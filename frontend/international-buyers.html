@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>International Buyers | Atlas Property Group</title>
+    <meta name="description" content="Explore U.S. real estate opportunities with resources for international buyers purchasing residential, commercial and investment property in the United States.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Montserrat:wght@500;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --ib-navy: #020a15;
+            --ib-blue: #2d6ad2;
+            --ib-gold: #0d1d33;
+            --ib-light: #f5f7fa;
+            --ib-border: #e4e7ec;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: #fff;
+            color: #1d2939;
+        }
+
+        .ib-hero {
+            position: relative;
+            min-height: 620px;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            background:
+                 linear-gradient(
+                    90deg,
+                
+                    rgba(62, 104, 173, 0.52) 48%,
+                    rgba(166, 179, 198, 0.16) 100%
+                ), 
+                url("https://images.pexels.com/photos/37415346/pexels-photo-37415346.jpeg");
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+        }
+
+        .ib-hero-content {
+            max-width: 820px;
+            padding: 130px 0 100px;
+        }
+
+        .ib-eyebrow {
+            color: whitesmoke;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-size: 13px;
+            font-weight: 700;
+            margin-bottom: 18px;
+        }
+
+        .ib-hero h1 {
+            font-family: "Cormorant Garamond", serif;
+            font-size: clamp(48px, 7vw, 78px);
+            line-height: 1.02;
+            margin: 0 0 25px;
+        }
+
+        .ib-hero p {
+            max-width: 730px;
+            font-size: 18px;
+            line-height: 1.8;
+            color: rgba(255,255,255,.92);
+        }
+
+        .ib-buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 32px;
+        }
+
+        .ib-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 9px;
+            padding: 14px 24px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: .3s ease;
+        }
+
+        .ib-btn-primary {
+            background: var(--ib-blue);
+            color: #101828;
+        }
+
+        .ib-btn-primary:hover {
+            transform: translateY(-2px);
+        }
+
+        .ib-btn-light {
+            border: 1px solid rgba(255,255,255,.65);
+            color: #fff;
+        }
+
+        .ib-btn-light:hover {
+            background: #fff;
+            color: var(--ib-navy);
+        }
+
+        .ib-intro {
+            padding: 85px 0;
+        }
+
+        .ib-section-title {
+            max-width: 820px;
+            margin-bottom: 50px;
+        }
+
+        .ib-section-title span {
+            display: block;
+            color: black;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 13px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .ib-section-title h2 {
+            font-family: "Cormorant Garamond", serif;
+            color: var(--ib-navy);
+            font-size: clamp(36px, 5vw, 54px);
+            margin: 0 0 15px;
+        }
+
+        .ib-section-title p {
+            color: #667085;
+            line-height: 1.8;
+            font-size: 16px;
+        }
+
+        .ib-path-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .ib-path-card {
+            border: 1px solid var(--ib-border);
+            border-radius: 12px;
+            padding: 34px;
+            background: #fff;
+            transition: .3s ease;
+        }
+
+        .ib-path-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 18px 40px rgba(16,24,40,.09);
+        }
+
+        .ib-icon {
+            width: 54px;
+            height: 54px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(212,175,55,.12);
+            color: var(--ib-gold);
+            font-size: 22px;
+            margin-bottom: 22px;
+        }
+
+        .ib-path-card h3 {
+            color: var(--ib-navy);
+            font-size: 22px;
+            margin-bottom: 12px;
+        }
+
+        .ib-path-card p {
+            color: #667085;
+            line-height: 1.75;
+            margin: 0;
+            font-size: 14px;
+        }
+
+        .ib-process {
+            background: var(--ib-light);
+            padding: 90px 0;
+        }
+
+        .ib-process-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .ib-step {
+            background: #fff;
+            border-radius: 12px;
+            padding: 30px;
+            border: 1px solid var(--ib-border);
+            position: relative;
+        }
+
+        .ib-step-number {
+            color: var(--ib-gold);
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            margin-bottom: 18px;
+        }
+
+        .ib-step h3 {
+            color: var(--ib-navy);
+            font-size: 19px;
+            margin-bottom: 10px;
+        }
+
+        .ib-step p {
+            color: #667085;
+            font-size: 14px;
+            line-height: 1.7;
+            margin: 0;
+        }
+
+        .ib-considerations {
+            padding: 90px 0;
+        }
+
+        .ib-two-col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 70px;
+            align-items: start;
+        }
+
+        .ib-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .ib-list li {
+            display: flex;
+            gap: 15px;
+            padding: 18px 0;
+            border-bottom: 1px solid var(--ib-border);
+            color: #475467;
+            line-height: 1.65;
+            font-size: 14px;
+        }
+
+        .ib-list i {
+            color: var(--ib-gold);
+            margin-top: 4px;
+        }
+
+        .ib-info-box {
+            background: var(--ib-navy);
+            color: #fff;
+            padding: 40px;
+            border-radius: 14px;
+        }
+
+        .ib-info-box h3 {
+            font-family: "Cormorant Garamond", serif;
+            font-size: 34px;
+            margin-top: 0;
+        }
+
+        .ib-info-box p {
+            color: rgba(255,255,255,.82);
+            line-height: 1.8;
+            font-size: 14px;
+        }
+
+        .ib-markets {
+            padding: 85px 0;
+            background: #fafafa;
+        }
+
+        .ib-market-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .ib-market {
+            min-height: 180px;
+            border-radius: 12px;
+            padding: 28px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            color: #fff;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            overflow: hidden;
+            text-decoration: none;
+            transition: transform .3s ease, box-shadow .3s ease;
+        }
+
+        .ib-market:hover,
+        .ib-market:focus-visible {
+            transform: translateY(-4px);
+            box-shadow: 0 16px 30px rgba(9, 47, 104, .18);
+        }
+
+        .ib-market::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(transparent, rgba(0,0,0,.78));
+        }
+
+        .ib-market-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .ib-market h3 {
+            margin: 0 0 5px;
+            font-size: 22px;
+        }
+
+        .ib-market p {
+            margin: 0;
+            font-size: 13px;
+            opacity: .9;
+        }
+
+        .ib-market.northeast {
+            background-image: url("https://images.pexels.com/photos/4082527/pexels-photo-4082527.jpeg");
+        }
+
+        .ib-market.southeast {
+            background-image: url("https://images.pexels.com/photos/14650436/pexels-photo-14650436.jpeg");
+        }
+
+        .ib-market.texas {
+            background-image: url("https://images.pexels.com/photos/20699219/pexels-photo-20699219.jpeg");
+        }
+
+        .ib-market.west {
+            background-image: url("https://images.pexels.com/photos/37152301/pexels-photo-37152301.jpeg");
+        }
+
+        .ib-market.midwest {
+            background-image: url("https://images.pexels.com/photos/36870473/pexels-photo-36870473.jpeg");
+        }
+
+        .ib-market.mountain {
+            background-image: url("https://images.pexels.com/photos/30312606/pexels-photo-30312606.jpeg");
+        }
+
+        .ib-cta {
+            background: var(--ib-navy);
+            color: #fff;
+            padding: 90px 0;
+        }
+
+        .ib-cta-inner {
+            max-width: 900px;
+            text-align: center;
+            margin: auto;
+        }
+
+        .ib-cta h2 {
+            font-family: "Cormorant Garamond", serif;
+            font-size: clamp(38px, 5vw, 58px);
+            margin: 0 0 18px;
+        }
+
+        .ib-cta p {
+            color: rgba(255,255,255,.82);
+            line-height: 1.8;
+            margin-bottom: 28px;
+        }
+
+        .ib-disclaimer {
+            padding: 35px 0 55px;
+            background: #fff;
+        }
+
+        .ib-disclaimer p {
+            max-width: 1000px;
+            margin: 0 auto;
+            color: #667085;
+            font-size: 12px;
+            line-height: 1.75;
+            text-align: center;
+        }
+
+        @media(max-width: 1024px) {
+            .ib-path-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .ib-process-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .ib-market-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .ib-two-col {
+                gap: 40px;
+            }
+        }
+
+        @media(max-width: 768px) {
+            .ib-hero {
+                min-height: 560px;
+            }
+
+            .ib-hero-content {
+                padding: 110px 0 80px;
+            }
+
+            .ib-path-grid,
+            .ib-process-grid,
+            .ib-market-grid,
+            .ib-two-col {
+                grid-template-columns: 1fr;
+            }
+
+            .ib-intro,
+            .ib-process,
+            .ib-considerations,
+            .ib-markets {
+                padding: 65px 0;
+            }
+
+            .ib-info-box {
+                padding: 30px;
+            }
+        }
+
+        @media(max-width: 480px) {
+            .ib-hero h1 {
+                font-size: 42px;
+            }
+
+            .ib-hero p {
+                font-size: 15px;
+            }
+
+            .ib-buttons {
+                flex-direction: column;
+            }
+
+            .ib-btn {
+                width: 100%;
+            }
+
+            .ib-path-card,
+            .ib-step {
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div id="shared-header-root" data-shared-navbar="true"></div>
+
+<main>
+
+    <!-- HERO -->
+    <section class="ib-hero">
+        <div class="container">
+            <div class="ib-hero-content reveal">
+
+                <div class="ib-eyebrow">
+                    Atlas Real Estate | International Buyers
+                </div>
+
+                <h1>
+                    Buying Real Estate in the United States
+                </h1>
+
+                <p>
+                    Atlas Property Group helps buyers explore U.S. residential,
+                    commercial and investment real estate opportunities. Our
+                    resources are designed for both buyers based in the United
+                    States and purchasers living abroad who are researching
+                    American property.
+                </p>
+
+                <div class="ib-buttons">
+                    <a href="properties.html" class="ib-btn ib-btn-primary">
+                        <i class="fas fa-building"></i>
+                        Explore U.S. Properties
+                    </a>
+
+                    <a href="contact.html" class="ib-btn ib-btn-light">
+                        <i class="fas fa-comments"></i>
+                        Speak With Our Team
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- INTRO -->
+    <section class="ib-intro">
+        <div class="container">
+
+            <div class="ib-section-title reveal">
+                <span>For Buyers Around the World</span>
+
+                <h2>
+                    A Practical Starting Point for U.S. Property Buyers
+                </h2>
+
+                <p>
+                    Purchasing property in the United States can involve
+                    different considerations depending on where you live,
+                    how you intend to use the property and how the purchase
+                    will be financed.
+                </p>
+
+                <p>
+                    Atlas provides a starting point for researching American
+                    real estate and connecting with property professionals.
+                    Buyers should obtain independent legal, tax, title,
+                    lending and other professional advice appropriate to
+                    their circumstances.
+                </p>
+            </div>
+
+            <div class="ib-path-grid">
+
+                <div class="ib-path-card reveal">
+                    <div class="ib-icon">
+                        <i class="fas fa-house"></i>
+                    </div>
+
+                    <h3>Primary Residence</h3>
+
+                    <p>
+                        Explore homes and residential properties for buyers
+                        planning to establish or maintain a residence in
+                        the United States.
+                    </p>
+                </div>
+
+                <div class="ib-path-card reveal">
+                    <div class="ib-icon">
+                        <i class="fas fa-plane"></i>
+                    </div>
+
+                    <h3>Second Home</h3>
+
+                    <p>
+                        Research U.S. properties that may serve as a second
+                        home, vacation residence or part-time residence.
+                    </p>
+                </div>
+
+                <div class="ib-path-card reveal">
+                    <div class="ib-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+
+                    <h3>Investment Property</h3>
+
+                    <p>
+                        Explore residential and commercial properties that
+                        may fit a buyer's investment objectives and risk
+                        considerations.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- PROCESS -->
+    <section class="ib-process">
+
+        <div class="container">
+
+            <div class="ib-section-title reveal">
+                <span>The Buying Process</span>
+
+                <h2>
+                    From Property Search to Closing
+                </h2>
+
+                <p>
+                    A U.S. real estate transaction normally involves several
+                    stages and may require coordination between multiple
+                    professionals.
+                </p>
+            </div>
+
+            <div class="ib-process-grid">
+
+                <div class="ib-step reveal">
+                    <div class="ib-step-number">01 — SEARCH</div>
+
+                    <h3>Define Your Objectives</h3>
+
+                    <p>
+                        Identify location, property type, intended use,
+                        budget, financing expectations and investment
+                        objectives.
+                    </p>
+                </div>
+
+                <div class="ib-step reveal">
+                    <div class="ib-step-number">02 — REVIEW</div>
+
+                    <h3>Evaluate Properties</h3>
+
+                    <p>
+                        Review property details, location, pricing,
+                        condition, comparable properties and other
+                        available information.
+                    </p>
+                </div>
+
+                <div class="ib-step reveal">
+                    <div class="ib-step-number">03 — DUE DILIGENCE</div>
+
+                    <h3>Conduct Due Diligence</h3>
+
+                    <p>
+                        Appropriate professionals may review title,
+                        contracts, inspections, financing, taxes,
+                        zoning and other transaction matters.
+                    </p>
+                </div>
+
+                <div class="ib-step reveal">
+                    <div class="ib-step-number">04 — CLOSING</div>
+
+                    <h3>Complete the Transaction</h3>
+
+                    <p>
+                        The closing process may involve a title company,
+                        attorney, lender, escrow provider and other
+                        transaction professionals.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- CONSIDERATIONS -->
+    <section class="ib-considerations">
+
+        <div class="container">
+
+            <div class="ib-two-col">
+
+                <div class="reveal">
+
+                    <div class="ib-section-title">
+                        <span>Important Considerations</span>
+
+                        <h2>
+                            Buying in the U.S. Requires Local Knowledge
+                        </h2>
+
+                        <p>
+                            Real estate rules, taxes, financing requirements,
+                            closing procedures and ownership considerations
+                            can vary by state and transaction.
+                        </p>
+                    </div>
+
+                    <ul class="ib-list">
+
+                        <li>
+                            <i class="fas fa-check"></i>
+                            <span>
+                                State and local property taxes may differ
+                                significantly by location.
+                            </span>
+                        </li>
+
+                        <li>
+                            <i class="fas fa-check"></i>
+                            <span>
+                                Financing requirements can vary depending
+                                on borrower status and property type.
+                            </span>
+                        </li>
+
+                        <li>
+                            <i class="fas fa-check"></i>
+                            <span>
+                                Buyers should understand title, insurance
+                                and closing requirements before purchasing.
+                            </span>
+                        </li>
+
+                        <li>
+                            <i class="fas fa-check"></i>
+                            <span>
+                                International purchasers should obtain
+                                professional advice regarding U.S. and
+                                applicable foreign tax obligations.
+                            </span>
+                        </li>
+
+                        <li>
+                            <i class="fas fa-check"></i>
+                            <span>
+                                Ownership structures should be reviewed with
+                                qualified legal and tax professionals.
+                            </span>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <div class="ib-info-box reveal">
+
+                    <h3>
+                        International Buyer Guidance
+                    </h3>
+
+                    <p>
+                        Buyers living outside the United States may have
+                        additional questions about financing, taxation,
+                        currency transfers, ownership structures, property
+                        management and the closing process.
+                    </p>
+
+                    <p>
+                        Atlas can help buyers begin their property research
+                        and identify the types of professionals they may
+                        need during the transaction.
+                    </p>
+
+                    <a href="faq.html"
+                       class="ib-btn ib-btn-primary"
+                       style="margin-top:15px;">
+                        International Buyer Guide
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- MARKETS -->
+    <section class="ib-markets">
+
+        <div class="container">
+
+            <div class="ib-section-title reveal">
+                <span>U.S. Market Coverage</span>
+
+                <h2>
+                    Explore Property Markets Across America
+                </h2>
+
+                <p>
+                    U.S. real estate opportunities vary significantly
+                    between regions and metropolitan areas. Start by
+                    identifying the markets that fit your objectives.
+                </p>
+            </div>
+
+            <div class="ib-market-grid">
+
+                <a class="ib-market northeast reveal" href="properties.html?location=New%20York">
+                    <div class="ib-market-content">
+                        <h3>Northeast</h3>
+                        <p>New York, Boston, Philadelphia and surrounding markets.</p>
+                    </div>
+                </a>
+
+                <a class="ib-market southeast reveal" href="properties.html?location=Florida">
+                    <div class="ib-market-content">
+                        <h3>Southeast</h3>
+                        <p>Florida, Georgia, North Carolina and regional markets.</p>
+                    </div>
+                </a>
+
+                <a class="ib-market texas reveal" href="properties.html?location=Texas">
+                    <div class="ib-market-content">
+                        <h3>Texas</h3>
+                        <p>Major metropolitan and growth markets throughout Texas.</p>
+                    </div>
+                </a>
+
+                <a class="ib-market west reveal" href="properties.html?location=California">
+                    <div class="ib-market-content">
+                        <h3>West Coast</h3>
+                        <p>California, Washington and selected western markets.</p>
+                    </div>
+                </a>
+
+                <a class="ib-market midwest reveal" href="properties.html?location=Midwest">
+                    <div class="ib-market-content">
+                        <h3>Midwest</h3>
+                        <p>Established metropolitan and emerging regional markets.</p>
+                    </div>
+                </a>
+
+                <a class="ib-market mountain reveal" href="properties.html?location=Mountain%20West">
+                    <div class="ib-market-content">
+                        <h3>Mountain West</h3>
+                        <p>Selected markets across the Rocky Mountain region.</p>
+                    </div>
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CTA -->
+    <section class="ib-cta">
+
+        <div class="container">
+
+            <div class="ib-cta-inner reveal">
+
+                <h2>
+                    Begin Your U.S. Property Search
+                </h2>
+
+                <p>
+                    Whether you are purchasing from within the United States
+                    or researching American real estate from abroad, start
+                    with the property and market information that matters
+                    to your objectives.
+                </p>
+
+                <div class="ib-buttons" style="justify-content:center;">
+
+                    <a href="properties.html"
+                       class="ib-btn ib-btn-primary">
+                        Explore Properties
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+
+                    <a href="contact.html"
+                       class="ib-btn ib-btn-light">
+                        Contact Atlas
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- DISCLAIMER -->
+    <!-- <section class="ib-disclaimer">
+
+        <div class="container">
+
+            <p>
+                <strong>Important Information:</strong>
+                Atlas Property Group provides real estate information and
+                services through its applicable business and real estate
+                professionals. Information presented on this page is for
+                general informational purposes and does not constitute legal,
+                tax, accounting, lending or investment advice. Real estate
+                availability, pricing, financing terms, taxes and transaction
+                requirements vary by property and jurisdiction. International
+                buyers should consult appropriately qualified U.S. real estate,
+                legal, tax, title and lending professionals before proceeding
+                with a transaction. Past performance and projections do not
+                guarantee future results.
+            </p>
+
+        </div>
+
+    </section> -->
+
+</main>
+
+
+<div id="shared-footer-root" data-shared-footer="true"></div>
+
+<script src="js/navbar.js"></script>
+<script src="js/main.js"></script>
+<script src="js/footer.js"></script>
+
+</body>
+</html>

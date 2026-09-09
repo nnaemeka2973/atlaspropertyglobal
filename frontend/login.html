@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Login | Atlas Property Group</title>
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { background: var(--light-gray); }
+        .auth-page {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            min-height: 100vh;
+            align-items: stretch;
+        }
+        .auth-image {
+            min-height: 100vh;
+            height: 100%;
+            width: 100%;
+            background-image: url('asset/image1.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: block;
+            align-self: stretch;
+        }
+        .auth-form-container {
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            padding: 8px 40px 18px; /* pulled up so form appears higher */
+            background: transparent; /* removed container background so page image shows through */
+        }
+        .auth-form-card {
+            width: 100%;
+            max-width: 420px;
+            background: transparent; /* removed white card so form floats over page */
+            border-radius: 0;
+            padding: 24px 32px; /* keep padding for breathing room */
+            box-shadow: none;
+            margin-top: 0;
+        }
+        /* Remove visible borders inside the login container only */
+        .auth-form-card,
+        .auth-form-container {
+            border: none !important;
+            box-shadow: none !important;
+        }
+        .auth-form-card .divider {
+            border-bottom: none !important;
+        }
+        .divider span {
+            background: transparent !important; /* ensure divider text doesn't show a white patch */
+        }
+        .auth-form-card .logo {
+            display: block;
+            margin-bottom: 28px;
+            text-decoration: none;
+            color: var(--primary-blue);
+            text-align: center;
+        }
+        .auth-form-card .auth-logo-img {
+            width: 170px;
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto 16px;
+        }
+        .logo-text, .logo-sub {
+            display: none;
+        }
+        .auth-form-card h1 {
+            font-size: 2.4rem;
+            margin-bottom: 10px;
+            line-height: 1.05;
+            color: var(--primary-blue);
+            text-align: center;
+        }
+        .auth-form-card p {
+            color: var(--medium-gray);
+            margin-bottom: 22px;
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+        .auth-form-card > p:not(.register-copy) { text-align: center; }
+        .social-login {
+            display: flex;
+            justify-content: center;
+            gap: 14px;
+            margin: 28px 0;
+        }
+        .btn-social {
+            width: 100%;
+            max-width: 280px;
+            padding: 12px 0;
+            border: 2px solid var(--primary-blue);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            font-weight: 700;
+            font-size: 0.95rem;
+            background: var(--card-bg);
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+        .btn-social:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 14px 30px rgba(0,0,0,0.08);
+        }
+        .divider {
+            text-align: center;
+            border-bottom: none;
+            line-height: 0.1em;
+            margin: 22px 0 30px;
+        }
+        .divider span {
+            background: transparent;
+            padding: 0 14px;
+            color: var(--medium-gray);
+            font-size: 0.82rem;
+            letter-spacing: 0.15em;
+        }
+        .auth-form-card label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: var(--primary-blue);
+        }
+        .auth-form-card input[type="email"],
+        .auth-form-card input[type="password"] {
+            width: 100%;
+            padding: 14px 16px;
+            border: 2px solid var(--primary-blue);
+            border-radius: 12px;
+            margin-bottom: 20px;
+            background: var(--card-bg);
+            font-size: 1rem;
+            color: var(--dark-gray);
+            box-sizing: border-box;
+        }
+        .auth-form-card input::placeholder { color: var(--medium-gray); }
+        .auth-actions {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 30px;
+            font-size: 0.93rem;
+            color: var(--medium-gray);
+        }
+        .auth-actions label { display: flex; align-items: center; gap: 10px; font-weight: 500; }
+        .auth-actions input[type="checkbox"] { width: 16px; height: 16px; }
+        .auth-actions a { color: var(--accent-gold); font-weight: 700; }
+        .auth-form-card .btn-primary { width: 100%; padding: 18px 0; border-radius: 12px; font-size: 1.05rem; }
+        .auth-form-card .register-copy {
+            margin-top: 32px;
+            text-align: center;
+            font-size: 0.95rem;
+            color: var(--medium-gray);
+        }
+        .auth-form-card .register-copy a { color: var(--primary-blue); font-weight: 700; }
+        footer { display: none !important; }
+        @media (max-width: 992px) {
+            .auth-page { grid-template-columns: 1fr; }
+            .auth-image { display: none; }
+            .auth-form-container { padding: 18px 16px 20px; }
+            .auth-form-card { padding: 32px 28px; }
+            .auth-form-card .logo { margin-left: auto; margin-right: auto; text-align: center; }
+            .auth-form-card .auth-logo-img { margin: 0 auto 14px; width: 150px; }
+            .auth-form-card h1,
+            .auth-form-card p,
+            .auth-form-card .register-copy { text-align: center; }
+            .social-login { grid-template-columns: 1fr; margin: 20px 0; gap: 14px; }
+            .auth-form-card h1 { font-size: 2.6rem; margin-bottom: 12px; }
+            .auth-form-card p { margin-bottom: 20px; font-size: 1rem; }
+            .auth-actions { flex-direction: column; align-items: stretch; margin-bottom: 20px; }
+            .btn-social { padding: 12px 0; font-size: 1rem; border-radius: 10px; }
+            .auth-form-card .btn-primary { padding: 16px 0; font-size: 1.05rem; }
+            .auth-form-card input[type="email"],
+            .auth-form-card input[type="password"] { padding: 14px 16px; margin-bottom: 18px; font-size: 1rem; }
+        }
+        @media (max-width: 560px) {
+            /* Increase sizes on small screens while keeping content visible */
+            .auth-form-container { padding: 10px 12px 12px; }
+            .auth-form-card { padding: 16px 14px; max-height: calc(100vh - 20px); box-sizing: border-box; }
+            .auth-form-card .auth-logo-img { width: 120px; margin-bottom: 8px; }
+            .auth-form-card h1 { font-size: 1.8rem; margin-bottom: 8px; }
+            .auth-form-card p { font-size: 0.95rem; margin-bottom: 12px; line-height: 1.4; }
+            .social-login { gap: 10px; margin: 14px 0; grid-template-columns: 1fr 1fr; }
+            .btn-social { padding: 10px 0; font-size: 0.95rem; border-radius: 10px; }
+            .auth-actions { margin-bottom: 12px; font-size: 0.9rem; }
+            .auth-form-card .btn-primary { padding: 14px 0; font-size: 1rem; border-radius: 10px; }
+            .auth-form-card input[type="email"],
+            .auth-form-card input[type="password"] { padding: 12px 14px; margin-bottom: 12px; font-size: 0.98rem; }
+            .auth-form-card .register-copy { margin-top: 12px; font-size: 0.9rem; }
+        }
+        @media (min-width: 993px) {
+            /* Desktop-only: pull the form card upwards slightly so the full login form is visible without scrolling */
+            .auth-form-container {
+                padding-top: 18px; /* small top padding to avoid clipping the logo */
+                padding-left: 40px;
+                padding-right: 40px;
+                padding-bottom: 18px;
+                align-items: flex-start;
+                overflow: visible;
+            }
+            .auth-form-card {
+                margin-top: -20px; /* reduced lift to prevent logo cutoff */
+                padding: 16px 20px; /* shrink card padding on desktop */
+                max-width: 400px;
+            }
+            /* Shrink visual details on desktop only (do not touch mobile or the image) */
+            .auth-form-card h1 { font-size: 2rem; margin-bottom: 8px; }
+            .auth-form-card p { font-size: 0.95rem; margin-bottom: 16px; }
+            .auth-form-card input[type="email"], .auth-form-card input[type="password"] {
+                padding: 10px 12px;
+                margin-bottom: 12px;
+                font-size: 0.95rem;
+            }
+            .auth-form-card .btn-primary { padding: 14px 0; font-size: 1rem; }
+            .btn-social { padding: 10px 0; font-size: 0.95rem; }
+            .auth-actions { margin-bottom: 18px; }
+            .auth-form-card .register-copy { margin-top: 18px; font-size: 0.9rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="auth-page">
+        <div class="auth-image"></div>
+        <div class="auth-form-container">
+            <div class="auth-form-card">
+                <a href="index.html" class="logo">
+                    <img src="asset/try4.png" alt="Atlas Property Group Logo" class="auth-logo-img">
+                </a>
+                <h1>Welcome Back</h1>
+                <p style="color: var(--medium-gray); margin-bottom: 30px;">Access your private portfolio and off-market listings.</p>
+
+               <div class="social-login">
+    <button id="google-login-btn" class="btn-social">
+        <i class="fab fa-google"></i> Google
+    </button>
+
+</div>
+
+                <div class="divider"><span>OR CONTINUE WITH EMAIL</span></div>
+
+                <form id="login-form">
+                    <div class="filter-group">
+                        <label>Email Address</label>
+                        <input type="email" id="login-email" required placeholder="name@corporate.com">
+                    </div>
+                    <div class="filter-group">
+                        <label>Password</label>
+                        <input type="password" id="login-password" required placeholder="••••••••">
+                    </div>
+                    <div class="auth-actions">
+                        <label><input type="checkbox"> Remember me</label>
+                        <a href="forgot-password.html">Forgot Password?</a>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Sign In to Portal</button>
+                </form>
+
+                <p class="register-copy">
+                    New to Atlas? <a href="signup.html">Create an Account</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="js/firebase-auth.js"></script>
+    <script src="js/api.js"></script>
+    <script>
+        window.__skipSharedFooter = true;
+        function removeLoginFooter() {
+            document.querySelectorAll('footer').forEach((footer) => footer.remove());
+            const sharedScript = document.querySelector('script[src="js/footer.js"]');
+            if (sharedScript) {
+                sharedScript.remove();
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            removeLoginFooter();
+            const observer = new MutationObserver(() => removeLoginFooter());
+            observer.observe(document.body, { childList: true, subtree: true });
+        });
+
+        (function () {
+            const params = new URLSearchParams(window.location.search);
+            const redirectTarget = params.get('redirect');
+            if (redirectTarget) {
+                sessionStorage.setItem('atlas_login_redirect', decodeURIComponent(redirectTarget));
+            } else {
+                const currentPath = window.location.pathname.split('/').pop() || 'login.html';
+                if (currentPath !== 'login.html' && currentPath !== 'signup.html') {
+                    sessionStorage.setItem('atlas_login_redirect', currentPath);
+                }
+            }
+        })();
+    </script>
+</body>
+</html>

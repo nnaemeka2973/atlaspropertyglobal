@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Properties | Atlas Property Group</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Montserrat:wght@500;700&family=Poppins:wght@300;400;600&display=swap">
+<link rel="stylesheet" href="css/variables.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="css/atlas-property-ui.css">
+<link rel="stylesheet" href="css/responsive.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+<div id="shared-header-root" data-shared-navbar="true"></div>
+<main>
+<section class="page-banner properties-hero" aria-label="Atlas property portfolio hero">
+  <div class="properties-hero-media"></div>
+  <div class="properties-hero-overlay"></div>
+  <div class="container properties-hero-content">
+  
+    <h1>Property Portfolio</h1>
+    <p>Discover exceptional homes, apartments and investment properties from the Atlas portfolio.</p>
+    <div class="mobile-property-search" id="mobilePropertySearch">
+      <div class="mobile-search-input">
+        <i class="fas fa-search" aria-hidden="true"></i>
+        <input id="mobileSearchInput" type="search" placeholder="Search address, city, ZIP..." aria-label="Search properties">
+      </div>
+      <button type="button" id="mobileFilterToggle" class="mobile-filter-toggle" aria-expanded="false" aria-controls="propertyFilterSidebar">
+        <i class="fas fa-sliders-h" aria-hidden="true"></i><span>Filters</span>
+      </button>
+    </div>
+  </div>
+</section>
+
+<section class="container properties-layout">
+  <aside class="property-filter-sidebar" id="propertyFilterSidebar" aria-label="Property filters">
+    <div class="filter-header">
+      <div>
+        <span class="filter-eyebrow">REFINE SEARCH</span>
+        <h2>Find a property</h2>
+      </div>
+      <div class="filter-header-actions">
+        <button type="button" id="clearFilters" class="filter-clear">Clear all</button>
+        <button type="button" class="filter-close" id="mobileFilterClose" aria-label="Close filters">
+          <i class="fas fa-xmark" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+
+    <div class="filter-scroll-area" id="filterScrollArea">
+    <form id="propertyFilterForm" class="property-filter-form">
+      <div class="filter-group">
+        <label for="searchInput">Search</label>
+        <div class="filter-search">
+          <i class="fas fa-search"></i>
+          <input id="searchInput" type="search" placeholder="Address, city, ZIP..." aria-label="Search properties">
+        </div>
+      </div>
+
+      <div class="filter-scroll-guide desktop-filter-guide">
+        <div class="filter-guide-row">
+          <button type="button" class="filter-scroll-arrow" id="filterScrollDown" aria-label="Scroll down to more filters"><i class="fas fa-chevron-down"></i></button>
+          <div class="filter-guide-copy">
+            <span>SEARCH &amp; FILTER</span>
+            <strong>More search options below</strong>
+            <small>Scroll down to access the full search</small>
+          </div>
+          <button type="button" class="filter-scroll-arrow" id="filterScrollUp" aria-label="Scroll up to search"><i class="fas fa-chevron-up"></i></button>
+        </div>
+      </div>
+
+      <div class="filter-group">
+        <label for="typeFilter">Property type</label>
+        <select id="typeFilter" aria-label="Filter by property type">
+          <option value="">All property types</option>
+        </select>
+      </div>
+
+      <div class="filter-group">
+        <label for="statusFilter">Status</label>
+        <select id="statusFilter" aria-label="Filter by status">
+          <option value="">All statuses</option>
+        </select>
+      </div>
+
+      <div class="filter-group">
+        <label for="locationFilter">Location</label>
+        <select id="locationFilter" aria-label="Filter by location">
+          <option value="">All locations</option>
+        </select>
+      </div>
+
+      <div class="filter-group">
+        <label>Price range</label>
+        <div class="range-grid">
+          <input id="minPrice" type="number" min="0" placeholder="Min price" aria-label="Minimum price">
+          <input id="maxPrice" type="number" min="0" placeholder="Max price" aria-label="Maximum price">
+        </div>
+      </div>
+
+      <div class="filter-group">
+        <label>Bedrooms</label>
+        <div class="choice-grid" data-filter-group="beds">
+          <button type="button" data-value="">Any</button>
+          <button type="button" data-value="1">1+</button>
+          <button type="button" data-value="2">2+</button>
+          <button type="button" data-value="3">3+</button>
+          <button type="button" data-value="4">4+</button>
+          <button type="button" data-value="5">5+</button>
+        </div>
+      </div>
+
+      <div class="filter-group">
+        <label>Bathrooms</label>
+        <div class="choice-grid" data-filter-group="baths">
+          <button type="button" data-value="">Any</button>
+          <button type="button" data-value="1">1+</button>
+          <button type="button" data-value="2">2+</button>
+          <button type="button" data-value="3">3+</button>
+          <button type="button" data-value="4">4+</button>
+          <button type="button" data-value="5">5+</button>
+        </div>
+      </div>
+
+      <div class="filter-group">
+        <label for="minSqft">Square feet</label>
+        <div class="range-grid">
+          <input id="minSqft" type="number" min="0" placeholder="Min sqft" aria-label="Minimum square feet">
+          <input id="maxSqft" type="number" min="0" placeholder="Max sqft" aria-label="Maximum square feet">
+        </div>
+      </div>
+
+      <button type="button" id="applyFilters" class="filter-apply">Show properties <span>→</span></button>
+    </form>
+    </div>
+  </aside>
+
+  <section class="property-results">
+    <div class="results-toolbar">
+      <div>
+        <span class="results-kicker">ATLAS PROPERTY GROUP</span>
+        <div class="results-row"><span id="pageRange" class="page-range"></span></div>
+      </div>
+      <div class="sort-wrap">
+        <label for="sortFilter">Sort by</label>
+        <select id="sortFilter" aria-label="Sort properties">
+          <option value="default">Recommended</option>
+          <option value="newest">Newest</option>
+          <option value="price-low">Price: Low to High</option>
+          <option value="price-high">Price: High to Low</option>
+          <option value="sqft-high">Largest first</option>
+        </select>
+      </div>
+    </div>
+    <div id="propertyGrid" class="property-grid"></div>
+    <nav id="pagination" class="property-pagination" aria-label="Property pages"></nav>
+    <div id="emptyState" class="empty hidden">No properties match your search. Try clearing a filter.</div>
+  </section>
+</section>
+
+</main>
+<div data-shared-footer></div>
+<script src="js/api.js"></script>
+<script src="js/atlas-properties-data.js"></script>
+<script src="js/saved-properties.js"></script>
+<script src="js/atlas-properties-page.js"></script>
+<script src="js/navbar.js"></script>
+<script src="js/footer.js"></script>
+</body></html>

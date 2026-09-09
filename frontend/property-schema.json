@@ -1,0 +1,185 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/schemas/property-schema.json",
+  "title": "Property Details",
+  "type": "object",
+  "properties": {
+    "property_id": { "type": "string" },
+    "listing_id": { "type": "string" },
+    "plan_id": { "type": ["string", "null"] },
+    "status": { "type": "string" },
+    "photo_count": { "type": "integer" },
+    "branding": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "photo": { "type": ["string", "null"] },
+          "name": { "type": ["string", "null"] },
+          "phone": { "type": ["string", "null"] },
+          "link": { "type": ["string", "null"] }
+        },
+        "required": []
+      }
+    },
+    "location": {
+      "type": "object",
+      "properties": {
+        "address": {
+          "type": "object",
+          "properties": {
+            "city": { "type": ["string", "null"] },
+            "line": { "type": ["string", "null"] },
+            "street_name": { "type": ["string", "null"] },
+            "street_number": { "type": ["string", "null"] },
+            "street_suffix": { "type": ["string", "null"] },
+            "country": { "type": ["string", "null"] },
+            "postal_code": { "type": ["string", "null"] },
+            "state_code": { "type": ["string", "null"] },
+            "state": { "type": ["string", "null"] },
+            "coordinate": {
+              "type": ["object", "null"],
+              "properties": {
+                "lat": { "type": ["number", "null"] },
+                "lon": { "type": ["number", "null"] },
+                "accuracy": { "type": ["number", "null"] }
+              },
+              "required": []
+            }
+          },
+          "required": []
+        },
+        "street_view_url": { "type": ["string", "null"] },
+        "county": {
+          "type": ["object", "null"],
+          "properties": {
+            "fips_code": { "type": ["string", "null"] }
+          },
+          "required": []
+        }
+      },
+      "required": []
+    },
+    "open_houses": { "type": ["array", "null"] },
+    "description": {
+      "type": "object",
+      "properties": {
+        "sub_type": { "type": ["string", "null"] },
+        "type": { "type": ["string", "null"] },
+        "beds": { "type": ["integer", "null"] },
+        "baths": { "type": ["number", "null"] },
+        "lot_sqft": { "type": ["integer", "null"] },
+        "sqft": { "type": ["integer", "null"] },
+        "beds_max": { "type": ["integer", "null"] },
+        "beds_min": { "type": ["integer", "null"] },
+        "sqft_max": { "type": ["integer", "null"] },
+        "sqft_min": { "type": ["integer", "null"] },
+        "baths_full": { "type": ["integer", "null"] },
+        "baths_half": { "type": ["integer", "null"] },
+        "baths_min": { "type": ["integer", "null"] },
+        "baths_max": { "type": ["integer", "null"] },
+        "baths_full_calc": { "type": ["integer", "null"] },
+        "baths_partial_calc": { "type": ["integer", "null"] }
+      },
+      "required": []
+    },
+    "virtual_tours": { "type": ["array", "null"] },
+    "matterport": { "type": ["boolean", "null"] },
+    "advertisers": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "fulfillment_id": { "type": ["string", "null"] },
+          "name": { "type": ["string", "null"] },
+          "email": { "type": ["string", "null"] },
+          "href": { "type": ["string", "null"] },
+          "slogan": { "type": ["string", "null"] },
+          "type": { "type": ["string", "null"] }
+        },
+        "required": []
+      }
+    },
+    "flags": {
+      "type": ["object", "null"],
+      "properties": {
+        "is_price_reduced": { "type": ["boolean", "null"] },
+        "is_new_construction": { "type": ["boolean", "null"] },
+        "is_foreclosure": { "type": ["boolean", "null"] },
+        "is_plan": { "type": ["boolean", "null"] },
+        "is_new_listing": { "type": ["boolean", "null"] },
+        "is_coming_soon": { "type": ["boolean", "null"] },
+        "is_contingent": { "type": ["boolean", "null"] },
+        "is_pending": { "type": ["boolean", "null"] }
+      },
+      "required": []
+    },
+    "source": {
+      "type": ["object", "null"],
+      "properties": {
+        "agents": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": { "type": ["string", "null"] },
+              "agent_id": { "type": ["string", "null"] },
+              "agent_name": { "type": ["string", "null"] },
+              "office_id": { "type": ["string", "null"] },
+              "office_name": { "type": ["string", "null"] }
+            },
+            "required": []
+          }
+        },
+        "id": { "type": ["string", "null"] },
+        "type": { "type": ["string", "null"] },
+        "spec_id": { "type": ["string", "null"] },
+        "plan_id": { "type": ["string", "null"] },
+        "listing_href": { "type": ["string", "null"] },
+        "listing_id": { "type": ["string", "null"] }
+      },
+      "required": []
+    },
+    "pet_policy": { "type": ["string", "null"] },
+    "community": { "type": ["string", "null"] },
+    "primary_photo": {
+      "type": ["object", "null"],
+      "properties": {
+        "href": { "type": ["string", "null"] }
+      },
+      "required": []
+    },
+    "href": { "type": ["string", "null"] },
+    "list_price": { "type": ["number", "null"] },
+    "list_price_min": { "type": ["number", "null"] },
+    "list_price_max": { "type": ["number", "null"] },
+    "price_reduced_amount": { "type": ["number", "null"] },
+    "estimate": {
+      "type": ["object", "null"],
+      "properties": {
+        "estimate": { "type": ["number", "null"] }
+      },
+      "required": []
+    },
+    "lead_attributes": {
+      "type": ["object", "null"],
+      "properties": {
+        "lead_type": { "type": ["string", "null"] },
+        "show_contact_an_agent": { "type": ["boolean", "null"] }
+      },
+      "required": []
+    },
+    "last_sold_date": { "type": ["string", "null"] },
+    "list_date": { "type": ["string", "null"] },
+    "products": {
+      "type": ["object", "null"],
+      "properties": {
+        "brand_name": { "type": ["string", "null"] },
+        "products": { "type": ["array", "null"] }
+      },
+      "required": []
+    },
+    "last_sold_price": { "type": ["number", "null"] }
+  },
+  "required": ["property_id", "listing_id", "status", "location", "description"]
+}

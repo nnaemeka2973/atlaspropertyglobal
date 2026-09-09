@@ -1,0 +1,388 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Our Advisors | Atlas Property Group</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Montserrat:wght@500;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- International Phone Input -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@25.3.0/build/css/intlTelInput.css">
+
+    <style>
+        :root { --contact-header-offset: 90px; }
+
+        html { scroll-padding-top: var(--contact-header-offset); }
+        body { padding-top: var(--contact-header-offset); }
+
+        .contact-wrapper{
+            display:grid;
+            grid-template-columns:1fr 420px;
+            gap:48px;
+            min-height:calc(100vh - var(--contact-header-offset));
+            padding:64px 0;
+            align-items:start;
+        }
+
+        .contact-hero{
+            max-width:780px;
+        }
+
+        .contact-name-fields{
+            display:grid;
+            grid-template-columns:1fr 1fr;
+            gap:20px;
+        }
+
+        .contact-hero span{
+            font-size:13px;
+            font-weight:600;
+            letter-spacing:2px;
+            color:var(--primary-blue);
+        }
+
+        .contact-hero h1{
+            font-size:44px;
+            margin:12px 0 18px;
+            line-height:1.06;
+            color:var(--primary-blue);
+            font-weight:700;
+        }
+
+        .contact-hero p{
+            margin-bottom:24px;
+            font-size:16px;
+            line-height:1.65;
+            color:var(--medium-gray);
+        }
+
+        .contact-form-container{
+            background:var(--white);
+            padding:30px;
+            border-radius:12px;
+            box-shadow:var(--shadow-md);
+            border:1px solid var(--border-color);
+        }
+
+        .contact-form-column{
+            min-width:0;
+        }
+
+        .mobile-form-heading{
+            display:none;
+        }
+
+        .office-card{
+            margin-bottom:22px;
+            padding-bottom:18px;
+            border-bottom:1px solid var(--border-color);
+        }
+
+        .office-card:last-child{
+            border:none;
+        }
+
+        .office-card h3{
+            color:var(--primary-blue);
+            margin-bottom:6px;
+            font-size:18px;
+        }
+
+        .office-card p{
+            margin:6px 0;
+            line-height:1.5;
+            color:var(--dark-gray);
+            font-size:14px;
+        }
+
+        .map-box{
+            height:420px;
+            width:100%;
+            background:#eee;
+            border-radius:12px;
+            margin-top:36px;
+            margin-bottom:64px;
+            overflow:hidden;
+        }
+
+        .map-box iframe{
+            width:100%;
+            height:100%;
+            border:none;
+        }
+
+        .contact-form-container label{
+            display:block;
+            font-weight:700;
+            margin-bottom:8px;
+            font-size:13px;
+            color:var(--primary-blue);
+        }
+
+        .contact-form-container input,
+        .contact-form-container select,
+        .contact-form-container textarea{
+            width:100%;
+            padding:12px 14px;
+            border:1px solid var(--border-color);
+            border-radius:8px;
+            font-size:14px;
+            margin-bottom:14px;
+            box-sizing:border-box;
+            background:var(--card-bg);
+            font-family:inherit;
+        }
+
+        .contact-form-container textarea{
+            min-height:140px;
+            resize:vertical;
+        }
+
+        .btn-whatsapp{
+            background:#25D366;
+            border:none;
+            color:#fff;
+        }
+
+        /* Phone Input */
+        .iti{
+            width:100%;
+            margin-bottom:14px;
+        }
+
+        .iti input{
+            width:100% !important;
+            padding-left:90px !important;
+            margin-bottom:0 !important;
+        }
+
+        .iti__country-list{
+            width:320px;
+            max-width:90vw;
+            border-radius:8px;
+            box-shadow:0 8px 24px rgba(0,0,0,.15);
+        }
+
+        @media(max-width:992px){
+            .contact-wrapper{
+                grid-template-columns:1fr;
+                gap:28px;
+                padding:48px 0 32px;
+            }
+
+            .contact-form-container{
+                padding:22px;
+            }
+
+            .mobile-form-heading{
+                display:block;
+                margin:0 0 14px;
+                color:var(--primary-blue);
+                font-size:24px;
+                line-height:1.15;
+            }
+
+            .map-box{
+                height:320px;
+                margin-top:18px;
+                margin-bottom:48px;
+            }
+
+            :root{
+                --contact-header-offset:82px;
+            }
+        }
+
+        @media(max-width:480px){
+            .contact-wrapper{
+                padding:36px 0 28px;
+            }
+
+            .contact-name-fields{
+                grid-template-columns:1fr;
+                gap:0;
+            }
+
+            .contact-hero h1{
+                font-size:28px;
+            }
+
+            .contact-hero p{
+                font-size:14px;
+            }
+
+            .contact-form-container{
+                padding:16px;
+            }
+
+            .map-box{
+                height:260px;
+                margin-bottom:36px;
+            }
+
+            :root{
+                --contact-header-offset:78px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div id="shared-header-root" data-shared-navbar="true"></div>
+
+<main class="container">
+
+    <div class="contact-wrapper">
+
+        <!-- LEFT -->
+        <div class="reveal contact-hero">
+
+            <span>GET IN TOUCH</span>
+
+            <h1>Consult With a Specialist</h1>
+
+            <p>
+                Whether you are looking to acquire a primary residence,
+                invest in U.S. real estate, or manage a commercial portfolio,
+                our advisors are available for confidential consultations.
+            </p>
+
+            <div class="office-card">
+    <h3>Miami Executive Office</h3>
+    <p>1395 Brickell Avenue, Suite 800</p>
+    <p>Miami, FL 33131, United States</p>
+                <p><strong>Phone:</strong> +1 (334) 697-1225</p>
+                <p><strong>Email:</strong> info@atlaspropertyglobal.com</p>
+            </div>
+
+            <!-- WORKING DAYS -->
+            <div class="office-card">
+                <h3>Working Days</h3>
+                <p><strong>Monday – Friday</strong></p>
+                <p>9:00 AM – 5:00 PM</p>
+                <p>Eastern Time (ET) · Miami, USA</p>
+            </div>
+
+            <div style="margin-top:18px;">
+                <a href="https://wa.me/+13346971225" class="btn btn-whatsapp">
+                    <i class="fab fa-whatsapp"></i>
+                    Chat on WhatsApp
+                </a>
+            </div>
+
+        </div>
+
+        <!-- RIGHT -->
+        <div class="contact-form-column">
+
+            <h2 class="mobile-form-heading">Send Us a Message</h2>
+
+            <div class="contact-form-container reveal">
+
+                <form id="main-contact-form">
+
+                <div class="contact-name-fields">
+
+                    <div class="filter-group">
+                        <label>First Name</label>
+                        <input type="text" id="fname" required>
+                    </div>
+
+                    <div class="filter-group">
+                        <label>Last Name</label>
+                        <input type="text" id="lname" required>
+                    </div>
+
+                </div>
+
+                <div class="filter-group">
+                    <label>Email Address</label>
+                    <input type="email" id="email" required>
+                </div>
+
+                <!-- NEW PHONE FIELD -->
+                <div class="filter-group">
+                    <label>Mobile Number</label>
+                    <input type="tel" id="phone" placeholder="Enter your mobile number" required>
+                </div>
+
+                <div class="filter-group">
+                    <label>Inquiry Type</label>
+                    <select id="subject">
+                        <option>Property Acquisition</option>
+                        <option>Investment Management</option>
+                        <option>Selling a Property</option>
+                        <option>Media Inquiry</option>
+                        <option>International Purchase</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label>Message</label>
+                    <textarea id="message" minlength="10" required></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary" style="width:100%;">
+                    Submit Inquiry
+                </button>
+
+                <div id="form-status"
+                     style="margin-top:20px;text-align:center;display:none;">
+                </div>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- MAP -->
+    <div class="map-box reveal">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3024.221990137358!2d-74.01107!3d40.7056!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a165bedccab%3A0x2cb2ddf004b54016!2s100%20Wall%20St%2C%20New%20York%2C%20NY%2010005!5e0!3m2!1sen!2sus!4v1684345678901"
+            allowfullscreen
+            loading="lazy">
+        </iframe>
+    </div>
+
+</main>
+
+<div id="shared-footer-root" data-shared-footer="true"></div>
+
+<script src="js/navbar.js"></script>
+<script src="js/main.js"></script>
+<script src="js/contact.js"></script>
+<script src="js/footer.js"></script>
+
+<!-- International Country Code Selector -->
+<script src="https://cdn.jsdelivr.net/npm/intl-tel-input@25.3.0/build/js/intlTelInput.min.js"></script>
+
+<script>
+const phoneInput = document.querySelector("#phone");
+
+if (phoneInput) {
+    window.iti = window.intlTelInput(phoneInput, {
+        initialCountry: "us",
+        separateDialCode: true,
+        autoPlaceholder: "aggressive",
+        loadUtils: () =>
+            import("https://cdn.jsdelivr.net/npm/intl-tel-input@25.3.0/build/js/utils.js")
+    });
+}
+</script>
+
+</body>
+</html>

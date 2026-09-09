@@ -1,0 +1,196 @@
+.mortgage-panel {
+    display: grid;
+    gap: 22px;
+    padding: 24px;
+    background: var(--dashboard-surface);
+    border-radius: 24px;
+    border: 1px solid rgba(11, 61, 145, 0.08);
+}
+
+.mortgage-panel .panel-grid {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1.3fr 0.9fr;
+}
+
+.mortgage-panel .card-panel {
+    padding: 20px;
+    border-radius: 20px;
+    background: var(--dashboard-surface-2);
+    border: 1px solid var(--panel-border);
+}
+
+.mortgage-panel .form-grid {
+    display: grid;
+    gap: 16px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.mortgage-panel .field-group {
+    display: grid;
+    gap: 8px;
+}
+
+.mortgage-panel label {
+    font-weight: 700;
+    color: var(--text-strong);
+}
+
+.mortgage-panel input,
+.mortgage-panel select {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid var(--panel-border);
+    border-radius: 14px;
+    background: var(--dashboard-surface);
+    color: var(--text-strong);
+}
+
+.mortgage-panel .summary-list {
+    display: grid;
+    gap: 12px;
+}
+
+.mortgage-panel .summary-item {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 16px;
+    border-radius: 16px;
+    border: 1px solid var(--panel-border);
+    background: var(--dashboard-surface);
+}
+
+.mortgage-panel .chart-shell,
+.mortgage-panel .schedule-shell,
+.mortgage-panel .saved-shell {
+    padding: 20px;
+    border-radius: 20px;
+    background: var(--dashboard-surface-2);
+    border: 1px solid var(--panel-border);
+}
+
+.mortgage-panel .chart-shell h3,
+.mortgage-panel .schedule-shell h3,
+.mortgage-panel .saved-shell h3 {
+    margin-bottom: 16px;
+}
+
+.mortgage-panel .charts-grid {
+    display: grid;
+    gap: 18px;
+    grid-template-columns: 1fr 1fr;
+}
+
+.mortgage-panel .chart-widget {
+    min-height: 260px;
+    width: 100%;
+    min-width: 0;
+    border-radius: 18px;
+    background: var(--dashboard-surface);
+}
+
+.mortgage-panel .schedule-shell {
+    overflow-x: auto;
+}
+
+.mortgage-panel .schedule-table {
+    width: 100%;
+    min-width: 640px;
+    border-collapse: collapse;
+}
+
+.mortgage-panel .schedule-shell table {
+    min-width: 100%;
+}
+
+.mortgage-panel .schedule-table th,
+.mortgage-panel .schedule-table td {
+    padding: 12px 10px;
+    border-bottom: 1px solid var(--panel-border);
+}
+
+.mortgage-panel .saved-list {
+    display: grid;
+    gap: 12px;
+}
+
+.mortgage-panel .saved-card {
+    padding: 14px;
+    border-radius: 16px;
+    border: 1px solid var(--panel-border);
+    display: grid;
+    gap: 10px;
+}
+
+.mortgage-panel .saved-card-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.mortgage-panel .btn-group {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 980px) {
+    .mortgage-panel .panel-grid,
+    .mortgage-panel .charts-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .mortgage-panel .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .mortgage-panel .btn-group {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .mortgage-panel .btn-group .btn {
+        width: 100%;
+    }
+}
+
+@media (max-width: 760px) {
+    .mortgage-panel {
+        padding: 16px;
+        gap: 18px;
+    }
+
+    .mortgage-panel .card-panel,
+    .mortgage-panel .summary-card,
+    .mortgage-panel .chart-shell,
+    .mortgage-panel .schedule-shell,
+    .mortgage-panel .saved-shell {
+        padding: 16px;
+    }
+
+    .mortgage-panel .summary-list,
+    .mortgage-panel .saved-list {
+        gap: 10px;
+    }
+
+    .mortgage-panel .chart-widget {
+        min-height: 200px;
+    }
+
+    .mortgage-panel .schedule-shell {
+        overflow-x: auto;
+    }
+
+    .mortgage-panel .schedule-table th,
+    .mortgage-panel .schedule-table td {
+        padding: 10px 8px;
+        font-size: 13px;
+        white-space: nowrap;
+    }
+
+    .mortgage-panel .field-group input,
+    .mortgage-panel .field-group select {
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,1477 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>U.S. Development Opportunities | Atlas Property Group</title>
+
+<meta name="description"
+content="Explore residential, mixed-use and commercial development opportunities across the United States for domestic and international property buyers.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Montserrat:wght@500;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/variables.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/responsive.css">
+<link rel="stylesheet" href="css/animations.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+
+/* =====================================================
+GLOBAL
+===================================================== */
+
+html{
+scroll-behavior:smooth;
+scroll-padding-top:110px;
+}
+
+body{
+overflow-x:hidden;
+background:#fff;
+}
+
+section[id]{
+scroll-margin-top:100px;
+}
+
+.container{
+width:min(1180px,calc(100% - 40px));
+margin:auto;
+}
+
+/* =====================================================
+HERO
+===================================================== */
+
+.dev-hero{
+position:relative;
+min-height:700px;
+display:flex;
+align-items:center;
+background:
+linear-gradient(90deg,
+rgba(5,27,63,.92),
+rgba(5,27,63,.75),
+rgba(5,27,63,.35)),
+url('https://images.pexels.com/photos/24847334/pexels-photo-24847334.jpeg');
+background-size:cover;
+background-position:center;
+color:#fff;
+}
+
+.dev-hero-content{
+max-width:760px;
+padding:150px 0 100px;
+}
+
+.dev-label{
+display:inline-block;
+color:#a7a8ad;
+font-size:13px;
+font-weight:700;
+letter-spacing:2px;
+text-transform:uppercase;
+margin-bottom:18px;
+}
+
+.dev-hero h1{
+font-size:clamp(3rem,6vw,5rem);
+line-height:1.05;
+margin-bottom:24px;
+color:#fff;
+}
+
+.dev-hero p{
+font-size:18px;
+line-height:1.8;
+color:rgba(255,255,255,.88);
+margin-bottom:35px;
+}
+
+.hero-buttons{
+display:flex;
+flex-wrap:wrap;
+gap:15px;
+}
+
+.hero-buttons .btn{
+min-width:190px;
+}
+
+.hero-stats{
+display:flex;
+flex-wrap:wrap;
+gap:30px;
+margin-top:45px;
+padding-top:25px;
+border-top:1px solid rgba(255,255,255,.2);
+}
+
+.hero-stat{
+display:flex;
+align-items:center;
+gap:10px;
+font-size:13px;
+color:rgba(255,255,255,.85);
+}
+
+.hero-stat i{
+color:#3f1ed3;
+}
+
+/* =====================================================
+STICKY NAVIGATION
+===================================================== */
+
+.development-nav{
+position:sticky;
+top:0;
+z-index:900;
+background:#0B3D91;
+box-shadow:0 5px 18px rgba(0,0,0,.08);
+}
+
+.development-nav .container{
+display:flex;
+align-items:center;
+justify-content:space-between;
+min-height:64px;
+}
+
+.nav-title{
+color:#fff;
+font-size:13px;
+font-weight:700;
+letter-spacing:1px;
+}
+
+.dev-links{
+display:flex;
+gap:6px;
+overflow-x:auto;
+scrollbar-width:none;
+}
+
+.dev-links::-webkit-scrollbar{
+display:none;
+}
+
+.dev-links a{
+color:rgba(255,255,255,.85);
+text-decoration:none;
+font-size:12px;
+font-weight:600;
+padding:22px 12px;
+transition:.3s;
+white-space:nowrap;
+}
+
+.dev-links a:hover{
+color:#0d0d0d;
+}
+
+/* =====================================================
+INTRO
+===================================================== */
+
+.intro-section{
+padding:90px 0;
+}
+
+.intro-grid{
+display:grid;
+grid-template-columns:1.2fr .8fr;
+gap:70px;
+align-items:center;
+}
+
+.section-label{
+display:block;
+color:#0b0b0b;
+font-size:13px;
+font-weight:700;
+letter-spacing:2px;
+text-transform:uppercase;
+margin-bottom:12px;
+}
+
+.section-title{
+font-size:clamp(2.3rem,4vw,3.5rem);
+line-height:1.1;
+color:#0B3D91;
+margin-bottom:22px;
+}
+
+.section-text{
+color:#6b7280;
+font-size:16px;
+line-height:1.85;
+margin-bottom:18px;
+}
+
+.info-card{
+background:#f8f9fb;
+border-left:4px solid #080808;
+padding:35px;
+border-radius:12px;
+}
+
+.info-card h3{
+color:#0B3D91;
+margin-bottom:18px;
+font-size:24px;
+}
+
+.info-card ul{
+padding-left:20px;
+margin:0;
+}
+
+.info-card li{
+margin-bottom:14px;
+color:#6b7280;
+line-height:1.7;
+}
+
+/* =====================================================
+MARKET STATS
+===================================================== */
+
+.market-stats{
+padding:20px 0 80px;
+}
+
+.stats-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:20px;
+}
+
+.stat-box{
+background:#fff;
+border:1px solid #e5e7eb;
+padding:28px;
+border-radius:12px;
+text-align:center;
+transition:.3s;
+}
+
+.stat-box:hover{
+transform:translateY(-6px);
+box-shadow:0 12px 30px rgba(0,0,0,.08);
+}
+
+.stat-box i{
+font-size:28px;
+color:#0a0a0a;
+margin-bottom:15px;
+}
+
+.stat-box h3{
+font-size:32px;
+color:#0B3D91;
+margin-bottom:8px;
+}
+
+.stat-box p{
+font-size:14px;
+color:#6b7280;
+margin:0;
+line-height:1.5;
+}
+
+.image-gallery {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    width: 100%;
+    height: 600px;
+    background: white;
+}
+
+.gallery-main {
+    height: 100%;
+    overflow: hidden;
+    border-radius: 14px 0 0 14px;
+    border-right: 3px solid white;
+}
+
+.gallery-main img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.gallery-small {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.gallery-small img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-bottom: 3px solid white;
+}
+
+.gallery-small img:last-child {
+    border-bottom: none;
+}
+
+
+/* TABLET */
+@media (max-width: 900px) {
+    .image-gallery {
+        height: 500px;
+    }
+}
+
+
+/* MOBILE */
+@media (max-width: 600px) {
+    .image-gallery {
+        grid-template-columns: 1fr;
+        height: auto;
+    }
+
+    .gallery-main {
+        height: 350px;
+        border-right: none;
+        border-bottom: 3px solid white;
+        border-radius: 14px 14px 0 0;
+    }
+
+    .gallery-small {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 150px;
+    }
+
+    .gallery-small img {
+        border-bottom: none;
+        border-right: 3px solid white;
+    }
+
+    .gallery-small img:last-child {
+        border-right: none;
+    }
+}
+
+/* =====================================================
+RESPONSIVE
+===================================================== */
+
+@media(max-width:1024px){
+
+.intro-grid{
+grid-template-columns:1fr;
+gap:40px;
+}
+
+.stats-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+@media(max-width:768px){
+
+html{
+scroll-padding-top:80px;
+}
+
+.dev-hero{
+min-height:auto;
+}
+
+.dev-hero-content{
+padding:120px 0 80px;
+}
+
+.dev-hero p{
+font-size:15px;
+}
+
+.hero-buttons{
+flex-direction:column;
+}
+
+.hero-buttons .btn{
+width:100%;
+}
+
+.development-nav .container{
+justify-content:flex-start;
+}
+
+.nav-title{
+display:none;
+}
+
+.dev-links{
+width:100%;
+}
+
+.stats-grid{
+grid-template-columns:1fr;
+}
+
+.container{
+width:calc(100% - 30px);
+}
+
+.image-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .image-grid img {
+        height: 300px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- Shared Atlas Header -->
+<div id="shared-header-root" data-shared-navbar="true"></div>
+
+<!-- =====================================================
+HERO
+===================================================== -->
+
+<section class="dev-hero">
+
+<div class="container">
+
+<div class="dev-hero-content reveal">
+
+<span class="dev-label">
+U.S. DEVELOPMENT OPPORTUNITIES
+</span>
+
+<h1>
+Building America's Next Communities
+</h1>
+
+<p>
+Explore newly built residential, mixed-use and commercial developments across the United States. Atlas Property Group provides a starting point for researching development opportunities for both U.S. residents and qualified international buyers seeking American real estate.
+</p>
+
+<div class="hero-buttons">
+
+<a href="#featured" class="btn btn-primary">
+Explore Developments
+</a>
+
+<a href="contact.html" class="btn btn-outline">
+Request Information
+</a>
+
+</div>
+
+<div class="hero-stats">
+
+<div class="hero-stat">
+<i class="fas fa-building"></i>
+<span>Residential & Mixed-Use Projects</span>
+</div>
+
+<div class="hero-stat">
+<i class="fas fa-map-marked-alt"></i>
+<span>High-Growth U.S. Markets</span>
+</div>
+
+<div class="hero-stat">
+<i class="fas fa-globe"></i>
+<span>International Buyers Welcome</span>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =====================================================
+STICKY NAVIGATION
+===================================================== -->
+
+<nav class="development-nav">
+
+<div class="container">
+
+<div class="nav-title">
+Developments
+</div>
+
+<div class="dev-links">
+
+<a href="#overview">Overview</a>
+
+<a href="#featured">Featured</a>
+
+<a href="#pipeline">Pipeline</a>
+
+<a href="#international">International Buyers</a>
+
+<a href="#process">Process</a>
+
+<a href="#faq">FAQ</a>
+
+<a href="investment.html">Investments</a>
+
+</div>
+
+</div>
+
+</nav>
+
+<!-- =====================================================
+OVERVIEW
+===================================================== -->
+
+<section class="intro-section" id="overview">
+
+<div class="container">
+
+<div class="intro-grid">
+
+<div>
+
+<span class="section-label">
+Development Opportunities
+</span>
+
+<h2 class="section-title">
+New Construction Across Premier U.S. Markets
+</h2>
+
+<p class="section-text">
+Atlas Property Group researches residential, multifamily, commercial and mixed-use developments located within growing metropolitan markets across the United States. Our platform is designed for homebuyers, investors, developers and international purchasers seeking newly constructed American property.
+</p>
+
+<p class="section-text">
+Development projects differ from existing properties because they often involve planning, construction milestones, phased releases and completion timelines. Buyers should evaluate location, market demand, financing, construction schedules and legal documentation before making an acquisition decision.
+</p>
+
+<p class="section-text">
+Whether you're purchasing a primary residence in Florida, investing in a mixed-use district in Texas or researching multifamily opportunities in North Carolina, Atlas provides a professional starting point for exploring U.S. developments.
+</p>
+
+</div>
+
+<div class="info-card">
+
+<h3>
+Who This Page Is For
+</h3>
+
+<ul>
+
+<li>U.S. residents purchasing newly built homes</li>
+
+<li>Domestic real estate investors researching development opportunities</li>
+
+<li>International buyers acquiring U.S. residential property</li>
+
+<li>Commercial investors evaluating mixed-use developments</li>
+
+<li>Developers seeking redevelopment and land opportunities</li>
+
+<li>Buyers comparing construction phases and future communities</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =====================================================
+MARKET STATS
+===================================================== -->
+
+<section class="market-stats">
+
+<div class="container">
+
+<div class="stats-grid">
+
+<div class="stat-box reveal">
+
+<i class="fas fa-city"></i>
+
+<h3>18</h3>
+
+<p>Active U.S. metropolitan markets</p>
+
+</div>
+
+<div class="stat-box reveal">
+
+<i class="fas fa-home"></i>
+
+<h3>2,400+</h3>
+
+<p>Planned residential homes</p>
+
+</div>
+
+<div class="stat-box reveal">
+
+<i class="fas fa-layer-group"></i>
+
+<h3>12</h3>
+
+<p>Mixed-use development districts</p>
+
+</div>
+
+<div class="stat-box reveal">
+
+<i class="fas fa-map"></i>
+
+<h3>9</h3>
+
+<p>States with development opportunities</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- PART 2 STARTS BELOW -->
+ <!-- =====================================================
+FEATURED DEVELOPMENTS
+===================================================== -->
+
+<section id="featured" style="padding:100px 0; background:#f8f9fb;">
+
+<div class="container">
+
+<div style="text-align:center; max-width:760px; margin:0 auto 60px;">
+
+<span class="section-label">Featured U.S. Developments</span>
+
+<h2 class="section-title">
+Signature Residential & Mixed-Use Communities
+</h2>
+
+<p class="section-text">
+Explore professionally designed developments located in high-growth American markets. Each project includes residential living, premium amenities and long-term community planning.
+</p>
+
+</div>
+
+<!-- PROJECT 1 -->
+
+<div class="dev-project reveal" style="display:grid; grid-template-columns:1fr 1fr; gap:45px; align-items:center; 
+margin-bottom:80px;">
+
+<div class="image-gallery">
+    <div class="gallery-main">
+        <img src="https://images.openai.com/static-rsc-4/rimkhzZkD7_qSNMdilKQ7JqSZmoy74bAobPp7XgYyqMI55f--G9HsIhyl7LM1miQRPfi9OwfP7zWYtWkwAdW-hahzHDMnjtRD5_vGiuoDD-2bgby4yC7-oHSuvaIV-TSSyIsyymkajZP3aTPhybrlKGUMgjA7YFJyVlb9fENKYhAnsEVrR0hQCWjoGArdnR4?purpose=fullsize" 
+        alt="Hudson Point Residences Miami">
+    </div>
+
+    <div class="gallery-small">
+        <img src="https://images.openai.com/static-rsc-4/3sdCDApVscV26sGNDUT1kdseoMkxXQUGeEHBHqnFXQydJLT2uGeYFOtxKesHagTbaaGhO5Oc9eER5fFpE0yIqUOOhtC4RgNqXo0bwfmVC2kKhmDZNJl3h_vJU1e-03Me7cdesECCoOL3dNrJmwMXhOVqoHJqPH3b0r0RjefdJ5rbaq0Rw2G5rA78hBaS4AcP?purpose=fullsize" 
+        alt="Hudson Point Residences Miami exterior">
+        <img src="https://images.openai.com/static-rsc-4/LIQgE8fqQHQaPeVA_JODCVNv7tPcNXodXoJGJ3wp3nS16dFr8WPuMwWEOpbQ66waIxy-8NnI-PT4qJFZBHp5e5Fvaa0gpbQtfKRLV--NBKx9HvDUgvKwXBYSBwc6suKIqe8n2a8o8H6f3d6E225M2MChU1ybOB7-mXPHxktANigJX4dWVovxwNSZW__YA3yy?purpose=fullsize"
+         alt="Hudson Point Residences Miami interior">
+        <img src="https://images.openai.com/static-rsc-4/sG_nCmwGXf1VArdZJSMruuSUv9btJTQ-nXzDt_t6Iqt2G02hFGZ66Iw4mYgmsAedsMrrVus56_6ef91YawJlrEurM0Xl17vBf3dVqDbYmXdkdlvqSfPAVYma4PR7scubUGeCRhkw-ZOWMVJyPRKFPk5w-Q3diifjOwppWgjBVUBPQB6KGJobOaSXalHi98Lv?purpose=fullsize" 
+        alt="Hudson Point Residences Miami amenities">
+    </div>
+</div>
+
+<div>
+
+<span style="display:inline-block; background:#0B3D91; color:#fff; padding:6px 16px; 
+border-radius:30px; font-size:12px; font-weight:700;">
+UNDER CONSTRUCTION
+</span>
+
+<h2 style="font-size:40px; color:#0B3D91; margin:18px 0 8px;">
+Hudson Point Residences
+</h2>
+
+<p style="color:#0f0f0f; font-weight:600; margin-bottom:20px;">
+Miami, Florida
+</p>
+
+<p class="section-text">
+A contemporary 42-story residential tower offering waterfront living in one of South Florida's fastest-growing neighborhoods. Designed for primary homeowners, second-home buyers and international purchasers seeking luxury urban residences.
+</p>
+
+<div style="display:grid; grid-template-columns:1fr 1fr; gap:15px; margin:28px 0;">
+
+<div><strong>Residences</strong><br>286 Homes</div>
+
+<div><strong>Completion</strong><br>Q3 2027</div>
+
+<div><strong>Layouts</strong><br>1–4 Bedrooms</div>
+
+<div><strong>Amenities</strong><br>Pool • Spa • Concierge</div>
+
+</div>
+
+<div style="margin-bottom:12px; display:flex; justify-content:space-between; font-size:14px; font-weight:600;">
+<span>Construction Progress</span>
+<span>68%</span>
+</div>
+
+<div style="height:8px; background:#e5e7eb; border-radius:20px;">
+<div style="width:68%; height:100%; background:#D4AF37; border-radius:20px;"></div>
+</div>
+
+</div>
+
+</div>
+
+<!-- PROJECT 2 -->
+
+<div class="dev-project reveal" style="display:grid; grid-template-columns:1fr 1fr; gap:45px; align-items:center; margin-bottom:80px;">
+
+<div class="image-gallery">
+    <div class="gallery-main">
+        <img src="https://images.openai.com/static-rsc-4/fLkgFf3WXgBRxo90MvDai3u6Zk_baWu0cTO_I54hPUFj3sisdyQSDAfqWxueztMRJE2Pq6Gmalo0tJxcNL-kum28RLraBVb8mlVN1t84cDLVnsfa6BlFF_SBClEFjxs4P-Z_rnAwKmJeffZAIkbVgVSHoCOizJ3q3aUhBOfb53G9D1f89Hx2TfKONbMG5-9Z?purpose=fullsize" 
+        alt="Hudson Point Residences Miami">
+    </div>
+
+    <div class="gallery-small">
+        <img src="https://images.openai.com/static-rsc-4/jHEae0X3D3sq4WG-f_WcSSEuJX8s3w7ASz3m5qFh3-Qo1-rq0nMgVN-wcWywcWzXE8jWJCo7FTDuWIRx6JHK49V2fwspycHWrUVHAhewKv1vtBB15HQ2f8q3LNKYxLLckamAEtL2qmgkydivF-9lXJEO4lC6t6Jg5Iq7Peot42n33BqO1I-upSzdfRu_ogiO?purpose=fullsize" 
+        alt="Hudson Point Residences Miami exterior">
+        <img src="https://images.openai.com/static-rsc-4/0qry9s5CucKs4RNxWCUkez9U4SqBwixAdVzqy56THp1NdjhQ0QORCUGrRUoqY6kuEAf55QRjMjnLIy_lp9sAle-f1YNXMR0llVY04fvdnGuXsDwvO3uVxIQVYLM34urvyOQ01IJS3WTParhHHgZNrXmnuAULAzz-SFG5QeXxZXF1YWhJif4AoWy0XZHzxc2k?purpose=fullsize" 
+        alt="Hudson Point Residences Miami interior">
+        <img src="https://images.openai.com/static-rsc-4/0GDHxWqCy8WGTqsJERe8MktLu4KXdOyx2nR5uJ5Q_cxNpk_u7eDBGUZoBfYZD6mS3irDdMjsYusEkZ0FldXKcFOxZCV17j3JYnQ6FvsS81S7TGcH0C-9G2rEDi29f99prMkoFQdy0EMZM9Pj96_OamAREoIHA88ptb2f3lZYTalRtF9MrVE7u-UQPTQv8Np5?purpose=fullsize" 
+        alt="Hudson Point Residences Miami amenities">
+    </div>
+</div>
+
+<div style="order:1;">
+
+<span style="display:inline-block; background:hwb(44 7% 17% / 0.888); color:#fff; padding:6px 16px; border-radius:30px; font-size:12px; font-weight:700;">
+PLANNING PHASE
+</span>
+
+<h2 style="font-size:40px; color:#0B3D91; margin:18px 0 8px;">
+Oak District
+</h2>
+
+<p style="color:#0e0e0e; font-weight:600; margin-bottom:20px;">
+Austin, Texas
+</p>
+
+<p class="section-text">
+A 32-acre master-planned community combining luxury residences, walkable retail, office space and landscaped public parks. Positioned within one of Texas' strongest employment corridors.
+</p>
+
+<div style="display:grid; grid-template-columns:1fr 1fr; gap:15px; margin:28px 0;">
+
+<div><strong>Land Area</strong><br>32 Acres</div>
+
+<div><strong>Residential</strong><br>740 Homes</div>
+
+<div><strong>Commercial</strong><br>210,000 sq ft</div>
+
+<div><strong>Public Park</strong><br>8 Acres</div>
+
+</div>
+
+<div style="margin-bottom:12px; display:flex; justify-content:space-between; font-size:14px; font-weight:600;">
+<span>Planning & Entitlement</span>
+<span>24%</span>
+</div>
+
+<div style="height:8px; background:#e5e7eb; border-radius:20px;">
+<div style="width:24%; height:100%; background:#D4AF37; border-radius:20px;"></div>
+</div>
+
+</div>
+
+</div>
+
+<!-- PROJECT 3 -->
+
+<div class="dev-project reveal" style="display:grid; grid-template-columns:1fr 1fr; gap:45px; align-items:center;">
+
+<div class="image-gallery">
+    <div class="gallery-main">
+        <img src="https://images.openai.com/static-rsc-4/-nV_87NOFw-pusnKuZi32FZAi-va564VQjbpHQMG86LB0pklT1Ycgftsl2MdfRxDyBujLfPvecFylNge7-VJOQLfeCWA9xC5oCuNsKC36x3mPisZ11rpk7N3MOpYXvz71x9jUVj2uR0f4gW30vWkC-TSiORF58F-mIF_uC1d4959-6mizgaWWGmY2F71qvx3?purpose=fullsize" 
+        alt="Hudson Point Residences Miami">
+    </div>
+
+    <div class="gallery-small">
+        <img src="https://images.openai.com/static-rsc-4/7n8fV4CGSfnaJo08DRgsqI60WUf7a15Q_GRG9G7C4LIDoS8We-WOovEYDJDw5qv4g3601WRqVYB4dfBxlegitWEne7Fu1GvTj37Pz9VC86h13ahhfYOJ3OdsGLIb8jCyaaurV1KQqfROGfI8bA-MHYXiaXtOiGuUj1_s80rNWDxU57nCsbfkmLxf6QDoK4kd?purpose=fullsize" 
+        alt="Hudson Point Residences Miami exterior">
+        <img src="https://images.openai.com/static-rsc-4/h0Zg_gO-PAW-di0Pnf67ixCiBu9a9roEZVIRTUYa_3jJQ2pOoQ0zACi1kZi9WPxTmNS4OMuvWPzIk9bJxIg0v5QFBnbEUlQ97XYv7x1cROD6tRhjfyyuLBpKc2FxUVMTQny8qyyeZbSqM2JKhOcGUrKz6f4Ae05n56gV81RAuGbfyKwxsllu-XsCtU5dpcj2?purpose=fullsize" 
+        alt="Hudson Point Residences Miami interior">
+        <img src="https://images.openai.com/static-rsc-4/cjgIze4uawliekkU_jppLj8zD82g4D2BOnCNJF2XU-tXrOgEfRHpZGID44hFKSRSYhQneGlXMRA6ATvIBkiYz8WD4v5_3q0rY5-y7WXEN548wTC2ZoRY39KRscDKArXdM8RVzCVLSaJmhUUuFD2Mi4PnW_VdT39W2lmrKOvRvECoUJzsh8-OtUNXXWfx5V_P?purpose=fullsize" 
+        alt="Hudson Point Residences Miami amenities">
+    </div>
+</div>
+
+<div>
+
+<span style="display:inline-block; background:#198754; color:#fff; padding:6px 16px; border-radius:30px; font-size:12px; font-weight:700;">
+NOW SELLING
+</span>
+
+<h2 style="font-size:40px; color:#0B3D91; margin:18px 0 8px;">
+Madison Exchange
+</h2>
+
+<p style="color:#0b0b0b; font-weight:600; margin-bottom:20px;">
+Charlotte, North Carolina
+</p>
+
+<p class="section-text">
+A transit-oriented residential development featuring contemporary apartments, retail spaces, coworking lounges and wellness amenities within one of Charlotte's expanding business districts.
+</p>
+
+<div style="display:grid; grid-template-columns:1fr 1fr; gap:15px; margin:28px 0;">
+
+<div><strong>Homes</strong><br>198 Residences</div>
+
+<div><strong>Retail</strong><br>Ground Floor Shops</div>
+
+<div><strong>Parking</strong><br>Secure Garage</div>
+
+<div><strong>Wellness</strong><br>Fitness & Lounge</div>
+
+</div>
+
+<div style="margin-bottom:12px; display:flex; justify-content:space-between; font-size:14px; font-weight:600;">
+<span>Sales Release</span>
+<span>82%</span>
+</div>
+
+<div style="height:8px; background:#e5e7eb; border-radius:20px;">
+<div style="width:82%; height:100%; background:#D4AF37; border-radius:20px;"></div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =====================================================
+DEVELOPMENT PIPELINE
+===================================================== -->
+
+<section id="pipeline" style="padding:100px 0;">
+
+<div class="container">
+
+<div style="text-align:center; max-width:720px; margin:0 auto 60px;">
+
+<span class="section-label">Development Pipeline</span>
+
+<h2 class="section-title">
+How U.S. Development Projects Progress
+</h2>
+
+<p class="section-text">
+Every development follows multiple planning, approval and construction stages before residential occupancy. Timelines vary by municipality, permitting and construction schedules.
+</p>
+
+</div>
+
+<div style="display:grid; grid-template-columns:repeat(4,1fr); gap:20px;">
+
+<div style="background:#fff; border:1px solid #e5e7eb; padding:30px; border-radius:12px;">
+
+<i class="fas fa-map fa-2x" style="color:#050a32; margin-bottom:18px;"></i>
+
+<h3 style="color:#0B3D91;">Planning</h3>
+
+<p style="font-size:14px; color:#6b7280; line-height:1.7;">
+Land acquisition, market research, feasibility studies and zoning evaluation.
+</p>
+
+</div>
+
+<div style="background:#fff; border:1px solid #e5e7eb; padding:30px; border-radius:12px;">
+
+<i class="fas fa-drafting-compass fa-2x" style="color:#05082e; margin-bottom:18px;"></i>
+
+<h3 style="color:#0B3D91;">Design</h3>
+
+<p style="font-size:14px; color:#6b7280; line-height:1.7;">
+Architectural planning, engineering, municipal approvals and permitting.
+</p>
+
+</div>
+
+<div style="background:#fff; border:1px solid #e5e7eb; padding:30px; border-radius:12px;">
+
+<i class="fas fa-hard-hat fa-2x" style="color:#050328; margin-bottom:18px;"></i>
+
+<h3 style="color:#0B3D91;">Construction</h3>
+
+<p style="font-size:14px; color:#6b7280; line-height:1.7;">
+Structural construction, infrastructure installation and interior completion.
+</p>
+
+</div>
+
+<div style="background:#fff; border:1px solid #e5e7eb; padding:30px; border-radius:12px;">
+
+<i class="fas fa-key fa-2x" style="color:#0a064d; margin-bottom:18px;"></i>
+
+<h3 style="color:#0B3D91;">Completion</h3>
+
+<p style="font-size:14px; color:#6b7280; line-height:1.7;">
+Final inspections, closings, occupancy and community delivery.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =====================================================
+INTERNATIONAL BUYERS
+===================================================== -->
+
+<section id="international" style="padding:100px 0; 
+background:linear-gradient(rgba(5,27,63,.82),rgba(5,27,63,.82)), url('https://images.pexels.com/photos/30792663/pexels-photo-30792663.jpeg') center / cover no-repeat; color:#f9f3f3;">
+
+<div class="container">
+
+<div style="display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:center;">
+
+<div>
+
+<span class="section-label" style="color:#8686e1;">
+For Buyers Around the World
+</span>
+
+<h2 style="font-size:44px; color:#fff; margin-bottom:20px;">
+Buying New U.S. Developments
+</h2>
+
+<p style="color:rgba(255,255,255,.82); line-height:1.9; margin-bottom:25px;">
+Many newly built residential properties in the United States may be purchased by international buyers, subject to applicable laws, financing availability and individual transaction requirements.
+</p>
+
+<ul style="list-style:none; padding:0; margin:0;">
+
+<li style="display:flex; gap:12px; margin-bottom:16px;">
+<i class="fas fa-check-circle" style="color:#D4AF37; margin-top:4px;"></i>
+<span>Reserve newly built residences before completion</span>
+</li>
+
+<li style="display:flex; gap:12px; margin-bottom:16px;">
+<i class="fas fa-check-circle" style="color:#D4AF37; margin-top:4px;"></i>
+<span>Purchase primary residences or investment property</span>
+</li>
+
+<li style="display:flex; gap:12px; margin-bottom:16px;">
+<i class="fas fa-check-circle" style="color:#D4AF37; margin-top:4px;"></i>
+<span>Explore ownership structures with qualified professionals</span>
+</li>
+
+<li style="display:flex; gap:12px;">
+<i class="fas fa-check-circle" style="color:#D4AF37; margin-top:4px;"></i>
+<span>Coordinate with U.S. title, legal and lending specialists</span>
+</li>
+
+</ul>
+
+</div>
+
+<div style="background:rgba(255,255,255,.08); padding:35px; border-radius:14px; border:1px solid rgba(255,255,255,.15);">
+
+<h3 style="color:#fff; margin-bottom:18px;">
+Important Information
+</h3>
+
+<p style="color:rgba(255,255,255,.75); line-height:1.8; font-size:14px;">
+Atlas Property Group provides a starting point for researching U.S. developments. We work with buyers across the United States and around the world, offering market guidance, verified property access, remote property tours, and transaction coordination.
+</p>
+
+<a href="international-buyers.html" class="btn btn-primary" style="margin-top:18px;">
+International Buyer Guide
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =====================================================
+ACQUISITION PROCESS
+===================================================== -->
+
+<section id="process" style="padding:100px 0;">
+
+<div class="container">
+
+<div style="text-align:center; max-width:700px; margin:0 auto 60px;">
+
+<span class="section-label">
+Development Purchase Process
+</span>
+
+<h2 class="section-title">
+From Reservation to Closing
+</h2>
+
+<p class="section-text">
+A structured purchasing process helps buyers understand construction milestones, documentation and closing requirements before acquiring a newly built property.
+</p>
+
+</div>
+
+<div style="display:grid; grid-template-columns:repeat(3,1fr); gap:24px;">
+
+<div style="text-align:center;">
+<div style="width:60px; height:60px; background:#0B3D91; color:#fff; border-radius:50%; display:flex; align-items:center; justify-content:center; margin:auto auto 18px; font-weight:700;">1</div>
+<h3 style="color:#0B3D91;">Explore Projects</h3>
+<p style="font-size:14px; color:#6b7280;">Review available developments, locations and floor plans.</p>
+</div>
+
+<div style="text-align:center;">
+<div style="width:60px; height:60px; background:#0B3D91; color:#fff; border-radius:50%; display:flex; align-items:center; justify-content:center; margin:auto auto 18px; font-weight:700;">2</div>
+<h3 style="color:#0B3D91;">Select Residence</h3>
+<p style="font-size:14px; color:#6b7280;">Compare layouts, pricing, availability and community features.</p>
+</div>
+
+<div style="text-align:center;">
+<div style="width:60px; height:60px; background:#0B3D91; color:#fff; border-radius:50%; display:flex; align-items:center; justify-content:center; margin:auto auto 18px; font-weight:700;">3</div>
+<h3 style="color:#0B3D91;">Financing Review</h3>
+<p style="font-size:14px; color:#6b7280;">Determine financing options and ownership considerations.</p>
+</div>
+
+<div style="text-align:center;">
+<div style="width:60px; height:60px; background:#0B3D91; color:#fff; border-radius:50%; display:flex; align-items:center; justify-content:center; margin:auto auto 18px; font-weight:700;">4</div>
+<h3 style="color:#0B3D91;">Due Diligence</h3>
+<p style="font-size:14px; color:#6b7280;">Review disclosures, contracts and construction documentation.</p>
+</div>
+
+<div style="text-align:center;">
+<div style="width:60px; height:60px; background:#0B3D91; color:#fff; border-radius:50%; display:flex; align-items:center; justify-content:center; margin:auto auto 18px; font-weight:700;">5</div>
+<h3 style="color:#0B3D91;">Reservation</h3>
+<p style="font-size:14px; color:#6b7280;">Execute purchase agreements and reserve the selected residence.</p>
+</div>
+
+<div style="text-align:center;">
+<div style="width:60px; height:60px; background:#0B3D91; color:#fff; border-radius:50%; display:flex; align-items:center; justify-content:center; margin:auto auto 18px; font-weight:700;">6</div>
+<h3 style="color:#0B3D91;">Closing</h3>
+<p style="font-size:14px; color:#6b7280;">Complete final inspections, settlement and property delivery.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =====================================================
+FAQ
+===================================================== -->
+
+<section id="faq" style="padding:90px 0; background:#f8f9fb;">
+
+<div class="container">
+
+<div style="text-align:center; max-width:700px; margin:0 auto 50px;">
+
+<span class="section-label">
+Frequently Asked Questions
+</span>
+
+<h2 class="section-title">
+Development Buying FAQ
+</h2>
+
+</div>
+
+<div style="max-width:900px; margin:auto; display:grid; gap:18px;">
+
+<div style="background:#fff; padding:28px; border-radius:12px;">
+<h3 style="color:#0B3D91;">Can international buyers purchase newly built developments?</h3>
+<p style="color:#6b7280; line-height:1.8;">
+Yes. Many U.S. residential developments are available to qualified international buyers, subject to applicable laws, financing and transaction requirements.
+</p>
+</div>
+
+<div style="background:#fff; padding:28px; border-radius:12px;">
+<h3 style="color:#0B3D91;">Are construction completion dates guaranteed?</h3>
+<p style="color:#6b7280; line-height:1.8;">
+No. Construction schedules are estimates and may change because of permitting, weather, supply chain conditions or other project-related factors.
+</p>
+</div>
+
+<div style="background:#fff; padding:28px; border-radius:12px;">
+<h3 style="color:#0B3D91;">Can I finance a pre-construction residence?</h3>
+<p style="color:#6b7280; line-height:1.8;">
+Financing depends on lender requirements, buyer qualifications, residency status and the individual development project.
+</p>
+</div>
+
+<div style="background:#fff; padding:28px; border-radius:12px;">
+<h3 style="color:#0B3D91;">Does Atlas provide legal or tax advice?</h3>
+<p style="color:#6b7280; line-height:1.8;">
+No. Buyers should consult qualified U.S. legal, tax, title and lending professionals regarding their individual circumstances.
+</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- PART 3 STARTS BELOW -->
+ <!-- =====================================================
+FINAL CALL TO ACTION
+===================================================== -->
+
+<section class="development-cta" style="padding:100px 0; background:linear-gradient(rgba(5,27,63,.92),rgba(5,27,63,.92)), url('asset/inv1.jpg'); background-size:cover; background-position:center; color:#fff; text-align:center;">
+
+    <div class="container">
+
+        <span class="section-label" style="color:#D4AF37;">
+            START YOUR U.S. PROPERTY JOURNEY
+        </span>
+
+        <h2 style="font-size:clamp(2.3rem,4vw,3.8rem); color:#fff; margin:18px 0 20px;">
+            Interested in a New Development?
+        </h2>
+
+        <p style="max-width:760px; margin:0 auto 35px; line-height:1.9; color:rgba(255,255,255,.82); font-size:16px;">
+            Whether you're purchasing a primary residence, second home or investment property, Atlas Property Group can help you explore available U.S. developments and begin your property research with confidence.
+        </p>
+
+        <div style="display:flex; justify-content:center; flex-wrap:wrap; gap:16px;">
+
+            <a href="contact.html" class="btn btn-primary">
+                Contact Atlas
+            </a>
+
+            <a href="investments.html" class="btn btn-outline">
+                Investment Opportunities
+            </a>
+
+            <a href="international-buyers.html" class="btn btn-outline">
+                International Buyer Guide
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =====================================================
+LEGAL DISCLAIMER
+===================================================== -->
+
+
+
+    <div class="container">
+
+        <div style="max-width:980px; margin:auto; text-align:center; color:#666; font-size:12px; line-height:1.8;">
+
+            <strong>Important Information</strong><br><br>
+
+            The developments presented on this page are provided for informational purposes to illustrate residential, mixed-use and commercial opportunities within the United States. Availability, pricing, construction schedules, specifications and completion dates may change without notice.
+
+            <br><br>
+
+            Atlas Property Group does not provide legal, immigration, tax or investment advice. Buyers and investors should conduct independent due diligence and consult appropriately qualified U.S. real estate, legal, tax, title and lending professionals before entering into any transaction.
+
+        </div>
+
+    </div>
+
+</section> -->
+
+<!-- =====================================================
+BACK TO TOP BUTTON
+===================================================== -->
+
+<button id="backToTop" aria-label="Back to top">
+
+    <i class="fas fa-arrow-up"></i>
+
+</button>
+
+<style>
+
+#backToTop{
+
+position:fixed;
+
+right:24px;
+
+bottom:24px;
+
+width:48px;
+
+height:48px;
+
+border:none;
+
+border-radius:50%;
+
+background:#0B3D91;
+
+color:#fff;
+
+cursor:pointer;
+
+opacity:0;
+
+visibility:hidden;
+
+transform:translateY(15px);
+
+transition:.3s;
+
+z-index:9999;
+
+box-shadow:0 8px 25px rgba(0,0,0,.18);
+
+}
+
+#backToTop.show{
+
+opacity:1;
+
+visibility:visible;
+
+transform:translateY(0);
+
+}
+
+#backToTop:hover{
+
+background:#D4AF37;
+
+transform:translateY(-3px);
+
+}
+
+@media(max-width:992px){
+
+.dev-project{
+
+grid-template-columns:1fr !important;
+
+}
+
+.dev-project div:first-child,
+
+.dev-project div:last-child{
+
+order:unset !important;
+
+}
+
+}
+
+@media(max-width:768px){
+
+#pipeline .container>div:last-child{
+
+grid-template-columns:1fr 1fr !important;
+
+}
+
+#process .container>div:last-child{
+
+grid-template-columns:1fr 1fr !important;
+
+}
+
+#international .container>div{
+
+grid-template-columns:1fr !important;
+
+}
+
+}
+
+@media(max-width:540px){
+
+#pipeline .container>div:last-child,
+
+#process .container>div:last-child{
+
+grid-template-columns:1fr !important;
+
+}
+
+#backToTop{
+
+right:16px;
+
+bottom:16px;
+
+width:44px;
+
+height:44px;
+
+}
+
+}
+
+</style>
+
+<!-- =====================================================
+SHARED FOOTER
+===================================================== -->
+
+<div id="shared-footer-root" data-shared-footer="true"></div>
+
+<!-- =====================================================
+SCRIPTS
+===================================================== -->
+
+<script src="js/navbar.js"></script>
+<script src="js/main.js"></script>
+<script src="js/footer.js"></script>
+
+<script>
+
+/* ==========================================
+SMOOTH SCROLL
+========================================== */
+
+document.querySelectorAll('.dev-links a[href^="#"]').forEach(link=>{
+
+link.addEventListener("click",function(e){
+
+const target=document.querySelector(this.getAttribute("href"));
+
+if(!target)return;
+
+e.preventDefault();
+
+const header=document.querySelector(".main-header");
+
+const nav=document.querySelector(".development-nav");
+
+let offset=20;
+
+if(header)offset+=header.offsetHeight;
+
+if(nav)offset+=nav.offsetHeight;
+
+window.scrollTo({
+
+top:target.offsetTop-offset,
+
+behavior:"smooth"
+
+});
+
+});
+
+});
+
+/* ==========================================
+ACTIVE SECTION HIGHLIGHT
+========================================== */
+
+const sections=document.querySelectorAll("section[id]");
+
+const navLinks=document.querySelectorAll(".dev-links a");
+
+window.addEventListener("scroll",()=>{
+
+let current="";
+
+sections.forEach(sec=>{
+
+const top=sec.offsetTop-180;
+
+if(pageYOffset>=top){
+
+current=sec.getAttribute("id");
+
+}
+
+});
+
+navLinks.forEach(link=>{
+
+link.style.color="rgba(255,255,255,.85)";
+
+if(link.getAttribute("href")==="#"+current){
+
+link.style.color="#D4AF37";
+
+}
+
+});
+
+});
+
+/* ==========================================
+BACK TO TOP
+========================================== */
+
+const topBtn=document.getElementById("backToTop");
+
+window.addEventListener("scroll",()=>{
+
+if(window.scrollY>500){
+
+topBtn.classList.add("show");
+
+}else{
+
+topBtn.classList.remove("show");
+
+}
+
+});
+
+topBtn.addEventListener("click",()=>{
+
+window.scrollTo({
+
+top:0,
+
+behavior:"smooth"
+
+});
+
+});
+
+</script>
+
+</body>
+</html>

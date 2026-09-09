@@ -1,0 +1,1091 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>FAQ & International Buyer Guide | Atlas Property Group</title>
+
+<meta name="description" content="Frequently asked questions and a professional international buyer guide for purchasing real estate in the United States through Atlas Property Group.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/variables.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/responsive.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+
+/* ===============================
+   ATLAS FAQ + BUYER GUIDE
+================================= */
+
+:root{
+    --faq-bg:#F6F3EE;
+    --faq-surface:#FFFFFF;
+    --faq-dark:#232323;
+    --faq-text:#555555;
+    --faq-border:#E7E2DA;
+    --faq-accent:#8C7A5B;
+}
+
+body{
+    background:var(--faq-bg);
+    color:var(--faq-dark);
+    font-family:'Poppins',sans-serif;
+}
+
+/* Hero */
+
+.faq-hero{
+    margin-top:90px;
+    min-height:55vh;
+    display:flex;
+    align-items:center;
+    background:
+    linear-gradient(rgba(24,24,24,.55),rgba(24,24,24,.55)),
+    url('https://images.pexels.com/photos/2789781/pexels-photo-2789781.jpeg');
+    background-size:cover;
+    background-position:center;
+    color:#fff;
+}
+
+.faq-hero-content{
+    max-width:760px;
+    padding:90px 0;
+}
+
+.faq-hero span{
+    letter-spacing:3px;
+    text-transform:uppercase;
+    font-size:13px;
+    font-weight:600;
+    color:#E8DED0;
+}
+
+.faq-hero h1{
+    font-family:'Cormorant Garamond',serif;
+    font-size:clamp(52px,7vw,82px);
+    font-weight:600;
+    line-height:.95;
+    margin:18px 0;
+}
+
+.faq-hero p{
+    font-size:16px;
+    line-height:1.9;
+    color:rgba(255,255,255,.88);
+}
+
+/* Navigation */
+
+.guide-nav{
+    position:sticky;
+    top:88px;
+    z-index:50;
+    background:#fff;
+    border-bottom:1px solid var(--faq-border);
+}
+
+.guide-nav ul{
+    display:flex;
+    overflow:auto;
+    gap:28px;
+    list-style:none;
+    padding:18px 0;
+    margin:0;
+}
+
+.guide-nav a{
+    text-decoration:none;
+    color:#444;
+    font-size:13px;
+    font-weight:600;
+    white-space:nowrap;
+}
+
+.guide-nav a:hover{
+    color:var(--faq-accent);
+}
+
+/* Layout */
+
+.faq-wrapper{
+    padding:90px 0;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:55px;
+}
+
+.section-title span{
+    color:var(--faq-accent);
+    text-transform:uppercase;
+    letter-spacing:2px;
+    font-size:12px;
+    font-weight:700;
+}
+
+.section-title h2{
+    font-family:'Cormorant Garamond',serif;
+    font-size:54px;
+    margin:15px 0;
+    color:var(--faq-dark);
+}
+
+.section-title p{
+    max-width:700px;
+    margin:auto;
+    color:var(--faq-text);
+    line-height:1.8;
+}
+
+/* Guide Cards */
+
+.guide-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:22px;
+    margin-bottom:90px;
+}
+
+.guide-card{
+    background:#fff;
+    padding:30px;
+    border:1px solid var(--faq-border);
+    border-radius:14px;
+    transition:.3s;
+}
+
+.guide-card:hover{
+    transform:translateY(-6px);
+}
+
+.guide-card i{
+    font-size:30px;
+    color:var(--faq-accent);
+    margin-bottom:18px;
+}
+
+.guide-card h3{
+    font-family:'Cormorant Garamond',serif;
+    font-size:28px;
+    margin-bottom:12px;
+}
+
+.guide-card p{
+    font-size:14px;
+    line-height:1.8;
+    color:var(--faq-text);
+}
+
+/* Timeline */
+
+.timeline{
+    display:grid;
+    gap:22px;
+    margin-bottom:90px;
+}
+
+.step{
+    display:grid;
+    grid-template-columns:90px 1fr;
+    gap:25px;
+    align-items:start;
+    background:#fff;
+    padding:28px;
+    border-radius:12px;
+    border:1px solid var(--faq-border);
+}
+
+.step-number{
+    width:62px;
+    height:62px;
+    border-radius:50%;
+    background:#F1ECE4;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:700;
+    color:var(--faq-accent);
+    font-size:22px;
+}
+
+.step h3{
+    margin:0 0 8px;
+    font-size:24px;
+    font-family:'Cormorant Garamond',serif;
+}
+
+.step p{
+    margin:0;
+    color:var(--faq-text);
+    line-height:1.8;
+}
+
+/* Documents */
+
+.docs-box{
+    background:#fff;
+    border:1px solid var(--faq-border);
+    border-radius:16px;
+    padding:40px;
+    margin-bottom:90px;
+}
+
+.docs-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:22px;
+}
+
+.doc-item{
+    display:flex;
+    gap:15px;
+    align-items:flex-start;
+}
+
+.doc-item i{
+    color:var(--faq-accent);
+    margin-top:5px;
+    font-size:20px;
+}
+
+.doc-item h4{
+    margin:0 0 6px;
+    font-size:16px;
+}
+
+.doc-item p{
+    margin:0;
+    color:var(--faq-text);
+    font-size:14px;
+    line-height:1.7;
+}
+
+/* FAQ */
+
+.faq-list{
+    display:grid;
+    gap:18px;
+}
+
+.faq-item{
+    background:#fff;
+    border-radius:12px;
+    border:1px solid var(--faq-border);
+    overflow:hidden;
+}
+
+.faq-question{
+    padding:26px 28px;
+    cursor:pointer;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    font-weight:600;
+    font-size:17px;
+}
+
+.faq-question i{
+    transition:.3s;
+}
+
+.faq-answer{
+    max-height:0;
+    overflow:hidden;
+    transition:.35s ease;
+    padding:0 28px;
+}
+
+.faq-answer p{
+    color:var(--faq-text);
+    line-height:1.9;
+    margin-bottom:22px;
+}
+
+.faq-item.active .faq-answer{
+    max-height:450px;
+    padding-bottom:22px;
+}
+
+.faq-item.active i{
+    transform:rotate(180deg);
+    color:var(--faq-accent);
+}
+
+/* CTA */
+
+.guide-cta{
+    margin-top:90px;
+    background:#262626;
+    color:#fff;
+    border-radius:18px;
+    padding:70px 40px;
+    text-align:center;
+}
+
+.guide-cta h2{
+    font-family:'Cormorant Garamond',serif;
+    font-size:48px;
+    margin-bottom:15px;
+}
+
+.guide-cta p{
+    max-width:650px;
+    margin:0 auto 30px;
+    line-height:1.8;
+    color:rgba(255,255,255,.75);
+}
+
+/* Mobile */
+
+@media(max-width:992px){
+
+.guide-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+.docs-grid{
+grid-template-columns:1fr;
+}
+
+}
+
+@media(max-width:768px){
+
+.faq-hero{
+min-height:45vh;
+}
+
+.guide-grid{
+grid-template-columns:1fr;
+}
+
+.step{
+grid-template-columns:1fr;
+}
+
+.step-number{
+margin-bottom:15px;
+}
+
+.section-title h2{
+font-size:40px;
+}
+
+.guide-cta{
+padding:50px 25px;
+}
+
+.guide-cta h2{
+font-size:38px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+    <!-- SHARED NAVBAR -->
+    <div id="shared-header-root" data-shared-navbar="true"></div>
+
+    <!-- ===============================
+         HERO
+    ================================ -->
+
+    <section class="faq-hero">
+        <div class="container">
+            <div class="faq-hero-content">
+
+                <span>Atlas Knowledge Centre</span>
+
+                <h1>FAQ & International Buyer Guide</h1>
+
+                <p>
+                    Everything you need to know about purchasing real estate in the
+                    United States. Whether you're a U.S. resident or buying from
+                    abroad, this guide explains the process, required documents,
+                    financing, closing, and the most common questions asked by buyers.
+                </p>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===============================
+         STICKY NAVIGATION
+    ================================ -->
+
+    <nav class="guide-nav">
+        <div class="container">
+            <ul>
+                <li><a href="#guide">Buyer Guide</a></li>
+                <li><a href="#process">Buying Process</a></li>
+                <li><a href="#documents">Required Documents</a></li>
+                <li><a href="#international">International Buyers</a></li>
+                <li><a href="#faq">FAQs</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="faq-wrapper">
+
+        <div class="container">
+
+            <!-- ===============================
+                 BUYER GUIDE
+            ================================ -->
+
+            <section id="guide">
+
+                <div class="section-title">
+                    <span>United States Real Estate</span>
+                    <h2>Buying Property with Confidence</h2>
+                    <p>
+                        Atlas Property Group provides professional guidance throughout
+                        the property acquisition journey. While every transaction is
+                        unique, the following overview explains the standard buying
+                        process for residential and investment real estate in the
+                        United States.
+                    </p>
+                </div>
+
+                <div class="guide-grid">
+
+                    <div class="guide-card">
+                        <i class="fas fa-house-user"></i>
+                        <h3>Primary Residence</h3>
+                        <p>
+                            Purchase a home to live in, relocate with your family,
+                            or establish a permanent residence within the United States.
+                        </p>
+                    </div>
+
+                    <div class="guide-card">
+                        <i class="fas fa-city"></i>
+                        <h3>Luxury Property</h3>
+                        <p>
+                            Explore premium residences, waterfront estates, penthouses,
+                            and architecturally significant homes across major U.S. markets.
+                        </p>
+                    </div>
+
+                    <div class="guide-card">
+                        <i class="fas fa-chart-line"></i>
+                        <h3>Investment Assets</h3>
+                        <p>
+                            Identify rental, multifamily and commercial opportunities
+                            designed for long-term capital growth and income potential.
+                        </p>
+                    </div>
+
+                    <div class="guide-card">
+                        <i class="fas fa-earth-americas"></i>
+                        <h3>International Buyers</h3>
+                        <p>
+                            Non-U.S. residents may legally purchase property in the
+                            United States, subject to applicable federal, state and
+                            local requirements.
+                        </p>
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- ===============================
+                 BUYING PROCESS
+            ================================ -->
+
+            <section id="process">
+
+                <div class="section-title">
+                    <span>Step-by-Step Guide</span>
+                    <h2>The U.S. Buying Process</h2>
+                </div>
+
+                <div class="timeline">
+
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div>
+                            <h3>Define Your Goals</h3>
+                            <p>
+                                Determine whether you're purchasing a primary residence,
+                                vacation home, rental property or commercial investment.
+                                Establish your preferred location, budget and timeline.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div>
+                            <h3>Financial Preparation</h3>
+                            <p>
+                                Buyers paying cash should verify available funds,
+                                while financed purchases generally require mortgage
+                                pre-qualification or proof of financing eligibility.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div>
+                            <h3>Property Search</h3>
+                            <p>
+                                Atlas helps clients identify verified listings,
+                                compare neighborhoods, schedule private viewings,
+                                and evaluate market value before making an offer.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <div>
+                            <h3>Offer & Negotiation</h3>
+                            <p>
+                                Once you've selected a property, a written purchase
+                                offer is submitted. Price, contingencies, inspection
+                                periods and closing timelines are negotiated.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-number">5</div>
+                        <div>
+                            <h3>Due Diligence</h3>
+                            <p>
+                                The property typically undergoes inspections,
+                                appraisal (when financed), title review and
+                                verification of ownership before closing.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-number">6</div>
+                        <div>
+                            <h3>Closing</h3>
+                            <p>
+                                Final documents are signed, funds are transferred,
+                                title is recorded, and ownership officially changes
+                                to the buyer.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </section>
+
+                        <!-- ===============================
+                 REQUIRED DOCUMENTS
+            ================================ -->
+
+            <section id="documents">
+
+                <div class="section-title">
+                    <span>Documentation</span>
+                    <h2>What You'll Typically Need</h2>
+                    <p>
+                        Documentation varies depending on whether you're paying cash,
+                        obtaining financing, or purchasing as an international buyer.
+                        Atlas helps coordinate the transaction, while legal, title and
+                        lending professionals provide advice within their respective fields.
+                    </p>
+                </div>
+
+                <div class="docs-box">
+
+                    <div class="docs-grid">
+
+                        <div class="doc-item">
+                            <i class="fas fa-passport"></i>
+                            <div>
+                                <h4>Government Identification</h4>
+                                <p>
+                                    Valid passport or government-issued photo ID for identity verification.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="doc-item">
+                            <i class="fas fa-file-invoice-dollar"></i>
+                            <div>
+                                <h4>Proof of Funds</h4>
+                                <p>
+                                    Bank statements or financial documentation demonstrating purchasing capacity.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="doc-item">
+                            <i class="fas fa-university"></i>
+                            <div>
+                                <h4>Mortgage Pre-Approval</h4>
+                                <p>
+                                    Required for financed purchases and strengthens your offer during negotiations.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="doc-item">
+                            <i class="fas fa-file-signature"></i>
+                            <div>
+                                <h4>Purchase Agreement</h4>
+                                <p>
+                                    The legal contract outlining purchase price, contingencies and closing terms.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="doc-item">
+                            <i class="fas fa-building-columns"></i>
+                            <div>
+                                <h4>Title & Closing Documents</h4>
+                                <p>
+                                    Prepared by the title or closing company before ownership is transferred.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="doc-item">
+                            <i class="fas fa-globe"></i>
+                            <div>
+                                <h4>International Identification</h4>
+                                <p>
+                                    Overseas buyers may need additional banking or identification documentation depending on the transaction.
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ===============================
+                 INTERNATIONAL BUYER GUIDE
+            ================================ -->
+
+            <section id="international">
+
+                <div class="section-title">
+                    <span>For Buyers Around the World</span>
+                    <h2>International Buyer Guide</h2>
+                    <p>
+                        The United States welcomes property ownership by foreign nationals.
+                        International buyers can legally purchase residential and commercial
+                        real estate in most U.S. markets, whether for personal use or investment.
+                    </p>
+                </div>
+
+                <div class="timeline">
+
+                    <div class="step">
+                        <div class="step-number">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <div>
+                            <h3>Can non-U.S. citizens buy property?</h3>
+                            <p>
+                                Yes. U.S. citizenship or permanent residency is generally not required
+                                to purchase property. Many overseas buyers acquire homes, condominiums,
+                                vacation residences and investment properties throughout the United States.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-number">
+                            <i class="fas fa-dollar-sign"></i>
+                        </div>
+                        <div>
+                            <h3>Cash or Financing</h3>
+                            <p>
+                                International buyers may purchase with cash or obtain financing through
+                                lenders that offer mortgage products for foreign nationals. Loan availability,
+                                down payment requirements and documentation vary by lender.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-number">
+                            <i class="fas fa-video"></i>
+                        </div>
+                        <div>
+                            <h3>Buying Remotely</h3>
+                            <p>
+                                Buyers do not always need to travel to complete a transaction.
+                                Virtual property tours, electronic signatures and remote closing
+                                options are commonly available depending on state regulations.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-number">
+                            <i class="fas fa-landmark"></i>
+                        </div>
+                        <div>
+                            <h3>Closing the Transaction</h3>
+                            <p>
+                                Before closing, buyers typically complete inspections, title review,
+                                final document signing and fund transfer. Ownership is recorded once
+                                the transaction has officially closed.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <!-- Financing Overview -->
+
+                <div class="docs-box">
+
+                    <h3 style="font-family:'Cormorant Garamond',serif;font-size:38px;margin-bottom:30px;">
+                        Financing Overview
+                    </h3>
+
+                    <div class="docs-grid">
+
+                        <div class="doc-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4>U.S. Residents</h4>
+                                <p>
+                                    Conventional mortgages, FHA, VA (eligible borrowers), jumbo financing,
+                                    adjustable-rate and investment property loan programs may be available.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="doc-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4>International Buyers</h4>
+                                <p>
+                                    Foreign national mortgage programs are offered by selected lenders and
+                                    generally require higher down payments together with proof of income,
+                                    assets and identity.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="doc-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4>Cash Purchases</h4>
+                                <p>
+                                    Cash transactions typically involve proof of funds, title verification
+                                    and closing through an escrow or title company.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="doc-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4>Investment Properties</h4>
+                                <p>
+                                    Financing terms for rental and commercial properties may differ from
+                                    owner-occupied residential purchases.
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Ownership Structure -->
+
+                <div class="docs-box">
+
+                    <h3 style="font-family:'Cormorant Garamond',serif;font-size:38px;margin-bottom:30px;">
+                        Choosing How to Hold Property
+                    </h3>
+
+                    <p style="color:var(--faq-text);line-height:1.9;margin-bottom:35px;">
+                        Buyers may purchase property in their personal name or through an entity,
+                        depending on their objectives. The appropriate ownership structure should be
+                        discussed with qualified legal and tax professionals before completing a purchase.
+                    </p>
+
+                    <div class="docs-grid">
+
+                        <div class="doc-item">
+                            <i class="fas fa-user"></i>
+                            <div>
+                                <h4>Individual Ownership</h4>
+                                <p>
+                                    Common for primary residences and personal property purchases.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="doc-item">
+                            <i class="fas fa-building"></i>
+                            <div>
+                                <h4>LLC Ownership</h4>
+                                <p>
+                                    Frequently used for investment properties, asset management and certain commercial holdings.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="doc-item">
+                            <i class="fas fa-users"></i>
+                            <div>
+                                <h4>Joint Ownership</h4>
+                                <p>
+                                    Available for spouses, family members and multiple investors depending on the transaction.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="doc-item">
+                            <i class="fas fa-scale-balanced"></i>
+                            <div>
+                                <h4>Professional Advice</h4>
+                                <p>
+                                    Atlas coordinates the real estate transaction but does not provide legal or tax advice.
+                                    Buyers should consult qualified U.S. legal, tax, title and lending professionals regarding their individual circumstances.
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+                        <!-- ===============================
+                 FREQUENTLY ASKED QUESTIONS
+            ================================ -->
+
+            <section id="faq">
+
+                <div class="section-title">
+                    <span>Frequently Asked Questions</span>
+                    <h2>Answers to Common Buyer Questions</h2>
+                    <p>
+                        The following information addresses many of the questions we receive from U.S. residents,
+                        international purchasers, property investors and first-time buyers.
+                    </p>
+                </div>
+
+                <div class="faq-list">
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            Can foreign nationals legally buy property in the United States?
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>
+                                Yes. In most cases, foreign nationals may legally purchase residential,
+                                commercial and investment real estate in the United States. Citizenship
+                                is generally not required to own property, although financing and tax
+                                obligations may differ depending on your circumstances.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            Do I need to travel to the U.S. to complete my purchase?
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>
+                                Not always. Many buyers complete property tours virtually, sign documents
+                                electronically and close remotely through approved title and escrow companies,
+                                depending on state regulations.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            Can Atlas help me obtain a mortgage?
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>
+                                Atlas can introduce buyers to reputable U.S. lending professionals and
+                                mortgage providers. Loan approval, underwriting and financing decisions
+                                are handled exclusively by licensed lenders.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            What is a title company and why is it important?
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>
+                                A title company verifies legal ownership, researches property records,
+                                manages escrow funds and helps facilitate the closing process to ensure
+                                ownership is transferred correctly.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            Does Atlas provide legal or tax advice?
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>
+                                No. Atlas Property Group is a real estate brokerage and advisory company.
+                                Buyers should consult qualified U.S. attorneys, certified public accountants,
+                                tax advisors and title professionals regarding legal, tax and ownership matters.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            How much money should I budget beyond the purchase price?
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>
+                                Buyers should also plan for closing costs, inspections, title services,
+                                insurance, property taxes and, where applicable, lender fees. The exact
+                                amount varies by state and transaction type.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            Can I purchase property through an LLC?
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>
+                                Yes. Many investment properties are acquired through limited liability
+                                companies (LLCs). The appropriate ownership structure depends on your
+                                investment objectives and should be discussed with qualified legal advisors.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            Which U.S. markets does Atlas serve?
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>
+                                Atlas focuses on major American real estate markets including New York,
+                                Florida, Texas, California, Georgia, Illinois, Arizona, North Carolina
+                                and Washington, D.C., while also assisting clients with opportunities
+                                across additional U.S. regions.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ===============================
+                 CALL TO ACTION
+            ================================ -->
+
+            <section class="guide-cta">
+
+                <span style="letter-spacing:2px;text-transform:uppercase;font-size:12px;color:#CFC7BA;">
+                    Atlas Property Group
+                </span>
+
+                <h2>Ready to Begin Your U.S. Property Journey?</h2>
+
+                <p>
+                    Whether you're purchasing your first American home, expanding an investment portfolio
+                    or relocating from overseas, Atlas Property Group is here to help you navigate the
+                    U.S. real estate market with confidence.
+                </p>
+
+                <div style="display:flex;justify-content:center;gap:15px;flex-wrap:wrap;">
+
+                    <a href="contact.html" class="btn btn-primary">
+                        Speak With an Advisor
+                    </a>
+
+                    <a href="properties.html" class="btn btn-outline" style="border-color:#fff;color:#fff;">
+                        Browse Properties
+                    </a>
+
+                </div>
+
+            </section>
+
+        </div>
+
+    </main>
+
+
+    <!-- SHARED FOOTER -->
+
+    <div id="shared-footer-root" data-shared-footer="true"></div>
+
+
+    <!-- ===============================
+         SCRIPTS
+    ================================ -->
+
+    <script src="js/navbar.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/footer.js"></script>
+
+    <script>
+
+    document.querySelectorAll(".faq-question").forEach(question=>{
+
+        question.addEventListener("click",()=>{
+
+            const item=question.parentElement;
+
+            document.querySelectorAll(".faq-item").forEach(faq=>{
+
+                if(faq!==item){
+                    faq.classList.remove("active");
+                }
+
+            });
+
+            item.classList.toggle("active");
+
+        });
+
+    });
+
+    </script>
+
+</body>
+</html>

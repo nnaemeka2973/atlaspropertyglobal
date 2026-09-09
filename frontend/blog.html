@@ -1,0 +1,1528 @@
+﻿<!DOCTYPE html>
+<html lang="en" class="blog-page">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Atlas Property Journal | U.S. Real Estate News & Market Intelligence</title>
+
+    <meta name="description"
+          content="Atlas Property Journal covers U.S. residential, luxury, commercial and investment real estate, including housing markets, development, mortgage conditions and guidance for international buyers.">
+
+    <meta name="keywords"
+          content="U.S. real estate news, American real estate, housing market, luxury real estate, commercial real estate, property investment, mortgage market, international buyers">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Montserrat:wght@500;700&family=Poppins:wght@300;400;600&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+
+        .blog-page {
+            overflow-x: hidden;
+        }
+
+        /* ==========================================================
+           ATLAS PROPERTY JOURNAL
+           U.S. REAL ESTATE PUBLICATION
+        ========================================================== */
+
+        .blog-wrapper {
+            padding-top: 140px;
+            overflow: hidden;
+        }
+
+        /* Publication masthead */
+
+        .journal-masthead {
+            position: relative;
+            isolation: isolate;
+            overflow: hidden;
+            min-height: 360px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 70px 58px 52px;
+            border-radius: 12px;
+            border-bottom: 1px solid var(--border-color);
+            margin-bottom: 28px;
+            background:
+                linear-gradient(90deg, rgba(5, 25, 52, .68), rgba(5, 25, 52, .24)),
+                url('https://images.pexels.com/photos/16764815/pexels-photo-16764815.jpeg') center 42% / cover no-repeat;
+        }
+
+        .journal-masthead::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            z-index: -1;
+            background: linear-gradient(180deg, rgba(5, 25, 52, .02), rgba(5, 25, 52, .18));
+        }
+
+        .journal-kicker {
+            display: block;
+            color: var(--accent-gold);
+            font-family: var(--font-body, "Poppins", sans-serif);
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.18em;
+            margin-bottom: 12px;
+        }
+
+        .journal-title {
+            font-family: "Cormorant Garamond", serif;
+            font-size: clamp(3.4rem, 7vw, 6.8rem);
+            line-height: .88;
+            color: #fff;
+            margin: 0;
+            font-weight: 600;
+        }
+
+        .journal-description {
+            max-width: 850px;
+            margin: 20px 0 0;
+            color: rgba(255, 255, 255, .9);
+            font-size: 16px;
+            line-height: 1.8;
+        }
+
+        /* Journal navigation */
+
+        .journal-nav {
+            display: flex;
+            gap: 28px;
+            overflow-x: auto;
+            border-bottom: 1px solid var(--border-color);
+            padding: 0 0 18px;
+            margin-bottom: 45px;
+            scrollbar-width: none;
+        }
+
+        .journal-nav::-webkit-scrollbar {
+            display: none;
+        }
+
+        .journal-nav a {
+            flex: 0 0 auto;
+            color: var(--primary-blue);
+            text-decoration: none;
+            font-family: "Montserrat", sans-serif;
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: .08em;
+        }
+
+        .journal-nav a:hover {
+            color: var(--accent-gold);
+        }
+
+        /* Market ticker */
+
+        .market-ticker {
+            background: var(--primary-blue);
+            color: #fff;
+            overflow: hidden;
+            margin-bottom: 50px;
+            border-radius: 4px;
+        }
+
+        .ticker-track {
+            display: flex;
+            width: max-content;
+            animation: journalTicker 32s linear infinite;
+        }
+
+        .ticker-item {
+            white-space: nowrap;
+            padding: 15px 28px;
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: .13em;
+        }
+
+        .ticker-item::after {
+            content: "•";
+            color: var(--accent-gold);
+            margin-left: 28px;
+        }
+
+        @keyframes journalTicker {
+            from {
+                transform: translateX(0);
+            }
+
+            to {
+                transform: translateX(-50%);
+            }
+        }
+
+        /* Market desk */
+
+        .market-desk {
+            margin-bottom: 70px;
+        }
+
+        .market-desk-heading {
+            display: flex;
+            justify-content: space-between;
+            align-items: end;
+            gap: 30px;
+            margin-bottom: 25px;
+        }
+
+        .market-desk-heading h2 {
+            font-family: "Cormorant Garamond", serif;
+            font-size: 40px;
+            color: var(--primary-blue);
+            margin: 0;
+        }
+
+        .market-desk-heading p {
+            max-width: 600px;
+            margin: 0;
+            color: var(--medium-gray);
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+        .market-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            border-top: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .market-item {
+            padding: 25px 22px;
+            border-right: 1px solid var(--border-color);
+        }
+
+        .market-item:last-child {
+            border-right: none;
+        }
+
+        .market-item-label {
+            color: var(--accent-gold);
+            font-size: 10px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: .15em;
+            margin-bottom: 8px;
+        }
+
+        .market-item h3 {
+            font-family: "Cormorant Garamond", serif;
+            font-size: 26px;
+            margin: 0 0 9px;
+            color: var(--primary-blue);
+        }
+
+        .market-item p {
+            color: var(--medium-gray);
+            font-size: 13px;
+            line-height: 1.65;
+            margin: 0;
+        }
+
+        /* Featured */
+
+        .section-header {
+            margin-bottom: 35px;
+        }
+
+        .section-header span {
+            display: inline-block;
+            margin-bottom: 12px;
+            color: var(--accent-gold);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.16em;
+            font-size: 12px;
+        }
+
+        .section-header h1 {
+            font-family: "Cormorant Garamond", serif;
+            font-size: clamp(3rem, 5vw, 4.8rem);
+            line-height: 1;
+            margin: 0;
+            color: var(--primary-blue);
+        }
+
+        .blog-featured {
+            margin-bottom: 80px;
+            position: relative;
+            border-radius: 10px;
+            overflow: hidden;
+            min-height: 570px;
+            height: auto;
+            display: flex;
+            align-items: flex-end;
+            text-decoration: none;
+        }
+
+        .blog-featured-img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -2;
+        }
+
+        .blog-featured::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background:
+                linear-gradient(
+                    180deg,
+                    rgba(0,0,0,.03) 20%,
+                    rgba(0,0,0,.22) 45%,
+                    rgba(0,0,0,.88) 100%
+                );
+            z-index: -1;
+        }
+
+        .blog-featured-content {
+            padding: 65px;
+            color: #fff;
+            width: 100%;
+            max-width: 900px;
+        }
+
+        .blog-meta {
+            display: block;
+            font-size: 11px;
+            text-transform: uppercase;
+            color: var(--accent-gold);
+            margin-bottom: 12px;
+            font-weight: 700;
+            letter-spacing: .13em;
+        }
+
+        .blog-featured-content h2 {
+            font-family: "Cormorant Garamond", serif;
+            font-size: clamp(2.8rem, 5vw, 5rem);
+            margin: 0 0 18px;
+            line-height: .98;
+        }
+
+        .blog-featured-content p {
+            max-width: 780px;
+            opacity: .94;
+            font-size: 16px;
+            line-height: 1.8;
+            margin: 0;
+        }
+
+        .featured-read {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 25px;
+            color: #fff;
+            border-bottom: 1px solid var(--accent-gold);
+            padding-bottom: 6px;
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: .08em;
+        }
+
+        /* Article grid */
+
+        .latest-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: end;
+            gap: 30px;
+            margin-bottom: 35px;
+        }
+
+        .latest-header h2 {
+            font-family: "Cormorant Garamond", serif;
+            font-size: 42px;
+            margin: 0;
+            color: var(--primary-blue);
+        }
+
+        .latest-header p {
+            max-width: 600px;
+            margin: 0;
+            color: var(--medium-gray);
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 32px;
+        }
+
+        .blog-card {
+            background: var(--white);
+            border-radius: 10px;
+            overflow: hidden;
+            border: 1px solid rgba(0,0,0,.06);
+            transition: var(--transition-smooth);
+        }
+
+        .blog-card:hover {
+            transform: translateY(-7px);
+        }
+
+        .blog-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .blog-card-body {
+            padding: 28px;
+        }
+
+        .blog-card-body h3 {
+            font-family: "Cormorant Garamond", serif;
+            font-size: 29px;
+            line-height: 1.05;
+            margin: 0 0 14px;
+            color: var(--primary-blue);
+        }
+
+        .blog-card-body p {
+            font-size: 13px;
+            color: var(--medium-gray);
+            line-height: 1.75;
+            margin-bottom: 20px;
+        }
+
+        .read-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 700;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: .08em;
+            border-bottom: 2px solid var(--accent-gold);
+            color: var(--primary-blue);
+            text-decoration: none;
+            padding-bottom: 4px;
+        }
+
+        /* Regional coverage */
+
+        .coverage-section {
+            margin-top: 100px;
+            padding: 65px 0;
+            border-top: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .coverage-heading {
+            max-width: 850px;
+            margin-bottom: 35px;
+        }
+
+        .coverage-heading span {
+            color: var(--accent-gold);
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: .15em;
+        }
+
+        .coverage-heading h2 {
+            font-family: "Cormorant Garamond", serif;
+            font-size: 44px;
+            line-height: 1;
+            color: var(--primary-blue);
+            margin: 10px 0 15px;
+        }
+
+        .coverage-heading p {
+            color: var(--medium-gray);
+            line-height: 1.75;
+            margin: 0;
+        }
+
+        .coverage-list {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px;
+        }
+
+        .coverage-list a {
+            display: block;
+            padding: 18px;
+            border: 1px solid var(--border-color);
+            color: var(--primary-blue);
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 700;
+            transition: var(--transition-smooth);
+        }
+
+        .coverage-list a:hover {
+            border-color: var(--accent-gold);
+            color: var(--accent-gold);
+        }
+
+        /* International buyers */
+
+        .international-section {
+            margin-top: 80px;
+            padding: 55px;
+            background: rgb(2, 2, 42);
+            color: #fff;
+            border-radius: 8px;
+        }
+
+        .international-section span {
+            color: var(--accent-gold);
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: .15em;
+            text-transform: uppercase;
+        }
+
+        .international-section h2 {
+            font-family: "Cormorant Garamond", serif;
+            font-size: 44px;
+            margin: 10px 0 15px;
+        }
+
+        .international-section p {
+            max-width: 820px;
+            color: rgba(255,255,255,.82);
+            line-height: 1.8;
+            font-size: 15px;
+        }
+
+        .international-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 12px;
+            color: #fff;
+            text-decoration: none;
+            font-weight: 700;
+            border-bottom: 1px solid var(--accent-gold);
+            padding-bottom: 7px;
+        }
+
+        /* Newsletter */
+
+        .newsletter-section {
+            margin: 90px 0;
+            padding: 55px;
+            text-align: center;
+            background: var(--light-gray);
+            border-radius: 8px;
+        }
+
+        .newsletter-section h2 {
+            font-family: "Cormorant Garamond", serif;
+            font-size: 42px;
+            color: var(--primary-blue);
+            margin: 0 0 12px;
+        }
+
+        .newsletter-section p {
+            max-width: 650px;
+            margin: 0 auto 25px;
+            color: var(--medium-gray);
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+        .newsletter-form {
+            max-width: 550px;
+            margin: auto;
+            display: flex;
+            gap: 10px;
+        }
+
+        .newsletter-form input {
+            flex: 1;
+            min-width: 0;
+            padding: 15px 17px;
+            border: 1px solid var(--border-color);
+            border-radius: 3px;
+            background: #fff;
+        }
+
+        .newsletter-form button {
+            border: none;
+            cursor: pointer;
+            white-space: nowrap;
+        }
+
+        /* Editorial standards */
+
+        .editorial-standards {
+            padding: 0 0 80px;
+        }
+
+        .editorial-standards h3 {
+            font-family: "Cormorant Garamond", serif;
+            color: var(--primary-blue);
+            font-size: 30px;
+            margin-bottom: 12px;
+        }
+
+        .editorial-standards p {
+            max-width: 900px;
+            color: var(--medium-gray);
+            font-size: 12px;
+            line-height: 1.8;
+        }
+
+        /* Responsive */
+
+        @media (max-width: 1024px) {
+
+            .market-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .market-item:nth-child(2) {
+                border-right: none;
+            }
+
+            .market-item:nth-child(-n+2) {
+                border-bottom: 1px solid var(--border-color);
+            }
+
+            .blog-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .coverage-list {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .blog-featured-content {
+                padding: 50px;
+            }
+        }
+
+        @media (max-width: 768px) {
+
+            .blog-wrapper {
+                padding-top: 110px;
+            }
+
+            .journal-masthead {
+                min-height: 330px;
+                padding: 54px 28px 36px;
+                background-position: 58% center;
+            }
+
+            .journal-title {
+                font-size: 62px;
+            }
+
+            .market-desk-heading,
+            .latest-header {
+                display: block;
+            }
+
+            .market-desk-heading p,
+            .latest-header p {
+                margin-top: 12px;
+            }
+
+            .blog-featured {
+                min-height: 450px;
+                height: auto;
+            }
+
+            .blog-featured-content {
+                padding: 32px;
+            }
+
+            .blog-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .coverage-list {
+                grid-template-columns: 1fr;
+            }
+
+            .international-section,
+            .newsletter-section {
+                padding: 35px 25px;
+            }
+
+            .newsletter-form {
+                flex-direction: column;
+            }
+        }
+
+        @media (max-width: 520px) {
+
+            .blog-wrapper {
+                padding-top: 95px;
+            }
+
+            .journal-title {
+                font-size: 48px;
+            }
+
+            .journal-masthead {
+                min-height: 300px;
+                padding: 42px 22px 30px;
+                border-radius: 8px;
+            }
+
+            .journal-nav {
+                gap: 18px;
+            }
+
+            .market-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .market-item {
+                border-right: none;
+                border-bottom: 1px solid var(--border-color);
+            }
+
+            .market-item:last-child {
+                border-bottom: none;
+            }
+
+            .blog-featured {
+                min-height: 390px;
+            }
+
+            .blog-featured-content {
+                padding: 22px;
+            }
+
+            .blog-featured-content h2 {
+                font-size: 35px;
+            }
+
+            .coverage-heading h2,
+            .international-section h2,
+            .newsletter-section h2 {
+                font-size: 35px;
+            }
+        }
+
+    </style>
+</head>
+
+<body class="blog-page">
+
+<div id="shared-header-root" data-shared-navbar="true"></div>
+
+<main class="container blog-wrapper">
+
+    <!-- ==========================================================
+         JOURNAL MASTHEAD
+    =========================================================== -->
+
+    <header class="journal-masthead">
+
+        <span class="journal-kicker">
+            Atlas Property Group
+        </span>
+
+        <h1 class="journal-title">
+            The Property Journal
+        </h1>
+
+        <p class="journal-description">
+            Independent-style market commentary and real estate reporting
+            focused on the United States. Coverage includes housing,
+            luxury property, commercial real estate, development,
+            investment considerations, mortgage conditions and the
+            experience of buying American property from abroad.
+        </p>
+
+    </header>
+
+
+    <!-- ==========================================================
+         JOURNAL NAVIGATION
+    =========================================================== -->
+
+    <nav class="journal-nav" aria-label="Property Journal sections">
+
+        <a href="#us-markets">U.S. Markets</a>
+        <a href="#housing">Housing</a>
+        <a href="#luxury">Luxury</a>
+        <a href="#investment">Investment</a>
+        <a href="#commercial">Commercial</a>
+        <a href="#development">Development</a>
+        <a href="#mortgage">Mortgage & Finance</a>
+        <a href="#international">International Buyers</a>
+
+    </nav>
+
+
+    <!-- ==========================================================
+         MOVING MARKET TICKER
+    =========================================================== -->
+
+    <div class="market-ticker"
+         aria-label="Atlas Property Journal market topics">
+
+        <div class="ticker-track">
+
+            <span class="ticker-item">
+                U.S. Real Estate
+            </span>
+
+            <span class="ticker-item">
+                Housing Markets
+            </span>
+
+            <span class="ticker-item">
+                Luxury Property
+            </span>
+
+            <span class="ticker-item">
+                Commercial Real Estate
+            </span>
+
+            <span class="ticker-item">
+                Mortgage & Finance
+            </span>
+
+            <span class="ticker-item">
+                Development
+            </span>
+
+            <span class="ticker-item">
+                Investment Research
+            </span>
+
+            <span class="ticker-item">
+                International Buyers
+            </span>
+
+            <!-- duplicated for seamless animation -->
+
+            <span class="ticker-item">
+                U.S. Real Estate
+            </span>
+
+            <span class="ticker-item">
+                Housing Markets
+            </span>
+
+            <span class="ticker-item">
+                Luxury Property
+            </span>
+
+            <span class="ticker-item">
+                Commercial Real Estate
+            </span>
+
+            <span class="ticker-item">
+                Mortgage & Finance
+            </span>
+
+            <span class="ticker-item">
+                Development
+            </span>
+
+            <span class="ticker-item">
+                Investment Research
+            </span>
+
+            <span class="ticker-item">
+                International Buyers
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <!-- ==========================================================
+         U.S. MARKET DESK
+    =========================================================== -->
+
+    <section class="market-desk"
+             id="us-markets">
+
+        <div class="market-desk-heading">
+
+            <div>
+                <span class="journal-kicker">
+                    The Market Desk
+                </span>
+
+                <h2>
+                    What We're Watching
+                </h2>
+            </div>
+
+            <p>
+                Real estate is local. Our coverage looks beyond national
+                headlines to the factors buyers, owners and investors
+                should consider when evaluating individual U.S. markets.
+            </p>
+
+        </div>
+
+
+        <div class="market-grid">
+
+            <div class="market-item">
+
+                <div class="market-item-label">
+                    Housing
+                </div>
+
+                <h3>
+                    Supply & Demand
+                </h3>
+
+                <p>
+                    Inventory, new construction, household formation and
+                    buyer demand can influence pricing and competition
+                    from one market to the next.
+                </p>
+
+            </div>
+
+
+            <div class="market-item">
+
+                <div class="market-item-label">
+                    Financing
+                </div>
+
+                <h3>
+                    Mortgage Conditions
+                </h3>
+
+                <p>
+                    Borrowing costs can affect purchasing power,
+                    monthly payments and the economics of both
+                    owner-occupied and investment property.
+                </p>
+
+            </div>
+
+
+            <div class="market-item">
+
+                <div class="market-item-label">
+                    Ownership
+                </div>
+
+                <h3>
+                    Cost of Carrying Property
+                </h3>
+
+                <p>
+                    Buyers should consider property taxes, insurance,
+                    maintenance, association fees and other recurring
+                    ownership expenses.
+                </p>
+
+            </div>
+
+
+            <div class="market-item">
+
+                <div class="market-item-label">
+                    Investment
+                </div>
+
+                <h3>
+                    Local Fundamentals
+                </h3>
+
+                <p>
+                    Employment, population trends, rental demand,
+                    development activity and neighborhood conditions
+                    can all influence an investment decision.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==========================================================
+         FEATURED REPORT
+    =========================================================== -->
+
+    <section>
+
+        <div class="section-header">
+
+            <span>
+                Featured Market Analysis
+            </span>
+
+            <h1>
+                American Real Estate
+            </h1>
+
+        </div>
+
+
+        <a href="blog-details.html"
+           class="blog-featured reveal">
+
+            <img
+                src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1800&q=85"
+                class="blog-featured-img"
+                alt="Contemporary American luxury residence">
+
+            <div class="blog-featured-content">
+
+                <span class="blog-meta">
+                    U.S. Markets • Market Analysis • August 2026
+                </span>
+
+                <h2>
+                    Why Buyers Are Looking Beyond America's Traditional
+                    Luxury Markets
+                </h2>
+
+                <p>
+                    The American luxury market extends well beyond a
+                    handful of globally recognized cities. Buyers are
+                    evaluating established metropolitan areas, resort
+                    communities and growing regional markets according
+                    to lifestyle, accessibility, housing supply and
+                    long-term ownership considerations.
+                </p>
+
+                <span class="featured-read">
+                    Read the full analysis
+                    <i class="fas fa-arrow-right"></i>
+                </span>
+
+            </div>
+
+        </a>
+
+    </section>
+
+
+    <!-- ==========================================================
+         LATEST STORIES
+    =========================================================== -->
+
+    <section id="housing">
+
+        <div class="latest-header">
+
+            <div>
+
+                <span class="journal-kicker">
+                    Latest Reporting
+                </span>
+
+                <h2>
+                    From the U.S. Property Market
+                </h2>
+
+            </div>
+
+            <p>
+                Practical reporting and market commentary for homeowners,
+                buyers, investors, developers and people researching
+                American real estate from outside the United States.
+            </p>
+
+        </div>
+
+
+        <div class="blog-grid">
+
+
+            <!-- ARTICLE 1 -->
+
+            <article class="blog-card reveal">
+
+                <img
+                    src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1000&q=85"
+                    alt="Modern American residential property">
+
+                <div class="blog-card-body">
+
+                    <span class="blog-meta">
+                        Housing • U.S. Markets
+                    </span>
+
+                    <h3>
+                        What Today's Buyers Should Examine Beyond the Asking Price
+                    </h3>
+
+                    <p>
+                        The purchase price is only one part of the cost of
+                        owning a home. Buyers should also evaluate property
+                        taxes, insurance, maintenance, financing, condition,
+                        location and potential future expenses.
+                    </p>
+
+                    <a href="blog-details.html"
+                       class="read-link">
+                        Read Article
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- ARTICLE 2 -->
+
+            <article class="blog-card reveal"
+                     style="transition-delay:.1s;">
+
+                <img
+                    src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=1000&q=85"
+                    alt="Luxury American residence">
+
+                <div class="blog-card-body">
+
+                    <span class="blog-meta">
+                        Luxury Real Estate
+                    </span>
+
+                    <h3>
+                        What Defines Luxury in the Modern American Home
+                    </h3>
+
+                    <p>
+                        Today's high-end buyers may prioritize privacy,
+                        architecture, entertaining spaces, wellness areas,
+                        home offices, security and proximity to desirable
+                        amenities as much as traditional indicators of luxury.
+                    </p>
+
+                    <a href="blog-details.html"
+                       class="read-link">
+                        Read Article
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- ARTICLE 3 -->
+
+            <article class="blog-card reveal"
+                     style="transition-delay:.2s;">
+
+                <img
+                    src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1000&q=85"
+                    alt="American commercial real estate building">
+
+                <div class="blog-card-body">
+
+                    <span class="blog-meta">
+                        Commercial Real Estate
+                    </span>
+
+                    <h3>
+                        How Investors Evaluate Commercial Property in Changing Markets
+                    </h3>
+
+                    <p>
+                        Office, retail, industrial and mixed-use properties
+                        require a different analysis from a typical
+                        residential purchase, including income, expenses,
+                        occupancy, leases, financing and local demand.
+                    </p>
+
+                    <a href="blog-details.html"
+                       class="read-link">
+                        Read Article
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- ARTICLE 4 -->
+
+            <article class="blog-card reveal">
+
+                <img
+                    src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1000&q=85"
+                    alt="Real estate professional reviewing property documents">
+
+                <div class="blog-card-body">
+
+                    <span class="blog-meta">
+                        Buyers
+                    </span>
+
+                    <h3>
+                        Due Diligence: The Questions Buyers Should Ask Before Closing
+                    </h3>
+
+                    <p>
+                        Inspections, title, disclosures, surveys, zoning,
+                        insurance, financing conditions and other transaction
+                        documents can be important parts of the U.S.
+                        property-buying process.
+                    </p>
+
+                    <a href="blog-details.html"
+                       class="read-link">
+                        Read Article
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- ARTICLE 5 -->
+
+            <article class="blog-card reveal"
+                     id="investment">
+
+                <img
+                    src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1000&q=85"
+                    alt="Investment analysis documents and financial planning">
+
+                <div class="blog-card-body">
+
+                    <span class="blog-meta">
+                        Investment
+                    </span>
+
+                    <h3>
+                        Evaluating a Property as an Investment Rather Than Just a Purchase
+                    </h3>
+
+                    <p>
+                        Investors may examine acquisition costs, operating
+                        expenses, financing, rental income, vacancy,
+                        management requirements, taxes and the characteristics
+                        of the surrounding market.
+                    </p>
+
+                    <a href="blog-details.html"
+                       class="read-link">
+                        Read Article
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- ARTICLE 6 -->
+
+            <article class="blog-card reveal"
+                     id="development">
+
+                <img
+                    src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1000&q=85"
+                    alt="Modern residential development in an American city">
+
+                <div class="blog-card-body">
+
+                    <span class="blog-meta">
+                        Development
+                    </span>
+
+                    <h3>
+                        How New Development Is Changing the U.S. Housing Landscape
+                    </h3>
+
+                    <p>
+                        New residential construction can add inventory,
+                        introduce new housing types and reshape neighborhoods.
+                        Buyers should examine the developer, specifications,
+                        completion schedule, fees and applicable contracts.
+                    </p>
+
+                    <a href="blog-details.html"
+                       class="read-link">
+                        Read Article
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==========================================================
+         U.S. MARKET COVERAGE
+    =========================================================== -->
+
+    <section class="coverage-section">
+
+        <div class="coverage-heading">
+
+            <span>
+                Our Coverage
+            </span>
+
+            <h2>
+                U.S. Real Estate, Market by Market
+            </h2>
+
+            <p>
+                American real estate is highly local. Our Journal follows
+                major metropolitan areas, regional markets and emerging
+                communities across the country, giving readers a framework
+                for understanding differences in housing, development,
+                investment and ownership conditions.
+            </p>
+
+        </div>
+
+
+        <div class="coverage-list">
+
+            <a href="properties.html">
+                New York
+            </a>
+
+            <a href="properties.html">
+                Florida
+            </a>
+
+            <a href="properties.html">
+                California
+            </a>
+
+            <a href="properties.html">
+                Texas
+            </a>
+
+            <a href="properties.html">
+                Arizona
+            </a>
+
+            <a href="properties.html">
+                Georgia
+            </a>
+
+            <a href="properties.html">
+                North Carolina
+            </a>
+
+            <a href="properties.html">
+                Tennessee
+            </a>
+
+            <a href="properties.html">
+                Colorado
+            </a>
+
+            <a href="properties.html">
+                Nevada
+            </a>
+
+            <a href="properties.html">
+                Virginia
+            </a>
+
+            <a href="properties.html">
+                Washington
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==========================================================
+         INTERNATIONAL BUYERS
+    =========================================================== -->
+
+    <section class="international-section"
+             id="international">
+
+        <span>
+            For Buyers Around the World
+        </span>
+
+        <h2>
+            Buying Real Estate in the United States
+        </h2>
+
+        <p>
+            Whether you are purchasing a primary residence, second home,
+            commercial property or investment asset, Atlas provides a
+            starting point for researching American real estate.
+            International buyers should also work with appropriately
+            qualified U.S. real estate, legal, tax, title and lending
+            professionals for their specific circumstances.
+        </p>
+
+        <a href="faq.html"
+           class="international-link">
+            International Buyer Guide
+            <i class="fas fa-arrow-right"></i>
+        </a>
+
+    </section>
+
+
+    <!-- ==========================================================
+         MORTGAGE & FINANCE
+    =========================================================== -->
+
+    <section class="coverage-section"
+             id="mortgage">
+
+        <div class="coverage-heading">
+
+            <span>
+                Mortgage & Finance
+            </span>
+
+            <h2>
+                Understanding the Cost of Buying
+            </h2>
+
+            <p>
+                Financing can have a significant effect on the affordability
+                of a property. Our coverage explains mortgage concepts,
+                loan structures, interest rates, down payments, closing
+                costs and other considerations buyers may encounter.
+            </p>
+
+        </div>
+
+        <div class="coverage-list">
+
+            <a href="mortgage-calculator.html">
+                Mortgage Calculator
+            </a>
+
+            <a href="faq.html">
+                Mortgage Questions
+            </a>
+
+            <a href="faq.html">
+                Closing Costs
+            </a>
+
+            <a href="faq.html">
+                International Buyer Financing
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==========================================================
+         NEWSLETTER
+    =========================================================== -->
+
+    <section class="newsletter-section">
+
+        <h2>
+            The Atlas Property Brief
+        </h2>
+
+        <p>
+            A concise selection of U.S. real estate stories, market
+            commentary and property insights for buyers, owners and
+            investors.
+        </p>
+
+        <form class="newsletter-form">
+
+            <input
+                type="email"
+                name="email"
+                placeholder="Email address"
+                aria-label="Email address"
+                required
+            >
+
+            <button
+                type="submit"
+                class="btn btn-gold">
+                Subscribe
+            </button>
+
+        </form>
+
+    </section>
+
+
+    <!-- ==========================================================
+         EDITORIAL STANDARDS
+    =========================================================== -->
+
+    <section class="editorial-standards">
+
+        <h3>
+            About the Atlas Property Journal
+        </h3>
+
+        <p>
+            The Atlas Property Journal is the editorial publication of
+            Atlas Property Group. Coverage focuses on U.S. residential,
+            luxury, commercial and investment real estate, along with
+            market conditions and issues relevant to domestic and
+            international buyers.
+        </p>
+
+        <!-- <p>
+            Articles are intended for general informational purposes and
+            should not be treated as legal, tax, financial, mortgage or
+            investment advice. Real estate conditions vary by property,
+            neighborhood and market. Readers should independently verify
+            property information and consult appropriately qualified
+            professionals before making a transaction.
+        </p> -->
+
+    </section>
+
+</main>
+
+
+<div id="shared-footer-root"
+     data-shared-footer="true">
+</div>
+
+
+<script src="js/navbar.js"></script>
+<script src="js/main.js"></script>
+<script src="js/footer.js"></script>
+
+</body>
+</html>

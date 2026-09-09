@@ -1,0 +1,2564 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Privacy Policy | Atlas Property Group</title>
+
+    <meta
+        name="description"
+        content="Atlas Property Group Privacy Policy. Learn how we collect, use, protect, and manage personal information when you use our U.S. real estate platform."
+    >
+
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    >
+
+    <style>
+        /* ============================================================
+           ATLAS PROPERTY GROUP
+           PRIVACY POLICY PAGE
+           ============================================================ */
+
+        .privacy-page {
+            padding: 155px 0 100px;
+            background: var(--background-color, #ffffff);
+        }
+
+        .privacy-container {
+            width: min(1180px, calc(100% - 40px));
+            margin: 0 auto;
+        }
+
+        /* ============================================================
+           HERO
+           ============================================================ */
+
+        .privacy-hero {
+            max-width: 850px;
+            margin: 0 auto 55px;
+            text-align: center;
+        }
+
+        .privacy-eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 16px;
+            color: var(--accent-gold, #b28a3c);
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .privacy-hero h1 {
+            margin: 0 0 18px;
+            color: var(--text-color, #16202b);
+            font-size: clamp(38px, 5vw, 62px);
+            line-height: 1.08;
+            font-weight: 700;
+        }
+
+        .privacy-hero > p {
+            max-width: 760px;
+            margin: 0 auto;
+            color: var(--medium-gray, #68717b);
+            font-size: 16px;
+            line-height: 1.85;
+        }
+
+        .privacy-meta {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 25px;
+        }
+
+        .privacy-meta span {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 9px 15px;
+            border: 1px solid rgba(0, 0, 0, .08);
+            border-radius: 30px;
+            background: rgba(0, 0, 0, .025);
+            color: var(--medium-gray, #68717b);
+            font-size: 12px;
+        }
+
+        .privacy-meta i {
+            color: var(--accent-gold, #b28a3c);
+        }
+
+        /* ============================================================
+           LAYOUT
+           ============================================================ */
+
+        .privacy-layout {
+            display: grid;
+            grid-template-columns: 255px minmax(0, 1fr);
+            gap: 55px;
+            align-items: start;
+        }
+
+        /* ============================================================
+           TABLE OF CONTENTS
+           ============================================================ */
+
+        .privacy-toc {
+            position: sticky;
+            top: 110px;
+            padding: 24px;
+            border: 1px solid rgba(0, 0, 0, .08);
+            background: rgba(0, 0, 0, .02);
+        }
+
+        .privacy-toc h3 {
+            margin: 0 0 17px;
+            color: var(--text-color, #16202b);
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 1.3px;
+            text-transform: uppercase;
+        }
+
+        .privacy-toc a {
+            display: block;
+            padding: 6px 0;
+            color: var(--medium-gray, #68717b);
+            font-size: 12px;
+            line-height: 1.5;
+            text-decoration: none;
+            transition:
+                color .2s ease,
+                padding-left .2s ease;
+        }
+
+        .privacy-toc a:hover {
+            padding-left: 4px;
+            color: var(--accent-gold, #b28a3c);
+        }
+
+        /* ============================================================
+           CONTENT
+           ============================================================ */
+
+        .privacy-content {
+            min-width: 0;
+        }
+
+        .privacy-intro {
+            margin-bottom: 38px;
+            padding: 25px 28px;
+            border-left: 4px solid var(--accent-gold, #b28a3c);
+            background: rgba(178, 138, 60, .07);
+        }
+
+        .privacy-intro p {
+            margin: 0;
+            color: var(--medium-gray, #59616a);
+            font-size: 14px;
+            line-height: 1.85;
+        }
+
+        .privacy-section {
+            margin-bottom: 40px;
+            padding-bottom: 40px;
+            border-bottom: 1px solid rgba(0, 0, 0, .08);
+            scroll-margin-top: 110px;
+        }
+
+        .privacy-section:last-child {
+            margin-bottom: 0;
+            border-bottom: 0;
+        }
+
+        .privacy-section h2 {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin: 0 0 18px;
+            color: var(--text-color, #16202b);
+            font-size: 25px;
+            line-height: 1.35;
+        }
+
+        .section-number {
+            display: inline-flex;
+            flex: 0 0 auto;
+            align-items: center;
+            justify-content: center;
+            width: 34px;
+            height: 34px;
+            border-radius: 50%;
+            background: var(--accent-gold, #b28a3c);
+            color: #ffffff;
+            font-size: 11px;
+            font-weight: 700;
+        }
+
+        .privacy-section h3 {
+            margin: 25px 0 10px;
+            color: var(--text-color, #28323c);
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        .privacy-section p {
+            margin: 0 0 15px;
+            color: var(--medium-gray, #59616a);
+            font-size: 14px;
+            line-height: 1.85;
+        }
+
+        .privacy-section ul {
+            margin: 12px 0 20px;
+            padding-left: 22px;
+        }
+
+        .privacy-section li {
+            margin-bottom: 8px;
+            color: var(--medium-gray, #59616a);
+            font-size: 14px;
+            line-height: 1.75;
+        }
+
+        .privacy-section strong {
+            color: var(--text-color, #303943);
+        }
+
+        /* ============================================================
+           INFORMATION CARDS
+           ============================================================ */
+
+        .privacy-cards {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 14px;
+            margin: 22px 0 25px;
+        }
+
+        .privacy-card {
+            padding: 20px;
+            border: 1px solid rgba(0, 0, 0, .08);
+            background: var(--card-bg, #ffffff);
+        }
+
+        .privacy-card i {
+            display: block;
+            margin-bottom: 11px;
+            color: var(--accent-gold, #b28a3c);
+            font-size: 19px;
+        }
+
+        .privacy-card h4 {
+            margin: 0 0 7px;
+            color: var(--text-color, #26313c);
+            font-size: 14px;
+        }
+
+        .privacy-card p {
+            margin: 0;
+            font-size: 12px;
+            line-height: 1.7;
+        }
+
+        /* ============================================================
+           NOTICE
+           ============================================================ */
+
+        .privacy-notice {
+            margin: 22px 0;
+            padding: 19px 21px;
+            border: 1px solid rgba(178, 138, 60, .25);
+            background: rgba(178, 138, 60, .06);
+        }
+
+        .privacy-notice strong {
+            display: block;
+            margin-bottom: 6px;
+            color: #8e692d;
+            font-size: 13px;
+        }
+
+        .privacy-notice p {
+            margin: 0;
+            font-size: 13px;
+        }
+
+        /* ============================================================
+           CONTACT
+           ============================================================ */
+
+        .privacy-contact {
+            padding: 32px;
+            background: var(--text-color, #16202b);
+        }
+
+        .privacy-contact h2 {
+            color: #ffffff;
+        }
+
+        .privacy-contact > p {
+            color: rgba(255, 255, 255, .72);
+        }
+
+        .privacy-contact-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 13px;
+            margin-top: 23px;
+        }
+
+        .privacy-contact-item {
+            padding: 17px;
+            border: 1px solid rgba(255, 255, 255, .12);
+            background: rgba(255, 255, 255, .04);
+        }
+
+        .privacy-contact-item span {
+            display: block;
+            margin-bottom: 6px;
+            color: rgba(255, 255, 255, .5);
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .privacy-contact-item strong {
+            color: #ffffff;
+            font-size: 13px;
+            font-weight: 500;
+        }
+
+        /* ============================================================
+           BACK TO TOP
+           ============================================================ */
+
+        .privacy-back-top {
+            display: flex;
+            justify-content: center;
+            margin-top: 35px;
+        }
+
+        .privacy-back-top a {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--accent-gold, #b28a3c);
+            font-size: 13px;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        /* ============================================================
+           DARK MODE
+           ============================================================ */
+
+        body.dark-mode .privacy-page {
+            background: var(--background-color, #111820);
+        }
+
+        body.dark-mode .privacy-toc,
+        body.dark-mode .privacy-card {
+            border-color: rgba(255, 255, 255, .09);
+            background: rgba(255, 255, 255, .025);
+        }
+
+        body.dark-mode .privacy-meta span {
+            border-color: rgba(255, 255, 255, .1);
+            background: rgba(255, 255, 255, .025);
+        }
+
+        body.dark-mode .privacy-section {
+            border-color: rgba(255, 255, 255, .09);
+        }
+
+        /* ============================================================
+           RESPONSIVE
+           ============================================================ */
+
+        @media (max-width: 900px) {
+
+            .privacy-layout {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .privacy-toc {
+                position: static;
+            }
+
+            .privacy-toc a {
+                display: inline-block;
+                width: 50%;
+                padding-right: 10px;
+            }
+        }
+
+        @media (max-width: 600px) {
+
+            .privacy-page {
+                padding: 125px 0 70px;
+            }
+
+            .privacy-container {
+                width: min(100% - 30px, 1180px);
+            }
+
+            .privacy-hero {
+                margin-bottom: 35px;
+            }
+
+            .privacy-hero h1 {
+                font-size: 38px;
+            }
+
+            .privacy-hero > p {
+                font-size: 14px;
+            }
+
+            .privacy-toc {
+                padding: 19px;
+            }
+
+            .privacy-toc a {
+                width: 100%;
+            }
+
+            .privacy-intro {
+                padding: 21px;
+            }
+
+            .privacy-section {
+                margin-bottom: 30px;
+                padding-bottom: 30px;
+            }
+
+            .privacy-section h2 {
+                font-size: 21px;
+            }
+
+            .privacy-section p,
+            .privacy-section li {
+                font-size: 13px;
+            }
+
+            .privacy-cards,
+            .privacy-contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .privacy-contact {
+                padding: 24px 20px;
+            }
+        }
+    </style>
+</head>
+
+
+<body id="top">
+
+
+<!-- ================================================================
+     ATLAS PROPERTY GROUP — CURRENT NAVBAR
+     ================================================================ -->
+
+<div id="shared-header-root" data-shared-navbar="true"></div>
+
+<template id="legacy-navbar-reference">
+
+    <div class="container">
+
+        <nav class="navbar">
+
+            <!-- Logo -->
+            <a href="index.html" class="logo">
+                <img
+                    src="asset/logo8.png"
+                    alt="Atlas Property Group Logo"
+                    class="logo-img"
+                >
+            </a>
+
+
+            <!-- Main Navigation -->
+            <ul class="nav-menu">
+
+                <li>
+                    <a href="index.html">
+                        Home
+                    </a>
+                </li>
+
+
+                <!-- Properties Mega Menu -->
+                <li class="has-mega">
+
+                    <a
+                        href="properties.html"
+                        class="mega-link"
+                    >
+                        Properties
+                    </a>
+
+                    <button
+                        class="mega-toggle"
+                        type="button"
+                        aria-controls="properties-menu"
+                        aria-expanded="false"
+                        aria-label="Show property categories"
+                    >
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+
+
+                    <div
+                        class="mega-menu"
+                        id="properties-menu"
+                    >
+
+                        <div class="mega-grid">
+
+
+                            <!-- Residential -->
+                            <div class="mega-col">
+
+                                <h4>
+                                    Residential
+                                </h4>
+
+                                <a href="properties.html?type=luxury-villas">
+                                    Luxury Villas
+                                </a>
+
+                                <a href="properties.html?type=penthouses">
+                                    Penthouses
+                                </a>
+
+                                <a href="properties.html?type=estates">
+                                    Private Estates
+                                </a>
+
+                            </div>
+
+
+                            <!-- Commercial -->
+                            <div class="mega-col">
+
+                                <h4>
+                                    Commercial
+                                </h4>
+
+                                <a href="properties.html?type=offices">
+                                    Corporate Offices
+                                </a>
+
+                                <a href="properties.html?type=retail">
+                                    Retail Spaces
+                                </a>
+
+                                <a href="properties.html?type=industrial">
+                                    Industrial Complexes
+                                </a>
+
+                            </div>
+
+
+                            <!-- Investments -->
+                            <div class="mega-col">
+
+                                <h4>
+                                    Investments
+                                </h4>
+
+                                <a href="investments.html">
+                                    Portfolio Strategy
+                                </a>
+
+                                <a href="investments.html#yield">
+                                    High Yield Assets
+                                </a>
+
+                                <a href="developments.html">
+                                    New Developments
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </li>
+
+
+                <li>
+                    <a href="services.html">
+                        Services
+                    </a>
+                </li>
+
+
+                <li>
+                    <a href="mortgage-calculator.html">
+                        Mortgage
+                    </a>
+                </li>
+
+
+                <li>
+                    <a href="agents.html">
+                        Agents
+                    </a>
+                </li>
+
+
+                <li>
+                    <a href="blog.html">
+                        Journal
+                    </a>
+                </li>
+
+
+                <li>
+                    <a href="contact.html">
+                        Contact
+                    </a>
+                </li>
+
+            </ul>
+
+
+            <!-- ========================================================
+                 NAV ACTIONS
+                 ======================================================== -->
+
+            <div class="nav-actions">
+
+
+                <!-- Dark Mode -->
+                <button
+                    id="dark-mode-toggle"
+                    aria-label="Toggle Dark Mode"
+                    type="button"
+                >
+                    <i class="fas fa-moon"></i>
+                </button>
+
+
+                <!-- Authentication -->
+                <div
+                    class="auth-group"
+                    id="auth-nav"
+                >
+
+                    <a
+                        href="login.html"
+                        class="btn btn-gold-sm"
+                    >
+                        Sign in
+                    </a>
+
+                </div>
+
+
+                <!-- ====================================================
+                     USER PROFILE
+                     Hidden until authentication succeeds
+                     ==================================================== -->
+
+                <div
+                    class="user-profile-nav"
+                    id="user-nav"
+                    style="display: none;"
+                >
+
+                    <button
+                        type="button"
+                        class="user-avatar-button"
+                        id="user-avatar-button"
+                        aria-haspopup="true"
+                        aria-expanded="false"
+                        aria-label="Open account menu"
+                    >
+
+                        <span
+                            class="nav-avatar nav-avatar--letter"
+                            id="user-nav-avatar"
+                        >
+                            A
+                        </span>
+
+                    </button>
+
+
+                    <!-- Logout -->
+                    <button
+                        id="logout-btn"
+                        class="logout-icon"
+                        aria-label="Log out"
+                        type="button"
+                    >
+                        <i class="fas fa-sign-out-alt"></i>
+                    </button>
+
+
+                    <!-- User Dropdown -->
+                    <div
+                        class="user-dropdown-menu"
+                        id="user-dropdown-menu"
+                        aria-hidden="true"
+                    >
+
+                        <a
+                            href="dashboard.html"
+                            class="user-dropdown-item"
+                        >
+                            My Dashboard
+                        </a>
+
+
+                        <a
+                            href="dashboard.html#panel-profile"
+                            class="user-dropdown-item"
+                        >
+                            Profile
+                        </a>
+
+
+                        <a
+                            href="dashboard.html#panel-saved-properties"
+                            class="user-dropdown-item"
+                        >
+                            Saved Properties
+                        </a>
+
+
+                        <a
+                            href="dashboard.html#panel-saved-searches"
+                            class="user-dropdown-item"
+                        >
+                            Saved Searches
+                        </a>
+
+
+                        <a
+                            href="dashboard.html#panel-compare"
+                            class="user-dropdown-item"
+                        >
+                            Compare Properties
+                        </a>
+
+
+                        <a
+                            href="dashboard.html#panel-tours"
+                            class="user-dropdown-item"
+                        >
+                            Scheduled Tours
+                        </a>
+
+
+                        <a
+                            href="dashboard.html#panel-messages"
+                            class="user-dropdown-item"
+                        >
+                            Messages
+                        </a>
+
+
+                        <a
+                            href="dashboard.html#panel-notifications"
+                            class="user-dropdown-item"
+                        >
+                            Notifications
+                        </a>
+
+
+                        <a
+                            href="dashboard.html#panel-settings"
+                            class="user-dropdown-item"
+                        >
+                            Settings
+                        </a>
+
+
+                        <div class="user-dropdown-divider"></div>
+
+
+                        <button
+                            type="button"
+                            class="user-dropdown-item"
+                            id="logout-menu-btn"
+                        >
+                            Logout
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Mobile Menu -->
+                <button
+                    class="mobile-menu-toggle"
+                    type="button"
+                    aria-label="Toggle mobile menu"
+                    aria-expanded="false"
+                >
+                    <i class="fas fa-bars"></i>
+                </button>
+
+            </div>
+
+        </nav>
+
+    </div>
+
+</template>
+
+<!-- ================================================================
+     PRIVACY PAGE
+     ================================================================ -->
+
+<main class="privacy-page">
+
+    <div class="privacy-container">
+
+
+        <!-- HERO -->
+        <section class="privacy-hero">
+
+            <div class="privacy-eyebrow">
+                <i class="fas fa-shield-halved"></i>
+                Privacy & Security
+            </div>
+
+            <h1>
+                Privacy Policy
+            </h1>
+
+            <p>
+                Atlas Property Group respects your privacy and is committed
+                to protecting the personal information you provide when
+                browsing properties, creating an account, requesting
+                information, communicating with our team, or using our
+                real estate services.
+            </p>
+
+            <div class="privacy-meta">
+
+                <span>
+                    <i class="far fa-calendar"></i>
+                    Effective August 26, 2026
+                </span>
+
+                <span>
+                    <i class="fas fa-building"></i>
+                    Atlas Property Group
+                </span>
+
+            </div>
+
+        </section>
+
+
+        <!-- CONTENT LAYOUT -->
+        <div class="privacy-layout">
+
+
+            <!-- ========================================================
+                 TABLE OF CONTENTS
+                 ======================================================== -->
+
+            <aside class="privacy-toc">
+
+                <h3>
+                    Contents
+                </h3>
+
+                <a href="#who-we-are">
+                    1. Who We Are
+                </a>
+
+                <a href="#information">
+                    2. Information We Collect
+                </a>
+
+                <a href="#accounts">
+                    3. Account Information
+                </a>
+
+                <a href="#property-data">
+                    4. Property & Search Data
+                </a>
+
+                <a href="#automatic">
+                    5. Automatically Collected Data
+                </a>
+
+                <a href="#cookies">
+                    6. Cookies
+                </a>
+
+                <a href="#use">
+                    7. How We Use Information
+                </a>
+
+                <a href="#communications">
+                    8. Communications
+                </a>
+
+                <a href="#ai">
+                    9. AI Features
+                </a>
+
+                <a href="#mortgage">
+                    10. Mortgage Tools
+                </a>
+
+                <a href="#sharing">
+                    11. Information Sharing
+                </a>
+
+                <a href="#security">
+                    12. Security
+                </a>
+
+                <a href="#retention">
+                    13. Data Retention
+                </a>
+
+                <a href="#children">
+                    14. Children's Privacy
+                </a>
+
+                <a href="#international">
+                    15. International Visitors
+                </a>
+
+                <a href="#california">
+                    16. California Privacy Rights
+                </a>
+
+                <a href="#state-rights">
+                    17. Other State Privacy Rights
+                </a>
+
+                <a href="#third-party">
+                    18. Third-Party Websites
+                </a>
+
+                <a href="#real-estate">
+                    19. Real Estate Disclaimer
+                </a>
+
+                <a href="#changes">
+                    20. Changes to Policy
+                </a>
+
+                <a href="#contact">
+                    21. Contact Us
+                </a>
+
+            </aside>
+
+
+            <!-- ========================================================
+                 POLICY CONTENT
+                 ======================================================== -->
+
+            <article class="privacy-content">
+
+
+                <!-- INTRODUCTION -->
+                <div class="privacy-intro">
+
+                    <p>
+                        <strong>Important:</strong>
+                        This Privacy Policy describes how Atlas Property
+                        Group collects, uses, discloses, retains, and protects
+                        personal information in connection with its website
+                        and services. This policy should be read together
+                        with any applicable Terms of Use, Cookie Policy,
+                        disclaimers, and other legal notices published by
+                        Atlas Property Group.
+                    </p>
+
+                </div>
+
+
+                <!-- ====================================================
+                     1
+                     ==================================================== -->
+
+                <section
+                    class="privacy-section"
+                    id="who-we-are"
+                >
+
+                    <h2>
+                        <span class="section-number">
+                            01
+                        </span>
+
+                        Who We Are
+                    </h2>
+
+                    <p>
+                        Atlas Property Group ("Atlas," "we," "us," or "our")
+                        operates a U.S.-focused real estate platform designed
+                        to help buyers, investors, sellers, and other users
+                        discover and explore real estate opportunities in
+                        the United States.
+                    </p>
+
+                    <p>
+                        Our services may include property listings, property
+                        search tools, user accounts, saved properties, saved
+                        searches, property comparisons, tour requests,
+                        agent communications, mortgage calculators,
+                        investment resources, artificial intelligence
+                        features, and other real estate-related services.
+                    </p>
+
+                </section>
+
+
+                <!-- ====================================================
+                     2
+                     ==================================================== -->
+
+                <section
+                    class="privacy-section"
+                    id="information"
+                >
+
+                    <h2>
+                        <span class="section-number">
+                            02
+                        </span>
+
+                        Information We Collect
+                    </h2>
+
+                    <p>
+                        We collect information that you voluntarily provide,
+                        information generated when you use our Services, and
+                        information that may be received from third parties.
+                    </p>
+
+
+                    <div class="privacy-cards">
+
+
+                        <div class="privacy-card">
+
+                            <i class="fas fa-user"></i>
+
+                            <h4>
+                                Identity Information
+                            </h4>
+
+                            <p>
+                                Name, profile information, and other
+                                information you provide when communicating
+                                with Atlas.
+                            </p>
+
+                        </div>
+
+
+                        <div class="privacy-card">
+
+                            <i class="fas fa-envelope"></i>
+
+                            <h4>
+                                Contact Information
+                            </h4>
+
+                            <p>
+                                Email address, telephone number, mailing
+                                address, and communication preferences.
+                            </p>
+
+                        </div>
+
+
+                        <div class="privacy-card">
+
+                            <i class="fas fa-house"></i>
+
+                            <h4>
+                                Property Preferences
+                            </h4>
+
+                            <p>
+                                Locations, property types, price ranges,
+                                searches, saved properties, and investment
+                                interests.
+                            </p>
+
+                        </div>
+
+
+                        <div class="privacy-card">
+
+                            <i class="fas fa-laptop"></i>
+
+                            <h4>
+                                Technical Information
+                            </h4>
+
+                            <p>
+                                Device, browser, IP address, website activity,
+                                and technical information.
+                            </p>
+
+                        </div>
+
+
+                    </div>
+
+
+                    <h3>
+                        Information You May Provide
+                    </h3>
+
+                    <ul>
+
+                        <li>
+                            Full name
+                        </li>
+
+                        <li>
+                            Email address
+                        </li>
+
+                        <li>
+                            Telephone or mobile number
+                        </li>
+
+                        <li>
+                            City, state, country, or ZIP/postal code
+                        </li>
+
+                        <li>
+                            Property preferences
+                        </li>
+
+                        <li>
+                            Purchase or investment interests
+                        </li>
+
+                        <li>
+                            Approximate budget or price range
+                        </li>
+
+                        <li>
+                            Property inquiries
+                        </li>
+
+                        <li>
+                            Property tour requests
+                        </li>
+
+                        <li>
+                            Messages submitted through our website
+                        </li>
+
+                        <li>
+                            Saved properties and searches
+                        </li>
+
+                        <li>
+                            Information voluntarily provided during
+                            communications
+                        </li>
+
+                    </ul>
+
+
+                    <p>
+                        You should not submit passwords, bank account
+                        credentials, government identification numbers, or
+                        other highly sensitive information through ordinary
+                        website inquiry forms.
+                    </p>
+
+                </section>
+
+
+                <!-- ====================================================
+                     3
+                     ==================================================== -->
+
+                <section
+                    class="privacy-section"
+                    id="accounts"
+                >
+
+                    <h2>
+                        <span class="section-number">
+                            03
+                        </span>
+
+                        Account Information
+                    </h2>
+
+                    <p>
+                        If you create an Atlas account, we may process
+                        information necessary to establish, authenticate,
+                        maintain, and secure your account.
+                    </p>
+
+                    <ul>
+
+                        <li>
+                            Account name and email address
+                        </li>
+
+                        <li>
+                            Authentication identifiers
+                        </li>
+
+                        <li>
+                            Profile information
+                        </li>
+
+                        <li>
+                            Saved properties
+                        </li>
+
+                        <li>
+                            Saved searches
+                        </li>
+
+                        <li>
+                            Property comparisons
+                        </li>
+
+                        <li>
+                            Tour requests
+                        </li>
+
+                        <li>
+                            Messages and notifications
+                        </li>
+
+                        <li>
+                            Account preferences
+                        </li>
+
+                        <li>
+                            Security-related activity
+                        </li>
+
+                    </ul>
+
+                    <p>
+                        Atlas may use third-party authentication technology
+                        to provide secure account access. Authentication
+                        providers may process authentication information
+                        according to their own privacy policies.
+                    </p>
+
+                </section>
+
+
+                <!-- ====================================================
+                     4
+                     ==================================================== -->
+
+                <section
+                    class="privacy-section"
+                    id="property-data"
+                >
+
+                    <h2>
+                        <span class="section-number">
+                            04
+                        </span>
+
+                        Property Search & Real Estate Information
+                    </h2>
+
+                    <p>
+                        When you search for, view, save, compare, or inquire
+                        about properties, we may collect information
+                        associated with those activities.
+                    </p>
+
+                    <ul>
+
+                        <li>
+                            Properties viewed
+                        </li>
+
+                        <li>
+                            Properties saved
+                        </li>
+
+                        <li>
+                            Search criteria
+                        </li>
+
+                        <li>
+                            Preferred locations
+                        </li>
+
+                        <li>
+                            Price ranges
+                        </li>
+
+                        <li>
+                            Property types
+                        </li>
+
+                        <li>
+                            Bedroom and bathroom preferences
+                        </li>
+
+                        <li>
+                            Investment preferences
+                        </li>
+
+                        <li>
+                            Property comparisons
+                        </li>
+
+                        <li>
+                            Tour requests
+                        </li>
+
+                        <li>
+                            Inquiry history
+                        </li>
+
+                    </ul>
+
+                    <p>
+                        We may use this information to remember your
+                        preferences, improve search results, personalize
+                        recommendations, and help connect you with relevant
+                        real estate professionals.
+                    </p>
+
+                </section>
+
+
+                <!-- ====================================================
+                     5
+                     ==================================================== -->
+
+                <section
+                    class="privacy-section"
+                    id="automatic"
+                >
+
+                    <h2>
+                        <span class="section-number">
+                            05
+                        </span>
+
+                        Automatically Collected Information
+                    </h2>
+
+                    <p>
+                        When you access our website, certain information may
+                        automatically be collected through server logs,
+                        analytics technologies, cookies, and similar
+                        technologies.
+                    </p>
+
+                    <ul>
+
+                        <li>
+                            IP address
+                        </li>
+
+                        <li>
+                            Browser type and version
+                        </li>
+
+                        <li>
+                            Device type
+                        </li>
+
+                        <li>
+                            Operating system
+                        </li>
+
+                        <li>
+                            Screen resolution
+                        </li>
+
+                        <li>
+                            Approximate location derived from IP address
+                        </li>
+
+                        <li>
+                            Referring website
+                        </li>
+
+                        <li>
+                            Pages viewed
+                        </li>
+
+                        <li>
+                            Property listings viewed
+                        </li>
+
+                        <li>
+                            Search activity
+                        </li>
+
+                        <li>
+                            Time spent on pages
+                        </li>
+
+                        <li>
+                            Website interactions
+                        </li>
+
+                        <li>
+                            Error and performance information
+                        </li>
+
+                    </ul>
+
+                </section>
+
+
+                <!-- ====================================================
+                     6
+                     ==================================================== -->
+
+                <section
+                    class="privacy-section"
+                    id="cookies"
+                >
+
+                    <h2>
+                        <span class="section-number">
+                            06
+                        </span>
+
+                        Cookies & Similar Technologies
+                    </h2>
+
+                    <p>
+                        Atlas may use cookies, pixels, local storage, session
+                        technologies, and similar technologies to operate,
+                        secure, analyze, and improve our website.
+                    </p>
+
+                    <h3>
+                        These technologies may help us:
+                    </h3>
+
+                    <ul>
+
+                        <li>
+                            Maintain account sessions
+                        </li>
+
+                        <li>
+                            Remember user preferences
+                        </li>
+
+                        <li>
+                            Improve website functionality
+                        </li>
+
+                        <li>
+                            Analyze website traffic
+                        </li>
+
+                        <li>
+                            Improve property search functionality
+                        </li>
+
+                        <li>
+                            Maintain website security
+                        </li>
+
+                        <li>
+                            Detect suspicious activity
+                        </li>
+
+                        <li>
+                            Measure website and communication performance
+                        </li>
+
+                    </ul>
+
+                    <p>
+                        You may be able to manage cookies through your browser
+                        settings. Disabling certain cookies may affect some
+                        website functionality.
+                    </p>
+
+                </section>
+
+
+                <!-- ====================================================
+                     7
+                     ==================================================== -->
+
+                <section
+                    class="privacy-section"
+                    id="use"
+                >
+
+                    <h2>
+                        <span class="section-number">
+                            07
+                        </span>
+
+                        How We Use Personal Information
+                    </h2>
+
+                    <p>
+                        Atlas may use personal information for legitimate
+                        business and service purposes, including to:
+                    </p>
+
+                    <ul>
+
+                        <li>
+                            Provide and operate our Services
+                        </li>
+
+                        <li>
+                            Display and organize property listings
+                        </li>
+
+                        <li>
+                            Respond to property inquiries
+                        </li>
+
+                        <li>
+                            Connect users with real estate professionals
+                        </li>
+
+                        <li>
+                            Schedule property tours
+                        </li>
+
+                        <li>
+                            Maintain user accounts
+                        </li>
+
+                        <li>
+                            Provide saved-property functionality
+                        </li>
+
+                        <li>
+                            Provide saved-search functionality
+                        </li>
+
+                        <li>
+                            Provide property comparison functionality
+                        </li>
+
+                        <li>
+                            Remember user preferences
+                        </li>
+
+                        <li>
+                            Provide relevant property recommendations
+                        </li>
+
+                        <li>
+                            Improve our website and Services
+                        </li>
+
+                        <li>
+                            Provide customer support
+                        </li>
+
+                        <li>
+                            Send requested information
+                        </li>
+
+                        <li>
+                            Maintain website security
+                        </li>
+
+                        <li>
+                            Detect and prevent fraud
+                        </li>
+
+                        <li>
+                            Analyze website usage
+                        </li>
+
+                        <li>
+                            Comply with applicable law
+                        </li>
+
+                        <li>
+                            Enforce our policies and agreements
+                        </li>
+
+                    </ul>
+
+                </section>
+
+
+                <!-- ====================================================
+                     8
+                     ==================================================== -->
+
+                <section
+                    class="privacy-section"
+                    id="communications"
+                >
+
+                    <h2>
+                        <span class="section-number">
+                            08
+                        </span>
+
+                        Communications
+                    </h2>
+
+                    <p>
+                        When you contact Atlas, submit an inquiry, request
+                        information, schedule a tour, or communicate with an
+                        agent through our Services, we may use your contact
+                        information to respond to your request.
+                    </p>
+
+                    <p>
+                        Communications may include:
+                    </p>
+
+                    <ul>
+
+                        <li>
+                            Property information
+                        </li>
+
+                        <li>
+                            Inquiry responses
+                        </li>
+
+                        <li>
+                            Tour confirmations
+                        </li>
+
+                        <li>
+                            Account notifications
+                        </li>
+
+                        <li>
+                            Security notifications
+                        </li>
+
+                        <li>
+                            Requested information
+                        </li>
+
+                        <li>
+                            Service updates
+                        </li>
+
+                        <li>
+                            Transaction-related communications
+                        </li>
+
+                    </ul>
+
+                    <p>
+                        Where permitted by applicable law, we may also send
+                        promotional communications. You may unsubscribe from
+                        marketing communications using the unsubscribe
+                        mechanism included in those communications.
+                    </p>
+
+                    <p>
+                        Opting out of marketing communications does not
+                        necessarily stop transactional, security, account,
+                        or other essential service communications.
+                    </p>
+
+                </section>
+
+
+                <!-- ====================================================
+                     9
+                     ==================================================== -->
+
+                <section
+                    class="privacy-section"
+                    id="ai"
+                >
+
+                    <h2>
+                        <span class="section-number">
+                            09
+                        </span>
+
+                        Artificial Intelligence Features
+                    </h2>
+
+                    <p>
+                        Atlas may provide artificial intelligence-powered
+                        features to assist with property searches, property
+                        information, general real estate questions,
+                        recommendations, or other website functionality.
+                    </p>
+
+                    <p>
+                        Information submitted through an AI-powered feature
+                        may be processed by Atlas and technology providers
+                        supporting that functionality.
+                    </p>
+
+                    <div class="privacy-notice">
+
+                        <strong>
+                            Protect sensitive information
+                        </strong>
+
+                        <p>
+                            Do not submit passwords, financial account
+                            credentials, government identification numbers,
+                            or other highly sensitive confidential information
+                            to an AI assistant unless Atlas specifically
+                            instructs you to do so through a secure process.
+                        </p>
+
+                    </div>
+
+                    <p>
+                        AI-generated information is provided for general
+                        informational purposes and should not be considered
+                        legal, tax, lending, appraisal, financial, or
+                        investment advice.
+                    </p>
+
+                </section>
+
+
+                <!-- ====================================================
+                     10
+                     ==================================================== -->
+
+                <section
+                    class="privacy-section"
+                    id="mortgage"
+                >
+
+                    <h2>
+                        <span class="section-number">
+                            10
+                        </span>
+
+                        Mortgage & Financial Tools
+                    </h2>
+
+                    <p>
+                        Atlas may provide mortgage calculators, affordability
+                        calculators, investment calculators, or other
+                        financial estimation tools.
+                    </p>
+
+                    <p>
+                        Information entered into these tools may be processed
+                        to generate calculations or estimates.
+                    </p>
+
+                    <p>
+                        Unless specifically stated otherwise, calculator
+                        results do not constitute:
+                    </p>
+
+                    <ul>
+
+                        <li>
+                            A loan offer
+                        </li>
+
+                        <li>
+                            A lending commitment
+                        </li>
+
+                        <li>
+                            Financial advice
+                        </li>
+
+                        <li>
+                            Investment advice
+                        </li>
+
+                        <li>
+                            Tax advice
+                        </li>
+
+                        <li>
+                            Legal advice
+                        </li>
+
+                        <li>
+                            A guarantee of financing
+                        </li>
+
+                    </ul>
+
+                    <p>
+                        Actual lending terms, rates, qualification standards,
+                        and financing decisions are determined by the
+                        applicable lender or financial institution.
+                    </p>
+
+                </section>
+
+
+                <!-- ====================================================
+                     11
+                     ==================================================== -->
+
+                <section
+                    class="privacy-section"
+                    id="sharing"
+                >
+
+                    <h2>
+                        <span class="section-number">
+                            11
+                        </span>
+
+                        How We Share Personal Information
+                    </h2>
+
+                    <p>
+                        Atlas does not sell personal information as a
+                        traditional customer database for money. However,
+                        we may disclose information when reasonably necessary
+                        to operate our business and provide requested
+                        Services.
+                    </p>
+
+                    <h3>
+                        Service Providers
+                    </h3>
+
+                    <p>
+                        We may use third-party providers for:
+                    </p>
+
+                    <ul>
+
+                        <li>
+                            Website hosting
+                        </li>
+
+                        <li>
+                            Database infrastructure
+                        </li>
+
+                        <li>
+                            Authentication
+                        </li>
+
+                        <li>
+                            Cloud storage
+                        </li>
+
+                        <li>
+                            Email delivery
+                        </li>
+
+                        <li>
+                            Customer communications
+                        </li>
+
+                        <li>
+                            Analytics
+                        </li>
+
+                        <li>
+                            Security
+                        </li>
+
+                        <li>
+                            AI functionality
+                        </li>
+
+                        <li>
+                            Technical support
+                        </li>
+
+                    </ul>
+
+
+                    <h3>
+                        Real Estate Professionals
+                    </h3>
+
+                    <p>
+                        Where necessary to respond to your request, relevant
+                        information may be shared with real estate agents,
+                        brokers, brokerages, property representatives,
+                        developers, property managers, or other authorized
+                        real estate professionals.
+                    </p>
+
+
+                    <h3>
+                        Transaction Professionals
+                    </h3>
+
+                    <p>
+                        Where appropriate and authorized, information may be
+                        shared with professionals involved in a real estate
+                        transaction, including title companies, escrow
+                        providers, attorneys, lenders, inspectors, appraisers,
+                        and other transaction service providers.
+                    </p>
+
+
+                    <h3>
+                        Legal Requirements
+                    </h3>
+
+                    <p>
+                        We may disclose information when required or permitted
+                        by law, including in response to subpoenas, court
+                        orders, government requests, legal proceedings,
+                        regulatory requirements, fraud investigations, or
+                        law enforcement requests.
+                    </p>
+
+                </section>
+
+
+                <!-- ====================================================
+                     12
+                     ==================================================== -->
+
+                <section
+                    class="privacy-section"
+                    id="security"
+                >
+
+                    <h2>
+                        <span class="section-number">
+                            12
+                        </span>
+
+                        Data Security
+                    </h2>
+
+                    <p>
+                        Atlas takes reasonable administrative, technical, and
+                        organizational measures designed to protect personal
+                        information against unauthorized access, loss, misuse,
+                        alteration, or disclosure.
+                    </p>
+
+                    <ul>
+
+                        <li>
+                            HTTPS/TLS encrypted communications
+                        </li>
+
+                        <li>
+                            Access controls
+                        </li>
+
+                        <li>
+                            Authentication controls
+                        </li>
+
+                        <li>
+                            Restricted access to personal information
+                        </li>
+
+                        <li>
+                            Secure infrastructure
+                        </li>
+
+                        <li>
+                            Security monitoring
+                        </li>
+
+                        <li>
+                            Software and security updates
+                        </li>
+
+                        <li>
+                            Data access limitations
+                        </li>
+
+                        <li>
+                            Appropriate vendor security measures
+                        </li>
+
+                    </ul>
+
+                    <p>
+                        No website, database, electronic transmission, or
+                        storage system can be guaranteed to be completely
+                        secure. Atlas therefore cannot guarantee absolute
+                        security of your information.
+                    </p>
+
+                </section>
+
+
+                <!-- ====================================================
+                     13
+                     ==================================================== -->
+
+                <section
+                    class="privacy-section"
+                    id="retention"
+                >
+
+                    <h2>
+                        <span class="section-number">
+                            13
+                        </span>
+
+                        Data Retention
+                    </h2>
+
+                    <p>
+                        We retain personal information for as long as
+                        reasonably necessary to fulfill the purposes for which
+                        it was collected and for legitimate business, legal,
+                        security, and operational purposes.
+                    </p>
+
+                    <p>
+                        Retention periods may depend on:
+                    </p>
+
+                    <ul>
+
+                        <li>
+                            The nature of the information
+                        </li>
+
+                        <li>
+                            The purpose for which it was collected
+                        </li>
+
+                        <li>
+                            Whether you maintain an active account
+                        </li>
+
+                        <li>
+                            Transaction requirements
+                        </li>
+
+                        <li>
+                            Legal obligations
+                        </li>
+
+                        <li>
+                            Dispute resolution requirements
+                        </li>
+
+                        <li>
+                            Security and fraud prevention requirements
+                        </li>
+
+                    </ul>
+
+                    <p>
+                        When information is no longer reasonably necessary,
+                        Atlas may delete, anonymize, or securely dispose of
+                        it, subject to applicable legal and operational
+                        requirements.
+                    </p>
+
+                </section>
+
+
+                <!-- ====================================================
+                     14
+                     ==================================================== -->
+
+                <section
+                    class="privacy-section"
+                    id="children"
+                >
+
+                    <h2>
+                        <span class="section-number">
+                            14
+                        </span>
+
+                        Children's Privacy
+                    </h2>
+
+                    <p>
+                        Our Services are intended for adults and are not
+                        directed toward children under the age of 13.
+                    </p>
+
+                    <p>
+                        Atlas does not knowingly collect personal information
+                        from children under 13. If we learn that personal
+                        information from a child under 13 has been collected
+                        without appropriate authorization, we will take
+                        reasonable steps to delete it.
+                    </p>
+
+                </section>
+
+
+                <!-- ====================================================
+                     15
+                     ==================================================== -->
+
+                <section
+                    class="privacy-section"
+                    id="international"
+                >
+
+                    <h2>
+                        <span class="section-number">
+                            15
+                        </span>
+
+                        International Visitors
+                    </h2>
+
+                    <p>
+                        Atlas provides information concerning real estate in
+                        the United States and may be accessed by users located
+                        outside the United States.
+                    </p>
+
+                    <p>
+                        If you access our Services from outside the United
+                        States, your information may be transferred to,
+                        stored in, or processed in the United States or other
+                        countries where Atlas or its service providers
+                        operate.
+                    </p>
+
+                    <p>
+                        Privacy and data protection laws in those jurisdictions
+                        may differ from the laws of your country of residence.
+                    </p>
+
+                </section>
+
+
+                <!-- ====================================================
+                     16
+                     ==================================================== -->
+
+                <section
+                    class="privacy-section"
+                    id="california"
+                >
+
+                    <h2>
+                        <span class="section-number">
+                            16
+                        </span>
+
+                        California Privacy Rights
+                    </h2>
+
+                    <p>
+                        If you are a California resident, you may have
+                        additional privacy rights under applicable California
+                        privacy laws, including the California Consumer
+                        Privacy Act, as amended ("CCPA"), depending on whether
+                        and how those laws apply to Atlas.
+                    </p>
+
+                    <p>
+                        Subject to applicable legal limitations, California
+                        residents may have rights concerning:
+                    </p>
+
+                    <ul>
+
+                        <li>
+                            Access to personal information
+                        </li>
+
+                        <li>
+                            Deletion of personal information
+                        </li>
+
+                        <li>
+                            Correction of inaccurate information
+                        </li>
+
+                        <li>
+                            Information about categories of information
+                            collected
+                        </li>
+
+                        <li>
+                            Information about collection purposes
+                        </li>
+
+                        <li>
+                            Information about categories of sources
+                        </li>
+
+                        <li>
+                            Information about categories of recipients
+                        </li>
+
+                        <li>
+                            Certain opt-out rights
+                        </li>
+
+                        <li>
+                            Other rights provided by applicable California
+                            law
+                        </li>
+
+                    </ul>
+
+                    <p>
+                        Atlas does not discriminate against users for
+                        exercising privacy rights granted by applicable law.
+                    </p>
+
+                </section>
+
+
+                <!-- ====================================================
+                     17
+                     ==================================================== -->
+
+                <section
+                    class="privacy-section"
+                    id="state-rights"
+                >
+
+                    <h2>
+                        <span class="section-number">
+                            17
+                        </span>
+
+                        Other U.S. State Privacy Rights
+                    </h2>
+
+                    <p>
+                        Depending on your state of residence, you may have
+                        additional rights under applicable state privacy laws.
+                    </p>
+
+                    <p>
+                        Depending on applicable law, these rights may include
+                        the right to:
+                    </p>
+
+                    <ul>
+
+                        <li>
+                            Access personal information
+                        </li>
+
+                        <li>
+                            Correct personal information
+                        </li>
+
+                        <li>
+                            Delete personal information
+                        </li>
+
+                        <li>
+                            Obtain a copy of certain information
+                        </li>
+
+                        <li>
+                            Opt out of certain processing activities
+                        </li>
+
+                        <li>
+                            Appeal certain privacy decisions
+                        </li>
+
+                    </ul>
+
+                    <p>
+                        The availability and scope of these rights depend on
+                        applicable law and whether Atlas is subject to that
+                        law.
+                    </p>
+
+                </section>
+
+
+                <!-- ====================================================
+                     18
+                     ==================================================== -->
+
+                <section
+                    class="privacy-section"
+                    id="third-party"
+                >
+
+                    <h2>
+                        <span class="section-number">
+                            18
+                        </span>
+
+                        Third-Party Websites
+                    </h2>
+
+                    <p>
+                        Our Services may contain links to third-party
+                        websites, including real estate services, lenders,
+                        financial services, mapping services, social media
+                        platforms, agents, brokers, and other external
+                        resources.
+                    </p>
+
+                    <p>
+                        Atlas is not responsible for the privacy practices,
+                        security, content, or policies of third-party websites.
+                    </p>
+
+                    <p>
+                        We encourage you to review the privacy policy of each
+                        third-party website before submitting personal
+                        information.
+                    </p>
+
+                </section>
+
+
+                <!-- ====================================================
+                     19
+                     ==================================================== -->
+
+                <section
+                    class="privacy-section"
+                    id="real-estate"
+                >
+
+                    <h2>
+                        <span class="section-number">
+                            19
+                        </span>
+
+                        Real Estate Information Disclaimer
+                    </h2>
+
+                    <p>
+                        Atlas is a real estate information and technology
+                        platform. Information provided through our Services
+                        should not automatically be interpreted as legal,
+                        tax, accounting, lending, appraisal, financial, or
+                        investment advice.
+                    </p>
+
+                    <p>
+                        Real estate transactions involve significant financial
+                        and legal considerations. Users should consult
+                        appropriately qualified professionals before making
+                        significant real estate or investment decisions.
+                    </p>
+
+                    <p>
+                        Property information may originate from public
+                        records, property owners, brokers, agents, developers,
+                        listing services, data providers, or other sources.
+                        Atlas does not guarantee that all property information
+                        is complete, current, or error-free.
+                    </p>
+
+                </section>
+
+
+                <!-- ====================================================
+                     20
+                     ==================================================== -->
+
+                <section
+                    class="privacy-section"
+                    id="changes"
+                >
+
+                    <h2>
+                        <span class="section-number">
+                            20
+                        </span>
+
+                        Changes to This Privacy Policy
+                    </h2>
+
+                    <p>
+                        Atlas may update this Privacy Policy periodically to
+                        reflect changes to our Services, technology, business
+                        practices, legal requirements, or privacy practices.
+                    </p>
+
+                    <p>
+                        When changes are made, we will update the "Last
+                        Updated" date displayed at the beginning of this
+                        policy.
+                    </p>
+
+                    <p>
+                        Where required by applicable law, we may provide
+                        additional notice concerning material changes.
+                    </p>
+
+                </section>
+
+
+                <!-- ====================================================
+                     21
+                     ==================================================== -->
+
+                <section
+                    class="privacy-section"
+                    id="contact"
+                >
+
+                    <div class="privacy-contact">
+
+                        <h2>
+                            <span class="section-number">
+                                21
+                            </span>
+
+                            Contact Us
+                        </h2>
+
+                        <p>
+                            If you have questions about this Privacy Policy,
+                            our privacy practices, or the handling of your
+                            personal information, please contact Atlas
+                            Property Group.
+                        </p>
+
+
+                        <div class="privacy-contact-grid">
+
+
+                            <div class="privacy-contact-item">
+
+                                <span>
+                                    Company
+                                </span>
+
+                                <strong>
+                                    Atlas Property Group
+                                </strong>
+
+                            </div>
+
+
+                            <div class="privacy-contact-item">
+
+                                <span>
+                                    Department
+                                </span>
+
+                                <strong>
+                                    Privacy Department
+                                </strong>
+
+                            </div>
+
+
+                            <div class="privacy-contact-item">
+
+                                <span>
+                                    Email
+                                </span>
+
+                                <strong>
+                                    [Insert official privacy email]
+                                </strong>
+
+                            </div>
+
+
+                            <div class="privacy-contact-item">
+
+                                <span>
+                                    Business Address
+                                </span>
+
+                                <strong>
+                                    [Insert official business address]
+                                </strong>
+
+                            </div>
+
+
+                        </div>
+
+
+                        <div class="privacy-notice">
+
+                            <strong>
+                                Privacy Requests
+                            </strong>
+
+                            <p>
+                                If you are submitting a privacy request,
+                                please include "Privacy Request" in the
+                                subject line of your email. We may request
+                                additional information to verify your identity
+                                before completing certain requests.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- BACK TO TOP -->
+                <div class="privacy-back-top">
+
+                    <a href="#top">
+                        Back to top
+                        <i class="fas fa-arrow-up"></i>
+                    </a>
+
+                </div>
+
+
+            </article>
+
+        </div>
+
+    </div>
+
+</main>
+
+
+<!-- ================================================================
+     ATLAS JAVASCRIPT
+     ================================================================ -->
+
+<script src="js/navbar.js"></script>
+<script src="js/footer.js"></script>
+
+</body>
+</html>
+

@@ -1,0 +1,1663 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Alexander Sterling | Senior Luxury Real Estate Advisor | Atlas Property Group</title>
+
+<meta name="description" content="Meet Alexander Sterling, Senior Luxury Real Estate Advisor at Atlas Property Group specializing in luxury homes, penthouses, waterfront estates, and international buyers across New York, Florida, and California.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/variables.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="css/responsive.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+
+/* ---------- HERO ---------- */
+
+.agent-hero{
+    position:relative;
+    padding:150px 0 90px;
+    background:
+    linear-gradient(rgba(7,20,45,.82),rgba(7,20,45,.82)),
+    url('https://images.unsplash.com/photo-1511818966892-d7d671e672a2?auto=format&fit=crop&w=1800&q=90');
+    background-size:cover;
+    background-position:center;
+    color:#fff;
+}
+
+.agent-grid{
+    display:grid;
+    grid-template-columns:380px 1fr;
+    gap:60px;
+    align-items:center;
+}
+
+.agent-photo{
+    position:relative;
+}
+
+.agent-photo img{
+    width:100%;
+    height:500px;
+    object-fit:cover;
+    border-radius:22px;
+    box-shadow:0 25px 60px rgba(0,0,0,.35);
+}
+
+.verified{
+    position:absolute;
+    top:20px;
+    left:20px;
+    background:#fff;
+    color:#0B3D91;
+    padding:10px 18px;
+    border-radius:999px;
+    font-size:12px;
+    font-weight:700;
+    display:flex;
+    align-items:center;
+    gap:8px;
+}
+
+.verified i{
+    color:#070345;
+}
+
+.hero-label{
+    color:#73678c;
+    text-transform:uppercase;
+    letter-spacing:2px;
+    font-size:13px;
+    font-weight:700;
+}
+
+.agent-info h1{
+    font-family:'Cormorant Garamond',serif;
+    font-size:clamp(56px,7vw,86px);
+    line-height:.92;
+    margin:18px 0;
+    color:#fff;
+}
+
+.agent-info p{
+    color:rgba(255,255,255,.86);
+    line-height:1.9;
+    max-width:700px;
+    font-size:16px;
+}
+
+.hero-actions{
+    display:flex;
+    gap:15px;
+    flex-wrap:wrap;
+    margin-top:30px;
+}
+
+.btn-outline-light{
+    border:1px solid rgba(255,255,255,.35);
+    color:#fff;
+    padding:14px 26px;
+    border-radius:999px;
+    text-decoration:none;
+    font-weight:600;
+}
+
+.btn-outline-light:hover{
+    background:#fff;
+    color:#0B3D91;
+}
+
+.agent-contact{
+    display:flex;
+    flex-wrap:wrap;
+    gap:18px;
+    margin-top:30px;
+    color:rgba(255,255,255,.85);
+    font-size:14px;
+}
+
+.agent-contact div{
+    display:flex;
+    align-items:center;
+    gap:8px;
+}
+
+/* ---------- STATS ---------- */
+
+.stats{
+    background:#fff;
+    margin-top:-45px;
+    position:relative;
+    z-index:5;
+}
+
+.stats-wrap{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 15px 40px rgba(0,0,0,.08);
+}
+
+.stat{
+    background:#fff;
+    padding:34px 20px;
+    text-align:center;
+    border-right:1px solid #eee;
+}
+
+.stat:last-child{
+    border:none;
+}
+
+.stat h3{
+    color:#0B3D91;
+    font-size:34px;
+    margin-bottom:8px;
+    font-family:'Cormorant Garamond',serif;
+}
+
+.stat p{
+    color:#64748B;
+    font-size:12px;
+    text-transform:uppercase;
+    letter-spacing:1px;
+    font-weight:700;
+}
+
+/* ---------- PROFILE ---------- */
+
+.profile{
+    padding:90px 0;
+}
+
+.profile-grid{
+    display:grid;
+    grid-template-columns:2fr 1fr;
+    gap:50px;
+}
+
+.section-title{
+    font-family:'Cormorant Garamond',serif;
+    font-size:48px;
+    color:#0E1726;
+    margin-bottom:20px;
+}
+
+.bio p{
+    color:#64748B;
+    line-height:2;
+    margin-bottom:18px;
+}
+
+.info-card{
+    background:#F8FAFC;
+    border-radius:18px;
+    padding:30px;
+    margin-bottom:25px;
+}
+
+.info-card h3{
+    color:#0B3D91;
+    margin-bottom:20px;
+}
+
+.info-row{
+    display:flex;
+    justify-content:space-between;
+    padding:12px 0;
+    border-bottom:1px solid #E5E7EB;
+    font-size:14px;
+}
+
+.info-row:last-child{
+    border:none;
+}
+
+.info-row span:first-child{
+    color:#64748B;
+}
+
+.info-row strong{
+    color:#111827;
+}
+
+.tags{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+}
+
+.tags span{
+    background:#E8EEF9;
+    color:#0B3D91;
+    padding:10px 16px;
+    border-radius:999px;
+    font-size:13px;
+    font-weight:600;
+}
+
+/* ---------- RESPONSIVE ---------- */
+
+@media(max-width:980px){
+
+.agent-grid,
+.profile-grid{
+grid-template-columns:1fr;
+}
+
+.stats-wrap{
+grid-template-columns:repeat(2,1fr);
+}
+
+.agent-photo{
+max-width:420px;
+margin:auto;
+}
+
+}
+
+@media(max-width:600px){
+
+.agent-hero{
+padding:120px 0 70px;
+}
+
+.agent-info h1{
+font-size:52px;
+}
+
+.stats-wrap{
+grid-template-columns:1fr;
+}
+
+.section-title{
+font-size:38px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div id="shared-header-root" data-shared-navbar="true"></div>
+
+<!-- HERO -->
+
+<section class="agent-hero">
+
+<div class="container">
+
+<div class="agent-grid">
+
+<div class="agent-photo reveal">
+
+<img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=900&q=90" alt="Alexander Sterling">
+
+<div class="verified">
+<i class="fas fa-circle-check"></i>
+Verified Advisor
+</div>
+
+</div>
+
+<div class="agent-info reveal">
+
+<div class="hero-label">
+Senior Luxury Real Estate Advisor
+</div>
+
+<h1>Alexander Sterling</h1>
+
+<p>
+Alexander Sterling is a luxury real estate advisor specializing in high-value residential and investment properties across New York, Florida, and California. He works with U.S. residents, relocating executives, and international buyers seeking exceptional American real estate opportunities.
+</p>
+
+<div class="hero-actions">
+
+<a href="#contact" class="btn btn-primary">
+Schedule Consultation
+</a>
+
+<a href="#listings" class="btn-outline-light">
+View Listings
+</a>
+
+</div>
+
+<div class="agent-contact">
+
+<!-- <div>
+<i class="fas fa-phone"></i>
++1 (212) 555-0184
+</div> -->
+
+<!-- <div>
+<i class="fas fa-envelope"></i>
+alexander@atlasproperty.com
+</div> -->
+
+<div>
+<i class="fas fa-location-dot"></i>
+New York • Miami • Los Angeles
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- STATS -->
+
+<section class="stats">
+
+<div class="container">
+
+<div class="stats-wrap">
+
+<div class="stat">
+<h3>$1.28B</h3>
+<p>Career Sales Volume</p>
+</div>
+
+<div class="stat">
+<h3>487</h3>
+<p>Closed Transactions</p>
+</div>
+
+<div class="stat">
+<h3>15+</h3>
+<p>Years Experience</p>
+</div>
+
+<div class="stat">
+<h3>98%</h3>
+<p>Client Satisfaction</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- PROFILE -->
+
+<section class="profile">
+
+<div class="container">
+
+<div class="profile-grid">
+
+<div class="bio">
+
+<span class="hero-label">Professional Biography</span>
+
+<h2 class="section-title">
+Helping Clients Invest With Confidence
+</h2>
+
+<p>
+For more than fifteen years, Alexander Sterling has represented buyers, sellers, and investors in some of the most competitive luxury real estate markets in the United States. His experience spans waterfront estates, penthouses, trophy residences, and income-producing investment assets.
+</p>
+
+<p>
+Alexander is known for combining detailed market analysis with a highly personalized client experience. Whether advising a family purchasing a primary residence or an overseas investor expanding a U.S. portfolio, his approach focuses on long-term value, discretion, and informed decision-making.
+</p>
+
+<p>
+His clientele includes business executives, entrepreneurs, physicians, professional athletes, and international families seeking residential and investment opportunities throughout America's leading metropolitan markets.
+</p>
+
+<h2 class="section-title" style="font-size:40px; margin-top:50px;">
+Areas of Specialization
+</h2>
+
+<div class="tags">
+
+<span>Luxury Homes</span>
+<span>Penthouses</span>
+<span>Waterfront Estates</span>
+<span>Investment Properties</span>
+<span>Commercial Assets</span>
+<span>International Buyers</span>
+<span>Relocation Services</span>
+<span>New Developments</span>
+
+</div>
+
+</div>
+
+<aside>
+
+<div class="info-card">
+
+<h3>Professional Information</h3>
+
+<div class="info-row">
+<span>License</span>
+<strong>Licensed REALTOR®</strong>
+</div>
+
+<div class="info-row">
+<span>Primary Markets</span>
+<strong>NY • FL • CA</strong>
+</div>
+
+<div class="info-row">
+<span>Languages</span>
+<strong>English, French</strong>
+</div>
+
+<div class="info-row">
+<span>Specialty</span>
+<strong>Luxury Residential</strong>
+</div>
+
+<div class="info-row">
+<span>Office</span>
+<strong>Atlas Manhattan</strong>
+</div>
+
+</div>
+
+<div class="info-card">
+
+<h3>Certifications</h3>
+
+<div class="info-row">
+<span>Luxury Specialist</span>
+<strong>Certified</strong>
+</div>
+
+<div class="info-row">
+<span>Investment Advisory</span>
+<strong>Qualified</strong>
+</div>
+
+<div class="info-row">
+<span>Relocation Services</span>
+<strong>Professional</strong>
+</div>
+
+</div>
+
+</aside>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ===========================================
+     CAREER TIMELINE
+=========================================== -->
+
+<section class="career-section">
+    <div class="container">
+
+        <div class="section-heading">
+            <span class="hero-label">Professional Journey</span>
+            <h2 class="section-title">Career Highlights</h2>
+            <p>Over 15 years representing luxury residential and investment properties across America's premier real estate markets.</p>
+        </div>
+
+        <div class="timeline">
+
+            <div class="timeline-item">
+                <div class="timeline-year">2011</div>
+                <div class="timeline-content">
+                    <h3>Entered Luxury Residential Real Estate</h3>
+                    <p>Began representing buyers and sellers in Manhattan's high-end condominium and townhouse market.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-year">2015</div>
+                <div class="timeline-content">
+                    <h3>Top Producer Recognition</h3>
+                    <p>Achieved annual sales exceeding $120 million and earned recognition among the region's leading luxury advisors.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-year">2019</div>
+                <div class="timeline-content">
+                    <h3>International Buyer Division</h3>
+                    <p>Expanded services to assist overseas clients investing in residential and commercial U.S. real estate.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-year">2026</div>
+                <div class="timeline-content">
+                    <h3>Senior Luxury Advisor</h3>
+                    <p>Leads Atlas Property Group's luxury residential and investment advisory services across multiple U.S. markets.</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- ===========================================
+     MARKETS SERVED
+=========================================== -->
+
+<section class="markets-section">
+    <div class="container">
+
+        <div class="section-heading center">
+            <span class="hero-label">Markets Served</span>
+            <h2 class="section-title">Local Expertise Across Leading U.S. Markets</h2>
+        </div>
+
+        <div class="market-grid">
+
+            <div class="market-card">
+                <h3>New York</h3>
+                <p>Luxury condominiums, penthouses, brownstones and investment apartments throughout Manhattan and Brooklyn.</p>
+            </div>
+
+            <div class="market-card">
+                <h3>Florida</h3>
+                <p>Waterfront estates, vacation residences and income-producing coastal properties in Miami and Palm Beach.</p>
+            </div>
+
+            <div class="market-card">
+                <h3>California</h3>
+                <p>Contemporary luxury homes and architect-designed residences across Los Angeles and Orange County.</p>
+            </div>
+
+            <div class="market-card">
+                <h3>International Buyers</h3>
+                <p>Dedicated guidance for overseas purchasers acquiring residential and commercial real estate in the United States.</p>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- ===========================================
+     PROFESSIONAL SERVICES
+=========================================== -->
+
+<section class="services-section">
+    <div class="container">
+
+        <div class="section-heading">
+            <span class="hero-label">Professional Services</span>
+            <h2 class="section-title">How Alexander Can Help</h2>
+        </div>
+
+        <div class="services-grid">
+
+            <div class="service-box">
+                <i class="fas fa-house"></i>
+                <h3>Luxury Home Buying</h3>
+                <p>Personalized guidance for primary residences, vacation homes and exclusive luxury properties.</p>
+            </div>
+
+            <div class="service-box">
+                <i class="fas fa-chart-line"></i>
+                <h3>Investment Advisory</h3>
+                <p>Evaluate residential and commercial opportunities using market-driven investment analysis.</p>
+            </div>
+
+            <div class="service-box">
+                <i class="fas fa-building"></i>
+                <h3>Commercial Properties</h3>
+                <p>Support for multifamily, office, retail and mixed-use commercial acquisitions.</p>
+            </div>
+
+            <div class="service-box">
+                <i class="fas fa-earth-americas"></i>
+                <h3>International Buyers</h3>
+                <p>Remote property tours, transaction coordination and guidance throughout the U.S. buying process.</p>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- ===========================================
+     CONSULTATION
+=========================================== -->
+
+<section class="consult-section" id="contact">
+    <div class="container">
+
+        <div class="consult-grid">
+
+            <div>
+                <span class="hero-label">Schedule a Consultation</span>
+                <h2 class="section-title">Let's Discuss Your Real Estate Goals</h2>
+
+                <p>
+                    Whether you're purchasing a luxury residence, relocating to the United States,
+                    or expanding an investment portfolio, Alexander will help you identify opportunities
+                    aligned with your objectives.
+                </p>
+
+                <div class="contact-list">
+
+                    <div>
+                        <i class="fas fa-phone"></i>
+                        <span>+1 (334) 697-1225</span>
+                    </div>
+
+                    <div>
+                        <i class="fas fa-envelope"></i>
+                        <span>alexander@atlaspropertyglobal.com</span>
+                    </div>
+
+                    <div>
+                        <i class="fas fa-location-dot"></i>
+                        <span>Atlas Property Group — Manhattan Office</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="consult-form">
+
+                <h3>Request a Private Consultation</h3>
+
+               <form id="agent-contact-form">
+
+    <input type="text" id="agent-name" placeholder="Full Name" required>
+
+    <input type="email" id="agent-email" placeholder="Email Address" required>
+
+    <input type="tel" id="agent-phone" placeholder="Phone Number">
+
+    <select id="agent-subject" required>
+        <option value="">I'm Interested In</option>
+        <option>Buying a Home</option>
+        <option>Luxury Property</option>
+        <option>Commercial Investment</option>
+        <option>International Purchase</option>
+    </select>
+
+    <textarea id="agent-message" rows="5" placeholder="Tell us about your property goals..."></textarea>
+
+    <button type="submit" class="btn btn-primary">
+        Schedule Consultation
+    </button>
+
+    <div id="agent-form-status" style="margin-top:15px; display:none;"></div>
+
+</form>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- ===========================================
+     PART 2 STYLES
+=========================================== -->
+
+<style>
+.career-section,.markets-section,.services-section,.consult-section{padding:90px 0}
+.section-heading{max-width:720px;margin-bottom:50px}
+.section-heading.center{text-align:center;margin-inline:auto}
+.section-heading p{color:#64748B;line-height:1.8}
+.timeline{position:relative;padding-left:40px;border-left:2px solid #041938}
+.timeline-item{position:relative;margin-bottom:45px}
+.timeline-item:last-child{margin-bottom:0}
+.timeline-item::before{content:"";position:absolute;left:-50px;top:8px;width:18px;height:18px;background:#01063c;border-radius:50%;border:4px solid #fff;box-shadow:0 0 0 2px #010e33}
+.timeline-year{font-size:14px;font-weight:700;color:#061245;letter-spacing:1px;margin-bottom:8px}
+.timeline-content h3{font-size:24px;color:#0E1726;margin-bottom:10px;font-family:'Cormorant Garamond',serif}
+.timeline-content p{color:#64748B;line-height:1.8}
+.markets-section{background:#F8FAFC}
+.market-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:25px}
+.market-card{background:#fff;padding:30px;border-radius:18px;box-shadow:0 10px 25px rgba(0,0,0,.05)}
+.market-card h3{color:#0B3D91;margin-bottom:12px;font-family:'Cormorant Garamond',serif;font-size:30px}
+.market-card p{color:#64748B;line-height:1.8}
+.services-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:25px}
+.service-box{background:#fff;border:1px solid #E5E7EB;padding:30px;border-radius:18px;transition:.3s}
+.service-box:hover{transform:translateY(-5px);box-shadow:0 15px 30px rgba(0,0,0,.06)}
+.service-box i{font-size:34px;color:#02053e;margin-bottom:18px}
+.service-box h3{margin-bottom:12px;color:#0E1726}
+.service-box p{color:#64748B;line-height:1.8}
+.consult-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:start}
+.contact-list{margin-top:30px;display:grid;gap:18px}
+.contact-list div{display:flex;align-items:center;gap:14px;color:#374151}
+.contact-list i{color:#021343;font-size:18px;width:22px}
+.consult-form{background:#F8FAFC;padding:35px;border-radius:20px}
+.consult-form h3{margin-bottom:20px;color:#0B3D91}
+.consult-form form{display:grid;gap:16px}
+.consult-form input,.consult-form select,.consult-form textarea{padding:14px 16px;border-radius:10px;border:1px solid #D1D5DB;font-family:inherit;font-size:14px}
+.consult-form textarea{resize:vertical}
+@media(max-width:900px){
+.market-grid,.services-grid,.consult-grid{grid-template-columns:1fr}
+}
+</style>
+
+
+<!-- ===========================================
+     EXCLUSIVE LISTINGS
+=========================================== -->
+
+<section class="listings-section" id="listings">
+
+    <div class="container">
+
+        <div class="section-heading center">
+
+            <span class="hero-label">Exclusive Listings</span>
+
+            <h2 class="section-title">
+                Signature Properties Represented by Alexander
+            </h2>
+
+            <p>
+                A selection of luxury residences and investment opportunities across New York,
+                Florida and California.
+            </p>
+
+        </div>
+
+        <div class="listing-grid">
+
+            <!-- Property 1 -->
+            <div class="listing-card">
+
+                <div class="listing-image">
+                    <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=900&q=80" alt="The Azure Estate">
+                    <span class="listing-price">$8,500,000</span>
+                </div>
+
+                <div class="listing-content">
+
+                    <span class="listing-location">
+                        <i class="fas fa-location-dot"></i>
+                        Palm Beach, Florida
+                    </span>
+
+                    <h3>The Azure Estate</h3>
+
+                    <div class="listing-specs">
+                        <span>6 Beds</span>
+                        <span>7 Baths</span>
+                        <span>8,900 Sq.Ft.</span>
+                    </div>
+
+                    <p>
+                        Waterfront luxury estate with private dock, infinity pool,
+                        home theater and panoramic Intracoastal views.
+                    </p>
+
+                    <a href="property-details.html" class="btn btn-primary">
+                        View Property
+                    </a>
+
+                </div>
+
+            </div>
+
+            <!-- Property 2 -->
+            <div class="listing-card">
+
+                <div class="listing-image">
+                    <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=80" alt="Skyline Penthouse">
+                    <span class="listing-price">$5,950,000</span>
+                </div>
+
+                <div class="listing-content">
+
+                    <span class="listing-location">
+                        <i class="fas fa-location-dot"></i>
+                        Manhattan, New York
+                    </span>
+
+                    <h3>Skyline Penthouse</h3>
+
+                    <div class="listing-specs">
+                        <span>4 Beds</span>
+                        <span>4.5 Baths</span>
+                        <span>4,200 Sq.Ft.</span>
+                    </div>
+
+                    <p>
+                        Full-floor penthouse featuring floor-to-ceiling glass,
+                        private rooftop terrace and Central Park skyline views.
+                    </p>
+
+                    <a href="property-details.html" class="btn btn-primary">
+                        View Property
+                    </a>
+
+                </div>
+
+            </div>
+
+            <!-- Property 3 -->
+            <div class="listing-card">
+
+                <div class="listing-image">
+                    <img src="https://images.unsplash.com/photo-1613977257363-707ba9348227?auto=format&fit=crop&w=900&q=80" alt="Bel Air Residence">
+                    <span class="listing-price">$12,750,000</span>
+                </div>
+
+                <div class="listing-content">
+
+                    <span class="listing-location">
+                        <i class="fas fa-location-dot"></i>
+                        Bel Air, California
+                    </span>
+
+                    <h3>Bel Air Contemporary</h3>
+
+                    <div class="listing-specs">
+                        <span>7 Beds</span>
+                        <span>8 Baths</span>
+                        <span>10,600 Sq.Ft.</span>
+                    </div>
+
+                    <p>
+                        Architect-designed residence with wellness spa,
+                        wine cellar and indoor-outdoor entertaining pavilion.
+                    </p>
+
+                    <a href="property-details.html" class="btn btn-primary">
+                        View Property
+                    </a>
+
+                </div>
+
+            </div>
+
+            <!-- Property 4 -->
+            <div class="listing-card">
+
+                <div class="listing-image">
+                    <img src="https://images.unsplash.com/photo-1600573472592-401b489a3cdc?auto=format&fit=crop&w=900&q=80" alt="Brickell Tower Residence">
+                    <span class="listing-price">$3,850,000</span>
+                </div>
+
+                <div class="listing-content">
+
+                    <span class="listing-location">
+                        <i class="fas fa-location-dot"></i>
+                        Miami, Florida
+                    </span>
+
+                    <h3>Brickell Tower Residence</h3>
+
+                    <div class="listing-specs">
+                        <span>3 Beds</span>
+                        <span>3 Baths</span>
+                        <span>2,950 Sq.Ft.</span>
+                    </div>
+
+                    <p>
+                        Luxury residence within a full-service waterfront tower
+                        offering concierge, marina access and resort amenities.
+                    </p>
+
+                    <a href="property-details.html" class="btn btn-primary">
+                        View Property
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ===========================================
+     RECENT TRANSACTIONS
+=========================================== -->
+
+<section class="transactions-section">
+
+    <div class="container">
+
+        <div class="section-heading center">
+
+            <span class="hero-label">Recent Transactions</span>
+
+            <h2 class="section-title">
+                Selected Luxury Sales
+            </h2>
+
+        </div>
+
+        <div class="transactions-table">
+
+            <div class="transaction-row header">
+                <div>Property</div>
+                <div>Market</div>
+                <div>Sale Price</div>
+                <div>Status</div>
+            </div>
+
+            <div class="transaction-row">
+                <div>Central Park Penthouse</div>
+                <div>New York</div>
+                <div>$9,200,000</div>
+                <div><span class="sold">Sold</span></div>
+            </div>
+
+            <div class="transaction-row">
+                <div>Oceanfront Estate</div>
+                <div>Miami Beach</div>
+                <div>$14,800,000</div>
+                <div><span class="sold">Sold</span></div>
+            </div>
+
+            <div class="transaction-row">
+                <div>Beverly Hills Villa</div>
+                <div>California</div>
+                <div>$11,350,000</div>
+                <div><span class="sold">Sold</span></div>
+            </div>
+
+            <div class="transaction-row">
+                <div>Luxury Investment Duplex</div>
+                <div>Brooklyn</div>
+                <div>$3,600,000</div>
+                <div><span class="sold">Sold</span></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ===========================================
+     CLIENT TESTIMONIALS
+=========================================== -->
+
+<section class="reviews-section">
+
+    <div class="container">
+
+        <div class="section-heading center">
+
+            <span class="hero-label">Client Reviews</span>
+
+            <h2 class="section-title">
+                Trusted by Buyers, Sellers & Investors
+            </h2>
+
+        </div>
+
+        <div class="review-grid">
+
+            <div class="review-card">
+
+                <div class="stars">
+                    ★★★★★
+                </div>
+
+                <p>
+                    “Alexander negotiated an exceptional purchase for our family’s
+                    Manhattan residence. His professionalism and market knowledge
+                    were outstanding throughout the transaction.”
+                </p>
+
+                <h4>Sarah Mitchell</h4>
+
+                <span>New York Buyer</span>
+
+            </div>
+
+            <div class="review-card">
+
+                <div class="stars">
+                    ★★★★★
+                </div>
+
+                <p>
+                    “As an overseas investor, I appreciated the clear communication,
+                    virtual tours and coordination with U.S. professionals. The process
+                    felt seamless from start to finish.”
+                </p>
+
+                <h4>Jean Dupont</h4>
+
+                <span>International Investor</span>
+
+            </div>
+
+            <div class="review-card">
+
+                <div class="stars">
+                    ★★★★★
+                </div>
+
+                <p>
+                    “Alexander helped us identify a waterfront investment property in
+                    Florida that aligned perfectly with our long-term portfolio strategy.”
+                </p>
+
+                <h4>Michael Carter</h4>
+
+                <span>Commercial Investor</span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ===========================================
+     PART 3 STYLES
+=========================================== -->
+
+<style>
+.listings-section,.transactions-section,.reviews-section{
+    padding:90px 0;
+}
+
+.listing-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:28px;
+}
+
+.listing-card{
+    background:#fff;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.listing-card:hover{
+    transform:translateY(-6px);
+}
+
+.listing-image{
+    position:relative;
+    height:260px;
+}
+
+.listing-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.listing-price{
+    position:absolute;
+    left:18px;
+    bottom:18px;
+    background:rgba(17,24,39,.9);
+    color:#fff;
+    padding:10px 16px;
+    border-radius:999px;
+    font-weight:700;
+}
+
+.listing-content{
+    padding:24px;
+}
+
+.listing-location{
+    color:#D4AF37;
+    font-size:13px;
+    font-weight:600;
+}
+
+.listing-content h3{
+    font-size:28px;
+    margin:12px 0;
+    font-family:'Cormorant Garamond',serif;
+}
+
+.listing-specs{
+    display:flex;
+    gap:18px;
+    font-size:13px;
+    color:#64748B;
+    margin-bottom:16px;
+}
+
+.listing-content p{
+    color:#64748B;
+    line-height:1.8;
+    margin-bottom:20px;
+}
+
+.transactions-section{
+    background:#F8FAFC;
+}
+
+.transactions-table{
+    background:#fff;
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 12px 30px rgba(0,0,0,.05);
+}
+
+.transaction-row{
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr 120px;
+    padding:22px 28px;
+    border-bottom:1px solid #E5E7EB;
+    align-items:center;
+}
+
+.transaction-row.header{
+    background:#0B3D91;
+    color:#fff;
+    font-weight:700;
+}
+
+.transaction-row:last-child{
+    border-bottom:none;
+}
+
+.sold{
+    background:#16A34A;
+    color:#fff;
+    padding:8px 14px;
+    border-radius:999px;
+    font-size:12px;
+    font-weight:700;
+}
+
+.review-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:24px;
+}
+
+.review-card{
+    background:#fff;
+    padding:32px;
+    border-radius:18px;
+    box-shadow:0 12px 28px rgba(0,0,0,.06);
+}
+
+.stars{
+    color:#D4AF37;
+    font-size:18px;
+    margin-bottom:18px;
+    letter-spacing:2px;
+}
+
+.review-card p{
+    color:#64748B;
+    line-height:1.9;
+    font-style:italic;
+    margin-bottom:20px;
+}
+
+.review-card h4{
+    color:#0E1726;
+    margin-bottom:4px;
+}
+
+.review-card span{
+    color:#64748B;
+    font-size:13px;
+}
+
+@media(max-width:900px){
+    .listing-grid,
+    .review-grid{
+        grid-template-columns:1fr;
+    }
+
+    .transaction-row{
+        grid-template-columns:1fr;
+        gap:8px;
+    }
+
+    .transaction-row.header{
+        display:none;
+    }
+}
+</style>
+
+<!-- ===========================================
+     FREQUENTLY ASKED QUESTIONS
+=========================================== -->
+
+<section class="faq-section">
+
+    <div class="container">
+
+        <div class="section-heading center">
+
+            <span class="hero-label">Frequently Asked Questions</span>
+
+            <h2 class="section-title">
+                Buying & Investing With Atlas
+            </h2>
+
+        </div>
+
+        <div class="faq-wrapper">
+
+            <div class="faq-item">
+                <h3>Can international buyers purchase U.S. real estate?</h3>
+                <p>
+                    Yes. Non-U.S. residents can purchase residential and commercial property in the United States.
+                    Atlas helps clients understand the buying process and coordinates with qualified real estate,
+                    title, lending, legal and tax professionals where appropriate.
+                </p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Do you provide virtual property tours?</h3>
+                <p>
+                    Absolutely. Alexander offers live video walkthroughs, detailed property presentations,
+                    neighborhood insights and remote consultation for buyers located anywhere in the world.
+                </p>
+            </div>
+
+            <div class="faq-item">
+                <h3>What property types do you specialize in?</h3>
+                <p>
+                    Luxury homes, waterfront estates, penthouses, investment properties, multifamily residences,
+                    commercial assets and new developments across major U.S. markets.
+                </p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Does Atlas provide legal or tax advice?</h3>
+                <p>
+                    No. Atlas Property Group is a real estate brokerage. Clients should obtain advice from qualified
+                    U.S. legal, tax, title and lending professionals regarding their individual circumstances.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ===========================================
+     SIMILAR ADVISORS
+=========================================== -->
+
+<section class="similar-agents">
+
+    <div class="container">
+
+        <div class="section-heading center">
+
+            <span class="hero-label">Meet More Advisors</span>
+
+            <h2 class="section-title">
+                You May Also Like
+            </h2>
+
+        </div>
+
+        <div class="similar-grid">
+
+            <!-- Advisor 1 -->
+            <div class="advisor-card">
+
+                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=700&q=80" alt="Elena Rodriguez">
+
+                <div class="advisor-info">
+
+                    <span>Commercial Director</span>
+
+                    <h3>Elena Rodriguez</h3>
+
+                    <p>Commercial acquisitions, retail developments and investment portfolios.</p>
+
+                    <a href="agent-details.html" class="btn btn-outline">
+                        View Profile
+                    </a>
+
+                </div>
+
+            </div>
+
+            <!-- Advisor 2 -->
+            <div class="advisor-card">
+
+                <img src="https://images.pexels.com/photos/6538430/pexels-photo-6538430.jpeg" alt="Grace Kim">
+
+                <div class="advisor-info">
+
+                    <span>Luxury Specialist</span>
+
+                    <h3>Grace Kim</h3>
+
+                    <p>Architectural homes and luxury coastal residences throughout California.</p>
+
+                    <a href="agent-details.html" class="btn btn-outline">
+                        View Profile
+                    </a>
+
+                </div>
+
+            </div>
+
+            <!-- Advisor 3 -->
+            <div class="advisor-card">
+
+                <img src="https://images.pexels.com/photos/7681357/pexels-photo-7681357.jpeg" alt="Michael Johnson">
+
+                <div class="advisor-info">
+
+                    <span>International Advisor</span>
+
+                    <h3>Michael Johnson</h3>
+
+                    <p>Dedicated support for overseas buyers purchasing U.S. real estate.</p>
+
+                    <a href="agent-details.html" class="btn btn-outline">
+                        View Profile
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ===========================================
+     FINAL CALL TO ACTION
+=========================================== -->
+
+<section class="agent-cta">
+
+    <div class="container">
+
+        <div class="cta-content">
+
+            <span class="hero-label" style="color:#D4AF37;">
+                Atlas Property Group
+            </span>
+
+            <h2>
+                Ready to Find Your Next Property?
+            </h2>
+
+            <p>
+                Whether you're buying your dream home, relocating to the United States,
+                or expanding an investment portfolio, Alexander Sterling is ready to help
+                you make informed real estate decisions.
+            </p>
+
+            <div class="hero-actions" style="justify-content:center;">
+
+                <a href="contact.html" class="btn btn-primary">
+                    Schedule Consultation
+                </a>
+
+                <a href="properties.html" class="btn btn-outline-light">
+                    Browse Properties
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ===========================================
+     SHARED FOOTER
+=========================================== -->
+
+<div id="shared-footer-root" data-shared-footer="true"></div>
+
+
+<!-- ===========================================
+     STYLES
+=========================================== -->
+
+<style>
+
+.faq-section{
+    padding:90px 0;
+    background:#F8FAFC;
+}
+
+.faq-wrapper{
+    max-width:900px;
+    margin:auto;
+}
+
+.faq-item{
+    background:#fff;
+    padding:28px 32px;
+    border-radius:16px;
+    margin-bottom:18px;
+    box-shadow:0 8px 20px rgba(0,0,0,.05);
+}
+
+.faq-item h3{
+    color:#0B3D91;
+    margin-bottom:12px;
+    font-size:22px;
+}
+
+.faq-item p{
+    color:#64748B;
+    line-height:1.9;
+}
+
+.similar-agents{
+    padding:90px 0;
+}
+
+.similar-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:28px;
+}
+
+.advisor-card{
+    background:#fff;
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 12px 30px rgba(0,0,0,.06);
+    transition:.3s;
+}
+
+.advisor-card:hover{
+    transform:translateY(-6px);
+}
+
+.advisor-card img{
+    width:100%;
+    height:300px;
+    object-fit:cover;
+}
+
+.advisor-info{
+    padding:24px;
+}
+
+.advisor-info span{
+    color:#D4AF37;
+    font-size:12px;
+    text-transform:uppercase;
+    font-weight:700;
+    letter-spacing:1px;
+}
+
+.advisor-info h3{
+    margin:10px 0;
+    font-size:28px;
+    font-family:'Cormorant Garamond',serif;
+    color:#0E1726;
+}
+
+.advisor-info p{
+    color:#64748B;
+    line-height:1.8;
+    margin-bottom:18px;
+}
+
+.agent-cta{
+    background:
+        linear-gradient(rgba(8,25,58,.88),rgba(8,25,58,.88)),
+        url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1800&q=85');
+    background-size:cover;
+    background-position:center;
+    padding:110px 0;
+    color:#fff;
+}
+
+.cta-content{
+    max-width:760px;
+    margin:auto;
+    text-align:center;
+}
+
+.cta-content h2{
+    font-family:'Cormorant Garamond',serif;
+    font-size:clamp(52px,6vw,76px);
+    line-height:.95;
+    margin:20px 0;
+}
+
+.cta-content p{
+    color:rgba(255,255,255,.85);
+    line-height:1.9;
+    margin-bottom:35px;
+    font-size:16px;
+}
+
+@media(max-width:900px){
+
+.similar-grid{
+grid-template-columns:1fr;
+}
+
+.cta-content h2{
+font-size:48px;
+}
+
+}
+
+</style>
+<script>
+document.getElementById("agent-contact-form").addEventListener("submit", async function(e){
+
+    e.preventDefault();
+
+    const status = document.getElementById("agent-form-status");
+    const submitButton = this.querySelector('button[type="submit"]');
+
+    const data = {
+        name: document.getElementById("agent-name").value.trim(),
+        email: document.getElementById("agent-email").value.trim(),
+        phone: document.getElementById("agent-phone").value.trim(),
+        subject: document.getElementById("agent-subject").value.trim(),
+        message: document.getElementById("agent-message").value.trim()
+    };
+
+    if (data.message.length < 10) {
+        status.style.display = "block";
+        status.style.color = "#DC2626";
+        status.textContent = "Please enter at least 10 characters in your message.";
+        return;
+    }
+
+    submitButton.disabled = true;
+    submitButton.textContent = "Submitting...";
+    status.style.display = "none";
+
+    try{
+
+        const response = await fetch("http://localhost:5000/api/contact/inquiry", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(data)
+        });
+
+        const result = await response.json();
+
+        if (!response.ok) {
+            throw new Error(result.error || result.message || "Unable to submit your consultation request.");
+        }
+
+        status.style.display = "block";
+        status.style.color = "#16A34A";
+        status.innerHTML = "✓ Consultation request submitted successfully.";
+
+        this.reset();
+
+    }catch(err){
+
+        status.style.display = "block";
+        status.style.color = "#DC2626";
+        status.textContent = err.message || "Unable to submit. Please try again.";
+
+        console.error(err);
+
+    } finally {
+        submitButton.disabled = false;
+        submitButton.textContent = "Schedule Consultation";
+    }
+
+});
+</script>
+
+
+<!-- ===========================================
+     SCRIPTS
+=========================================== -->
+
+<script type="module" src="js/firebase-auth.js"></script>
+<script src="js/navbar.js"></script>
+<script src="js/main.js"></script>
+<script src="js/footer.js"></script>
+
+</body>
+</html>

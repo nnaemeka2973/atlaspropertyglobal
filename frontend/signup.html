@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Join the Inner Circle | Atlas Property Group</title>
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .auth-page { display: grid; grid-template-columns: 1fr 1fr; min-height: 100vh; }
+        .auth-image { background: url('asset/log1.png') center/cover; }
+        .auth-form-container { display: flex; align-items: center; justify-content: center; padding: 20px 24px; background: var(--white); }
+        .auth-form-card { width: 100%; max-width: 520px; padding: 8px 0; }
+
+        /* Form elements */
+        .auth-form-card .logo { display: block; margin-bottom: 10px; text-decoration: none; color: var(--primary-blue); text-align: center; }
+        .auth-form-card .logo img {
+            max-width: 130px !important;
+            width: 130px !important;
+            height: auto !important;
+            display: block;
+            margin: 0 auto 10px;
+        }
+        .auth-form-card h1 { font-size: 1.7rem; margin-bottom: 4px; color: var(--primary-blue); text-align: center; }
+        .auth-form-card > p:not(.auth-terms) { color: var(--medium-gray); margin-bottom: 10px; line-height: 1.4; font-size: 0.92rem; text-align: center; }
+        .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+        .filter-group label { display: block; margin-bottom: 8px; font-weight: 700; color: var(--primary-blue); }
+        .filter-group input, .filter-group select, .filter-group textarea {
+            width: 100%; padding: 10px 12px; border-radius: 10px; border: 1px solid var(--border-color); box-sizing: border-box; background: var(--card-bg);
+            margin-bottom: 10px; font-size: 0.95rem; color: var(--dark-gray);
+        }
+        .auth-terms { font-size: 0.84rem; color: var(--medium-gray); margin-bottom: 10px; }
+        .btn-gold { padding: 10px 14px; border-radius: 10px; font-weight: 700; }
+        .auth-divider { display: flex; align-items: center; gap: 10px; margin: 10px 0 8px; color: var(--medium-gray); font-size: 0.9rem; }
+        .auth-divider::before, .auth-divider::after { content: ''; flex: 1; height: 1px; background: var(--border-color); }
+        footer { display: none !important; }
+        .btn-google {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            width: 100%;
+            border: 1px solid var(--border-color);
+            background: var(--white);
+            color: var(--primary-blue);
+            padding: 10px 14px;
+            border-radius: 10px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+        }
+        .btn-google:hover {
+            background: var(--card-bg);
+            transform: translateY(-1px);
+            box-shadow: 0 8px 18px rgba(0,0,0,0.06);
+        }
+        @media (max-width: 992px) {
+            .auth-page { grid-template-columns: 1fr; }
+            .auth-image { display: none; }
+            .auth-form-container { padding: 20px; }
+            .auth-form-card { max-width: 640px; }
+            .form-grid { grid-template-columns: 1fr; }
+            .auth-form-card .logo { text-align: center; }
+            .auth-form-card .logo img { margin: 0 auto 12px; }
+            .auth-form-card h1 { text-align: center; font-size: 2rem; }
+            .auth-form-card p { text-align: center; }
+        }
+        @media (max-width: 560px) {
+            body { overflow-x: hidden; }
+            .auth-form-container { padding: 8px; align-items: flex-start; }
+            .auth-form-card { padding: 8px; max-width: 100%; }
+            .auth-form-card .logo { margin-bottom: 6px; }
+            .auth-form-card .logo img { width: 105px !important; max-width: 105px !important; margin: 0 auto 6px; }
+            .auth-form-card h1 { font-size: 1.35rem; margin-bottom: 2px; }
+            .auth-form-card p { font-size: 0.85rem; margin-bottom: 8px; }
+            .btn-google { padding: 9px 12px; margin-bottom: 8px; font-size: 0.92rem; }
+            .auth-divider { margin: 8px 0 6px; font-size: 0.82rem; }
+            .filter-group input, .filter-group select, .filter-group textarea { padding: 9px 10px; margin-bottom: 8px; font-size: 0.9rem; }
+            .auth-terms { font-size: 0.78rem; margin-bottom: 8px; }
+            .btn-gold { padding: 9px 12px; font-size: 0.92rem; }
+            form#signup-form { margin-bottom: 8px; }
+            .auth-form-card p[style*="margin-top: 20px"] { margin-top: 10px !important; font-size: 0.84rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="auth-page">
+        <div class="auth-form-container">
+            <div class="auth-form-card">
+                <a href="index.html" class="logo">
+                    <img src="asset/logo8.png" alt="Atlas Logo">
+                </a>
+                <h1>Create Account</h1>
+                <p>Join 50,000+ global investors and homeowners.</p>
+
+                <button type="button" id="google-signup-btn" class="btn-google" style="margin-bottom: 18px;">
+                    <i class="fab fa-google"></i> Continue with Google
+                </button>
+                <div class="auth-divider">or</div>
+
+                <form id="signup-form">
+                    <div class="form-grid">
+                        <div class="filter-group">
+                            <label>Full Name</label>
+                            <input type="text" id="reg-name" required placeholder="John Doe">
+                        </div>
+                        <div class="filter-group">
+                            <label>Account Type</label>
+                            <select id="reg-type">
+                                <option>Private Investor</option>
+                                <option>Home Buyer</option>
+                                <option>Property Seller</option>
+                                <option>Institutional Partner</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="filter-group">
+                        <label>Corporate Email</label>
+                        <input type="email" id="reg-email" required placeholder="john@company.com">
+                    </div>
+                    <div class="filter-group">
+                        <label>Password</label>
+                        <input type="password" id="reg-password" required placeholder="Min. 8 characters">
+                    </div>
+                    <p class="auth-terms">
+                        By clicking register, you agree to our <a href="terms.html">Terms</a> and <a href="privacy.html">Privacy Policy</a>.
+                    </p>
+                    <button type="submit" class="btn btn-gold" style="width: 100%;">Complete Registration</button>
+                </form>
+
+                <p style="margin-top: 20px; text-align: center; font-size: 14px;">
+                    Already have an account? <a href="login.html" style="color: var(--primary-blue); font-weight: 700;">Log In</a>
+                </p>
+            </div>
+        </div>
+        <div class="auth-image"></div>
+    </div>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="js/supabase.js"></script> -->
+    <script type="module" src="js/firebase-auth.js"></script>
+    <!-- <script src="js/auth.js"></script> -->
+    <script>
+        window.__skipSharedFooter = true;
+        function removeSignupFooter() {
+            document.querySelectorAll('footer').forEach((footer) => footer.remove());
+            const sharedScript = document.querySelector('script[src="js/footer.js"]');
+            if (sharedScript) {
+                sharedScript.remove();
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            removeSignupFooter();
+            const observer = new MutationObserver(() => removeSignupFooter());
+            observer.observe(document.body, { childList: true, subtree: true });
+        });
+    </script>
+</body>
+</html>

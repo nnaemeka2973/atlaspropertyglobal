@@ -1,0 +1,14 @@
+Atlas Property Group — Property Dataset Update
+
+Updated from: p(1).zip
+Base project: Atlas_Property_Group_Merged_All_Properties_HQ.zip
+
+Result:
+- 494 total properties
+- 20 properties replaced because their names matched records in p(1).zip
+- No additional property names were introduced because all 20 updated records already existed in the base dataset
+- The p(1).zip versions are the authoritative versions for those 20 properties
+- Full raw detail data is retained in providerData
+- All supplied photo URLs are retained; Realtor image URLs are upgraded from the thumbnail `s.jpg` form to the `o.jpg` image form where the URL pattern supports it
+- Property photos are exposed through both photos and images, with primaryPhoto/image set to the upgraded primary image
+- Existing Atlas property pages and frontend structure were preserved

@@ -1,0 +1,1352 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Meet Our U.S. Real Estate Advisors | Atlas Property Group</title>
+
+<meta name="description" content="Meet Atlas Property Group's verified real estate advisors serving residential, luxury, commercial and investment clients across the United States.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/variables.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="css/responsive.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+
+/* ===========================================
+   AGENTS PAGE
+=========================================== */
+
+:root{
+    --atlas-blue:#0B3D91;
+    --atlas-gold:#a08f42;
+    --atlas-dark:#0E1726;
+    --atlas-light:#F8F9FB;
+    --atlas-text:#5F6B7A;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#fff;
+    color:var(--atlas-dark);
+}
+
+/* HERO */
+
+.agents-hero{
+    position:relative;
+    min-height:88vh;
+    display:flex;
+    align-items:center;
+    color:#fff;
+    background:
+    linear-gradient(rgba(8,25,58,.72),rgba(8,25,58,.58)),
+    url('https://images.pexels.com/photos/7688336/pexels-photo-7688336.jpeg');
+    background-size:cover;
+    background-position:center;
+}
+
+.hero-content{
+    max-width:760px;
+}
+
+.hero-label{
+    display:inline-block;
+    color:var(--atlas-gold);
+    font:700 13px 'Montserrat',sans-serif;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    margin-bottom:18px;
+}
+
+.hero-content h1{
+    font-family:'Cormorant Garamond',serif;
+    font-size:clamp(56px,7vw,92px);
+    line-height:.92;
+    margin-bottom:24px;
+    color:#fff;
+}
+
+.hero-content p{
+    color:rgba(255,255,255,.92);
+    font-size:17px;
+    line-height:1.9;
+    max-width:650px;
+    margin-bottom:34px;
+}
+
+.hero-actions{
+    display:flex;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+/* STATS */
+
+.agent-stats{
+    background:whitesmoke;
+    padding:42px 0;
+}
+
+.stats-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+    text-align:center;
+}
+
+.stats-item h2{
+    color:darkblue;
+    font-size:44px;
+    margin-bottom:8px;
+    font-family:'Cormorant Garamond',serif;
+}
+
+.stats-item p{
+    color:rgba(55, 53, 53, 0.85);
+    font-size:14px;
+}
+
+/* SECTION */
+
+.section{
+    padding:100px 0;
+}
+
+.section-light{
+    background:var(--atlas-light);
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:15px;
+    font-size:52px;
+    font-family:'Cormorant Garamond',serif;
+    color:var(--atlas-dark);
+}
+
+.section-subtitle{
+    text-align:center;
+    max-width:720px;
+    margin:0 auto 55px;
+    color:var(--atlas-text);
+    line-height:1.8;
+}
+
+/* FILTER BAR */
+
+.filter-bar{
+    background:#fff;
+    border-radius:14px;
+    padding:24px;
+    box-shadow:0 12px 30px rgba(0,0,0,.06);
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr;
+    gap:16px;
+    margin-bottom:55px;
+}
+
+.filter-group{
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+}
+
+.filter-group label{
+    font-size:12px;
+    font-weight:700;
+    color:#64748B;
+    text-transform:uppercase;
+    letter-spacing:1px;
+}
+
+.filter-group input,
+.filter-group select{
+    height:48px;
+    border:1px solid #E5E7EB;
+    border-radius:10px;
+    padding:0 16px;
+    font-size:14px;
+    outline:none;
+}
+
+/* Responsive */
+
+@media(max-width:900px){
+
+.stats-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+.filter-bar{
+grid-template-columns:1fr;
+}
+
+.hero-content h1{
+font-size:64px;
+}
+
+}
+
+@media(max-width:600px){
+
+.agents-hero{
+min-height:74vh;
+}
+
+.hero-content h1{
+font-size:46px;
+}
+
+.hero-content p{
+font-size:15px;
+}
+
+.stats-grid{
+grid-template-columns:1fr 1fr;
+}
+
+.section-title{
+font-size:40px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- Shared Navbar -->
+<div id="shared-header-root" data-shared-navbar="true"></div>
+
+<!-- ===========================================
+     HERO
+=========================================== -->
+
+<section class="agents-hero">
+
+<div class="container">
+
+<div class="hero-content reveal">
+
+<span class="hero-label">Atlas Property Group</span>
+
+<h1>
+Meet Our U.S.
+Real Estate Advisors
+</h1>
+
+<p>
+Licensed real estate professionals serving residential, luxury,
+commercial and investment clients across leading American markets.
+Whether you're buying your first home or investing from overseas,
+our advisors provide personalized guidance every step of the way.
+</p>
+
+<div class="hero-actions">
+
+<a href="#agents" class="btn btn-primary">
+Find an Advisor
+</a>
+
+<a href="contact.html" class="btn btn-outline-light">
+Schedule Consultation
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ===========================================
+     STATS
+=========================================== -->
+
+<section class="agent-stats">
+
+<div class="container">
+
+<div class="stats-grid">
+
+<div class="stats-item">
+<h2>32</h2>
+<p>Professional Advisors</p>
+</div>
+
+<div class="stats-item">
+<h2>18</h2>
+<p>U.S. Markets Served</p>
+</div>
+
+<div class="stats-item">
+<h2>250+</h2>
+<p>Properties Represented</p>
+</div>
+
+<div class="stats-item">
+<h2>12</h2>
+<p>Languages Supported</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ===========================================
+     AGENTS SECTION START
+=========================================== -->
+
+<section class="section section-light" id="agents">
+
+<div class="container">
+
+<h2 class="section-title">
+Find the Right Real Estate Advisor
+</h2>
+
+<p class="section-subtitle">
+Browse our team of verified residential, luxury, commercial and investment specialists serving buyers and sellers throughout the United States.
+</p>
+
+<!-- Search Bar -->
+
+<div class="filter-bar">
+
+<div class="filter-group">
+<label>Search Advisor</label>
+<input type="text" placeholder="Name or specialty">
+</div>
+
+<div class="filter-group">
+<label>Market</label>
+<select>
+<option>All Markets</option>
+<option>Florida</option>
+<option>New York</option>
+<option>Texas</option>
+<option>California</option>
+</select>
+</div>
+
+<div class="filter-group">
+<label>Specialty</label>
+<select>
+<option>All Services</option>
+<option>Luxury Homes</option>
+<option>Residential</option>
+<option>Commercial</option>
+<option>Investment</option>
+</select>
+</div>
+
+</div>
+
+<!-- Agent cards continue in Part 2 -->
+<div class="agents-grid">
+    <style>
+/* ===========================================
+   AGENT CARDS
+=========================================== */
+
+.agents-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:28px;
+}
+
+.agent-card{
+    background:#fff;
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 12px 30px rgba(0,0,0,.08);
+    transition:.35s ease;
+    border:1px solid #EEF2F7;
+    display:flex;
+    flex-direction:column;
+    height:100%;
+}
+
+.agent-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 20px 40px rgba(0,0,0,.12);
+}
+
+.agent-photo{
+    position:relative;
+    height:340px;
+    overflow:hidden;
+}
+
+.agent-photo img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:.5s;
+}
+
+.agent-card:hover .agent-photo img{
+    transform:scale(1.05);
+}
+
+.verified-badge{
+    position:absolute;
+    top:18px;
+    left:18px;
+    background:#0B3D91;
+    color:#fff;
+    padding:8px 14px;
+    border-radius:30px;
+    font-size:11px;
+    font-weight:700;
+    letter-spacing:.5px;
+}
+
+.agent-info{
+    padding:26px;
+    display:flex;
+    flex-direction:column;
+    flex:1;
+}
+
+.agent-role{
+    color:#13076f;
+    font-size:12px;
+    font-weight:700;
+    letter-spacing:1px;
+    text-transform:uppercase;
+}
+
+.agent-info h3{
+    font:600 30px 'Cormorant Garamond',serif;
+    color:#0E1726;
+    margin:8px 0 12px;
+}
+
+.agent-info p{
+    color:#64748B;
+    font-size:14px;
+    line-height:1.8;
+    margin-bottom:18px;
+}
+
+.agent-tags{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+    margin-bottom:18px;
+}
+
+.agent-tags span{
+    background:#F3F6FB;
+    color:#0B3D91;
+    padding:6px 10px;
+    border-radius:20px;
+    font-size:11px;
+    font-weight:600;
+}
+
+.agent-meta{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:12px;
+    padding:18px 0;
+    border-top:1px solid #E5E7EB;
+    border-bottom:1px solid #E5E7EB;
+    margin-bottom:18px;
+}
+
+.meta-item{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    font-size:12px;
+    color:#64748B;
+}
+
+.meta-item i{
+    color:#031544;
+}
+
+.agent-actions{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:12px;
+    margin-top:auto;
+    align-items:stretch;
+}
+
+.agent-actions .btn{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    min-height:52px;
+    padding:12px 16px;
+    text-align:center;
+    border-radius:12px;
+    font-size:12px;
+    line-height:1.2;
+    white-space:nowrap;
+    letter-spacing:.8px;
+}
+
+.agent-card .btn-primary{
+    background:#0B3D91;
+    color:#fff;
+    border:1px solid #0B3D91;
+}
+
+.agent-card .btn-primary:hover{
+    background:#1047b5;
+    color:#fff;
+    transform:translateY(-2px);
+}
+
+.agent-card .btn-outline{
+    background:#fff;
+    border:1.5px solid #dfe7f3;
+    color:#0B3D91;
+}
+
+.agent-card .btn-outline:hover{
+    background:#F3F6FB;
+    color:#0B3D91;
+    border-color:#cfe0fa;
+}
+
+@media(max-width:900px){
+    .agents-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media(max-width:600px){
+    .agents-grid{
+        grid-template-columns:1fr;
+    }
+
+    .agent-photo{
+        height:380px;
+    }
+
+    .agent-actions{
+        grid-template-columns:1fr;
+    }
+}
+</style>
+
+<!-- ===========================================
+     AGENT 1
+=========================================== -->
+
+<div class="agent-card reveal">
+
+    <div class="agent-photo">
+
+        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=900&q=80"
+         alt="Alexander sterling">
+
+        <div class="verified-badge">
+            <i class="fas fa-badge-check"></i> VERIFIED
+        </div>
+
+    </div>
+
+    <div class="agent-info">
+
+        <div class="agent-role">Senior Luxury Advisor</div>
+
+        <h3>Alexander sterling</h3>
+
+        <p>
+            Luxury residential specialist serving Miami, Palm Beach and
+            South Florida's premier waterfront communities.
+        </p>
+
+        <div class="agent-tags">
+            <span>Luxury Homes</span>
+            <span>Waterfront</span>
+            <span>Relocation</span>
+        </div>
+
+        <div class="agent-meta">
+
+            <div class="meta-item">
+                <i class="fas fa-map-marker-alt"></i>
+                Florida
+            </div>
+
+            <div class="meta-item">
+                <i class="fas fa-briefcase"></i>
+                12+ Years
+            </div>
+
+            <div class="meta-item">
+                <i class="fas fa-language"></i>
+                English
+            </div>
+
+            <div class="meta-item">
+                <i class="fas fa-globe"></i>
+                Spanish
+            </div>
+
+        </div>
+
+        <div class="agent-actions">
+            <a href="agent-details.html" class="btn btn-primary">View Profile</a>
+            <a href="contact.html" class="btn btn-outline">Contact</a>
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ===========================================
+     AGENT 2
+=========================================== -->
+
+<div class="agent-card reveal" style="transition-delay:.1s;">
+
+    <div class="agent-photo">
+
+        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=900&q=80" alt="Sophia Martinez">
+
+        <div class="verified-badge">
+            <i class="fas fa-badge-check"></i> VERIFIED
+        </div>
+
+    </div>
+
+    <div class="agent-info">
+
+        <div class="agent-role">Commercial Advisor</div>
+
+        <h3>Sophia Martinez</h3>
+
+        <p>
+            Commercial real estate expert specializing in mixed-use,
+            retail and multifamily investment opportunities.
+        </p>
+
+        <div class="agent-tags">
+            <span>Commercial</span>
+            <span>Retail</span>
+            <span>Multifamily</span>
+        </div>
+
+        <div class="agent-meta">
+
+            <div class="meta-item">
+                <i class="fas fa-map-marker-alt"></i>
+                Texas
+            </div>
+
+            <div class="meta-item">
+                <i class="fas fa-briefcase"></i>
+                14 Years
+            </div>
+
+            <div class="meta-item">
+                <i class="fas fa-language"></i>
+                English
+            </div>
+
+            <div class="meta-item">
+                <i class="fas fa-globe"></i>
+                Spanish
+            </div>
+
+        </div>
+
+        <div class="agent-actions">
+            <a href="agent-details.html" class="btn btn-primary">View Profile</a>
+            <a href="contact.html" class="btn btn-outline">Contact</a>
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ===========================================
+     AGENT 3
+=========================================== -->
+
+<div class="agent-card reveal" style="transition-delay:.2s;">
+
+    <div class="agent-photo">
+
+        <img src="https://images.pexels.com/photos/6592686/pexels-photo-6592686.jpeg" alt="Daniel Brooks">
+
+        <div class="verified-badge">
+            <i class="fas fa-badge-check"></i> VERIFIED
+        </div>
+
+    </div>
+
+    <div class="agent-info">
+
+        <div class="agent-role">Investment Advisor</div>
+
+        <h3>Daniel Brooks</h3>
+
+        <p>
+            Advises domestic and international investors on income-producing
+            residential and commercial property portfolios.
+        </p>
+
+        <div class="agent-tags">
+            <span>Investment</span>
+            <span>Multifamily</span>
+            <span>Commercial</span>
+        </div>
+
+        <div class="agent-meta">
+
+            <div class="meta-item">
+                <i class="fas fa-map-marker-alt"></i>
+                New York
+            </div>
+
+            <div class="meta-item">
+                <i class="fas fa-briefcase"></i>
+                15 Years
+            </div>
+
+            <div class="meta-item">
+                <i class="fas fa-language"></i>
+                English
+            </div>
+
+            <div class="meta-item">
+                <i class="fas fa-chart-line"></i>
+                Portfolio Strategy
+            </div>
+
+        </div>
+
+        <div class="agent-actions">
+            <a href="agent-details.html" class="btn btn-primary">View Profile</a>
+            <a href="contact.html" class="btn btn-outline">Contact</a>
+        </div>
+
+    </div>
+
+</div>
+<!-- ===========================================
+     AGENT 4
+=========================================== -->
+
+<div class="agent-card reveal">
+
+    <div class="agent-photo">
+
+        <img src="https://images.pexels.com/photos/7681575/pexels-photo-7681575.jpeg" 
+        alt="Emma Thompson">
+
+        <div class="verified-badge">
+            <i class="fas fa-badge-check"></i> VERIFIED
+        </div>
+
+    </div>
+
+    <div class="agent-info">
+
+        <div class="agent-role">Residential Advisor</div>
+
+        <h3>Emma Thompson</h3>
+
+        <p>
+            Helping families purchase primary residences and new construction
+            homes throughout Charlotte and Raleigh, North Carolina.
+        </p>
+
+        <div class="agent-tags">
+            <span>Residential</span>
+            <span>New Construction</span>
+            <span>Relocation</span>
+        </div>
+
+        <div class="agent-meta">
+
+            <div class="meta-item">
+                <i class="fas fa-map-marker-alt"></i>
+                North Carolina
+            </div>
+
+            <div class="meta-item">
+                <i class="fas fa-briefcase"></i>
+                9 Years
+            </div>
+
+            <div class="meta-item">
+                <i class="fas fa-language"></i>
+                English
+            </div>
+
+            <div class="meta-item">
+                <i class="fas fa-home"></i>
+                Residential
+            </div>
+
+        </div>
+
+        <div class="agent-actions">
+            <a href="agent-details.html" class="btn btn-primary">View Profile</a>
+            <a href="contact.html" class="btn btn-outline">Contact</a>
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- ===========================================
+     AGENT 5
+=========================================== -->
+
+<div class="agent-card reveal" style="transition-delay:.1s;">
+
+    <div class="agent-photo">
+
+        <img src="https://images.pexels.com/photos/6538430/pexels-photo-6538430.jpeg" alt="Grace Kim">
+
+        <div class="verified-badge">
+            <i class="fas fa-badge-check"></i> VERIFIED
+        </div>
+
+    </div>
+
+    <div class="agent-info">
+
+        <div class="agent-role">Luxury Home Specialist</div>
+
+        <h3>Grace Kim</h3>
+
+        <p>
+            Specializing in architect-designed luxury residences and exclusive
+            communities across Los Angeles and Orange County.
+        </p>
+
+        <div class="agent-tags">
+            <span>Luxury</span>
+            <span>Architecture</span>
+            <span>Coastal Homes</span>
+        </div>
+
+        <div class="agent-meta">
+
+            <div class="meta-item">
+                <i class="fas fa-map-marker-alt"></i>
+                California
+            </div>
+
+            <div class="meta-item">
+                <i class="fas fa-briefcase"></i>
+                11 Years
+            </div>
+
+            <div class="meta-item">
+                <i class="fas fa-language"></i>
+                English
+            </div>
+
+            <div class="meta-item">
+                <i class="fas fa-globe"></i>
+                Korean
+            </div>
+
+        </div>
+
+        <div class="agent-actions">
+            <a href="agent-details.html" class="btn btn-primary">View Profile</a>
+            <a href="contact.html" class="btn btn-outline">Contact</a>
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- ===========================================
+     AGENT 6
+=========================================== -->
+
+<div class="agent-card reveal" style="transition-delay:.2s;">
+
+    <div class="agent-photo">
+
+        <img src="https://images.pexels.com/photos/7681357/pexels-photo-7681357.jpeg" alt="Michael Johnson">
+
+        <div class="verified-badge">
+            <i class="fas fa-badge-check"></i> VERIFIED
+        </div>
+
+    </div>
+
+    <div class="agent-info">
+
+        <div class="agent-role">International Buyer Advisor</div>
+
+        <h3>Michael Johnson</h3>
+
+        <p>
+            Assisting overseas buyers investing in residential, vacation and
+            commercial properties throughout the United States.
+        </p>
+
+        <div class="agent-tags">
+            <span>International</span>
+            <span>Investment</span>
+            <span>Commercial</span>
+        </div>
+
+        <div class="agent-meta">
+
+            <div class="meta-item">
+                <i class="fas fa-map-marker-alt"></i>
+                Florida
+            </div>
+
+            <div class="meta-item">
+                <i class="fas fa-briefcase"></i>
+                13 Years
+            </div>
+
+            <div class="meta-item">
+                <i class="fas fa-language"></i>
+                English
+            </div>
+
+            <div class="meta-item">
+                <i class="fas fa-globe"></i>
+                French
+            </div>
+
+        </div>
+
+        <div class="agent-actions">
+            <a href="agent-details.html" class="btn btn-primary">View Profile</a>
+            <a href="contact.html" class="btn btn-outline">Contact</a>
+        </div>
+
+    </div>
+
+</div>
+
+</div> <!-- End .agents-grid -->
+
+</div>
+</section>
+
+
+<!-- ===========================================
+     WHY WORK WITH ATLAS ADVISORS
+=========================================== -->
+
+<section class="section">
+
+<div class="container">
+
+<div style="text-align:center; max-width:760px; margin:0 auto 60px;">
+
+<span class="hero-label">Why Choose Atlas</span>
+
+<h2 class="section-title">
+Professional Guidance for Every Real Estate Goal
+</h2>
+
+<p class="section-subtitle">
+Our advisors combine local market expertise with personalized service to help
+buyers, sellers and investors make informed decisions across America's leading
+real estate markets.
+</p>
+
+</div>
+
+<div class="stats-grid">
+
+<div class="stats-item" style="background:#fff; border-radius:16px; padding:30px; box-shadow:0 10px 25px rgba(0,0,0,.06);">
+
+<i class="fas fa-house" style="font-size:34px; color:#dddbee; margin-bottom:15px;"></i>
+
+<h3 style="color:#0E1726;">Residential Expertise</h3>
+
+<p style="color:#64748B; font-size:14px;">
+Guidance for first homes, luxury residences and relocation buyers.
+</p>
+
+</div>
+
+<div class="stats-item" style="background:#fff; border-radius:16px; padding:30px; box-shadow:0 10px 25px rgba(0,0,0,.06);">
+
+<i class="fas fa-chart-line" style="font-size:34px; color:#08025f; margin-bottom:15px;"></i>
+
+<h3 style="color:#0E1726;">Investment Focus</h3>
+
+<p style="color:#64748B; font-size:14px;">
+Market-driven analysis for residential and commercial property investors.
+</p>
+
+</div>
+
+<div class="stats-item" style="background:#fff; border-radius:16px; padding:30px; box-shadow:0 10px 25px rgba(0,0,0,.06);">
+
+<i class="fas fa-earth-americas" style="font-size:34px; color:#e3dfd2; margin-bottom:15px;"></i>
+
+<h3 style="color:#0E1726;">International Buyers</h3>
+
+<p style="color:#64748B; font-size:14px;">
+Dedicated support for clients purchasing U.S. real estate from abroad.
+</p>
+
+</div>
+
+<div class="stats-item" style="background:#fff; border-radius:16px; padding:30px; box-shadow:0 10px 25px rgba(0,0,0,.06);">
+
+<i class="fas fa-building" style="font-size:34px; color:#bdbae6; margin-bottom:15px;"></i>
+
+<h3 style="color:#0E1726;">Commercial Advisory</h3>
+
+<p style="color:#64748B; font-size:14px;">
+Office, retail, multifamily and mixed-use commercial opportunities.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+<!-- ===========================================
+     VERIFIED AGENT STANDARDS
+=========================================== -->
+
+<section class="section section-light">
+
+    <div class="container">
+
+        <div style="text-align:center; max-width:760px; margin:0 auto 60px;">
+
+            <span class="hero-label">Verified Agent Standards</span>
+
+            <h2 class="section-title">
+                What Our Verified Advisor Badge Means
+            </h2>
+
+            <p class="section-subtitle">
+                Atlas Property Group uses an internal verification process before displaying the
+                <strong>Verified Advisor</strong> badge. The badge reflects our professional review process
+                and does not replace state licensing authorities.
+            </p>
+
+        </div>
+
+        <div class="verify-grid">
+
+            <div class="verify-card">
+                <i class="fas fa-id-card"></i>
+                <h3>Identity Verified</h3>
+                <p>
+                    Government-issued identity and professional profile have been reviewed internally.
+                </p>
+            </div>
+
+            <div class="verify-card">
+                <i class="fas fa-certificate"></i>
+                <h3>License Reviewed</h3>
+                <p>
+                    Active real estate license status is reviewed for the state where the advisor operates.
+                </p>
+            </div>
+
+            <div class="verify-card">
+                <i class="fas fa-briefcase"></i>
+                <h3>Atlas Affiliation</h3>
+                <p>
+                    The advisor is authorized to represent Atlas Property Group and follows company standards.
+                </p>
+            </div>
+
+            <div class="verify-card">
+                <i class="fas fa-scale-balanced"></i>
+                <h3>Professional Compliance</h3>
+                <p>
+                    Transactions remain subject to applicable U.S. real estate and state licensing laws.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ===========================================
+     U.S. MARKETS SERVED
+=========================================== -->
+
+<section class="section">
+
+    <div class="container">
+
+        <div style="text-align:center; max-width:760px; margin:0 auto 50px;">
+
+            <span class="hero-label">Markets We Serve</span>
+
+            <h2 class="section-title">
+                Local Expertise Across America's Leading Real Estate Markets
+            </h2>
+
+        </div>
+
+        <div class="markets-grid">
+
+            <div class="market-box">
+                <h4>Florida</h4>
+                <p>Miami • Palm Beach • Orlando • Tampa</p>
+            </div>
+
+            <div class="market-box">
+                <h4>New York</h4>
+                <p>Manhattan • Brooklyn • Long Island</p>
+            </div>
+
+            <div class="market-box">
+                <h4>Texas</h4>
+                <p>Austin • Dallas • Houston</p>
+            </div>
+
+            <div class="market-box">
+                <h4>California</h4>
+                <p>Los Angeles • Orange County • San Diego</p>
+            </div>
+
+            <div class="market-box">
+                <h4>Georgia</h4>
+                <p>Atlanta Metropolitan Area</p>
+            </div>
+
+            <div class="market-box">
+                <h4>North Carolina</h4>
+                <p>Charlotte • Raleigh</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ===========================================
+     CALL TO ACTION
+=========================================== -->
+
+<section class="agent-cta">
+
+    <div class="container">
+
+        <div class="cta-wrapper">
+
+            <span class="hero-label" style="color:#eae9e6;">Start Your Journey</span>
+
+            <h2>
+                Connect With the Right Real Estate Advisor
+            </h2>
+
+            <p>
+                Whether you're purchasing a primary residence, luxury home,
+                commercial property or investment asset, Atlas Property Group
+                is ready to connect you with an advisor who understands your goals.
+            </p>
+
+            <div class="hero-actions" style="justify-content:center;">
+
+                <a href="contact.html" class="btn btn-primary">
+                    Schedule a Consultation
+                </a>
+
+                <a href="properties.html" class="btn btn-outline-light">
+                    Browse Properties
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ===========================================
+     FOOTER
+=========================================== -->
+
+<div id="shared-footer-root" data-shared-footer="true"></div>
+
+
+<!-- ===========================================
+     PAGE STYLES
+=========================================== -->
+
+<style>
+
+.verify-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:24px;
+}
+
+.verify-card{
+    background:#fff;
+    border-radius:16px;
+    padding:32px 24px;
+    text-align:center;
+    box-shadow:0 12px 28px rgba(0,0,0,.06);
+    transition:.3s;
+}
+
+.verify-card:hover{
+    transform:translateY(-6px);
+}
+
+.verify-card i{
+    font-size:36px;
+    color:#02113f;
+    margin-bottom:18px;
+}
+
+.verify-card h3{
+    font-family:'Cormorant Garamond',serif;
+    font-size:28px;
+    margin-bottom:12px;
+    color:#0E1726;
+}
+
+.verify-card p{
+    color:#64748B;
+    font-size:14px;
+    line-height:1.8;
+}
+
+.markets-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+}
+
+.market-box{
+    background:#F8FAFC;
+    border:1px solid #E5E7EB;
+    border-radius:14px;
+    padding:24px;
+    transition:.3s;
+}
+
+.market-box:hover{
+    border-color:#D4AF37;
+    transform:translateY(-4px);
+}
+
+.market-box h4{
+    color:#0B3D91;
+    font-size:22px;
+    margin-bottom:8px;
+    font-family:'Cormorant Garamond',serif;
+}
+
+.market-box p{
+    color:#64748B;
+    line-height:1.7;
+    font-size:14px;
+}
+
+.agent-cta{
+    background:
+        linear-gradient(rgba(8,25,58,.88),rgba(8,25,58,.88)),
+        url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1800&q=85');
+    background-size:cover;
+    background-position:center;
+    padding:110px 0;
+    color:#fff;
+}
+
+.cta-wrapper{
+    max-width:760px;
+    margin:auto;
+    text-align:center;
+}
+
+.cta-wrapper h2{
+    font-family:'Cormorant Garamond',serif;
+    font-size:clamp(46px,6vw,72px);
+    line-height:.95;
+    margin:20px 0;
+}
+
+.cta-wrapper p{
+    color:rgba(255,255,255,.85);
+    font-size:16px;
+    line-height:1.9;
+    margin-bottom:35px;
+}
+
+@media(max-width:900px){
+
+.verify-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+.markets-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+@media(max-width:600px){
+
+.verify-grid,
+.markets-grid{
+grid-template-columns:1fr;
+}
+
+.cta-wrapper h2{
+font-size:42px;
+}
+
+}
+
+</style>
+
+
+<!-- ===========================================
+     SCRIPTS
+=========================================== -->
+
+<script type="module" src="js/firebase-auth.js"></script>
+<script src="js/navbar.js"></script>
+<script src="js/main.js"></script>
+<script src="js/footer.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mortgage Calculator | Atlas Property Group</title>
+    <meta name="description" content="Estimate monthly mortgage payments, compare amortization, and save mortgage scenarios with Atlas Property Group.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css" media="(max-width:1024px)">
+    <link rel="stylesheet" href="css/mortgage-calculator.css">
+</head>
+<body>
+    <div id="shared-header-root" data-shared-navbar="true"></div>
+
+    <main class="mortgage-page">
+        <section class="hero-section">
+            <div class="container hero-grid">
+                <div class="hero-copy">
+                    <p class="eyebrow">Atlas Property Group</p>
+                    <h1>Mortgage planning that feels clear, fast, and precise.</h1>
+                    <p class="hero-text">Model your monthly payment, view the amortization schedule, and save scenarios for your next move.</p>
+                    <div class="hero-actions">
+                        <button type="button" class="btn btn-primary" id="calculate-trigger">Calculate payment</button>
+                        <a class="btn btn-outline-dark" href="dashboard.html">Go to dashboard</a>
+                    </div>
+                </div>
+                <div class="hero-card" aria-label="Mortgage calculator overview">
+                    <div class="hero-card-top">
+                        <span class="pill">Smart estimate</span>
+                        <span class="pill muted">PMI auto-applied</span>
+                    </div>
+                    <div class="hero-metric">
+                        <strong id="hero-monthly-payment">$0</strong>
+                        <span>Estimated monthly payment</span>
+                    </div>
+                    <ul class="hero-highlights">
+                        <li>Principal & interest</li>
+                        <li>Property taxes + insurance</li>
+                        <li>HOA and PMI included</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="container calculator-section" aria-labelledby="mortgage-calculator-title">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">Interactive estimator</p>
+                    <h2 id="mortgage-calculator-title">Build a realistic mortgage scenario</h2>
+                </div>
+                <p class="section-copy">Adjust your assumptions and instantly explore how each input changes your payment and long-term cost.</p>
+            </div>
+
+            <div class="calculator-grid">
+                <form id="mortgage-form" class="calculator-card" novalidate>
+                    <div class="card-header">
+                        <div>
+                            <p class="card-kicker">Loan details</p>
+                            <h3>Property financing</h3>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Run calculation</button>
+                    </div>
+
+                    <div class="form-grid">
+                        <label class="field-group">
+                            <span>Home price</span>
+                            <input id="home-price" name="homePrice" type="number" min="1" step="1000" value="450000">
+                        </label>
+
+                        <label class="field-group">
+                            <span>Down payment amount</span>
+                            <input id="down-payment-amount" name="downPaymentAmount" type="number" min="0" step="1000" value="90000">
+                        </label>
+
+                        <label class="field-group">
+                            <span>Down payment percentage</span>
+                            <input id="down-payment-percent" name="downPaymentPercent" type="number" min="0" max="100" step="0.1" value="20">
+                        </label>
+
+                        <label class="field-group">
+                            <span>Interest rate (%)</span>
+                            <input id="interest-rate" name="interestRate" type="number" min="0" max="20" step="0.01" value="6.5">
+                        </label>
+
+                        <label class="field-group">
+                            <span>Loan term</span>
+                            <select id="loan-term" name="loanTerm">
+                                <option value="15">15 years</option>
+                                <option value="20">20 years</option>
+                                <option value="30" selected>30 years</option>
+                            </select>
+                        </label>
+
+                        <label class="field-group">
+                            <span>Annual property tax</span>
+                            <input id="property-tax" name="propertyTax" type="number" min="0" step="50" value="5400">
+                        </label>
+
+                        <label class="field-group">
+                            <span>Annual home insurance</span>
+                            <input id="home-insurance" name="homeInsurance" type="number" min="0" step="25" value="1800">
+                        </label>
+
+                        <label class="field-group">
+                            <span>Monthly HOA</span>
+                            <input id="hoa" name="monthlyHoa" type="number" min="0" step="10" value="0">
+                        </label>
+                    </div>
+
+                    <div class="helper-box" role="status" aria-live="polite">
+                        <strong>Automatic PMI</strong>
+                        <p>Private mortgage insurance is applied automatically whenever the down payment is less than 20%.</p>
+                    </div>
+                </form>
+
+                <div class="results-stack">
+                    <section class="calculator-card summary-card" aria-labelledby="summary-title">
+                        <div class="card-header">
+                            <div>
+                                <p class="card-kicker">Monthly payment</p>
+                                <h3 id="summary-title">Estimated payment</h3>
+                            </div>
+                            <div class="summary-actions">
+                                <button type="button" class="btn btn-secondary" id="save-calculation">Save to dashboard</button>
+                                <button type="button" class="btn btn-outline-dark" id="print-calculation">Print</button>
+                                <button type="button" class="btn btn-outline-dark" id="export-pdf">Export PDF</button>
+                            </div>
+                        </div>
+
+                        <div class="payment-hero">
+                            <div>
+                                <p class="overview-label">Total monthly payment</p>
+                                <h4 id="monthly-payment-total" tabindex="-1">$0.00</h4>
+                            </div>
+                            <div class="badge-pill" id="pmi-badge">PMI Included</div>
+                        </div>
+
+                        <div class="breakdown-grid">
+                            <article class="breakdown-item">
+                                <span>Principal & interest</span>
+                                <strong id="payment-principal-interest">$0.00</strong>
+                            </article>
+                            <article class="breakdown-item">
+                                <span>Property tax</span>
+                                <strong id="payment-tax">$0.00</strong>
+                            </article>
+                            <article class="breakdown-item">
+                                <span>Insurance</span>
+                                <strong id="payment-insurance">$0.00</strong>
+                            </article>
+                            <article class="breakdown-item">
+                                <span>HOA</span>
+                                <strong id="payment-hoa">$0.00</strong>
+                            </article>
+                            <article class="breakdown-item">
+                                <span>PMI</span>
+                                <strong id="payment-pmi">$0.00</strong>
+                            </article>
+                        </div>
+
+                        <div class="summary-meta-grid">
+                            <article class="summary-meta-card">
+                                <span>Total interest paid</span>
+                                <strong id="total-interest-paid">$0.00</strong>
+                            </article>
+                            <article class="summary-meta-card">
+                                <span>Total cost of loan</span>
+                                <strong id="total-cost-of-loan">$0.00</strong>
+                            </article>
+                            <article class="summary-meta-card">
+                                <span>Loan amount</span>
+                                <strong id="loan-amount">$0.00</strong>
+                            </article>
+                        </div>
+                    </section>
+
+                    <section class="calculator-card chart-card" aria-labelledby="distribution-title">
+                        <div class="card-header compact">
+                            <div>
+                                <p class="card-kicker">Payment mix</p>
+                                <h3 id="distribution-title">Distribution overview</h3>
+                            </div>
+                        </div>
+                        <div class="chart-layout">
+                            <div class="pie-chart" id="pie-chart" aria-label="Payment distribution chart"></div>
+                            <ul class="legend-list" id="legend-list"></ul>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </section>
+
+        <section class="container charts-section">
+            <div class="calculator-card">
+                <div class="card-header compact">
+                    <div>
+                        <p class="card-kicker">Amortization</p>
+                        <h3>Loan balance over time</h3>
+                    </div>
+                </div>
+                <div class="chart-frame">
+                    <svg id="balance-chart" viewBox="0 0 640 280" role="img" aria-label="Line chart showing mortgage balance over time"></svg>
+                </div>
+            </div>
+        </section>
+
+        <section class="container schedule-section" aria-labelledby="schedule-title">
+            <div class="calculator-card schedule-card">
+                <div class="card-header compact">
+                    <div>
+                        <p class="card-kicker">Schedule</p>
+                        <h3 id="schedule-title">Interactive amortization schedule</h3>
+                    </div>
+                    <div class="schedule-controls">
+                        <label class="field-group inline-field">
+                            <span class="sr-only">Rows to display</span>
+                            <select id="schedule-range">
+                                <option value="12">12 months</option>
+                                <option value="24">24 months</option>
+                                <option value="60">60 months</option>
+                                <option value="120">120 months</option>
+                                <option value="all">Full schedule</option>
+                            </select>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="schedule-table-shell">
+                    <table class="schedule-table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Month</th>
+                                <th scope="col">Payment</th>
+                                <th scope="col">Principal</th>
+                                <th scope="col">Interest</th>
+                                <th scope="col">Balance</th>
+                            </tr>
+                        </thead>
+                        <tbody id="schedule-body"></tbody>
+                    </table>
+                </div>
+
+                <div class="schedule-details" id="schedule-details" aria-live="polite"></div>
+            </div>
+        </section>
+
+        <section class="container saved-section" aria-labelledby="saved-title">
+            <div class="calculator-card">
+                <div class="card-header compact">
+                    <div>
+                        <p class="card-kicker">Dashboard</p>
+                        <h3 id="saved-title">Saved mortgage scenarios</h3>
+                    </div>
+                </div>
+                <div id="saved-calculations" class="saved-calculations"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-shell">
+            <p>Atlas Property Group • Mortgage planning built with accessible, responsive web standards.</p>
+            <a href="mailto:hello@atlaspropertygroup.com">hello@atlaspropertygroup.com</a>
+        </div>
+    </footer>
+
+    <div id="shared-footer-root" data-shared-footer="true"></div>
+    <script src="js/navbar.js"></script>
+    <script src="js/mortgage-calculator.js"></script>
+    <script src="js/footer.js"></script>
+</body>
+</html>

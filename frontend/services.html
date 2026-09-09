@@ -1,0 +1,1652 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Our Services | Atlas Property Group</title>
+
+<meta name="description" content="Residential, commercial, investment, property management and international real estate services across the United States.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/variables.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="css/responsive.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+
+/* =====================================================
+   GLOBAL
+===================================================== */
+
+:root{
+    --header-height:90px;
+    --primary:#0B3D91;
+    --gold:#bb9ea0;
+    --dark:#0E1726;
+    --light:#F7F6F3;
+    --text:#374151;
+}
+
+html{
+    scroll-behavior:smooth;
+    scroll-padding-top:150px;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    color:var(--text);
+    background:#fff;
+}
+
+.container{
+    width:min(1200px,92%);
+    margin:auto;
+}
+
+.section{
+    padding:100px 0;
+}
+
+.section-light{
+    background:var(--light);
+}
+
+.section-title{
+    font-family:'Cormorant Garamond',serif;
+    font-size:clamp(42px,5vw,68px);
+    line-height:.95;
+    color:var(--dark);
+    margin-bottom:18px;
+    font-weight:600;
+}
+
+.section-label{
+    display:inline-block;
+    color:var(--gold);
+    font:700 13px 'Montserrat',sans-serif;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    margin-bottom:18px;
+}
+
+.section-text{
+    max-width:700px;
+    line-height:1.9;
+    color:#6B7280;
+    font-size:15px;
+}
+
+.btn-group{
+    display:flex;
+    gap:14px;
+    flex-wrap:wrap;
+}
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.services-hero{
+    position:relative;
+    min-height:calc(100vh - var(--header-height));
+    height:auto;
+    display:flex;
+    align-items:center;
+    overflow:visible;
+    background:url('asset/ser.jpg');
+    background-size:cover;
+    background-position:center;
+}
+
+.hero-overlay{
+    content:'';
+    position:absolute;
+    inset:0;
+    z-index:1;
+    background:linear-gradient(90deg,rgba(5,15,32,.82) 0%,rgba(5,15,32,.54) 42%,rgba(5,15,32,.12) 100%);
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+    max-width:760px;
+    color:#fff;
+    padding:40px 0;
+    text-align:left;
+}
+
+.hero-badge{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    color:whitesmoke;
+    font:700 15px 'Montserrat',sans-serif;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    margin-bottom:22px;
+}
+ 
+.hero-title{
+    font:700 15px 'Montserrat',sans-serif;
+    color:whitesmoke;
+    margin-left: 40px;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    display:inline-flex;
+    align-items:center;
+     margin-bottom:22px;
+
+}
+
+
+
+.hero-content h1{
+    font-family:'Cormorant Garamond',serif;
+    font-size:clamp(80px,7vw,96px);
+    line-height:.92;
+    margin:0 0 24px;
+    color:#fff;
+}
+
+.hero-content h1 span{
+    color:#0B3D91;
+}
+
+.hero-content p{
+    color:rgba(255,255,255,.86);
+    font-size:17px;
+    line-height:1.9;
+    margin-bottom:36px;
+    max-width:650px;
+}
+
+.hero-buttons{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    flex-wrap:nowrap;
+}
+
+.hero-buttons .btn{
+    min-width:190px;
+}
+
+.hero-buttons .explore-services-btn{
+    transition:transform .25s ease,background-color .25s ease,color .25s ease,box-shadow .25s ease;
+}
+
+.hero-buttons .explore-services-btn:hover,
+.hero-buttons .explore-services-btn:focus-visible{
+    transform:translateY(-3px);
+    background:#fff;
+    color:#0B3D91;
+    box-shadow:0 12px 24px rgba(0,0,0,.2);
+}
+
+/* =====================================================
+   MOVING SERVICE TICKER
+===================================================== */
+
+.services-ticker{
+    position:sticky;
+    top:90px;
+    z-index:999;
+    background:#082E73;
+    overflow:hidden;
+    border-top:1px solid rgba(255,255,255,.08);
+    border-bottom:1px solid rgba(255,255,255,.08);
+    height:60px;
+    display:flex;
+    align-items:center;
+}
+
+.services-track{
+    display:flex;
+    width:max-content;
+    animation:marquee 26s linear infinite;
+}
+
+.services-group{
+    display:flex;
+    align-items:center;
+}
+
+.services-group a{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    padding:0 30px;
+    color:#fff;
+    text-decoration:none;
+    white-space:nowrap;
+    font:600 12px 'Montserrat',sans-serif;
+    text-transform:uppercase;
+    letter-spacing:1px;
+    transition:.3s;
+}
+
+.services-group a i{
+    color:var(--gold);
+}
+
+.services-group a:hover{
+    color:var(--gold);
+    background:rgba(255,255,255,.08);
+}
+
+.services-ticker:hover .services-track{
+    animation-play-state:paused;
+}
+
+@keyframes marquee{
+    from{transform:translateX(0);}
+    to{transform:translateX(-50%);}
+}
+
+/* =====================================================
+   INTRO PREVIEW
+===================================================== */
+
+.intro-preview{
+    padding:90px 0 70px;
+    background:#fff;
+}
+
+.intro-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:70px;
+    align-items:center;
+}
+
+.intro-grid img{
+    width:100%;
+    height:520px;
+    object-fit:cover;
+    border-radius:12px;
+}
+
+.intro-text h2{
+    font-family:'Cormorant Garamond',serif;
+    font-size:58px;
+    color:var(--dark);
+    line-height:.95;
+    margin-bottom:22px;
+}
+
+.intro-text p{
+    color:#6B7280;
+    line-height:1.9;
+    margin-bottom:18px;
+}
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media(max-width:768px){
+
+    :root{
+        --header-height:110px;
+    }
+
+    .services-hero{
+        min-height:calc(100vh - var(--header-height));
+        height:auto;
+    }
+
+    .hero-content{
+        padding:32px 0;
+    }
+
+    .hero-content h1{
+        font-size:56px;
+    }
+
+    .hero-content p{
+        font-size:15px;
+    }
+
+    .hero-buttons{
+        flex-direction:column;
+        align-items:stretch;
+    }
+
+    .hero-buttons .btn{
+        width:100%;
+    }
+
+    .services-ticker{
+        top:110px;
+        height:54px;
+    }
+
+    .services-group a{
+        padding:0 20px;
+        font-size:11px;
+    }
+
+    .intro-grid{
+        grid-template-columns:1fr;
+    }
+
+    .intro-grid img{
+        height:340px;
+    }
+
+    .intro-text h2{
+        font-size:44px;
+    }
+
+}
+
+@media(max-width:480px){
+
+    .hero-content h1{
+        font-size:42px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- =====================================================
+     SHARED NAVBAR
+===================================================== -->
+
+<div id="shared-header-root" data-shared-navbar="true"></div>
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<!-- =====================================================
+     PREMIUM HERO
+===================================================== -->
+
+<section class="services-hero">
+
+    <div class="hero-overlay"></div>
+
+    <div class="container">
+
+        <div class="hero-content">
+
+            <h2 class="hero-title">
+                
+                Atlas Property Group
+            </h2>
+
+            <h1>
+                
+                <span>Real Estate</span> Services
+            </h1>
+
+            <p>
+                Residential, commercial and investment real estate services across the United States. We help U.S. residents and international buyers discover exceptional property opportunities with confidence.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="contact.html" class="btn btn-primary">
+                    Speak With an Advisor
+                </a>
+
+                <a href="#our-services" class="btn btn-secondary explore-services-btn">
+                    Explore Services
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =====================================================
+     MOVING SERVICES NAVIGATION
+===================================================== -->
+
+<div class="services-ticker">
+
+    <div class="services-track">
+
+        <!-- First Group -->
+
+        <div class="services-group">
+
+            <a href="#residential">
+                <i class="fas fa-house"></i>Residential
+            </a>
+
+            <a href="#investment">
+                <i class="fas fa-chart-line"></i>Investment
+            </a>
+
+            <a href="#commercial">
+                <i class="fas fa-building"></i>Commercial
+            </a>
+
+            <a href="#sales">
+                <i class="fas fa-tag"></i>Property Sales
+            </a>
+
+            <a href="#management">
+                <i class="fas fa-key"></i>Management
+            </a>
+
+            <a href="#international">
+                <i class="fas fa-earth-americas"></i>International Buyers
+            </a>
+
+        </div>
+
+        <!-- Duplicate Group -->
+
+        <div class="services-group">
+
+            <a href="#residential">
+                <i class="fas fa-house"></i>Residential
+            </a>
+
+            <a href="#investment">
+                <i class="fas fa-chart-line"></i>Investment
+            </a>
+
+            <a href="#commercial">
+                <i class="fas fa-building"></i>Commercial
+            </a>
+
+            <a href="#sales">
+                <i class="fas fa-tag"></i>Property Sales
+            </a>
+
+            <a href="#management">
+                <i class="fas fa-key"></i>Management
+            </a>
+
+            <a href="#international">
+                <i class="fas fa-earth-americas"></i>International Buyers
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- =====================================================
+     INTRODUCTION
+===================================================== -->
+
+<section class="intro-preview">
+
+    <div class="container">
+
+        <div class="intro-grid">
+
+            <img src="https://images.pexels.com/photos/8293717/pexels-photo-8293717.jpeg" alt="Luxury residential property">
+
+            <div class="intro-text">
+
+                <span class="section-label">
+                    Our Approach
+                </span>
+
+                <h2>
+                    More Than a Property Search.
+                </h2>
+
+                <p>
+                    Atlas Property Group delivers personalized real estate services
+                    designed around your financial goals, lifestyle and long-term
+                    property objectives.
+                </p>
+
+                <p>
+                    From luxury homes and commercial acquisitions to investment
+                    properties and international purchases, our team helps clients
+                    navigate every stage of the U.S. real estate journey.
+                </p>
+
+                <a href="#our-services" class="btn btn-primary">
+                    View All Services
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =====================================================
+     PART 2 STARTS HERE
+===================================================== -->
+<!-- =====================================================
+     SERVICES OVERVIEW
+===================================================== -->
+
+<section class="section section-light" id="our-services">
+
+    <div class="container">
+
+        <span class="section-label">Our Professional Services</span>
+
+        <h2 class="section-title">
+            Solutions for Every Real Estate Goal
+        </h2>
+
+        <p class="section-text">
+            Whether you're purchasing a home, selling a property, expanding an investment portfolio or relocating to the United States, Atlas Property Group offers comprehensive real estate services tailored to both U.S. residents and international buyers.
+        </p>
+
+        <div class="services-grid">
+
+            <!-- Residential -->
+            <div class="service-card">
+                <div class="icon"><i class="fas fa-house"></i></div>
+                <h3>Residential</h3>
+                <p>Luxury homes, condominiums, waterfront residences and primary homes across major U.S. markets.</p>
+                <a href="#residential">Learn More <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <!-- Investment -->
+            <div class="service-card">
+                <div class="icon"><i class="fas fa-chart-line"></i></div>
+                <h3>Investment</h3>
+                <p>Income-producing residential, multifamily and commercial investment opportunities throughout the United States.</p>
+                <a href="#investment">Learn More <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <!-- Commercial -->
+            <div class="service-card">
+                <div class="icon"><i class="fas fa-building"></i></div>
+                <h3>Commercial</h3>
+                <p>Office buildings, retail properties, industrial assets and mixed-use developments for businesses and investors.</p>
+                <a href="#commercial">Learn More <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <!-- Sales -->
+            <div class="service-card">
+                <div class="icon"><i class="fas fa-tag"></i></div>
+                <h3>Property Sales</h3>
+                <p>Strategic pricing, professional marketing and qualified buyer outreach designed to maximize property exposure.</p>
+                <a href="#sales">Learn More <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <!-- Management -->
+            <div class="service-card">
+                <div class="icon"><i class="fas fa-key"></i></div>
+                <h3>Property Management</h3>
+                <p>Professional oversight, tenant coordination, maintenance scheduling and owner reporting for rental properties.</p>
+                <a href="#management">Learn More <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <!-- International -->
+            <div class="service-card">
+                <div class="icon"><i class="fas fa-earth-americas"></i></div>
+                <h3>International Buyers</h3>
+                <p>Guidance for overseas clients researching residential and investment real estate in the United States.</p>
+                <a href="#international">Learn More <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     RESIDENTIAL SERVICE
+===================================================== -->
+
+<section class="section" id="residential">
+
+    <div class="container">
+
+        <div class="service-row">
+
+            <div class="service-image">
+                <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=85" alt="Luxury residential home">
+            </div>
+
+            <div class="service-content">
+
+                <span class="section-label">Residential Real Estate</span>
+
+                <h2 class="section-title">
+                    Find the Right Home Across America's Leading Markets
+                </h2>
+
+                <p>
+                    Atlas Property Group helps buyers discover exceptional residential properties ranging from luxury estates and waterfront homes to downtown condominiums, family residences and newly built communities.
+                </p>
+
+                <p>
+                    Whether you're relocating within the United States or purchasing your first American property from abroad, our advisors help you evaluate neighborhoods, property values and long-term ownership opportunities.
+                </p>
+
+                <div class="feature-list">
+
+                    <div><i class="fas fa-check-circle"></i> Luxury Homes & Estates</div>
+                    <div><i class="fas fa-check-circle"></i> Condominiums & Penthouses</div>
+                    <div><i class="fas fa-check-circle"></i> Waterfront Properties</div>
+                    <div><i class="fas fa-check-circle"></i> New Construction Communities</div>
+                    <div><i class="fas fa-check-circle"></i> Private Property Tours</div>
+                    <div><i class="fas fa-check-circle"></i> Purchase & Closing Coordination</div>
+
+                </div>
+
+                <div class="btn-group">
+
+                    <a href="properties.html" class="btn btn-primary">
+                        View Properties
+                    </a>
+
+                    <a href="contact.html" class="btn btn-secondary">
+                        Schedule a Consultation
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     INVESTMENT SERVICE
+===================================================== -->
+
+<section class="section section-light" id="investment">
+
+    <div class="container">
+
+        <div class="service-row reverse">
+
+            <div class="service-image">
+                <img src="asset/hh.jpg" alt="U.S. investment real estate">
+            </div>
+
+            <div class="service-content">
+
+                <span class="section-label">Real Estate Investment</span>
+
+                <h2 class="section-title">
+                    Build Long-Term Wealth Through U.S. Property
+                </h2>
+
+                <p>
+                    Our investment services are designed for individuals, families and international investors researching residential and commercial real estate opportunities throughout the United States.
+                </p>
+
+                <p>
+                    Atlas assists clients with identifying income-producing properties, evaluating neighborhood fundamentals and understanding different investment strategies before making a purchase decision.
+                </p>
+
+                <div class="feature-list">
+
+                    <div><i class="fas fa-chart-line"></i> Multifamily Investment Opportunities</div>
+                    <div><i class="fas fa-chart-line"></i> Residential Rental Properties</div>
+                    <div><i class="fas fa-chart-line"></i> Commercial Asset Research</div>
+                    <div><i class="fas fa-chart-line"></i> Market & Neighborhood Analysis</div>
+                    <div><i class="fas fa-chart-line"></i> Portfolio Diversification Support</div>
+                    <div><i class="fas fa-chart-line"></i> New Development Opportunities</div>
+
+                </div>
+
+                <div class="btn-group">
+
+                    <a href="investments.html" class="btn btn-primary">
+                        Investment Opportunities
+                    </a>
+
+                    <a href="developments.html" class="btn btn-secondary">
+                        New Developments
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     STYLES FOR PART 2
+===================================================== -->
+
+<style>
+
+.services-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:28px;
+    margin-top:60px;
+}
+
+.service-card{
+    background:#fff;
+    padding:34px;
+    border-radius:14px;
+    box-shadow:0 10px 28px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.service-card:hover{
+    transform:translateY(-8px);
+}
+
+.service-card .icon{
+    width:64px;
+    height:64px;
+    border-radius:50%;
+    background:rgba(212,175,55,.12);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#09168b;
+    font-size:24px;
+    margin-bottom:22px;
+}
+
+.service-card h3{
+    font:600 28px 'Cormorant Garamond',serif;
+    color:#0E1726;
+    margin-bottom:14px;
+}
+
+.service-card p{
+    color:#6B7280;
+    line-height:1.8;
+    font-size:14px;
+    margin-bottom:22px;
+}
+
+.service-card a{
+    color:#0B3D91;
+    font:700 12px 'Montserrat',sans-serif;
+    text-decoration:none;
+    text-transform:uppercase;
+    letter-spacing:1px;
+}
+
+.service-row{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:70px;
+    align-items:center;
+}
+
+.service-row.reverse .service-image{
+    order:2;
+}
+
+.service-image img{
+    width:100%;
+    height:560px;
+    object-fit:cover;
+    border-radius:14px;
+}
+
+.service-content p{
+    color:#6B7280;
+    line-height:1.9;
+    margin-bottom:18px;
+}
+
+.feature-list{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:14px;
+    margin:30px 0;
+}
+
+.feature-list div{
+    display:flex;
+    align-items:flex-start;
+    gap:10px;
+    font-size:14px;
+    color:#374151;
+    line-height:1.6;
+}
+
+.feature-list i{
+    color:#0b0551;
+    margin-top:3px;
+}
+
+@media(max-width:900px){
+
+    .services-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .service-row,
+    .service-row.reverse{
+        grid-template-columns:1fr;
+    }
+
+    .service-row.reverse .service-image{
+        order:0;
+    }
+
+    .service-image img{
+        height:380px;
+    }
+
+}
+
+@media(max-width:600px){
+
+    .services-grid{
+        grid-template-columns:1fr;
+    }
+
+    .feature-list{
+        grid-template-columns:1fr;
+    }
+
+}
+
+</style>
+
+<!-- =====================================================
+     PART 3 STARTS HERE
+===================================================== -->
+<!-- =====================================================
+     COMMERCIAL REAL ESTATE
+===================================================== -->
+
+<section class="section" id="commercial">
+
+    <div class="container">
+
+        <div class="service-row">
+
+            <div class="service-image">
+                <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=85" alt="Commercial office building">
+            </div>
+
+            <div class="service-content">
+
+                <span class="section-label">Commercial Real Estate</span>
+
+                <h2 class="section-title">
+                    Commercial Property Solutions for Growing Businesses
+                </h2>
+
+                <p>
+                    Atlas Property Group works with business owners, investors and organizations seeking office buildings, retail centers, industrial facilities and mixed-use commercial real estate throughout the United States.
+                </p>
+
+                <p>
+                    We help clients evaluate location, accessibility, market demand and long-term ownership objectives before making commercial real estate decisions.
+                </p>
+
+                <div class="feature-list">
+
+                    <div><i class="fas fa-check-circle"></i> Office Buildings</div>
+                    <div><i class="fas fa-check-circle"></i> Retail Spaces</div>
+                    <div><i class="fas fa-check-circle"></i> Industrial Properties</div>
+                    <div><i class="fas fa-check-circle"></i> Mixed-Use Developments</div>
+                    <div><i class="fas fa-check-circle"></i> Commercial Acquisitions</div>
+                    <div><i class="fas fa-check-circle"></i> Market Evaluation</div>
+
+                </div>
+
+                <div class="btn-group">
+
+                    <a href="properties.html" class="btn btn-primary">
+                        Browse Commercial Listings
+                    </a>
+
+                    <a href="contact.html" class="btn btn-secondary">
+                        Speak With an Advisor
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     PROPERTY SALES
+===================================================== -->
+
+<section class="section section-light" id="sales">
+
+    <div class="container">
+
+        <div class="service-row reverse">
+
+            <div class="service-image">
+                <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1200&q=85" alt="Luxury property for sale">
+            </div>
+
+            <div class="service-content">
+
+                <span class="section-label">Property Sales</span>
+
+                <h2 class="section-title">
+                    Professional Marketing Designed to Reach Qualified Buyers
+                </h2>
+
+                <p>
+                    Selling real estate involves more than listing a property. Atlas combines professional presentation, pricing strategy and targeted exposure to help property owners position their homes for today's competitive market.
+                </p>
+
+                <p>
+                    Every property receives an individualized marketing approach designed to showcase its unique characteristics and connect with serious buyers.
+                </p>
+
+                <div class="feature-list">
+
+                    <div><i class="fas fa-camera"></i> Professional Photography</div>
+                    <div><i class="fas fa-video"></i> Virtual Property Tours</div>
+                    <div><i class="fas fa-chart-bar"></i> Pricing Strategy</div>
+                    <div><i class="fas fa-bullhorn"></i> Digital Marketing Campaigns</div>
+                    <div><i class="fas fa-users"></i> Buyer Qualification</div>
+                    <div><i class="fas fa-file-signature"></i> Offer & Closing Coordination</div>
+
+                </div>
+
+                <div class="btn-group">
+
+                    <a href="contact.html" class="btn btn-primary">
+                        List Your Property
+                    </a>
+
+                    <a href="agents.html" class="btn btn-secondary">
+                        Meet Our Advisors
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     PROPERTY MANAGEMENT
+===================================================== -->
+
+<section class="section" id="management">
+
+    <div class="container">
+
+        <div class="service-row">
+
+            <div class="service-image">
+                <img src="https://images.unsplash.com/photo-1554469384-e58fac16e23a?auto=format&fit=crop&w=1200&q=85" alt="Property management">
+            </div>
+
+            <div class="service-content">
+
+                <span class="section-label">Property Management</span>
+
+                <h2 class="section-title">
+                    Protect and Maintain Your Real Estate Investment
+                </h2>
+
+                <p>
+                    Property ownership continues long after closing. Atlas provides professional management support for residential rental properties, investment homes and select commercial assets through coordinated property oversight.
+                </p>
+
+                <p>
+                    Our goal is to help owners maintain their property's condition while improving operational efficiency and tenant communication.
+                </p>
+
+                <div class="feature-list">
+
+                    <div><i class="fas fa-key"></i> Tenant Coordination</div>
+                    <div><i class="fas fa-tools"></i> Maintenance Scheduling</div>
+                    <div><i class="fas fa-clipboard-list"></i> Property Inspections</div>
+                    <div><i class="fas fa-file-invoice-dollar"></i> Owner Reporting</div>
+                    <div><i class="fas fa-calendar-check"></i> Lease Administration</div>
+                    <div><i class="fas fa-shield-alt"></i> Asset Oversight</div>
+
+                </div>
+
+                <div class="btn-group">
+
+                    <a href="contact.html" class="btn btn-primary">
+                        Property Management Inquiry
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     INTERNATIONAL BUYERS
+===================================================== -->
+
+<section class="section" id="international" style="background:#0B3D91; color:#fff;">
+
+    <div class="container">
+
+        <div class="service-row reverse">
+
+            <div class="service-image">
+                <img src="asset/iv.jpg" alt="United States skyline">
+            </div>
+
+            <div class="service-content">
+
+                <span class="section-label" style="color:#FF6B6B;">International Buyers</span>
+
+                <h2 class="section-title" style="color:#fff;">
+                    Buying U.S. Real Estate From Anywhere in the World
+                </h2>
+
+                <p style="color:rgba(255,255,255,.86);">
+                    Atlas welcomes buyers from around the world who are interested in purchasing residential, commercial or investment property throughout the United States.
+                </p>
+
+                <p style="color:rgba(255,255,255,.86);">
+                    We provide property guidance, virtual consultations and transaction coordination while encouraging buyers to work with appropriately qualified U.S. legal, tax, title and lending professionals.
+                </p>
+
+                <div class="feature-list">
+
+                    <div style="color:#fff;"><i class="fas fa-globe"></i> International Property Search</div>
+                    <div style="color:#fff;"><i class="fas fa-video"></i> Virtual Viewings</div>
+                    <div style="color:#fff;"><i class="fas fa-language"></i> Overseas Buyer Support</div>
+                    <div style="color:#fff;"><i class="fas fa-building"></i> Residential & Commercial Opportunities</div>
+                    <div style="color:#fff;"><i class="fas fa-file-contract"></i> Closing Coordination</div>
+                    <div style="color:#fff;"><i class="fas fa-passport"></i> U.S. Market Guidance</div>
+
+                </div>
+
+                <div class="btn-group">
+
+                    <a href="international-buyers.html" class="btn btn-primary">
+                        International Buyer Guide
+                    </a>
+
+                    <a href="contact.html" class="btn btn-secondary">
+                        Contact Atlas
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     U.S. MARKETS
+===================================================== -->
+
+<section class="section section-light" id="markets">
+
+    <div class="container">
+
+        <div style="text-align:center; margin-bottom:60px;">
+
+            <span class="section-label">Our U.S. Market Coverage</span>
+
+            <h2 class="section-title">
+                Serving Buyers Across America's Leading Real Estate Markets
+            </h2>
+
+            <p class="section-text" style="margin:auto;">
+                Atlas Property Group focuses on residential, luxury and investment opportunities in some of the most active metropolitan real estate markets across the United States.
+            </p>
+
+        </div>
+
+        <div class="market-grid">
+
+            <div class="market-card">
+                <i class="fas fa-city"></i>
+                <h3>New York</h3>
+                <p>Luxury condominiums, Manhattan residences and investment property.</p>
+            </div>
+
+            <div class="market-card">
+                <i class="fas fa-water"></i>
+                <h3>Florida</h3>
+                <p>Waterfront homes, vacation residences and coastal investments.</p>
+            </div>
+
+            <div class="market-card">
+                <i class="fas fa-building"></i>
+                <h3>Texas</h3>
+                <p>Commercial growth, multifamily housing and expanding metro markets.</p>
+            </div>
+
+            <div class="market-card">
+                <i class="fas fa-sun"></i>
+                <h3>California</h3>
+                <p>Luxury residential communities and premium urban real estate.</p>
+            </div>
+
+            <div class="market-card">
+                <i class="fas fa-tree-city"></i>
+                <h3>Georgia</h3>
+                <p>Growing residential neighborhoods and investment opportunities.</p>
+            </div>
+
+            <div class="market-card">
+                <i class="fas fa-chart-line"></i>
+                <h3>North Carolina</h3>
+                <p>Emerging mixed-use developments and long-term residential growth.</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     STYLES FOR PART 3
+===================================================== -->
+
+<style>
+
+.market-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:24px;
+}
+
+.market-card{
+    background:#fff;
+    border-radius:12px;
+    padding:30px;
+    text-align:center;
+    box-shadow:0 8px 22px rgba(0,0,0,.06);
+    transition:.3s;
+}
+
+.market-card:hover{
+    transform:translateY(-6px);
+}
+
+.market-card i{
+    font-size:34px;
+    color:#090445;
+    margin-bottom:18px;
+}
+
+.market-card h3{
+    font:600 28px 'Cormorant Garamond',serif;
+    color:#0c3780;
+    margin-bottom:10px;
+}
+
+.market-card p{
+    color:#6B7280;
+    line-height:1.8;
+    font-size:14px;
+}
+
+@media(max-width:900px){
+    .market-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media(max-width:600px){
+    .market-grid{
+        grid-template-columns:1fr;
+    }
+}
+
+</style>
+
+<!-- =====================================================
+     PART 4 STARTS HERE
+===================================================== -->
+<!-- =====================================================
+     THE ATLAS PROCESS
+===================================================== -->
+
+<section class="section" id="process">
+
+    <div class="container">
+
+        <div style="text-align:center; margin-bottom:60px;">
+
+            <span class="section-label">The Atlas Process</span>
+
+            <h2 class="section-title">
+                A Professional Approach to Every Transaction
+            </h2>
+
+            <p class="section-text" style="margin:auto;">
+                Every client has unique objectives. Our process is designed to
+                provide clarity, market insight and personalized support from
+                your first consultation through closing.
+            </p>
+
+        </div>
+
+        <div class="process-grid">
+
+            <div class="process-card">
+                <div class="step-number">01</div>
+                <h3>Consultation</h3>
+                <p>
+                    We begin by understanding your goals, preferred locations,
+                    budget and timeline.
+                </p>
+            </div>
+
+            <div class="process-card">
+                <div class="step-number">02</div>
+                <h3>Property Research</h3>
+                <p>
+                    Our advisors identify residential, commercial or investment
+                    opportunities aligned with your objectives.
+                </p>
+            </div>
+
+            <div class="process-card">
+                <div class="step-number">03</div>
+                <h3>Viewings & Analysis</h3>
+                <p>
+                    Schedule private tours, virtual viewings and review market
+                    data before making decisions.
+                </p>
+            </div>
+
+            <div class="process-card">
+                <div class="step-number">04</div>
+                <h3>Negotiation</h3>
+                <p>
+                    We coordinate offers, negotiations and transaction details
+                    throughout the purchase process.
+                </p>
+            </div>
+
+            <div class="process-card">
+                <div class="step-number">05</div>
+                <h3>Closing</h3>
+                <p>
+                    Work with qualified title, legal and lending professionals
+                    to complete the transaction.
+                </p>
+            </div>
+
+            <div class="process-card">
+                <div class="step-number">06</div>
+                <h3>After Closing</h3>
+                <p>
+                    Continue exploring management, investment and future real
+                    estate opportunities with Atlas.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     WHY CHOOSE ATLAS
+===================================================== -->
+
+<section class="section section-light" id="why-atlas">
+
+    <div class="container">
+
+        <div class="why-grid">
+
+            <div>
+
+                <span class="section-label">Why Choose Atlas</span>
+
+                <h2 class="section-title">
+                    Real Estate Expertise Built Around Your Goals
+                </h2>
+
+                <p class="section-text">
+                    Atlas Property Group combines local market knowledge,
+                    personalized service and technology to help clients make
+                    informed real estate decisions across the United States.
+                </p>
+
+            </div>
+
+            <div class="why-features">
+
+                <div class="why-item">
+                    <i class="fas fa-user-check"></i>
+                    <div>
+                        <h4>Client-First Service</h4>
+                        <p>Every recommendation begins with your objectives and priorities.</p>
+                    </div>
+                </div>
+
+                <div class="why-item">
+                    <i class="fas fa-map-location-dot"></i>
+                    <div>
+                        <h4>U.S. Market Knowledge</h4>
+                        <p>Research-driven guidance across leading American real estate markets.</p>
+                    </div>
+                </div>
+
+                <div class="why-item">
+                    <i class="fas fa-building-circle-check"></i>
+                    <div>
+                        <h4>Residential & Commercial</h4>
+                        <p>Support for homes, luxury properties, commercial assets and investments.</p>
+                    </div>
+                </div>
+
+                <div class="why-item">
+                    <i class="fas fa-earth-americas"></i>
+                    <div>
+                        <h4>International Buyers</h4>
+                        <p>Helping overseas clients explore opportunities in the United States.</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     FINAL CALL TO ACTION
+===================================================== -->
+
+<section class="services-cta">
+
+    <div class="container">
+
+        <div class="cta-content">
+
+            <span class="section-label" style="color:#070c5b;">
+                Start Your Real Estate Journey
+            </span>
+
+            <h2>
+                Let's Find the Right Property or Investment Opportunity
+            </h2>
+
+            <p>
+                Whether you're buying, selling, investing or relocating to the
+                United States, Atlas Property Group is ready to help you explore
+                residential, commercial and investment real estate opportunities.
+            </p>
+
+            <div class="btn-group" style="justify-content:center;">
+
+                <a href="contact.html" class="btn btn-primary">
+                    Contact Atlas
+                </a>
+
+                <a href="properties.html" class="btn btn-secondary">
+                    Browse Properties
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<div id="shared-footer-root" data-shared-footer="true"></div>
+
+
+<!-- =====================================================
+     STYLES
+===================================================== -->
+
+<style>
+
+/* Process */
+
+.process-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:24px;
+}
+
+.process-card{
+    background:#fff;
+    border-radius:14px;
+    padding:32px;
+    box-shadow:0 10px 28px rgba(0,0,0,.06);
+    transition:.3s;
+}
+
+.process-card:hover{
+    transform:translateY(-6px);
+}
+
+.step-number{
+    width:52px;
+    height:52px;
+    border-radius:50%;
+    background:#0B3D91;
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font:700 16px 'Montserrat',sans-serif;
+    margin-bottom:20px;
+}
+
+.process-card h3{
+    font:600 28px 'Cormorant Garamond',serif;
+    color:#0E1726;
+    margin-bottom:12px;
+}
+
+.process-card p{
+    color:#6B7280;
+    line-height:1.8;
+    font-size:14px;
+}
+
+/* Why Atlas */
+
+.why-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+    align-items:center;
+}
+
+.why-features{
+    display:grid;
+    gap:20px;
+}
+
+.why-item{
+    display:flex;
+    gap:18px;
+    background:#fff;
+    padding:22px;
+    border-radius:12px;
+    box-shadow:0 6px 18px rgba(0,0,0,.05);
+}
+
+.why-item i{
+    font-size:28px;
+    color:#130a85;
+    min-width:36px;
+    margin-top:4px;
+}
+
+.why-item h4{
+    margin-bottom:6px;
+    color:#0E1726;
+    font-size:18px;
+}
+
+.why-item p{
+    color:#6B7280;
+    font-size:14px;
+    line-height:1.7;
+}
+
+/* CTA */
+
+.services-cta{
+    background:
+        linear-gradient(rgba(18, 34, 66, 0.88),rgba(24, 38, 67, 0.88)),
+        url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1800&q=85');
+    background-size:cover;
+    background-position:center;
+    padding:110px 0;
+    color:#fff;
+    text-align:center;
+}
+
+.cta-content{
+    max-width:820px;
+    margin:auto;
+}
+
+.cta-content h2{
+    font-family:'Cormorant Garamond',serif;
+    font-size:clamp(44px,5vw,68px);
+    line-height:.95;
+    margin-bottom:22px;
+}
+
+.cta-content p{
+    color:rgba(255,255,255,.82);
+    line-height:1.9;
+    font-size:15px;
+    margin-bottom:36px;
+}
+
+/* Responsive */
+
+@media(max-width:900px){
+
+    .process-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .why-grid{
+        grid-template-columns:1fr;
+    }
+
+}
+
+@media(max-width:600px){
+
+    .process-grid{
+        grid-template-columns:1fr;
+    }
+
+    .cta-content h2{
+        font-size:42px;
+    }
+
+}
+
+</style>
+
+
+<!-- =====================================================
+     SCRIPTS
+===================================================== -->
+
+<script type="module" src="js/firebase-auth.js"></script>
+<script src="js/navbar.js"></script>
+<script src="js/main.js"></script>
+<script src="js/footer.js"></script>
+
+<script>
+
+/* Smooth scrolling for moving service ticker */
+
+document.querySelectorAll('.services-group a').forEach(link=>{
+
+    link.addEventListener('click',function(e){
+
+        const target=document.querySelector(this.getAttribute('href'));
+
+        if(target){
+
+            e.preventDefault();
+
+            const offset=140;
+
+            const top=target.getBoundingClientRect().top + window.pageYOffset - offset;
+
+            window.scrollTo({
+                top:top,
+                behavior:'smooth'
+            });
+
+        }
+
+    });
+
+});
+
+</script>
+
+</body>
+</html>

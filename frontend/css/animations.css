@@ -1,0 +1,55 @@
+/* 
+    Atlas Property Group - Motion Design
+    Senior UI/UX Designer
+*/
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        transform: scale(0.95);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.reveal {
+    opacity: 0;
+    transition: var(--transition-smooth);
+}
+
+.reveal.active {
+    opacity: 1;
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.hover-gold {
+    transition: var(--transition-smooth);
+}
+
+.hover-gold:hover {
+    color: var(--accent-gold);
+}

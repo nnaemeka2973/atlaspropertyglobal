@@ -1,0 +1,618 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | Atlas Property Group</title>
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/dashboard-mortgage.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="dashboard-shell">
+        <aside class="dashboard-sidebar" id="dashboard-sidebar" aria-label="Dashboard navigation">
+            <div class="sidebar-brand">
+                <a href="index.html" class="sidebar-logo" aria-label="Atlas Property Group home">
+                    <img src="asset/try4.png" alt="Atlas Property Group Logo" class="sidebar-logo-img" />
+                </a>
+                <div class="brand-copy">
+                    <p class="brand-label">Atlas Property Group</p>
+                    <!-- <span class="brand-subtitle">Owner portal</span> -->
+                </div>
+            </div>
+
+            <nav class="sidebar-nav" role="navigation">
+                <button type="button" class="sidebar-link active" data-panel="panel-overview" data-panel-link>
+                    <i class="fa-solid fa-chart-simple"></i>
+                    <span>Dashboard</span>
+                </button>
+                <button type="button" class="sidebar-link" data-panel="panel-profile" data-panel-link>
+                    <i class="fa-solid fa-user"></i>
+                    <span>Profile</span>
+                </button>
+                <button type="button" class="sidebar-link" data-panel="panel-saved-properties" data-panel-link>
+                    <i class="fa-solid fa-heart"></i>
+                    <span>Saved Properties</span>
+                </button>
+                <button type="button" class="sidebar-link" data-panel="panel-saved-searches" data-panel-link>
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <span>Saved Searches</span>
+                </button>
+                <button type="button" class="sidebar-link" data-panel="panel-compare" data-panel-link>
+                    <i class="fa-solid fa-code-compare"></i>
+                    <span>Compare Properties</span>
+                </button>
+                <button type="button" class="sidebar-link" data-panel="panel-tours" data-panel-link>
+                    <i class="fa-solid fa-calendar-check"></i>
+                    <span>Scheduled Tours</span>
+                </button>
+                <button type="button" class="sidebar-link" data-panel="panel-messages" data-panel-link>
+                    <i class="fa-solid fa-envelope"></i>
+                    <span>Messages</span>
+                </button>
+                <button type="button" class="sidebar-link" data-panel="panel-notifications" data-panel-link>
+                    <i class="fa-regular fa-bell"></i>
+                    <span>Notifications</span>
+                </button>
+                <button type="button" class="sidebar-link" data-panel="panel-mortgage" data-panel-link>
+                    <i class="fa-solid fa-calculator"></i>
+                    <span>Mortgage Calculator</span>
+                </button>
+                <button type="button" class="sidebar-link" data-panel="panel-settings" data-panel-link>
+                    <i class="fa-solid fa-gear"></i>
+                    <span>Settings</span>
+                </button>
+                <button type="button" class="sidebar-link logout-link" id="logout-btn">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    <span>Logout</span>
+                </button>
+            </nav>
+        </aside>
+        <div class="sidebar-backdrop" id="sidebar-backdrop" aria-hidden="true"></div>
+
+        <div class="dashboard-main">
+            <header class="dashboard-topbar">
+                <div class="topbar-left">
+                    <button id="sidebar-toggle" class="icon-button sidebar-toggle" aria-label="Toggle navigation menu">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                    <div class="topbar-welcome">
+                        <p>Welcome back,</p>
+                        <h1 id="dashboard-user-name">Atlas Member</h1>
+                    </div>
+                </div>
+
+                <form id="dashboard-search-form" class="topbar-search" aria-label="Global property search">
+                    <label class="sr-only" for="dashboard-search-input">Search properties</label>
+                    <input id="dashboard-search-input" type="search" placeholder="Search neighborhoods, homes, keywords" autocomplete="off" />
+                    <button type="submit" class="search-button" aria-label="Search properties">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </form>
+
+                <div class="topbar-actions">
+                    <button id="top-notifications-toggle" type="button" class="icon-button" aria-label="View notifications">
+                        <i class="fa-regular fa-bell" aria-hidden="true"></i>
+                        <span id="top-notification-count" class="badge" aria-live="polite"></span>
+                    </button>
+                    <button id="theme-toggle" type="button" class="icon-button" aria-label="Toggle dark mode">
+                        <i class="fa-solid fa-moon"></i>
+                    </button>
+                    <div class="topbar-avatar" aria-label="User profile">
+                        <span id="dashboard-avatar">A</span>
+                    </div>
+                </div>
+            </header>
+
+            <main class="dashboard-content">
+                <section id="panel-overview" class="dashboard-panel active" aria-labelledby="overview-title">
+                    <!-- Key Metrics Grid -->
+                    <div class="metrics-section">
+                        <h2 class="section-title">Key Metrics</h2>
+                        <div class="stats-grid">
+                            <article class="stat-card" data-dashboard-panel="panel-saved-properties" role="button" tabindex="0">
+                                <div class="stat-icon stat-icon-favorites"><i class="fa-solid fa-heart"></i></div>
+                                <div class="stat-content">
+                                    <p class="stat-label">Saved Properties</p>
+                                    <h3 id="card-saved-properties-count" class="stat-value">Loading...</h3>
+                                </div>
+                            </article>
+                            <article class="stat-card" data-dashboard-panel="panel-overview" role="button" tabindex="0">
+                                <div class="stat-icon stat-icon-recent"><i class="fa-solid fa-clock-rotate-left"></i></div>
+                                <div class="stat-content">
+                                    <p class="stat-label">Recently Viewed</p>
+                                    <h3 id="card-recently-viewed-count" class="stat-value">Loading...</h3>
+                                </div>
+                            </article>
+                            <article class="stat-card" data-dashboard-panel="panel-tours" role="button" tabindex="0">
+                                <div class="stat-icon stat-icon-tours"><i class="fa-solid fa-calendar-days"></i></div>
+                                <div class="stat-content">
+                                    <p class="stat-label">Scheduled Tours</p>
+                                    <h3 id="card-scheduled-tours-count" class="stat-value">Loading...</h3>
+                                </div>
+                            </article>
+                            <article class="stat-card" data-dashboard-panel="panel-saved-searches" role="button" tabindex="0">
+                                <div class="stat-icon stat-icon-searches"><i class="fa-solid fa-folder-open"></i></div>
+                                <div class="stat-content">
+                                    <p class="stat-label">Saved Searches</p>
+                                    <h3 id="card-saved-searches-count" class="stat-value">Loading...</h3>
+                                </div>
+                            </article>
+                            <article class="stat-card" data-dashboard-panel="panel-messages" role="button" tabindex="0">
+                                <div class="stat-icon stat-icon-messages"><i class="fa-solid fa-envelope"></i></div>
+                                <div class="stat-content">
+                                    <p class="stat-label">Messages</p>
+                                    <h3 id="card-messages-count" class="stat-value">Loading...</h3>
+                                </div>
+                            </article>
+                            <article class="stat-card" data-dashboard-panel="panel-notifications" role="button" tabindex="0">
+                                <div class="stat-icon stat-icon-notifications"><i class="fa-solid fa-bell"></i></div>
+                                <div class="stat-content">
+                                    <p class="stat-label">Notifications</p>
+                                    <h3 id="card-notifications-count" class="stat-value">Loading...</h3>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+
+                    <div class="section-header">
+                        <div>
+                            <p class="section-label">Overview</p>
+                            <h2 id="overview-title">Today’s activity</h2>
+                        </div>
+                    </div>
+
+                    <div class="overview-panels">
+                        <article class="activity-panel quick-search-panel">
+                            <div class="panel-header">
+                                <div class="panel-title-group">
+                                    <i class="fa-solid fa-magnifying-glass panel-icon"></i>
+                                    <div>
+                                        <h3>Quick Search</h3>
+                                        <p>Find properties instantly</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="search-results" id="search-results">
+                                <p class="empty-state">Search for a town, neighborhood, or property feature.</p>
+                            </div>
+                        </article>
+
+                        <article class="activity-panel snapshot-panel">
+                            <div class="panel-header">
+                                <div class="panel-title-group">
+                                    <i class="fa-solid fa-chart-simple panel-icon"></i>
+                                    <div>
+                                        <h3>Activity Snapshot</h3>
+                                        <p>Your engagement summary</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <ul class="snapshot-list">
+                                <li>
+                                    <span class="snapshot-icon"><i class="fa-solid fa-heart"></i></span>
+                                    <div>
+                                        <strong id="snapshot-favorites">Loading...</strong>
+                                        <span>saved homes</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="snapshot-icon"><i class="fa-solid fa-magnifying-glass"></i></span>
+                                    <div>
+                                        <strong id="snapshot-searches">Loading...</strong>
+                                        <span>saved searches</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="snapshot-icon"><i class="fa-solid fa-envelope"></i></span>
+                                    <div>
+                                        <strong id="snapshot-messages">Loading...</strong>
+                                        <span>unread messages</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="snapshot-icon"><i class="fa-solid fa-bell"></i></span>
+                                    <div>
+                                        <strong id="snapshot-notifications">Loading...</strong>
+                                        <span>new updates</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </article>
+                    </div>
+
+                    <div class="section-header">
+                        <div>
+                            <p class="section-label">Mortgage Planning</p>
+                            <h2>Saved Mortgage Scenarios</h2>
+                        </div>
+                    </div>
+
+                    <div class="card-panel" id="saved-mortgage-scenarios">
+                        <div class="empty-state">
+                            <p>No saved mortgage scenarios yet. Save one from the mortgage calculator page.</p>
+                        </div>
+                    </div>
+
+                    <div class="recent-section">
+                        <div class="section-header">
+                            <div>
+                                <p class="section-label">Recently Viewed</p>
+                                <h2>Recent Homes</h2>
+                            </div>
+                        </div>
+
+                        <div class="cards-grid" id="recently-viewed-body">
+                            <div class="card-skeleton"></div>
+                            <div class="card-skeleton"></div>
+                            <div class="card-skeleton"></div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="panel-saved-properties" class="dashboard-panel" aria-labelledby="saved-properties-title">
+                    <div class="section-header">
+                        <div>
+                            <p class="section-label">Collections</p>
+                            <h2 id="saved-properties-title">Your Favorite Homes</h2>
+                        </div>
+                    </div>
+
+                    <div class="filter-header">
+                        <div class="filter-group">
+                            <label for="saved-properties-search"><i class="fa-solid fa-magnifying-glass"></i> Search</label>
+                            <input id="saved-properties-search" type="search" placeholder="Search saved homes" aria-label="Search saved homes" />
+                        </div>
+                        <div class="filter-group">
+                            <label for="saved-properties-sort"><i class="fa-solid fa-arrow-down-short-wide"></i> Sort</label>
+                            <select id="saved-properties-sort" aria-label="Sort saved properties">
+                                <option value="recent">Most recent</option>
+                                <option value="price-low">Price: low to high</option>
+                                <option value="price-high">Price: high to low</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="cards-grid" id="saved-properties-body">
+                        <div class="card-skeleton"></div>
+                        <div class="card-skeleton"></div>
+                        <div class="card-skeleton"></div>
+                    </div>
+                </section>
+
+                <section id="panel-saved-searches" class="dashboard-panel" aria-labelledby="saved-searches-title">
+                    <div class="section-header">
+                        <div>
+                            <p class="section-label">Search Tools</p>
+                            <h2 id="saved-searches-title">Saved Search Filters</h2>
+                        </div>
+                    </div>
+
+                    <div class="saved-searches-container">
+                        <div class="saved-search-section">
+                            <h3 class="subsection-title"><i class="fa-solid fa-plus-circle"></i> Create New Search</h3>
+                            <div class="card-panel saved-searches-panel">
+                                <form id="save-search-form" class="saved-search-form" aria-label="Save new search">
+                                    <div class="form-row">
+                                        <label for="search-name">Search name</label>
+                                        <input id="search-name" name="name" type="text" placeholder="Family home in Seattle" />
+                                    </div>
+                                    <div class="form-row">
+                                        <label for="search-location">Location</label>
+                                        <input id="search-location" name="location" type="text" placeholder="City, neighborhood, ZIP" />
+                                    </div>
+                                    <div class="form-row split-row">
+                                        <div>
+                                            <label for="search-price">Price range</label>
+                                            <select id="search-price" name="priceRange">
+                                                <option value="Any">Any</option>
+                                                <option value="$0 - $500k">$0 - $500k</option>
+                                                <option value="$500k - $1M">$500k - $1M</option>
+                                                <option value="$1M+">$1M+</option>
+                                            </select>
+                                        </div>
+                                        <div>
+                                            <label for="search-beds">Beds</label>
+                                            <select id="search-beds" name="beds">
+                                                <option value="Any">Any</option>
+                                                <option value="1">1+</option>
+                                                <option value="2">2+</option>
+                                                <option value="3">3+</option>
+                                                <option value="4">4+</option>
+                                            </select>
+                                        </div>
+                                        <div>
+                                            <label for="search-baths">Baths</label>
+                                            <select id="search-baths" name="baths">
+                                                <option value="Any">Any</option>
+                                                <option value="1">1+</option>
+                                                <option value="2">2+</option>
+                                                <option value="3">3+</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <label for="search-keyword">Keyword</label>
+                                        <input id="search-keyword" name="keyword" type="text" placeholder="e.g. waterfront, modern, pool" />
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">Save search</button>
+                                </form>
+                            </div>
+                        </div>
+
+                        <div class="saved-search-section">
+                            <h3 class="subsection-title"><i class="fa-solid fa-list-check"></i> Your Saved Searches</h3>
+                            <div class="cards-grid" id="saved-searches-body">
+                                <div class="card-skeleton"></div>
+                                <div class="card-skeleton"></div>
+                            </div>
+                            <div class="search-results" id="saved-search-results"></div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="panel-compare" class="dashboard-panel" aria-labelledby="compare-title">
+                    <div class="section-header">
+                        <div>
+                            <p class="section-label">Analysis</p>
+                            <h2 id="compare-title">Compare Properties</h2>
+                        </div>
+                        <button id="compare-clear-all" type="button" class="btn btn-outline"><i class="fa-solid fa-trash"></i> Clear All</button>
+                    </div>
+
+                    <div class="compare-info">
+                        <p><i class="fa-solid fa-info-circle"></i> Compare up to 4 properties side-by-side to help with your decision</p>
+                    </div>
+
+                    <div class="cards-grid" id="compare-properties-body">
+                        <div class="card-skeleton"></div>
+                        <div class="card-skeleton"></div>
+                        <div class="card-skeleton"></div>
+                        <div class="card-skeleton"></div>
+                    </div>
+                </section>
+
+                <section id="panel-tours" class="dashboard-panel" aria-labelledby="tours-title">
+                    <div class="section-header">
+                        <div>
+                            <p class="section-label">Schedule</p>
+                            <h2 id="tours-title">Property Tours</h2>
+                        </div>
+                    </div>
+
+                    <div class="tour-columns">
+                        <div class="tour-panel">
+                            <div class="tour-panel-header">
+                                <i class="fa-solid fa-calendar-check"></i>
+                                <h3>Upcoming Tours</h3>
+                            </div>
+                            <div id="upcoming-tours-body" class="timeline-list">
+                                <div class="timeline-skeleton"></div>
+                            </div>
+                        </div>
+                        <div class="tour-panel">
+                            <div class="tour-panel-header">
+                                <i class="fa-solid fa-history"></i>
+                                <h3>Past Tours</h3>
+                            </div>
+                            <div id="past-tours-body" class="timeline-list">
+                                <div class="timeline-skeleton"></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="panel-messages" class="dashboard-panel" aria-labelledby="messages-title">
+                    <div class="section-header">
+                        <div>
+                            <p class="section-label">Communication</p>
+                            <h2 id="messages-title">Messages</h2>
+                        </div>
+                    </div>
+
+                    <div class="messages-layout">
+                        <div class="messages-sidebar-wrapper">
+                            <h3 class="messages-sidebar-title"><i class="fa-solid fa-envelope"></i> Inbox</h3>
+                            <div class="messages-sidebar" id="messages-list"></div>
+                        </div>
+                        <div class="messages-view">
+                            <div class="messages-view-wrapper">
+                                <h3 class="messages-view-title"><i class="fa-solid fa-comment"></i> Conversation</h3>
+                                <div class="message-detail" id="message-detail"></div>
+                            </div>
+                            <form id="compose-form" class="compose-form" aria-label="Compose a new message">
+                                <h3><i class="fa-solid fa-pen"></i> New Message</h3>
+                                <div class="form-row">
+                                    <label for="compose-to">To</label>
+                                    <input id="compose-to" type="text" placeholder="Agent, lender or team" />
+                                </div>
+                                <div class="form-row">
+                                    <label for="compose-subject">Subject</label>
+                                    <input id="compose-subject" type="text" placeholder="Message topic" />
+                                </div>
+                                <div class="form-row">
+                                    <label for="compose-body">Message</label>
+                                    <textarea id="compose-body" rows="5" placeholder="Write your message..."></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Send message</button>
+                            </form>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="panel-notifications" class="dashboard-panel" aria-labelledby="notifications-title">
+                    <div class="section-header">
+                        <div>
+                            <p class="section-label">Alerts</p>
+                            <h2 id="notifications-title">Notifications</h2>
+                        </div>
+                        <button id="mark-all-read" type="button" class="btn btn-outline"><i class="fa-solid fa-check-double"></i> Mark all read</button>
+                    </div>
+
+                    <div class="notification-list" id="notifications-body">
+                        <div class="notification-skeleton"></div>
+                        <div class="notification-skeleton"></div>
+                        <div class="notification-skeleton"></div>
+                    </div>
+                </section>
+
+                <section id="panel-profile" class="dashboard-panel" aria-labelledby="profile-title">
+                    <div class="section-header">
+                        <div>
+                            <p class="section-label">Account</p>
+                            <h2 id="profile-title">Profile Settings</h2>
+                        </div>
+                    </div>
+
+                    <div class="profile-grid">
+                        <div class="profile-summary card-panel">
+                            <div class="profile-avatar">
+                                <span id="profile-avatar-initial">A</span>
+                            </div>
+                            <h3 id="profile-full-name">Atlas Member</h3>
+                            <p id="profile-email">member@atlas.com</p>
+                            <p id="profile-phone" class="profile-detail"><i class="fa-solid fa-phone"></i> Phone not added</p>
+                            <p id="profile-address" class="profile-detail"><i class="fa-solid fa-location-dot"></i> Address not added</p>
+                        </div>
+
+                        <div class="profile-edit-wrapper">
+                            <div class="profile-section">
+                                <h3 class="profile-section-title"><i class="fa-solid fa-user"></i> Personal Information</h3>
+                                <form id="profile-form" class="profile-form" aria-label="Edit profile details">
+                                    <div class="form-row">
+                                        <label for="profile-name">Full name</label>
+                                        <input id="profile-name" type="text" name="fullName" />
+                                    </div>
+                                    <div class="form-row">
+                                        <label for="profile-email-input">Email</label>
+                                        <input id="profile-email-input" type="email" name="email" />
+                                    </div>
+                                    <div class="form-row">
+                                        <label for="profile-phone-input">Phone</label>
+                                        <input id="profile-phone-input" type="tel" name="phone" />
+                                    </div>
+                                    <div class="form-row">
+                                        <label for="profile-address-input">Address</label>
+                                        <input id="profile-address-input" type="text" name="address" />
+                                    </div>
+                                    <div class="form-row split-row">
+                                        <div>
+                                            <label for="profile-city">City</label>
+                                            <input id="profile-city" type="text" name="city" />
+                                        </div>
+                                        <div>
+                                            <label for="profile-state">State</label>
+                                            <input id="profile-state" type="text" name="state" />
+                                        </div>
+                                        <div>
+                                            <label for="profile-postal">Postal code</label>
+                                            <input id="profile-postal" type="text" name="postalCode" />
+                                        </div>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">Save profile</button>
+                                </form>
+                            </div>
+
+                            <div class="profile-section">
+                                <h3 class="profile-section-title"><i class="fa-solid fa-lock"></i> Security</h3>
+                                <form id="password-form" aria-label="Change password">
+                                    <div class="form-row">
+                                        <label for="current-password">Current password</label>
+                                        <input id="current-password" type="password" autocomplete="current-password" />
+                                    </div>
+                                    <div class="form-row">
+                                        <label for="new-password">New password</label>
+                                        <input id="new-password" type="password" autocomplete="new-password" />
+                                    </div>
+                                    <div class="form-row">
+                                        <label for="confirm-password">Confirm new password</label>
+                                        <input id="confirm-password" type="password" autocomplete="new-password" />
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">Update password</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="panel-settings" class="dashboard-panel" aria-labelledby="settings-title">
+                    <div class="section-header">
+                        <div>
+                            <p class="section-label">Configuration</p>
+                            <h2 id="settings-title">Settings & Preferences</h2>
+                        </div>
+                    </div>
+
+                    <div class="settings-grid">
+                        <div class="settings-card">
+                            <div class="settings-card-header">
+                                <i class="fa-solid fa-palette"></i>
+                                <h3>Appearance</h3>
+                            </div>
+                            <p>Switch between light and dark mode for your workspace.</p>
+                            <button id="settings-theme-toggle" type="button" class="btn btn-outline">Toggle theme</button>
+                        </div>
+
+                        <div class="settings-card">
+                            <div class="settings-card-header">
+                                <i class="fa-solid fa-bell"></i>
+                                <h3>Notifications</h3>
+                            </div>
+                            <div class="switch-row">
+                                <label><i class="fa-solid fa-envelope"></i> Email notifications</label>
+                                <input id="setting-email-notifications" type="checkbox" />
+                            </div>
+                            <div class="switch-row">
+                                <label><i class="fa-solid fa-mobile"></i> SMS notifications</label>
+                                <input id="setting-sms-notifications" type="checkbox" />
+                            </div>
+                        </div>
+
+                        <div class="settings-card">
+                            <div class="settings-card-header">
+                                <i class="fa-solid fa-shield"></i>
+                                <h3>Privacy</h3>
+                            </div>
+                            <label for="setting-privacy">Profile visibility</label>
+                            <select id="setting-privacy">
+                                <option value="private">Private</option>
+                                <option value="public">Public</option>
+                                <option value="connections">Connections only</option>
+                            </select>
+                        </div>
+
+                        <div class="settings-card">
+                            <div class="settings-card-header">
+                                <i class="fa-solid fa-globe"></i>
+                                <h3>Language</h3>
+                            </div>
+                            <label for="setting-language">Preferred language</label>
+                            <select id="setting-language">
+                                <option value="en">English</option>
+                                <option value="es">Spanish</option>
+                                <option value="fr">French</option>
+                            </select>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <div id="toast-container" class="toast-container" aria-live="polite" aria-atomic="true"></div>
+
+    <script type="module" src="js/firebase-auth.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/helpers.js"></script>
+    <script src="js/protect.js"></script>
+    <script src="js/dashboard-mortgage.js"></script>
+    <script src="js/dashboard.js"></script>
+    <script src="js/saved-properties.js"></script>
+    <script src="js/footer.js"></script>
+</body>
+
+</html>

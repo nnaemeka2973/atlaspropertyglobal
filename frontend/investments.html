@@ -1,0 +1,2695 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>U.S. Real Estate Investment | Atlas Property Group</title>
+
+    <meta
+        name="description"
+        content="Explore U.S. real estate investment opportunities for domestic and international buyers through Atlas Property Group."
+    >
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Montserrat:wght@500;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    >
+
+    <style>
+
+        /* =========================================================
+           GLOBAL
+        ========================================================= */
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 110px;
+        }
+
+        body {
+            overflow-x: hidden;
+        }
+
+        section[id] {
+            scroll-margin-top: 110px;
+        }
+
+        .investment-page {
+            overflow: hidden;
+        }
+
+        .container {
+            width: min(1180px, calc(100% - 40px));
+            margin: 0 auto;
+        }
+
+
+        /* =========================================================
+           INVESTMENT HERO
+        ========================================================= */
+
+        .invest-hero {
+            position: relative;
+            min-height: 680px;
+            display: flex;
+            align-items: center;
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(5, 27, 63, 0.92),
+                    rgba(5, 27, 63, 0.72),
+                    rgba(5, 27, 63, 0.35)
+                ),
+                url('https://images.pexels.com/photos/28914932/pexels-photo-28914932.jpeg');
+
+            background-size: cover;
+            background-position: center 10%;
+            color: var(--white);
+            
+        }
+
+        .invest-hero-content {
+            max-width: 820px;
+            padding: 150px 0 100px;
+        }
+
+        .invest-eyebrow {
+            display: block;
+            color:rgb(80, 53, 233);
+            letter-spacing: 2px;
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 18px;
+        }
+
+        .invest-hero h1 {
+            font-size: clamp(3rem, 6vw, 5rem);
+            line-height: 1.05;
+            margin: 0 0 25px;
+            color: var(--white);
+        }
+
+        .invest-hero p {
+            max-width: 760px;
+            font-size: 18px;
+            line-height: 1.8;
+            color: rgba(255,255,255,.9);
+            margin-bottom: 32px;
+        }
+
+        .hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+        }
+
+        .hero-actions .btn {
+            min-width: 180px;
+        }
+
+        .hero-trust {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            margin-top: 45px;
+            padding-top: 25px;
+            border-top: 1px solid rgba(255,255,255,.2);
+        }
+
+        .hero-trust-item {
+            display: flex;
+            align-items: center;
+            gap: 9px;
+            font-size: 13px;
+            color: rgba(255,255,255,.85);
+        }
+
+        .hero-trust-item i {
+            color: rgb(57, 25, 217);
+        }
+
+
+        /* =========================================================
+           INVESTMENT NAVIGATION
+        ========================================================= */
+
+        .investment-nav {
+            position: sticky;
+            top: 0;
+            z-index: 900;
+            background: rgb(19, 50, 126);
+            border-bottom: 1px solid rgba(5, 4, 60, 0.285);
+            box-shadow: 0 5px 20px rgba(1, 3, 15, 0.08);
+        }
+
+        .investment-nav-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            min-height: 64px;
+            
+        }
+
+        .investment-nav-label {
+            color: var(--white);
+            font-weight: 700;
+            font-size: 13px;
+            white-space: nowrap;
+            
+        }
+
+        .investment-nav-links {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            overflow-x: auto;
+            scrollbar-width: none;
+        }
+
+        .investment-nav-links::-webkit-scrollbar {
+            display: none;
+        }
+
+        .investment-nav-links a {
+            color: rgba(255,255,255,.85);
+            text-decoration: none;
+            padding: 22px 13px;
+            font-size: 12px;
+            font-weight: 600;
+            white-space: nowrap;
+            transition: .25s ease;
+        }
+
+        .investment-nav-links a:hover {
+            color: black;
+        }
+
+
+        /* =========================================================
+           INTRODUCTION
+        ========================================================= */
+
+        .investment-intro {
+            padding: 90px 0 50px;
+            background-image: url('https://images.pexels.com/photos/6276128/pexels-photo-6276128.jpeg');
+            
+        
+            
+
+        }
+
+        .intro-grid {
+            display: grid;
+            grid-template-columns: 1.1fr .9fr;
+            gap: 70px;
+            align-items: center;
+        }
+
+        .section-label {
+            color: rgb(18, 18, 18);
+            font-size: 13px;
+            letter-spacing: 2px;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+            display: block;
+        }
+
+        .section-title {
+            color: rgb(10, 10, 58);
+            font-size: clamp(2.3rem, 4vw, 3.5rem);
+            line-height: 1.1;
+            margin: 0 0 20px;
+        }
+
+        .section-text {
+            color: var(--medium-gray);
+            line-height: 1.85;
+            font-size: 16px;
+        }
+
+        .intro-panel {
+            background: var(--light-gray);
+            border-left: 4px solid rgb(229, 227, 240);
+            padding: 35px;
+            border-radius: 10px;
+        }
+
+        .intro-panel h3 {
+            color: rgb(6, 6, 53);
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-size: 22px;
+        }
+
+        .intro-panel ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+
+        .intro-panel li {
+            margin-bottom: 12px;
+            color: var(--medium-gray);
+            line-height: 1.6;
+        }
+
+
+        /* =========================================================
+           STRATEGIES
+        ========================================================= */
+
+        .strategy-section {
+            padding: 80px 0;
+            background: var(--light-gray);
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 780px;
+            margin: 0 auto 55px;
+        }
+
+        .section-header p {
+            color: var(--medium-gray);
+            line-height: 1.8;
+            margin: 0;
+        }
+
+        .strategy-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .strategy-card {
+            background: var(--white);
+            padding: 35px 28px;
+            border-radius: 10px;
+            box-shadow: var(--shadow-md);
+            border-top: 4px solid white;
+            transition: .3s ease;
+        }
+
+        .strategy-card:hover {
+            transform: translateY(-7px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .strategy-card i {
+            color: rgb(5, 5, 69);
+            font-size: 30px;
+            margin-bottom: 18px;
+        }
+
+        .strategy-card h3 {
+            color: rgb(8, 8, 69);
+            font-size: 21px;
+            margin: 0 0 12px;
+        }
+
+        .strategy-card p {
+            color: var(--medium-gray);
+            line-height: 1.7;
+            font-size: 14px;
+            margin: 0;
+        }
+
+
+        /* =========================================================
+           U.S. MARKET
+        ========================================================= */
+
+        .us-market {
+            padding: 100px 0;
+        }
+
+        .market-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            margin-top: 50px;
+        }
+
+        .market-card {
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            overflow: hidden;
+            background: var(--white);
+            transition: .3s ease;
+        }
+
+        .market-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .market-card-image {
+            height: 210px;
+            overflow: hidden;
+        }
+
+        .market-card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform .5s ease;
+        }
+
+        .market-card:hover img {
+            transform: scale(1.05);
+        }
+
+        .market-card-content {
+            padding: 27px;
+        }
+
+        .market-card-content h3 {
+            color: var(--primary-blue);
+            margin: 0 0 10px;
+            font-size: 22px;
+        }
+
+        .market-card-content p {
+            color: var(--medium-gray);
+            font-size: 14px;
+            line-height: 1.7;
+            margin: 0 0 18px;
+        }
+
+        .market-link {
+            color: var(--primary-blue);
+            font-weight: 700;
+            font-size: 13px;
+            text-decoration: none;
+        }
+
+        .market-link:hover {
+            color: black;
+        }
+
+
+        /* =========================================================
+           INTERNATIONAL BUYERS
+        ========================================================= */
+
+        .international-section {
+            padding: 100px 0;
+            background:
+                linear-gradient(rgba(5, 27, 63, 0.88), rgba(5, 27, 63, 0.88)),
+                url('asset/image7.jpg') center / cover no-repeat;
+            color: var(--white);
+        }
+
+        .international-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 70px;
+            align-items: center;
+        }
+
+        .international-section .section-title {
+            color: var(--white);
+        }
+
+        .international-section .section-text {
+            color: rgba(255,255,255,.78);
+        }
+
+        .international-list {
+            margin: 30px 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .international-list li {
+            display: flex;
+            gap: 13px;
+            margin-bottom: 17px;
+            line-height: 1.6;
+            color: rgba(255,255,255,.88);
+        }
+
+        .international-list i {
+            color: var(--accent-gold);
+            margin-top: 4px;
+        }
+
+        .international-panel {
+            background: rgba(255,255,255,.08);
+            border: 1px solid rgba(255,255,255,.15);
+            border-radius: 14px;
+            padding: 35px;
+        }
+
+        .international-panel h3 {
+            margin-top: 0;
+            color: var(--white);
+        }
+
+        .international-panel p {
+            color: rgba(255,255,255,.75);
+            line-height: 1.75;
+            font-size: 14px;
+        }
+
+
+        /* =========================================================
+           DEVELOPMENT
+        ========================================================= */
+
+        .development-section {
+            padding: 100px 0;
+        }
+
+        .development-box {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            border-radius: 15px;
+            overflow: hidden;
+            background: var(--light-gray);
+        }
+
+        .development-image {
+            min-height: 450px;
+        }
+
+        .development-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .development-content {
+            padding: 60px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .development-content h2 {
+            color: var(--primary-blue);
+            font-size: 38px;
+            margin: 0 0 20px;
+        }
+
+        .development-content p {
+            color: var(--medium-gray);
+            line-height: 1.8;
+        }
+
+        .development-list {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0 30px;
+        }
+
+        .development-list li {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 14px;
+            color: var(--medium-gray);
+        }
+
+        .development-list i {
+            color: var(--accent-gold);
+            margin-top: 4px;
+        }
+
+
+        /* =========================================================
+           ROI CALCULATOR
+        ========================================================= */
+
+        .roi-section {
+            padding: 100px 0;
+            background: var(--light-gray);
+        }
+
+        .calculator-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: start;
+            background: var(--white);
+            padding: 55px;
+            border-radius: 15px;
+            box-shadow: var(--shadow-md);
+        }
+
+        .calculator-inputs h3,
+        .calculator-results h3 {
+            color: var(--primary-blue);
+            margin-top: 0;
+            font-size: 24px;
+        }
+
+        .calculator-inputs {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .filter-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .filter-group label {
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--text-color);
+        }
+
+        .filter-group input,
+        .filter-group select {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 13px 15px;
+            border: 1px solid var(--border-color);
+            border-radius: 7px;
+            background: var(--white);
+            color: var(--text-color);
+            font-family: var(--font-body);
+            font-size: 14px;
+        }
+
+        .filter-group input:focus,
+        .filter-group select:focus {
+            outline: none;
+            border-color: var(--primary-blue);
+            box-shadow: 0 0 0 3px rgba(11,61,145,.08);
+        }
+
+        .calculator-results {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .result-highlight {
+            padding: 28px;
+            background: linear-gradient(
+                135deg,
+                rgba(11,61,145,.06),
+                rgba(212,175,55,.08)
+            );
+            border-left: 4px solid black;
+            border-radius: 10px;
+        }
+
+        .result-label {
+            color: var(--medium-gray);
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+
+        #roi-total-label {
+            color: black;
+            font-size: 32px;
+            margin: 0;
+        }
+
+        .result-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+
+        .result-box {
+            padding: 20px;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+        }
+
+        .result-box span {
+            display: block;
+            color: var(--medium-gray);
+            font-size: 12px;
+            margin-bottom: 7px;
+        }
+
+        .result-box strong {
+            color: var(--primary-blue);
+            font-size: 19px;
+        }
+
+        .calculator-note {
+            color: var(--medium-gray);
+            font-size: 12px;
+            line-height: 1.6;
+        }
+
+
+        /* =========================================================
+           PROCESS
+        ========================================================= */
+
+        .process-section {
+            padding: 100px 0;
+        }
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 20px;
+        }
+
+        .process-step {
+            text-align: center;
+            position: relative;
+        }
+
+        .process-number {
+            width: 52px;
+            height: 52px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 18px;
+            border-radius: 50%;
+            background: var(--primary-blue);
+            color: var(--white);
+            font-weight: 700;
+            font-size: 17px;
+        }
+
+        .process-step h3 {
+            color: var(--primary-blue);
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .process-step p {
+            color: var(--medium-gray);
+            font-size: 13px;
+            line-height: 1.65;
+        }
+
+
+        /* =========================================================
+           DUE DILIGENCE
+        ========================================================= */
+
+        .due-section {
+            padding: 90px 0;
+            background: var(--light-gray);
+        }
+
+        .due-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
+        .due-card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 10px;
+        }
+
+        .due-card i {
+            color: black;
+            font-size: 26px;
+            margin-bottom: 15px;
+        }
+
+        .due-card h3 {
+            color: var(--primary-blue);
+            margin: 0 0 10px;
+            font-size: 19px;
+        }
+
+        .due-card p {
+            color: var(--medium-gray);
+            font-size: 14px;
+            line-height: 1.7;
+            margin: 0;
+        }
+
+
+        /* =========================================================
+           CTA
+        ========================================================= */
+
+        .investment-cta {
+            padding: 100px 0;
+            background:
+                linear-gradient(
+                    rgba(5,27,63,.92),
+                    rgba(5,27,63,.92)
+                ),
+                url('asset/inv1.jpg');
+
+            background-size: cover;
+            background-position: center;
+            color: var(--white);
+            text-align: center;
+        }
+
+        .investment-cta h2 {
+            font-size: clamp(2.2rem, 4vw, 3.5rem);
+            color: var(--white);
+            margin: 0 0 18px;
+        }
+
+        .investment-cta p {
+            max-width: 720px;
+            margin: 0 auto 30px;
+            color: rgba(255,255,255,.8);
+            line-height: 1.8;
+        }
+
+        .cta-actions {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 14px;
+        }
+
+
+        /* =========================================================
+           DISCLAIMER
+        ========================================================= */
+
+        .disclaimer-section {
+            padding: 45px 0;
+            background: #f4f5f7;
+        }
+
+        .disclaimer {
+            max-width: 950px;
+            margin: 0 auto;
+            color: #666;
+            font-size: 11px;
+            line-height: 1.7;
+            text-align: center;
+        }
+
+
+        /* =========================================================
+           BACK TO TOP
+        ========================================================= */
+
+        #back-to-top {
+            position: fixed;
+            right: 25px;
+            bottom: 25px;
+            width: 48px;
+            height: 48px;
+            border: none;
+            border-radius: 50%;
+            background: var(--primary-blue);
+            color: var(--white);
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(15px);
+            transition: all .3s ease;
+            z-index: 9999;
+            box-shadow: 0 5px 20px rgba(0,0,0,.18);
+        }
+
+        #back-to-top.show {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        #back-to-top:hover {
+            background: var(--accent-gold);
+            transform: translateY(-3px);
+        }
+
+
+        /* =========================================================
+           RESPONSIVE
+        ========================================================= */
+
+        @media (max-width: 1024px) {
+
+            .strategy-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .market-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .process-grid {
+                grid-template-columns: repeat(3, 1fr);
+                row-gap: 35px;
+            }
+
+            .intro-grid,
+            .international-grid,
+            .development-box,
+            .calculator-wrapper {
+                gap: 40px;
+            }
+        }
+
+
+        @media (max-width: 768px) {
+
+            html {
+                scroll-padding-top: 80px;
+            }
+
+            section[id] {
+                scroll-margin-top: 80px;
+            }
+
+            .container {
+                width: min(100% - 30px, 680px);
+            }
+
+            .invest-hero {
+                min-height: auto;
+            }
+
+            .invest-hero-content {
+                padding: 120px 0 80px;
+            }
+
+            .invest-hero p {
+                font-size: 15px;
+            }
+
+            .hero-actions {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .hero-actions .btn {
+                width: 100%;
+            }
+
+            .hero-trust {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .investment-nav-label {
+                display: none;
+            }
+
+            .investment-nav-inner {
+                justify-content: flex-start;
+            }
+
+            .investment-nav-links {
+                width: 100%;
+            }
+
+            .investment-nav-links a {
+                padding: 20px 10px;
+            }
+
+            .investment-intro,
+            .us-market,
+            .international-section,
+            .development-section,
+            .roi-section,
+            .process-section {
+                padding: 70px 0;
+            }
+
+            .intro-grid,
+            .international-grid,
+            .development-box,
+            .calculator-wrapper {
+                grid-template-columns: 1fr;
+            }
+
+            .strategy-grid,
+            .market-grid,
+            .due-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .process-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .development-image {
+                min-height: 300px;
+            }
+
+            .development-content {
+                padding: 35px 25px;
+            }
+
+            .calculator-wrapper {
+                padding: 30px 22px;
+            }
+        }
+
+
+        @media (max-width: 480px) {
+
+            .container {
+                width: calc(100% - 24px);
+            }
+
+            .invest-hero-content {
+                padding: 100px 0 60px;
+            }
+
+            .invest-hero h1 {
+                font-size: 31px;
+            }
+
+            .invest-hero p {
+                font-size: 14px;
+                line-height: 1.7;
+            }
+
+            .section-title {
+                font-size: 28px;
+            }
+
+            .section-text {
+                font-size: 14px;
+            }
+
+            .strategy-card {
+                padding: 27px 22px;
+            }
+
+            .market-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .process-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .result-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .development-content h2 {
+                font-size: 29px;
+            }
+
+            #roi-total-label {
+                font-size: 25px;
+            }
+
+            #back-to-top {
+                width: 44px;
+                height: 44px;
+                right: 16px;
+                bottom: 16px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+<div class="investment-page">
+
+    <!-- =========================================================
+         SHARED WEBSITE HEADER
+    ========================================================== -->
+
+    <div
+        id="shared-header-root"
+        data-shared-navbar="true">
+    </div>
+
+
+    <!-- =========================================================
+         HERO
+    ========================================================== -->
+
+    <section class="invest-hero" id="top">
+
+        <div class="container">
+
+            <div class="invest-hero-content">
+
+                <span class="invest-eyebrow reveal">
+                    CAPITAL PRESERVATION &amp; GROWTH
+                </span>
+
+                <!-- YOUR ORIGINAL HERO TEXT RETAINED -->
+                <h1 class="reveal">
+                    Institutional Real Estate Investment
+                </h1>
+
+                <p class="reveal">
+                    We identify and evaluate real estate opportunities across
+                    the United States for private investors, property buyers,
+                    developers and international clients seeking exposure to
+                    the U.S. real estate market.
+                </p>
+
+                <div class="hero-actions">
+
+                    <a
+                        href="#investment-strategies"
+                        class="btn btn-primary">
+                        Explore Strategies
+                    </a>
+
+                    <a
+                        href="contact.html"
+                        class="btn btn-outline">
+                        Speak With Our Team
+                    </a>
+
+                </div>
+
+                <div class="hero-trust">
+
+                    <div class="hero-trust-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        U.S. Market Coverage
+                    </div>
+
+                    <div class="hero-trust-item">
+                        <i class="fas fa-globe"></i>
+                        International Buyer Support
+                    </div>
+
+                    <div class="hero-trust-item">
+                        <i class="fas fa-file-shield"></i>
+                        Property Due Diligence
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         INVESTMENT NAVIGATION
+    ========================================================== -->
+
+    <nav class="investment-nav" aria-label="Investment page navigation">
+
+        <div class="container investment-nav-inner">
+
+            <div class="investment-nav-label">
+                Investment
+            </div>
+
+            <div class="investment-nav-links">
+
+                <a href="#investment-overview">
+                    Overview
+                </a>
+
+                <a href="#investment-strategies">
+                    Strategies
+                </a>
+
+                <a href="#us-market">
+                    U.S. Markets
+                </a>
+
+                <a href="#international-buyers">
+                    International Buyers
+                </a>
+
+                <a href="#developments">
+                    Developments
+                </a>
+
+                <a href="#calculator">
+                    Calculator
+                </a>
+
+                <a href="#investment-process">
+                    Process
+                </a>
+
+                <a href="#due-diligence">
+                    Due Diligence
+                </a>
+
+                <a href="contact.html">
+                    Contact
+                </a>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
+    <!-- =========================================================
+         OVERVIEW
+    ========================================================== -->
+
+    <section
+        class="investment-intro"
+        id="investment-overview">
+
+        <div class="container">
+
+            <div class="intro-grid">
+
+                <div>
+
+                    <span class="section-label">
+                        U.S. Real Estate Investment
+                    </span>
+
+                    <h2 class="section-title">
+                        A structured approach to investing in American real estate
+                    </h2>
+
+                    <p class="section-text">
+                        Atlas Property Group provides a starting point for
+                        evaluating residential, commercial and development
+                        opportunities in the United States.
+                    </p>
+
+                    <p class="section-text">
+                        Our investment approach is designed for both U.S.
+                        residents and qualified international buyers who want
+                        to research opportunities, understand potential
+                        property economics and connect with the appropriate
+                        real estate professionals.
+                    </p>
+
+                    <p class="section-text">
+                        Every investment is subject to market conditions,
+                        property-specific risks, financing terms, taxes,
+                        operating expenses and other factors. We encourage
+                        investors to conduct independent due diligence and
+                        obtain professional legal, tax, lending and investment
+                        advice before committing capital.
+                    </p>
+
+                </div>
+
+                <div class="intro-panel">
+
+                    <h3>
+                        What investors can explore
+                    </h3>
+
+                    <ul>
+
+                        <li>
+                            U.S. residential investment properties
+                        </li>
+
+                        <li>
+                            Multifamily and income-producing real estate
+                        </li>
+
+                        <li>
+                            Commercial property opportunities
+                        </li>
+
+                        <li>
+                            Development and redevelopment opportunities
+                        </li>
+
+                        <li>
+                            Property acquisition and market research
+                        </li>
+
+                        <li>
+                            Financing and investment considerations
+                        </li>
+
+                        <li>
+                            International buyer considerations
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         STRATEGIES
+    ========================================================== -->
+
+    <section
+        class="strategy-section"
+        id="investment-strategies">
+
+        <div class="container">
+
+            <div class="section-header">
+
+                <span class="section-label">
+                    Investment Strategies
+                </span>
+
+                <h2 class="section-title">
+                    Different strategies for different investment objectives
+                </h2>
+
+                <p>
+                    Real estate investments can have different risk profiles,
+                    holding periods and objectives. The appropriate strategy
+                    depends on the property, market, financing structure and
+                    investor's circumstances.
+                </p>
+
+            </div>
+
+            <div class="strategy-grid">
+
+                <div class="strategy-card reveal">
+
+                    <i class="fas fa-shield-halved"></i>
+
+                    <h3>
+                        Core
+                    </h3>
+
+                    <p>
+                        Typically focused on stabilized properties in
+                        established markets with existing occupancy and
+                        established operating characteristics.
+                    </p>
+
+                </div>
+
+
+                <div class="strategy-card reveal">
+
+                    <i class="fas fa-chart-line"></i>
+
+                    <h3>
+                        Core Plus
+                    </h3>
+
+                    <p>
+                        Properties with established fundamentals that may
+                        offer opportunities for operational improvement,
+                        repositioning or modest capital investment.
+                    </p>
+
+                </div>
+
+
+                <div class="strategy-card reveal">
+
+                    <i class="fas fa-arrow-trend-up"></i>
+
+                    <h3>
+                        Value-Add
+                    </h3>
+
+                    <p>
+                        Properties where renovations, management improvements,
+                        leasing strategies or repositioning may affect future
+                        property performance.
+                    </p>
+
+                </div>
+
+
+                <div class="strategy-card reveal">
+
+                    <i class="fas fa-building"></i>
+
+                    <h3>
+                        Development
+                    </h3>
+
+                    <p>
+                        Ground-up development, redevelopment and land
+                        opportunities that require detailed feasibility,
+                        permitting, financing and construction analysis.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         U.S. MARKETS
+    ========================================================== -->
+
+    <section
+        class="us-market"
+        id="us-market">
+
+        <div class="container">
+
+            <div class="section-header">
+
+                <span class="section-label">
+                    Our U.S. Market Coverage
+                </span>
+
+                <h2 class="section-title">
+                    Explore real estate opportunities across the United States
+                </h2>
+
+                <p>
+                    Investors can evaluate markets according to property type,
+                    economic conditions, employment trends, demographics,
+                    rental demand, development activity and other factors.
+                </p>
+
+            </div>
+
+
+            <div class="market-grid">
+
+                <article class="market-card">
+
+                    <div class="market-card-image">
+
+                        <img
+                            src="https://images.pexels.com/photos/4082527/pexels-photo-4082527.jpeg"
+                            alt="Residential real estate investment in the United States"
+                            loading="lazy">
+
+                    </div>
+
+                    <div class="market-card-content">
+
+                        <h3>
+                            Residential
+                        </h3>
+
+                        <p>
+                            Single-family homes, luxury residences, second
+                            homes, multifamily properties and other residential
+                            real estate opportunities.
+                        </p>
+
+                        <a
+                            href="properties.html?type=estates"
+                            class="market-link">
+                            Explore Residential Properties
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <article class="market-card">
+
+                    <div class="market-card-image">
+
+                        <img
+                            src="https://images.pexels.com/photos/30820686/pexels-photo-30820686.jpeg"
+                            alt="Commercial real estate investment in the United States"
+                            loading="lazy">
+
+                    </div>
+
+                    <div class="market-card-content">
+
+                        <h3>
+                            Commercial
+                        </h3>
+
+                        <p>
+                            Office, retail, industrial, mixed-use and other
+                            commercial real estate categories for investors
+                            researching income-producing assets.
+                        </p>
+
+                        <a
+                            href="properties.html?type=offices"
+                            class="market-link">
+                            Explore Commercial Properties
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <article class="market-card">
+
+                    <div class="market-card-image">
+
+                        <img
+                            src="https://images.pexels.com/photos/4170185/pexels-photo-4170185.jpeg"
+                            alt="U.S. real estate development opportunity"
+                            loading="lazy">
+
+                    </div>
+
+                    <div class="market-card-content">
+
+                        <h3>
+                            Development
+                        </h3>
+
+                        <p>
+                            Land acquisition, redevelopment and new construction
+                            opportunities requiring project-level feasibility
+                            and due diligence.
+                        </p>
+
+                        <a
+                            href="developments.html"
+                            class="market-link">
+                            View Development Opportunities
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         INTERNATIONAL BUYERS
+    ========================================================== -->
+
+    <section
+        class="international-section"
+        id="international-buyers">
+
+        <div class="container">
+
+            <div class="international-grid">
+
+                <div>
+
+                    <span class="section-label">
+                        For Buyers Around the World
+                    </span>
+
+                    <h2 class="section-title">
+                        Buying Real Estate in the United States
+                    </h2>
+
+                    <p class="section-text">
+                        Whether you are purchasing a primary residence,
+                        second home, commercial property or investment asset,
+                        Atlas provides a starting point for researching
+                        American real estate.
+                    </p>
+
+                    <ul class="international-list">
+
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            Research U.S. properties and markets
+                        </li>
+
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            Understand common purchase considerations
+                        </li>
+
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            Connect with appropriate real estate professionals
+                        </li>
+
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            Review financing and transaction considerations
+                        </li>
+
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            Learn about the U.S. acquisition process
+                        </li>
+
+                    </ul>
+
+                    <a
+                        href="international-buyers.html"
+                        class="btn btn-primary">
+                        International Buyer Guide
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+
+                </div>
+
+
+                <div class="international-panel">
+
+                    <h3>
+                        Important considerations for international buyers
+                    </h3>
+
+                    <p>
+                        Purchasing U.S. real estate can involve additional
+                        considerations relating to ownership structure,
+                        financing, taxation, reporting obligations, currency
+                        exchange, insurance, title and local regulations.
+                    </p>
+
+                   
+
+                    <a
+                        href="faq.html"
+                        class="btn btn-outline">
+                        View Buyer FAQ
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         DEVELOPMENT OPPORTUNITIES
+    ========================================================== -->
+
+    <section
+        class="development-section"
+        id="developments">
+
+        <div class="container">
+
+            <div class="development-box">
+
+                <div class="development-image">
+
+                    <img
+                        src="https://images.pexels.com/photos/38303325/pexels-photo-38303325.jpeg"
+                        alt="U.S. real estate development opportunity"
+                        loading="lazy">
+
+                </div>
+
+                <div class="development-content">
+
+                    <span class="section-label">
+                        Development Opportunities
+                    </span>
+
+                    <h2>
+                        From land acquisition to new development
+                    </h2>
+
+                    <p>
+                        Development projects require a different level of
+                        analysis from stabilized property acquisitions.
+                        Investors should evaluate the site, zoning,
+                        entitlements, construction costs, financing,
+                        projected demand and potential exit strategy.
+                    </p>
+
+                    <ul class="development-list">
+
+                        <li>
+                            <i class="fas fa-check"></i>
+                            Land and site opportunities
+                        </li>
+
+                        <li>
+                            <i class="fas fa-check"></i>
+                            Residential development
+                        </li>
+
+                        <li>
+                            <i class="fas fa-check"></i>
+                            Multifamily development
+                        </li>
+
+                        <li>
+                            <i class="fas fa-check"></i>
+                            Commercial development
+                        </li>
+
+                        <li>
+                            <i class="fas fa-check"></i>
+                            Redevelopment opportunities
+                        </li>
+
+                    </ul>
+
+                    <div>
+
+                        <a
+                            href="developments.html"
+                            class="btn btn-primary">
+                            Explore Developments
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         CALCULATOR
+    ========================================================== -->
+
+    <section
+        class="roi-section"
+        id="calculator">
+
+        <div class="container">
+
+            <div class="section-header">
+
+                <span class="section-label">
+                    Investment Analysis Tool
+                </span>
+
+                <h2 class="section-title">
+                    Investment Yield Calculator
+                </h2>
+<!-- 
+                <p>
+                    Use this calculator to illustrate how an assumed annual
+                    return could affect an investment over a selected period.
+                </p> -->
+
+            </div>
+
+
+            <div class="calculator-wrapper">
+
+                <div class="calculator-inputs">
+
+                    <!-- <h3>
+                        Enter assumptions
+                    </h3> -->
+
+                    <div class="filter-group">
+
+                        <label for="inv-amount">
+                            Initial Investment ($)
+                        </label>
+
+                        <input
+                            type="number"
+                            id="inv-amount"
+                            value="1000000"
+                            min="0"
+                            step="10000">
+
+                    </div>
+
+
+                    <div class="filter-group">
+
+                        <label for="inv-yield">
+                            Assumed Annual Return (%)
+                        </label>
+
+                        <input
+                            type="number"
+                            id="inv-yield"
+                            value="8"
+                            min="0"
+                            max="100"
+                            step="0.1">
+
+                    </div>
+
+
+                    <div class="filter-group">
+
+                        <label for="inv-years">
+                            Holding Period
+                        </label>
+
+                        <select id="inv-years">
+
+                            <option value="5">
+                                5 Years
+                            </option>
+
+                            <option value="10" selected>
+                                10 Years
+                            </option>
+
+                            <option value="15">
+                                15 Years
+                            </option>
+
+                            <option value="20">
+                                20 Years
+                            </option>
+
+                            <option value="30">
+                                30 Years
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <button
+                        type="button"
+                        class="btn btn-primary"
+                        id="calculate-roi-btn">
+
+                        <i class="fas fa-calculator"></i>
+                        Calculate Projection
+
+                    </button>
+
+                </div>
+
+
+                <div class="calculator-results">
+
+                    <!-- <h3>
+                        Illustrative projection
+                    </h3> -->
+
+                    <div class="result-highlight">
+
+                        <div class="result-label">
+                            Illustrative Future Value
+                        </div>
+
+                        <h4 id="roi-total-label">
+                            $2,158,925
+                        </h4>
+
+                    </div>
+
+
+                    <div class="result-grid">
+
+                        <div class="result-box">
+
+                            <span>
+                                Initial Investment
+                            </span>
+
+                            <strong id="roi-principal">
+                                $1,000,000
+                            </strong>
+
+                        </div>
+
+
+                        <div class="result-box">
+
+                            <span>
+                                Assumed Return
+                            </span>
+
+                            <strong id="roi-rate">
+                                8.00%
+                            </strong>
+
+                        </div>
+
+
+                        <div class="result-box">
+
+                            <span>
+                                Holding Period
+                            </span>
+
+                            <strong id="roi-period">
+                                10 years
+                            </strong>
+
+                        </div>
+
+
+                        <div class="result-box">
+
+                            <span>
+                                Illustrative Gain
+                            </span>
+
+                            <strong id="roi-gain">
+                                $1,158,925
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- <p class="calculator-note">
+
+                        <i class="fas fa-circle-info"></i>
+
+                        This calculator is for illustration only. It does not
+                        account for taxes, financing costs, transaction costs,
+                        vacancies, operating expenses, property appreciation,
+                        depreciation, management costs or other investment
+                        factors. Actual investment performance may differ
+                        materially and returns are not guaranteed.
+
+                    </p> -->
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         INVESTMENT PROCESS
+    ========================================================== -->
+
+    <section
+        class="process-section"
+        id="investment-process">
+
+        <div class="container">
+
+            <div class="section-header">
+
+                <span class="section-label">
+                    Our Investment Process
+                </span>
+
+                <h2 class="section-title">
+                    From initial research to informed decision-making
+                </h2>
+
+                <p>
+                    A disciplined process helps investors understand a
+                    property before making an acquisition decision.
+                </p>
+
+            </div>
+
+
+            <div class="process-grid">
+
+                <div class="process-step">
+
+                    <div class="process-number">
+                        01
+                    </div>
+
+                    <h3>
+                        Define
+                    </h3>
+
+                    <p>
+                        Identify investment objectives, property preferences,
+                        budget and intended holding period.
+                    </p>
+
+                </div>
+
+
+                <div class="process-step">
+
+                    <div class="process-number">
+                        02
+                    </div>
+
+                    <h3>
+                        Research
+                    </h3>
+
+                    <p>
+                        Review markets, property types, comparable properties
+                        and relevant market information.
+                    </p>
+
+                </div>
+
+
+                <div class="process-step">
+
+                    <div class="process-number">
+                        03
+                    </div>
+
+                    <h3>
+                        Analyze
+                    </h3>
+
+                    <p>
+                        Examine pricing, income assumptions, expenses,
+                        financing and property-specific factors.
+                    </p>
+
+                </div>
+
+
+                <div class="process-step">
+
+                    <div class="process-number">
+                        04
+                    </div>
+
+                    <h3>
+                        Verify
+                    </h3>
+
+                    <p>
+                        Conduct appropriate property, title, legal, financial
+                        and physical due diligence.
+                    </p>
+
+                </div>
+
+
+                <div class="process-step">
+
+                    <div class="process-number">
+                        05
+                    </div>
+
+                    <h3>
+                        Decide
+                    </h3>
+
+                    <p>
+                        Work with qualified professionals to determine whether
+                        the opportunity fits your circumstances.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         DUE DILIGENCE
+    ========================================================== -->
+
+    <section
+        class="due-section"
+        id="due-diligence">
+
+        <div class="container">
+
+            <div class="section-header">
+
+                <span class="section-label">
+                    Due Diligence
+                </span>
+
+                <h2 class="section-title">
+                    What should be reviewed before an acquisition?
+                </h2>
+
+                <p>
+                    Real estate due diligence is property-specific and should
+                    be conducted by appropriately qualified professionals.
+                </p>
+
+            </div>
+
+
+            <div class="due-grid">
+
+                <div class="due-card">
+
+                    <i class="fas fa-file-contract"></i>
+
+                    <h3>
+                        Title & Ownership
+                    </h3>
+
+                    <p>
+                        Review ownership, title, liens, easements and other
+                        matters identified through appropriate title research.
+                    </p>
+
+                </div>
+
+
+                <div class="due-card">
+
+                    <i class="fas fa-house-circle-check"></i>
+
+                    <h3>
+                        Physical Condition
+                    </h3>
+
+                    <p>
+                        Property inspections can help identify structural,
+                        mechanical, electrical and other physical issues.
+                    </p>
+
+                </div>
+
+
+                <div class="due-card">
+
+                    <i class="fas fa-chart-column"></i>
+
+                    <h3>
+                        Financial Analysis
+                    </h3>
+
+                    <p>
+                        Review income, expenses, financing assumptions,
+                        reserves, taxes, insurance and other applicable costs.
+                    </p>
+
+                </div>
+
+
+                <div class="due-card">
+
+                    <i class="fas fa-scale-balanced"></i>
+
+                    <h3>
+                        Legal & Regulatory
+                    </h3>
+
+                    <p>
+                        Zoning, permits, contracts, local regulations and
+                        transaction documents should receive appropriate review.
+                    </p>
+
+                </div>
+
+
+                <div class="due-card">
+
+                    <i class="fas fa-location-dot"></i>
+
+                    <h3>
+                        Market Conditions
+                    </h3>
+
+                    <p>
+                        Consider local supply, demand, employment, population
+                        trends, rents, pricing and competing properties.
+                    </p>
+
+                </div>
+
+
+                <div class="due-card">
+
+                    <i class="fas fa-landmark"></i>
+
+                    <h3>
+                        Tax & Financing
+                    </h3>
+
+                    <p>
+                        Buyers should obtain professional advice regarding
+                        applicable taxes, financing structures and ownership
+                        considerations.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         FINAL CTA
+    ========================================================== -->
+
+    <section
+        class="investment-cta"
+        id="contact-investment">
+
+        <div class="container">
+
+            <span class="section-label">
+                Start Your Research
+            </span>
+
+            <h2>
+                Explore U.S. Real Estate Opportunities
+            </h2>
+
+            <p>
+                Whether you live in the United States or are considering
+                acquiring property from abroad, our team can help you begin
+                researching available opportunities and determine the
+                appropriate next steps.
+            </p>
+
+            <div class="cta-actions">
+
+                <a
+                    href="properties.html"
+                    class="btn btn-primary">
+                    Browse Properties
+                </a>
+
+                <a
+                    href="international-buyers.html"
+                    class="btn btn-outline">
+                    International Buyer Guide
+                </a>
+
+                <a
+                    href="contact.html"
+                    class="btn btn-outline">
+                    Contact Atlas
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         DISCLAIMER
+    ========================================================== -->
+
+    <section class="disclaimer-section">
+
+        <!-- <div class="container">
+
+            <div class="disclaimer">
+
+                <strong>Important Information:</strong>
+
+                The information presented on this page is provided for
+                general informational and educational purposes and should
+                not be considered an offer to sell securities, a solicitation
+                to purchase securities, investment advice, tax advice, legal
+                advice or a guarantee of investment performance.
+
+                <br><br>
+
+                Real estate investments involve risk, including the possible
+                loss of capital. Property values, rental income, operating
+                expenses, financing costs and market conditions can change.
+                Historical performance and illustrative projections are not
+                guarantees of future results.
+
+                <br><br>
+
+                Buyers and investors should conduct independent due diligence
+                and consult appropriately qualified real estate, legal, tax,
+                accounting, lending and financial professionals regarding
+                their individual circumstances.
+
+            </div>
+
+        </div> -->
+
+    </section>
+
+
+</div>
+
+
+<!-- =============================================================
+     BACK TO TOP
+============================================================= -->
+
+<button
+    id="back-to-top"
+    type="button"
+    aria-label="Back to top">
+
+    <i class="fas fa-arrow-up"></i>
+
+</button>
+
+
+<!-- =============================================================
+     EXISTING WEBSITE SCRIPTS
+============================================================= -->
+
+<script src="js/navbar.js"></script>
+<script src="js/main.js"></script>
+<script src="js/footer.js"></script>
+
+
+<!-- =============================================================
+     INVESTMENT PAGE JAVASCRIPT
+============================================================= -->
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    /* =========================================================
+       SMOOTH INTERNAL NAVIGATION
+    ========================================================= */
+
+    const internalLinks = document.querySelectorAll(
+        'a[href^="#"]'
+    );
+
+    internalLinks.forEach(function (link) {
+
+        link.addEventListener("click", function (event) {
+
+            const targetId = this.getAttribute("href");
+
+            if (
+                !targetId ||
+                targetId === "#" ||
+                targetId.length < 2
+            ) {
+                return;
+            }
+
+            const target = document.querySelector(targetId);
+
+            if (!target) {
+                return;
+            }
+
+            event.preventDefault();
+
+            const stickyHeader =
+                document.querySelector(".main-header");
+
+            const investmentNav =
+                document.querySelector(".investment-nav");
+
+            let offset = 20;
+
+            if (stickyHeader) {
+                offset += stickyHeader.getBoundingClientRect().height;
+            }
+
+            if (investmentNav) {
+                offset += investmentNav.getBoundingClientRect().height;
+            }
+
+            const targetPosition =
+                target.getBoundingClientRect().top +
+                window.pageYOffset -
+                offset;
+
+            window.scrollTo({
+                top: Math.max(0, targetPosition),
+                behavior: "smooth"
+            });
+
+            /*
+             * Update the URL without causing the browser's
+             * default jump.
+             */
+            if (
+                history.pushState &&
+                targetId !== "#top"
+            ) {
+                history.pushState(
+                    null,
+                    "",
+                    targetId
+                );
+            }
+
+        });
+
+    });
+
+
+    /* =========================================================
+       HANDLE HASH WHEN PAGE LOADS
+    ========================================================= */
+
+    function handleInitialHash() {
+
+        if (!window.location.hash) {
+            return;
+        }
+
+        const target =
+            document.querySelector(
+                window.location.hash
+            );
+
+        if (!target) {
+            return;
+        }
+
+        setTimeout(function () {
+
+            const stickyHeader =
+                document.querySelector(".main-header");
+
+            const investmentNav =
+                document.querySelector(".investment-nav");
+
+            let offset = 20;
+
+            if (stickyHeader) {
+                offset += stickyHeader.getBoundingClientRect().height;
+            }
+
+            if (investmentNav) {
+                offset += investmentNav.getBoundingClientRect().height;
+            }
+
+            const targetPosition =
+                target.getBoundingClientRect().top +
+                window.pageYOffset -
+                offset;
+
+            window.scrollTo({
+                top: Math.max(0, targetPosition),
+                behavior: "smooth"
+            });
+
+        }, 250);
+    }
+
+    handleInitialHash();
+
+
+    /* =========================================================
+       BACK TO TOP
+    ========================================================= */
+
+    const backToTop =
+        document.getElementById("back-to-top");
+
+    function updateBackToTop() {
+
+        if (!backToTop) {
+            return;
+        }
+
+        if (window.scrollY > 500) {
+
+            backToTop.classList.add("show");
+
+        } else {
+
+            backToTop.classList.remove("show");
+
+        }
+
+    }
+
+    window.addEventListener(
+        "scroll",
+        updateBackToTop,
+        { passive: true }
+    );
+
+    updateBackToTop();
+
+
+    if (backToTop) {
+
+        backToTop.addEventListener(
+            "click",
+            function () {
+
+                window.scrollTo({
+                    top: 0,
+                    behavior: "smooth"
+                });
+
+                /*
+                 * Remove hash so the page stays at the top.
+                 */
+                if (
+                    history.replaceState &&
+                    window.location.hash
+                ) {
+                    history.replaceState(
+                        null,
+                        "",
+                        window.location.pathname +
+                        window.location.search
+                    );
+                }
+
+            }
+        );
+
+    }
+
+
+    /* =========================================================
+       ROI CALCULATOR
+    ========================================================= */
+
+    const calculateButton =
+        document.getElementById(
+            "calculate-roi-btn"
+        );
+
+    if (calculateButton) {
+
+        calculateButton.addEventListener(
+            "click",
+            calculateROI
+        );
+
+    }
+
+
+    function calculateROI() {
+
+        const investmentInput =
+            document.getElementById(
+                "inv-amount"
+            );
+
+        const yieldInput =
+            document.getElementById(
+                "inv-yield"
+            );
+
+        const yearsInput =
+            document.getElementById(
+                "inv-years"
+            );
+
+        const investment =
+            parseFloat(
+                investmentInput.value
+            );
+
+        const annualRate =
+            parseFloat(
+                yieldInput.value
+            );
+
+        const years =
+            parseInt(
+                yearsInput.value,
+                10
+            );
+
+
+        /*
+         * Basic input validation.
+         */
+
+        if (
+            !Number.isFinite(investment) ||
+            investment < 0
+        ) {
+
+            alert(
+                "Please enter a valid investment amount."
+            );
+
+            investmentInput.focus();
+
+            return;
+        }
+
+
+        if (
+            !Number.isFinite(annualRate) ||
+            annualRate < 0 ||
+            annualRate > 100
+        ) {
+
+            alert(
+                "Please enter an assumed annual return between 0% and 100%."
+            );
+
+            yieldInput.focus();
+
+            return;
+        }
+
+
+        if (
+            !Number.isFinite(years) ||
+            years <= 0
+        ) {
+
+            alert(
+                "Please select a valid holding period."
+            );
+
+            yearsInput.focus();
+
+            return;
+        }
+
+
+        /*
+         * Compound-growth illustration.
+         *
+         * This is intentionally presented as an
+         * illustrative projection rather than
+         * a promised real-estate return.
+         */
+
+        const rate =
+            annualRate / 100;
+
+        const futureValue =
+            investment *
+            Math.pow(
+                1 + rate,
+                years
+            );
+
+        const gain =
+            futureValue -
+            investment;
+
+
+        const currency =
+            new Intl.NumberFormat(
+                "en-US",
+                {
+                    style: "currency",
+                    currency: "USD",
+                    maximumFractionDigits: 0
+                }
+            );
+
+
+        document.getElementById(
+            "roi-total-label"
+        ).textContent =
+            currency.format(
+                futureValue
+            );
+
+
+        document.getElementById(
+            "roi-principal"
+        ).textContent =
+            currency.format(
+                investment
+            );
+
+
+        document.getElementById(
+            "roi-rate"
+        ).textContent =
+            annualRate.toFixed(2) +
+            "%";
+
+
+        document.getElementById(
+            "roi-period"
+        ).textContent =
+            years +
+            (years === 1 ? " year" : " years");
+
+
+        document.getElementById(
+            "roi-gain"
+        ).textContent =
+            currency.format(
+                gain
+            );
+
+    }
+
+
+    /*
+     * Calculate the default example immediately.
+     */
+
+    calculateROI();
+
+
+    /* =========================================================
+       KEYBOARD ACCESSIBILITY
+    ========================================================= */
+
+    document.addEventListener(
+        "keydown",
+        function (event) {
+
+            /*
+             * Escape closes focus from navigation links.
+             */
+            if (event.key === "Escape") {
+
+                document.activeElement.blur();
+
+            }
+
+        }
+    );
+
+});
+
+</script>
+
+</body>
+</html>
