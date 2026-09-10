@@ -35,9 +35,10 @@ document.addEventListener('DOMContentLoaded', async () => {
     initCounters();
     initPropertyInteractions();
     initTestimonials();
+    initNewsletterForm();
 
-    const isLandingPage = /(^\/|\bindex\.html$)/.test(window.location.pathname || "") || document.getElementById("propertiesGrid") !== null;
-    if (isLandingPage) {
+    const propertiesGrid = document.getElementById("propertiesGrid");
+    if (!propertiesGrid || document.querySelector(".hero-slider")) {
         return;
     }
 
@@ -49,6 +50,37 @@ document.addEventListener('DOMContentLoaded', async () => {
     displayProperties(properties);
 
 });
+
+function initNewsletterForm() {
+    const form = document.querySelector('.newsletter-form');
+    if (!form || form.dataset.initialized === 'true') return;
+
+    form.dataset.initialized = 'true';
+    const emailInput = form.querySelector('input[type="email"]');
+    const submitButton = form.querySelector('button[type="submit"]');
+    const status = form.querySelector('.newsletter-status');
+
+    form.addEventListener('submit', event => {
+        event.preventDefault();
+        if (!emailInput || !emailInput.checkValidity()) {
+            emailInput?.reportValidity();
+            return;
+        }
+
+        try {
+            localStorage.setItem('atlasNewsletterEmail', emailInput.value.trim().toLowerCase());
+        } catch (error) {
+            console.warn('Unable to save newsletter subscription locally:', error);
+        }
+
+        if (status) {
+            status.textContent = 'You are subscribed to Atlas market insights.';
+            status.className = 'newsletter-status success';
+        }
+        emailInput.value = '';
+        if (submitButton) submitButton.disabled = true;
+    });
+}
 
 // Sticky Header & Mega Menu Logic
 function initNavigation() {

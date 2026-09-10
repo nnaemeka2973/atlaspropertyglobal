@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Montserrat:wght@500;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="preload" as="image" href="asset/hero1.jpg">
     
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -38,10 +39,10 @@
         <section class="hero-slider" aria-label="Hero - Atlas Property Group">
             <div class="slides-wrapper">
                 <!-- Slide 1 -->
-                <div class="slide active" style="background-image: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url('asset/hero1.jpg');" aria-hidden="false"></div>
+                <div class="slide active" style="background-image: url('asset/hero1.jpg');" aria-hidden="false"></div>
 
                 <!-- Slide 2 -->
-                <div class="slide" style="background-image: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url('asset/image7.jpg');" aria-hidden="true"></div>
+                <div class="slide" style="background-image: url('asset/image7.jpg');" aria-hidden="true"></div>
             </div>
 
             <div class="hero-overlay">
@@ -198,6 +199,14 @@
                         <div class="trusted-logo"><div class="brand-mark"><i class="fab fa-microsoft"></i><span>Microsoft</span></div></div>
                         <div class="trusted-logo"><div class="brand-mark"><i class="fab fa-airbnb"></i><span>Airbnb</span></div></div>
                         <div class="trusted-logo"><div class="brand-mark"><i class="fab fa-supple"></i><span>HSBC</span></div></div>
+                        <div class="trusted-logo"><div class="brand-mark"><i class="fas fa-building-columns"></i><span>JLL</span></div></div>
+                        <div class="trusted-logo"><div class="brand-mark"><i class="fas fa-city"></i><span>CBRE</span></div></div>
+                        <div class="trusted-logo"><div class="brand-mark"><i class="fas fa-compass"></i><span>Compass</span></div></div>
+                        <div class="trusted-logo"><div class="brand-mark"><i class="fas fa-landmark"></i><span>Chase</span></div></div>
+                        <div class="trusted-logo"><div class="brand-mark"><i class="fas fa-chart-line"></i><span>Blackstone</span></div></div>
+                        <div class="trusted-logo"><div class="brand-mark"><i class="fas fa-building"></i><span>Fidelity</span></div></div>
+                        <div class="trusted-logo"><div class="brand-mark"><i class="fas fa-house"></i><span>Redfin</span></div></div>
+                        <div class="trusted-logo"><div class="brand-mark"><i class="fas fa-key"></i><span>Realtor</span></div></div>
 
                         <div class="trusted-logo"><div class="brand-mark"><i class="fab fa-cc-visa"></i><span>Visa</span></div></div>
                         <div class="trusted-logo"><div class="brand-mark"><i class="fab fa-cc-mastercard"></i><span>Mastercard</span></div></div>
@@ -207,6 +216,14 @@
                         <div class="trusted-logo"><div class="brand-mark"><i class="fab fa-microsoft"></i><span>Microsoft</span></div></div>
                         <div class="trusted-logo"><div class="brand-mark"><i class="fab fa-airbnb"></i><span>Airbnb</span></div></div>
                         <div class="trusted-logo"><div class="brand-mark"><i class="fab fa-supple"></i><span>HSBC</span></div></div>
+                        <div class="trusted-logo"><div class="brand-mark"><i class="fas fa-building-columns"></i><span>JLL</span></div></div>
+                        <div class="trusted-logo"><div class="brand-mark"><i class="fas fa-city"></i><span>CBRE</span></div></div>
+                        <div class="trusted-logo"><div class="brand-mark"><i class="fas fa-compass"></i><span>Compass</span></div></div>
+                        <div class="trusted-logo"><div class="brand-mark"><i class="fas fa-landmark"></i><span>Chase</span></div></div>
+                        <div class="trusted-logo"><div class="brand-mark"><i class="fas fa-chart-line"></i><span>Blackstone</span></div></div>
+                        <div class="trusted-logo"><div class="brand-mark"><i class="fas fa-building"></i><span>Fidelity</span></div></div>
+                        <div class="trusted-logo"><div class="brand-mark"><i class="fas fa-house"></i><span>Redfin</span></div></div>
+                        <div class="trusted-logo"><div class="brand-mark"><i class="fas fa-key"></i><span>Realtor</span></div></div>
                     </div>
                 </div>
             </div>
@@ -222,7 +239,7 @@
                 <div class="stats-grid">
                     <article class="stat-card reveal">
                         <i class="fas fa-building"></i>
-                        <h2 class="counter-value" data-target="15" data-suffix="+">0</h2>
+                        <h2 class="counter-value" data-target="9" data-suffix="+">0</h2>
                         <p>Years Experience</p>
                     </article>
                     <article class="stat-card reveal" style="transition-delay: 0.05s;">
@@ -237,12 +254,12 @@
                     </article>
                     <article class="stat-card reveal" style="transition-delay: 0.15s;">
                         <i class="fas fa-user-friends"></i>
-                        <h2 class="counter-value" data-target="150" data-suffix="+">0</h2>
+                        <h2 class="counter-value" data-target="15" data-suffix="+">0</h2>
                         <p>Professional Agents</p>
                     </article>
                     <article class="stat-card reveal" style="transition-delay: 0.2s;">
                         <i class="fas fa-smile"></i>
-                        <h2 class="counter-value" data-target="5000" data-suffix="+">0</h2>
+                        <h2 class="counter-value" data-target="500" data-suffix="+">0</h2>
                         <p>Happy Clients</p>
                     </article>
                     <article class="stat-card reveal" style="transition-delay: 0.25s;">
@@ -290,42 +307,55 @@
         </section>
 
         <!-- Why Choose Atlas -->
-        <section class="why-choose">
-            <div class="container">
+        <section class="why-choose atlas-why-us">
+            <div class="container atlas-why-container">
                 <div class="section-header">
-                    <span>Why Choose Atlas Property Group</span>
-                    <h2>Luxury Expertise Built for You</h2>
+                    <span>Why Choose Atlas</span>
+                    <h2>A Better Way to Explore U.S. Real Estate</h2>
+                    <p>Trusted expertise, carefully selected opportunities, and guidance for every step of the journey.</p>
                 </div>
-                <div class="why-grid">
-                    <article class="why-card reveal">
-                        <i class="fas fa-user-tie"></i>
+                <div class="why-grid atlas-why-grid">
+                    <article class="why-card atlas-why-card reveal">
+                        <div class="atlas-why-card-icon"><i class="fas fa-user-tie" aria-hidden="true"></i></div>
+                        <div class="atlas-why-card-content"><span class="atlas-why-card-number">01</span>
                         <h3>Trusted Professionals</h3>
                         <p>Dedicated advisors with global experience and a white-glove approach.</p>
+                        </div>
                     </article>
-                    <article class="why-card reveal" style="transition-delay: 0.05s;">
-                        <i class="fas fa-crown"></i>
+                    <article class="why-card atlas-why-card reveal" style="transition-delay: 0.05s;">
+                        <div class="atlas-why-card-icon"><i class="fas fa-crown" aria-hidden="true"></i></div>
+                        <div class="atlas-why-card-content"><span class="atlas-why-card-number">02</span>
                         <h3>Luxury Portfolio</h3>
                         <p>Curated residences, estates and investment-grade assets.</p>
+                        </div>
                     </article>
-                    <article class="why-card reveal" style="transition-delay: 0.1s;">
-                        <i class="fas fa-chart-line"></i>
+                    <article class="why-card atlas-why-card reveal" style="transition-delay: 0.1s;">
+                        <div class="atlas-why-card-icon"><i class="fas fa-chart-line" aria-hidden="true"></i></div>
+                        <div class="atlas-why-card-content"><span class="atlas-why-card-number">03</span>
                         <h3>Investment Experts</h3>
                         <p>Market-led strategy that maximizes returns and minimizes risk.</p>
+                        </div>
                     </article>
-                    <article class="why-card reveal" style="transition-delay: 0.15s;">
-                        <i class="fas fa-globe-americas"></i>
+                    <article class="why-card atlas-why-card reveal" style="transition-delay: 0.15s;">
+                        <div class="atlas-why-card-icon"><i class="fas fa-globe-americas" aria-hidden="true"></i></div>
+                        <div class="atlas-why-card-content"><span class="atlas-why-card-number">04</span>
                         <h3>Nationwide Coverage</h3>
                         <p>Local specialists across premier U.S. and global markets.</p>
+                        </div>
                     </article>
-                    <article class="why-card reveal" style="transition-delay: 0.2s;">
-                        <i class="fas fa-hand-holding-heart"></i>
+                    <article class="why-card atlas-why-card reveal" style="transition-delay: 0.2s;">
+                        <div class="atlas-why-card-icon"><i class="fas fa-hand-holding-heart" aria-hidden="true"></i></div>
+                        <div class="atlas-why-card-content"><span class="atlas-why-card-number">05</span>
                         <h3>Customer First</h3>
                         <p>Personalized care, responsive communication and trusted support.</p>
+                        </div>
                     </article>
-                    <article class="why-card reveal" style="transition-delay: 0.25s;">
-                        <i class="fas fa-balance-scale"></i>
+                    <article class="why-card atlas-why-card reveal" style="transition-delay: 0.25s;">
+                        <div class="atlas-why-card-icon"><i class="fas fa-balance-scale" aria-hidden="true"></i></div>
+                        <div class="atlas-why-card-content"><span class="atlas-why-card-number">06</span>
                         <h3>Transparent Process</h3>
                         <p>Clear terms, honest reporting and reliable execution.</p>
+                        </div>
                     </article>
                 </div>
             </div>
@@ -797,8 +827,9 @@
                     <p>Receive premium property alerts, investment trends, and invite-only opportunities.</p>
                 </div>
                 <form class="newsletter-form" action="#" method="POST">
-                    <input type="email" placeholder="Enter your email" aria-label="Email address" required>
+                    <input type="email" name="email" placeholder="Enter your email" aria-label="Email address" autocomplete="email" required>
                     <button type="submit" class="btn btn-gold">Subscribe</button>
+                    <p class="newsletter-status" role="status" aria-live="polite"></p>
                 </form>
             </div>
         </section>

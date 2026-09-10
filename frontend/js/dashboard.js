@@ -1033,7 +1033,7 @@ function isLikelyUuid(value) {
 }
 
 async function refreshDashboardData() {
-    if (!state.user) {
+    if (!state.user || state.loadingMetrics) {
         console.log('[refreshDashboardData] No state.user, returning');
         return;
     }
