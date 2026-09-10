@@ -1,3 +1,4 @@
+
 /**
  * Atlas Property Group
  * Main Express Server
@@ -45,9 +46,9 @@ const allowedOrigins = [
     // Vercel
     "https://atlaspropertyglobal.vercel.app",
 
-    // Cloudflare custom domain
-    "https://atlaspropertygroup.com",
-    "https://www.atlaspropertygroup.com"
+    // Custom domain
+    "https://atlaspropertyglobal.com",
+    "https://www.atlaspropertyglobal.com"
 ];
 
 const corsOptions = {
@@ -99,6 +100,7 @@ const corsOptions = {
     ],
 
     credentials: true,
+
     optionsSuccessStatus: 204
 };
 
@@ -355,9 +357,11 @@ function logErrorSafe(error) {
     if (stack) {
         console.error(stack);
     }
+
 }
 
 process.on("unhandledRejection", (reason) => {
+
     console.error(
         "[unhandledRejection]",
         reason?.message || reason
@@ -366,6 +370,7 @@ process.on("unhandledRejection", (reason) => {
     if (reason?.stack) {
         console.error(reason.stack);
     }
+
 });
 
 process.on("uncaughtException", (error) => {
@@ -392,6 +397,7 @@ const server = app.listen(PORT, () => {
     console.log("==========================================");
     console.log(`🚀 Atlas Property Group API running on port ${PORT}`);
     console.log("==========================================");
+
     console.log("🌐 Allowed frontend origins:");
 
     allowedOrigins.forEach((origin) => {
@@ -399,6 +405,7 @@ const server = app.listen(PORT, () => {
     });
 
     console.log("");
+
     console.log(
         `📧 COMPANY_EMAIL configured: ${
             process.env.COMPANY_EMAIL ? "YES" : "NO"
@@ -424,3 +431,4 @@ server.on("error", (error) => {
     process.exit(1);
 
 });
+
