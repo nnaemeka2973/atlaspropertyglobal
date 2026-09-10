@@ -246,32 +246,10 @@
     }
 
 
-    /*
-        Keep dark mode button visible on mobile
-    */
+    /* Keep mobile actions focused on account access and navigation. */
 
     #dark-mode-toggle {
-        display: inline-flex !important;
-
-        align-items: center;
-        justify-content: center;
-
-        width: 40px !important;
-        height: 40px !important;
-
-        padding: 0 !important;
-
-        background: rgba(255, 255, 255, 0.08) !important;
-
-        border: 1px solid rgba(255, 255, 255, 0.12) !important;
-
-        border-radius: 50% !important;
-
-        color: #ffffff !important;
-
-        cursor: pointer;
-
-        z-index: 2200;
+        display: none !important;
     }
 
 
@@ -315,18 +293,24 @@
     */
 
     .main-header .auth-group .btn-gold-sm {
-        padding: 6px 10px;
+        padding: 0 14px;
 
-        min-height: 30px;
+        min-height: 40px;
 
-        font-size: 0.74rem;
+        font-size: 0.78rem;
 
-        line-height: 1;
+        line-height: 1.1;
+        border-radius: 8px;
 
         display: inline-flex;
 
         align-items: center;
         justify-content: center;
+    }
+
+    .main-header .nav-actions {
+        gap: 10px;
+        padding-right: 8px;
     }
 
 

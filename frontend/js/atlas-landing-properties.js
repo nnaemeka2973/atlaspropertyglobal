@@ -1,6 +1,6 @@
 ﻿(() => {
   const grid = document.getElementById("propertiesGrid");
-  if (!grid) return;
+  if (!grid || grid.dataset.landingPropertiesRendered === "true") return;
 
   const allProperties = Array.isArray(window.properties) ? window.properties : [];
   const normalize = value => String(value || "").trim().toLowerCase().replace(/[-\s]+/g, "_");
@@ -66,6 +66,8 @@
       </div>
     </article>`;
   }).join("");
+
+  grid.dataset.landingPropertiesRendered = "true";
 
   if (window.revealOnScroll) window.revealOnScroll();
 })();
