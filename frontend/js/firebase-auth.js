@@ -224,6 +224,15 @@ function clearAuthState() {
    ========================================================= */
 
 function redirectAfterAuth() {
+    const shouldSkipAutoRedirect =
+        window.location.protocol === "file:" ||
+        window.location.hostname === "localhost" ||
+        window.location.hostname === "127.0.0.1";
+
+    if (shouldSkipAutoRedirect) {
+        return;
+    }
+
     window.location.replace(
         getPostLoginRedirect()
     );
@@ -741,8 +750,14 @@ function initAuthState() {
                     page === "signup.html" ||
                     page === "forgot-password.html"
                 ) {
+                    const shouldSkipAutoRedirect =
+                        window.location.protocol === "file:" ||
+                        window.location.hostname === "localhost" ||
+                        window.location.hostname === "127.0.0.1";
 
-                    redirectAfterAuth();
+                    if (!shouldSkipAutoRedirect) {
+                        redirectAfterAuth();
+                    }
                 }
 
 

@@ -172,16 +172,10 @@
             if (authNav) authNav.style.display = 'none';
             if (userNav) userNav.style.display = 'flex';
             if (avatarTarget) {
-                const avatarPhoto = user.photo_url || user.avatar_url || user.profile_photo || user.profileImage || user.photo || user.image_url || '';
                 const name = (user.full_name || user.fullName || user.name || user.display_name || user.email || 'User').trim();
                 const initial = name.charAt(0).toUpperCase() || 'U';
-                if (avatarPhoto) {
-                    avatarTarget.className = 'nav-avatar nav-avatar--image';
-                    avatarTarget.innerHTML = `<img src="${avatarPhoto}" alt="Profile photo" />`;
-                } else {
-                    avatarTarget.className = 'nav-avatar nav-avatar--letter';
-                    avatarTarget.textContent = initial;
-                }
+                avatarTarget.className = 'nav-avatar nav-avatar--letter';
+                avatarTarget.textContent = initial;
             }
         } else {
             if (authNav) authNav.style.display = 'flex';

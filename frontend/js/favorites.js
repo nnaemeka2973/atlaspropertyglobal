@@ -8,7 +8,15 @@ async function loadFavorites() {
     const user = JSON.parse(localStorage.getItem("atlas_user"));
 
     if (!user) {
-        window.location.href = "login.html";
+        const container = document.getElementById("favorites-list");
+        if (container) {
+            container.innerHTML = `
+                <div class="empty">
+                    <h2>No Favorites Yet</h2>
+                    <p>Save properties from the listings page and they will appear here.</p>
+                </div>
+            `;
+        }
         return;
     }
 

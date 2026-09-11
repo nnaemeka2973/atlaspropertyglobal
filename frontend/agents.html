@@ -92,6 +92,29 @@ body{
     flex-wrap:wrap;
 }
 
+.agents-hero .hero-actions .btn{
+    min-width:210px;
+    text-align:center;
+    box-shadow:0 12px 24px rgba(11, 38, 76, 0.12);
+    transition:transform .2s ease, box-shadow .2s ease, background-color .2s ease, border-color .2s ease, color .2s ease;
+}
+
+.agents-hero .hero-actions .btn:hover{
+    transform:translateY(-3px);
+    box-shadow:0 16px 30px rgba(11, 38, 76, 0.18);
+}
+
+.agents-hero .btn-primary:hover{
+    background:#1047b5;
+    color:#fff;
+}
+
+.agents-hero .btn-outline-light:hover{
+    background:#fff;
+    color:#0B3D91;
+    border-color:rgba(255,255,255,.9);
+}
+
 /* STATS */
 
 .agent-stats{
@@ -284,7 +307,7 @@ Schedule Consultation
 <div class="stats-grid">
 
 <div class="stats-item">
-<h2>32</h2>
+<h2>15</h2>
 <p>Professional Advisors</p>
 </div>
 
@@ -547,6 +570,33 @@ Browse our team of verified residential, luxury, commercial and investment speci
 
     .agent-actions{
         grid-template-columns:1fr;
+    }
+
+    .agents-hero{
+        min-height:72vh;
+        padding-top:40px;
+    }
+
+    .hero-content h1{
+        font-size:clamp(42px, 12vw, 62px);
+        line-height:0.96;
+    }
+
+    .hero-content p{
+        font-size:15px;
+        line-height:1.7;
+    }
+
+    .agents-hero .hero-actions{
+        flex-direction:column;
+        align-items:stretch;
+        gap:12px;
+    }
+
+    .agents-hero .hero-actions .btn{
+        width:100%;
+        min-width:0;
+        padding:14px 18px;
     }
 }
 </style>

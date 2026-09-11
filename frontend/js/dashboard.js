@@ -1105,12 +1105,23 @@ function scheduleDashboardRefresh() {
 async function initializeDashboard() {
     readLocalState();
 
+    applyThemeFromStorage();
+
     if (!state.user) {
-        window.location.href = 'login.html';
+        renderSidebarNavigation();
+        activateMobileSidebar();
+        attachGlobalEventHandlers();
+        updateSavedSearchForm();
+        displayProfile();
+        renderTourLists();
+        attachTourHandlers();
+
+        initDashboardMortgagePanel();
+        renderDashboardSummary();
+        renderDashboardPanels();
         return;
     }
 
-    applyThemeFromStorage();
     renderSidebarNavigation();
     activateMobileSidebar();
     attachGlobalEventHandlers();

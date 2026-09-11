@@ -504,7 +504,7 @@
                 aria-controls="atlas-ai-assistant-panel"
                 title="AI Assistant"
             >
-                <i class="fas fa-robot"></i>
+                <i class="fas fa-comments"></i>
             </button>
 
             <div

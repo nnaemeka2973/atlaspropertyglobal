@@ -1,17 +1,8 @@
-import { auth } from "./firebase.js";
-
-import {
-
-    onAuthStateChanged
-
-} from "https://www.gstatic.com/firebasejs/12.3.0/firebase-auth.js";
-
-onAuthStateChanged(auth,(user)=>{
-
-    if(!user){
-
-        location.href="login.html";
-
+// Auto-redirect disabled intentionally so the page does not navigate away on its own.
+// Authentication checks remain available without forcing a login redirect.
+(function () {
+    const user = JSON.parse(localStorage.getItem("atlas_user") || "null");
+    if (!user) {
+        return;
     }
-
-});
+})();
