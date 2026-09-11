@@ -5,7 +5,7 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/12.3.0/firebas
 import {
     getAuth,
     GoogleAuthProvider,
-    browserLocalPersistence,
+    browserSessionPersistence,
     setPersistence
 } from "https://www.gstatic.com/firebasejs/12.3.0/firebase-auth.js";
 
@@ -22,7 +22,7 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 
 const auth = getAuth(app);
-await setPersistence(auth, browserLocalPersistence);
+await setPersistence(auth, browserSessionPersistence);
 
 const googleProvider = new GoogleAuthProvider();
 googleProvider.setCustomParameters({ prompt: "select_account" });

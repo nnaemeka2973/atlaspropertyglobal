@@ -8,7 +8,6 @@
 // ===============================
 
 document.addEventListener('DOMContentLoaded', async () => {
-
     if (window.initSharedNavbar) {
         window.initSharedNavbar();
     } else {
@@ -49,6 +48,10 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     displayProperties(properties);
 
+});
+
+window.addEventListener('load', () => {
+    document.body.classList.add('is-ready');
 });
 
 function initNewsletterForm() {

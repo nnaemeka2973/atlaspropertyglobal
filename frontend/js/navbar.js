@@ -23,23 +23,23 @@
                                 <div class="mega-grid">
                                     <div class="mega-col">
                                         <h4>Residential</h4>
-                                        <a href="properties.html?type=houses">Houses</a>
-                                        <a href="properties.html?type=apartments">Apartments</a>
-                                        <a href="properties.html?type=luxury-villas">Luxury Villas</a>
-                                        <a href="properties.html?type=penthouses">Penthouses</a>
-                                        <a href="properties.html?type=estates">Private Estates</a>
+                                        <a class="mega-item" href="properties.html?type=houses">Houses</a>
+                                        <a class="mega-item" href="properties.html?type=apartments">Apartments</a>
+                                        <a class="mega-item" href="properties.html?type=luxury-villas">Luxury Villas</a>
+                                        <a class="mega-item" href="properties.html?type=penthouses">Penthouses</a>
+                                        <a class="mega-item" href="properties.html?type=estates">Private Estates</a>
                                     </div>
                                     <div class="mega-col">
                                         <h4>Commercial</h4>
-                                        <a href="properties.html?type=offices">Corporate Offices</a>
-                                        <a href="properties.html?type=retail">Retail Spaces</a>
-                                        <a href="properties.html?type=industrial">Industrial Complexes</a>
+                                        <a class="mega-item" href="properties.html?type=offices">Corporate Offices</a>
+                                        <a class="mega-item" href="properties.html?type=retail">Retail Spaces</a>
+                                        <a class="mega-item" href="properties.html?type=industrial">Industrial Complexes</a>
                                     </div>
                                     <div class="mega-col">
                                         <h4>Investments</h4>
-                                        <a href="investments.html">Portfolio Strategy</a>
-                                        <a href="investments.html#yield">High Yield Assets</a>
-                                        <a href="developments.html">New Developments</a>
+                                        <a class="mega-item" href="investments.html">Portfolio Strategy</a>
+                                        <a class="mega-item" href="investments.html#yield">High Yield Assets</a>
+                                        <a class="mega-item" href="developments.html">New Developments</a>
                                     </div>
                                 </div>
                             </div>
@@ -213,7 +213,8 @@
             return;
         }
 
-        window.location.replace('login.html');
+        localStorage.removeItem('atlas_user');
+        window.dispatchEvent(new Event('atlas-auth-state'));
     }
 
     function bindUserDropdown() {
@@ -263,10 +264,22 @@
         });
     }
 
+    function ensureSiteFavicon() {
+        let favicon = document.querySelector('link[rel~="icon"]');
+        if (!favicon) {
+            favicon = document.createElement('link');
+            favicon.rel = 'icon';
+            document.head.appendChild(favicon);
+        }
+        favicon.type = 'image/png';
+        favicon.href = 'asset/try3.png';
+    }
+
     function initSharedNavbar() {
         if (window.__atlasNavbarInitialized) return;
         window.__atlasNavbarInitialized = true;
 
+        ensureSiteFavicon();
         renderSharedNavbar();
         const header = document.querySelector('.main-header');
         const mobileMenuBtn = document.querySelector('.mobile-menu-toggle');
@@ -403,19 +416,27 @@
             document.body.classList.remove('menu-panel-open');
         };
 
-        document.querySelectorAll('.nav-menu .has-mega .mega-toggle').forEach((megaToggle) => {
-            megaToggle.addEventListener('click', (event) => {
-                event.preventDefault();
-                const megaItem = megaToggle.closest('.has-mega');
-                const expanded = megaToggle.getAttribute('aria-expanded') === 'true';
+        const toggleMegaMenu = (trigger, event) => {
+            event.preventDefault();
+            const megaItem = trigger.closest('.has-mega');
+            const megaToggle = megaItem?.querySelector('.mega-toggle');
+            const expanded = megaToggle?.getAttribute('aria-expanded') === 'true';
 
-                closeMegaMenus();
-                if (!expanded) {
-                    megaToggle.setAttribute('aria-expanded', 'true');
-                    megaItem?.classList.add('open');
-                    if (window.innerWidth <= 768) document.body.classList.add('menu-panel-open');
-                }
-            });
+            closeMegaMenus();
+            if (!expanded && megaItem && megaToggle) {
+                megaToggle.setAttribute('aria-expanded', 'true');
+                megaItem.classList.add('open');
+                if (window.innerWidth <= 768) document.body.classList.add('menu-panel-open');
+            }
+        };
+
+        document.querySelectorAll('.nav-menu .has-mega .mega-toggle, .nav-menu .has-mega .mega-link').forEach((trigger) => {
+            trigger.addEventListener('click', (event) => toggleMegaMenu(trigger, event));
+        });
+
+        document.addEventListener('click', (event) => {
+            const openMega = document.querySelector('.nav-menu .has-mega.open');
+            if (openMega && !openMega.contains(event.target)) closeMegaMenus();
         });
 
         document.querySelector('#dark-mode-toggle')?.addEventListener('click', () => {

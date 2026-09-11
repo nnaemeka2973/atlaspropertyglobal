@@ -14,6 +14,7 @@ import {
 } from "https://www.gstatic.com/firebasejs/12.3.0/firebase-auth.js";
 
 const USER_KEY = "atlas_user";
+const LOGOUT_GUARD_KEY = "atlas_logout_guard";
 
 let googleSignInInProgress = false;
 
@@ -26,10 +27,23 @@ function getCurrentPagePath() {
     return `${window.location.pathname.split("/").pop() || "index.html"}${window.location.search}${window.location.hash}`;
 }
 
+function getLoginRedirectParam() {
+    const redirectParam =
+        new URLSearchParams(window.location.search).get("redirect");
+
+    if (!redirectParam) {
+        return null;
+    }
+
+    return decodeURIComponent(redirectParam);
+}
+
 function rememberLoginRedirect() {
+    const redirectParam = getLoginRedirectParam();
+
     sessionStorage.setItem(
         "atlas_login_redirect",
-        getCurrentPagePath()
+        redirectParam || getCurrentPagePath()
     );
 }
 
@@ -39,7 +53,23 @@ function getPostLoginRedirect() {
 
     if (storedRedirect) {
         sessionStorage.removeItem("atlas_login_redirect");
-        return storedRedirect;
+
+        if (
+            storedRedirect !== "login.html" &&
+            storedRedirect !== "signup.html" &&
+            storedRedirect !== "forgot-password.html" &&
+            !storedRedirect.startsWith("login.html?") &&
+            !storedRedirect.startsWith("signup.html?") &&
+            !storedRedirect.startsWith("forgot-password.html?")
+        ) {
+            return storedRedirect;
+        }
+    }
+
+    const redirectParam = getLoginRedirectParam();
+
+    if (redirectParam) {
+        return redirectParam;
     }
 
     const currentPath = getCurrentPagePath();
@@ -48,7 +78,10 @@ function getPostLoginRedirect() {
         currentPath &&
         currentPath !== "login.html" &&
         currentPath !== "signup.html" &&
-        currentPath !== "forgot-password.html"
+        currentPath !== "forgot-password.html" &&
+        !currentPath.startsWith("login.html?") &&
+        !currentPath.startsWith("signup.html?") &&
+        !currentPath.startsWith("forgot-password.html?")
     ) {
         return currentPath;
     }
@@ -216,6 +249,19 @@ function clearAuthState() {
     sessionStorage.removeItem(
         "atlas_login_redirect"
     );
+
+    // Prevent a stale auth callback from restoring the user
+    // immediately after an explicit sign-out.
+    sessionStorage.removeItem(
+        LOGOUT_GUARD_KEY
+    );
+}
+
+function setLogoutGuard() {
+    sessionStorage.setItem(
+        LOGOUT_GUARD_KEY,
+        "1"
+    );
 }
 
 
@@ -225,9 +271,7 @@ function clearAuthState() {
 
 function redirectAfterAuth() {
     const shouldSkipAutoRedirect =
-        window.location.protocol === "file:" ||
-        window.location.hostname === "localhost" ||
-        window.location.hostname === "127.0.0.1";
+        window.location.protocol === "file:";
 
     if (shouldSkipAutoRedirect) {
         return;
@@ -357,6 +401,35 @@ function getAuthErrorMessage(
 /* =========================================================
    AUTHENTICATION BUTTONS
    ========================================================= */
+
+function bindGlobalLogoutButtons() {
+    const selector = [
+        "#logout-btn",
+        "#logout-menu-btn",
+        "[data-logout-button]",
+        "button[aria-label*='Log out']",
+        "button[aria-label*='Logout']"
+    ].join(", ");
+
+    document.querySelectorAll(selector).forEach((button) => {
+        if (button.dataset.atlasLogoutBound === "true") {
+            return;
+        }
+
+        button.dataset.atlasLogoutBound = "true";
+        button.addEventListener("click", async (event) => {
+            event.preventDefault();
+            event.stopPropagation();
+
+            try {
+                await logoutUser();
+            } catch (error) {
+                console.error("Global logout failed:", error);
+                alert("Unable to sign you out right now. Please try again.");
+            }
+        });
+    });
+}
 
 function bindAuthButtons() {
 
@@ -714,6 +787,18 @@ function initAuthState() {
         auth,
         async (user) => {
 
+            if (sessionStorage.getItem(LOGOUT_GUARD_KEY) === "1") {
+                if (user) {
+                    try {
+                        await signOut(auth);
+                    } catch (error) {
+                        console.warn("Logout guard prevented a stale auth restore:", error);
+                    }
+                }
+                clearAuthState();
+                return;
+            }
+
             if (user) {
 
                 /*
@@ -751,9 +836,7 @@ function initAuthState() {
                     page === "forgot-password.html"
                 ) {
                     const shouldSkipAutoRedirect =
-                        window.location.protocol === "file:" ||
-                        window.location.hostname === "localhost" ||
-                        window.location.hostname === "127.0.0.1";
+                        window.location.protocol === "file:";
 
                     if (!shouldSkipAutoRedirect) {
                         redirectAfterAuth();
@@ -802,6 +885,8 @@ export async function logoutUser() {
 
     try {
 
+        setLogoutGuard();
+
         await signOut(auth);
 
         /*
@@ -819,11 +904,11 @@ export async function logoutUser() {
         });
 
         /*
-         * Return user to login page.
+         * Sign out silently and remain on the current page.
          */
-        window.location.replace(
-            "login.html"
-        );
+        if (window.location.pathname.split("/").pop() !== "login.html") {
+            window.dispatchEvent(new Event("atlas-auth-state"));
+        }
 
     } catch (error) {
 
@@ -860,6 +945,7 @@ if (
         () => {
 
             bindAuthButtons();
+            bindGlobalLogoutButtons();
             initAuthState();
 
         }
@@ -868,5 +954,6 @@ if (
 } else {
 
     bindAuthButtons();
+    bindGlobalLogoutButtons();
     initAuthState();
 }

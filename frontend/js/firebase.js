@@ -4,7 +4,7 @@ import {
     getAuth,
     GoogleAuthProvider,
     OAuthProvider,
-    browserLocalPersistence,
+    browserSessionPersistence,
     setPersistence
 } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-auth.js";
 
@@ -21,7 +21,7 @@ const app = initializeApp(firebaseConfig);
 
 const auth = getAuth(app);
 
-await setPersistence(auth, browserLocalPersistence);
+await setPersistence(auth, browserSessionPersistence);
 
 const googleProvider = new GoogleAuthProvider();
 

@@ -57,8 +57,15 @@ body{
     background-position:center;
 }
 
+.agents-hero .container{
+    display:flex;
+    align-items:center;
+    min-height:88vh;
+}
+
 .hero-content{
     max-width:760px;
+    padding-top:10px;
 }
 
 .hero-label{
@@ -72,10 +79,11 @@ body{
 
 .hero-content h1{
     font-family:'Cormorant Garamond',serif;
-    font-size:clamp(56px,7vw,92px);
+    font-size:clamp(48px,4vw,72px);
     line-height:.92;
     margin-bottom:24px;
     color:#fff;
+    white-space:nowrap;
 }
 
 .hero-content p{
@@ -225,15 +233,54 @@ font-size:64px;
 @media(max-width:600px){
 
 .agents-hero{
-min-height:74vh;
+min-height:72vh;
+padding-top:60px;
+display:flex;
+align-items:flex-end;
+}
+
+.agents-hero .container{
+width:100%;
+}
+
+.hero-content{
+max-width:100%;
+width:100%;
+padding-top:8px;
+text-align:left;
+}
+
+.hero-label{
+margin-bottom:14px;
 }
 
 .hero-content h1{
-font-size:46px;
+font-size:clamp(40px, 13vw, 56px);
+line-height:0.92;
+letter-spacing:-0.04em;
+margin-bottom:16px;
+max-width:100%;
+white-space:normal;
 }
 
 .hero-content p{
 font-size:15px;
+line-height:1.7;
+margin-bottom:24px;
+max-width:100%;
+}
+
+.agents-hero .hero-actions{
+flex-direction:column;
+align-items:stretch;
+width:100%;
+}
+
+.agents-hero .hero-actions .btn{
+width:100%;
+min-width:0;
+max-width:100%;
+padding:14px 18px;
 }
 
 .stats-grid{
@@ -267,8 +314,7 @@ font-size:40px;
 <span class="hero-label">Atlas Property Group</span>
 
 <h1>
-Meet Our U.S.
-Real Estate Advisors
+Meet Our Real Estate Advisors
 </h1>
 
 <p>
@@ -574,17 +620,32 @@ Browse our team of verified residential, luxury, commercial and investment speci
 
     .agents-hero{
         min-height:72vh;
-        padding-top:40px;
+        padding-top:64px;
+        display:flex;
+        align-items:flex-end;
+    }
+
+    .agents-hero .container{
+        width:100%;
+    }
+
+    .hero-content{
+        max-width:100%;
+        width:100%;
+        padding-top:10px;
     }
 
     .hero-content h1{
         font-size:clamp(42px, 12vw, 62px);
         line-height:0.96;
+        margin-bottom:16px;
     }
 
     .hero-content p{
         font-size:15px;
         line-height:1.7;
+        margin-bottom:24px;
+        max-width:100%;
     }
 
     .agents-hero .hero-actions{

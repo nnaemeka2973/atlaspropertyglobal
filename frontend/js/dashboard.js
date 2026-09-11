@@ -345,22 +345,22 @@ async function loadDashboardPropertyLists() {
 }
 
 async function loadDashboardMessages() {
-    if (!state.user) return state.messages;
+    if (!state.user) return state.messages || [];
 
     try {
-        const result = await getContactMessages();
-        if (result.success && Array.isArray(result.data)) {
-            return result.data.map((message) => ({
+        const storedMessages = JSON.parse(localStorage.getItem('atlasMessages') || '[]');
+        if (Array.isArray(storedMessages) && storedMessages.length) {
+            return storedMessages.map((message) => ({
                 ...message,
                 unread: message.status && message.status !== 'Read' && message.status !== 'Closed',
                 preview: message.message ? message.message.slice(0, 80) : ''
             }));
         }
     } catch (error) {
-        console.error('Dashboard contact messages load failed:', error);
+        console.warn('Dashboard local messages load failed:', error);
     }
 
-    return state.messages;
+    return state.messages || [];
 }
 
 
@@ -443,7 +443,10 @@ function renderDashboardSummary() {
     });
 
     const badgeValue = state.loadingMetrics ? '' : (Number(state.metrics.notifications ?? 0) || '');
-    document.getElementById('top-notification-count').textContent = badgeValue;
+    const topNotificationCount = document.getElementById('top-notification-count');
+    if (topNotificationCount) {
+        topNotificationCount.textContent = badgeValue;
+    }
 }
 
 function renderMortgageScenarios() {
@@ -487,7 +490,10 @@ function renderDashboardPanels() {
     notificationsBody.innerHTML = getNotificationCards();
     renderMortgageScenarios();
 
-    document.getElementById('top-notification-count').textContent = state.loadingMetrics ? '' : (Number(state.metrics.notifications ?? 0) || '');
+    const topNotificationCount = document.getElementById('top-notification-count');
+    if (topNotificationCount) {
+        topNotificationCount.textContent = state.loadingMetrics ? '' : (Number(state.metrics.notifications ?? 0) || '');
+    }
 }
 
 function getMatchedRecentlyViewed() {
@@ -546,8 +552,16 @@ function attachGlobalEventHandlers() {
             event.preventDefault();
             switchDashboardPanel(panelLink.dataset.panel);
             const sidebar = document.getElementById('dashboard-sidebar');
+            const toggle = document.getElementById('sidebar-toggle');
             if (window.innerWidth <= 980 && sidebar?.classList.contains('sidebar-open')) {
                 sidebar.classList.remove('sidebar-open');
+                toggle?.classList.remove('is-active');
+                toggle?.setAttribute('aria-expanded', 'false');
+                const icon = toggle?.querySelector('i');
+                if (icon) {
+                    icon.classList.remove('fa-xmark');
+                    icon.classList.add('fa-bars');
+                }
             }
             return;
         }
@@ -584,7 +598,6 @@ function attachGlobalEventHandlers() {
 
     document.getElementById('logout-btn')?.addEventListener('click', () => window.logoutUser?.());
 
-    document.getElementById('theme-toggle')?.addEventListener('click', toggleTheme);
     document.getElementById('settings-theme-toggle')?.addEventListener('click', toggleTheme);
 
     document.getElementById('compare-clear-all')?.addEventListener('click', () => {
@@ -594,11 +607,6 @@ function attachGlobalEventHandlers() {
         renderDashboardPanels();
         addDashboardNotification('Compare cleared', 'Your property comparison list has been cleared.');
         showToast('Compare list cleared.');
-    });
-
-    document.getElementById('top-notifications-toggle')?.addEventListener('click', (event) => {
-        event.preventDefault();
-        switchDashboardPanel('panel-notifications');
     });
 
     document.getElementById('mark-all-read')?.addEventListener('click', () => {
@@ -1008,13 +1016,27 @@ function activateMobileSidebar() {
 
     if (!toggle || !sidebar || !backdrop) return;
 
+    const icon = toggle.querySelector('i');
+    const syncToggleState = () => {
+        const isOpen = sidebar.classList.contains('sidebar-open');
+        toggle.classList.toggle('is-active', isOpen);
+        toggle.setAttribute('aria-expanded', String(isOpen));
+
+        if (icon) {
+            icon.classList.toggle('fa-bars', !isOpen);
+            icon.classList.toggle('fa-xmark', isOpen);
+        }
+    };
+
     const closeSidebar = () => {
         sidebar.classList.remove('sidebar-open');
+        syncToggleState();
     };
 
     toggle.addEventListener('click', (event) => {
         event.stopPropagation();
         sidebar.classList.toggle('sidebar-open');
+        syncToggleState();
     });
 
     backdrop.addEventListener('click', closeSidebar);
@@ -1022,10 +1044,11 @@ function activateMobileSidebar() {
     document.addEventListener('click', (event) => {
         if (window.innerWidth > 980) return;
         if (!sidebar.classList.contains('sidebar-open')) return;
-        if (!document.getElementById('panel-profile')?.classList.contains('active')) return;
         if (sidebar.contains(event.target) || toggle.contains(event.target)) return;
         closeSidebar();
     });
+
+    syncToggleState();
 }
 
 function isLikelyUuid(value) {
@@ -1034,7 +1057,6 @@ function isLikelyUuid(value) {
 
 async function refreshDashboardData() {
     if (!state.user || state.loadingMetrics) {
-        console.log('[refreshDashboardData] No state.user, returning');
         return;
     }
 
@@ -1042,38 +1064,20 @@ async function refreshDashboardData() {
     renderDashboardSummary();
 
     try {
-        console.log('[refreshDashboardData] Calling loadFavoritesForDashboard...');
-        const favorites = await loadFavoritesForDashboard();
-        console.log('[refreshDashboardData] Got favorites:', favorites.length);
-        state.favorites = Array.isArray(favorites) ? favorites : [];
-        console.log('[refreshDashboardData] state.favorites set to:', state.favorites.length);
+        state.favorites = await loadFavoritesForDashboard();
         state.messages = await loadDashboardMessages();
-        // notifications feature removed; maintain local state only
         state.notifications = state.notifications || [];
 
-        if (!isLikelyUuid(state.user.id)) {
-            state.metrics = {
-                savedProperties: state.favorites.length,
-                recentlyViewed: state.recentlyViewedDetails.length,
-                scheduledTours: state.tours.upcoming.length,
-                savedSearches: state.savedSearches.length,
-                messages: state.messages.length,
-                notifications: state.notifications.length
-            };
-        } else {
-            const dashboardResult = await getDashboardStats(state.user.id);
-            const stats = dashboardResult?.success && dashboardResult.data ? dashboardResult.data : {};
-            state.metrics = {
-                savedProperties: state.favorites.length,
-                recentlyViewed: Number(stats.recentlyViewed ?? 0),
-                scheduledTours: Number(stats.scheduledTours ?? 0),
-                savedSearches: Number(stats.savedSearches ?? 0),
-                messages: Number(stats.messages ?? 0),
-                notifications: Number(stats.notifications ?? 0)
-            };
-        }
+        state.metrics = {
+            savedProperties: state.favorites.length,
+            recentlyViewed: state.recentlyViewedDetails.length,
+            scheduledTours: state.tours.upcoming.length,
+            savedSearches: state.savedSearches.length,
+            messages: state.messages.length,
+            notifications: state.notifications.length
+        };
     } catch (error) {
-        console.error('Dashboard refresh failed:', error);
+        console.warn('Dashboard refresh failed, using local data:', error);
         state.metrics = {
             savedProperties: state.favorites.length,
             recentlyViewed: state.recentlyViewedDetails.length,
@@ -1097,9 +1101,7 @@ function scheduleDashboardRefresh() {
         window.clearInterval(state.refreshTimer);
     }
 
-    state.refreshTimer = window.setInterval(() => {
-        refreshDashboardData();
-    }, 30000);
+    state.refreshTimer = null;
 }
 
 async function initializeDashboard() {
@@ -1133,7 +1135,6 @@ async function initializeDashboard() {
     initDashboardMortgagePanel();
 
     await refreshDashboardData();
-    scheduleDashboardRefresh();
 }
 
 window.addEventListener('atlas:dashboard-refresh', () => {

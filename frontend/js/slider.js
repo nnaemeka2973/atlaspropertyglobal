@@ -63,4 +63,6 @@ class HeroSlider {
     }
 }
 
-new HeroSlider();
+document.addEventListener('DOMContentLoaded', () => {
+    new HeroSlider();
+});

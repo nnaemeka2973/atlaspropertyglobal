@@ -478,6 +478,16 @@ body{font-family:var(--font-body, 'Poppins', sans-serif);background:#f6f7f9;colo
 .contact-dialog{overflow-y:auto;scrollbar-width:none;-ms-overflow-style:none}
 .contact-dialog::-webkit-scrollbar{width:0;height:0;display:none}
 
+.contact-dialog .iti{width:100%;margin-top:6px;margin-bottom:14px}
+.contact-dialog .iti input{width:100%!important;padding-left:90px!important;margin-top:0!important;margin-bottom:0!important}
+.contact-dialog .iti__country-list{width:320px;max-width:90vw;border-radius:8px;box-shadow:0 8px 24px rgba(0,0,0,.15)}
+
+.phone-input-group{display:flex;gap:8px;margin-top:6px}
+.phone-input-group select{flex:0 0 132px;border:1px solid #d9dee7;border-radius:10px;padding:0 8px;background:#fff;color:inherit;font:inherit;font-size:13px;outline:none}
+.phone-input-group input{flex:1;min-width:0;margin-top:0!important}
+.phone-input-group select:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(11,61,145,.10)}
+.contact-dialog .phone-input-group select{width:155px;min-width:0;max-width:42%;flex:0 0 155px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+
 @media(max-width:768px){
   .mobile-contact-bar{
     box-sizing:border-box;
@@ -508,6 +518,7 @@ body{font-family:var(--font-body, 'Poppins', sans-serif);background:#f6f7f9;colo
   .contact-modal{z-index:2200}
   .contact-dialog{box-sizing:border-box;padding:18px 16px;width:calc(100% - 24px);max-height:calc(100dvh - 92px);margin:78px auto 14px;border-radius:16px}
   .contact-dialog h2{font-size:22px;margin:4px 0 6px}
+  .contact-dialog .phone-input-group select{width:126px;flex-basis:126px}
   .contact-dialog>p{font-size:13px;margin-bottom:10px}
   .contact-dialog label{margin:8px 0;font-size:12px}
   .contact-dialog input,.contact-dialog textarea{margin-top:4px;padding:9px 10px;border-radius:8px}

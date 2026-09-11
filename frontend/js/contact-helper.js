@@ -62,7 +62,25 @@ function renderContactAgentCard(agent, property, getPropertyIdFn, escFn) {
                 <input type="hidden" name="userId" value="" />
                 <label for="contact-name">Full Name<span aria-hidden="true">*</span><input id="contact-name" name="name" type="text" required autocomplete="name" /></label>
                 <label for="contact-email">Email<span aria-hidden="true">*</span><input id="contact-email" name="email" type="email" required autocomplete="email" /></label>
-                <label for="contact-phone">Phone<span aria-hidden="true">*</span><input id="contact-phone" name="phone" type="tel" required autocomplete="tel" /></label>
+                <label for="contact-phone">Phone<span aria-hidden="true">*</span>
+                    <span class="phone-input-group">
+                        <select name="phoneCountryCode" aria-label="Country calling code">
+                            <option value="+1">US/Canada +1</option>
+                            <option value="+44">UK +44</option>
+                            <option value="+33">France +33</option>
+                            <option value="+34">Spain +34</option>
+                            <option value="+49">Germany +49</option>
+                            <option value="+52">Mexico +52</option>
+                            <option value="+55">Brazil +55</option>
+                            <option value="+61">Australia +61</option>
+                            <option value="+81">Japan +81</option>
+                            <option value="+86">China +86</option>
+                            <option value="+91">India +91</option>
+                            <option value="+971">UAE +971</option>
+                        </select>
+                        <input id="contact-phone" name="phone" type="tel" required autocomplete="tel" inputmode="tel" placeholder="Phone number" />
+                    </span>
+                </label>
                 <label for="contact-subject">Subject<span aria-hidden="true">*</span><input id="contact-subject" name="subject" type="text" required /></label>
                 <label for="contact-message">Message<span aria-hidden="true">*</span><textarea id="contact-message" name="message" rows="5" required>Hi ${escape(safeAgent.fullName)}, I am interested in ${escape(property?.title || property?.address || 'this property')}.</textarea></label>
                 <button type="submit" class="pd-primary">Send Message</button>
@@ -93,7 +111,7 @@ function bindContactAgentForm(property) {
             agentId: formData.get('agentId'),
             name: formData.get('name')?.trim(),
             email: formData.get('email')?.trim(),
-            phone: formData.get('phone')?.trim(),
+            phone: `${formData.get('phoneCountryCode') || '+1'} ${formData.get('phone')?.trim() || ''}`.trim(),
             subject: formData.get('subject')?.trim(),
             message: formData.get('message')?.trim()
         };

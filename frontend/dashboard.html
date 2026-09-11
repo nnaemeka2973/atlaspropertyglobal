@@ -84,6 +84,9 @@
                         <p>Welcome back,</p>
                         <h1 id="dashboard-user-name">Atlas Member</h1>
                     </div>
+                    <div class="topbar-avatar topbar-avatar-mobile" aria-label="User profile">
+                        <span id="dashboard-avatar-mobile">A</span>
+                    </div>
                 </div>
 
                 <form id="dashboard-search-form" class="topbar-search" aria-label="Global property search">
@@ -95,13 +98,6 @@
                 </form>
 
                 <div class="topbar-actions">
-                    <button id="top-notifications-toggle" type="button" class="icon-button" aria-label="View notifications">
-                        <i class="fa-regular fa-bell" aria-hidden="true"></i>
-                        <span id="top-notification-count" class="badge" aria-live="polite"></span>
-                    </button>
-                    <button id="theme-toggle" type="button" class="icon-button" aria-label="Toggle dark mode">
-                        <i class="fa-solid fa-moon"></i>
-                    </button>
                     <div class="topbar-avatar" aria-label="User profile">
                         <span id="dashboard-avatar">A</span>
                     </div>
@@ -109,6 +105,12 @@
             </header>
 
             <main class="dashboard-content">
+                <div class="dashboard-return-row">
+                    <a href="index.html" class="home-arrow-button" aria-label="Return to home page">
+                        <i class="fa-solid fa-arrow-left"></i>
+                    </a>
+                </div>
+
                 <section id="panel-overview" class="dashboard-panel active" aria-labelledby="overview-title">
                     <!-- Key Metrics Grid -->
                     <div class="metrics-section">
