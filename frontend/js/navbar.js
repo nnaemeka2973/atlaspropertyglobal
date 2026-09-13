@@ -359,6 +359,18 @@
             }
         };
 
+        window.addEventListener('pageshow', () => {
+            const liveNav = document.querySelector('.nav-menu');
+            if (!liveNav?.classList.contains('active')) return;
+
+            closeMobileMenu(false);
+            if (history.state?.atlasMobileMenu) {
+                const restoredState = { ...history.state };
+                delete restoredState.atlasMobileMenu;
+                history.replaceState(restoredState, '', window.location.href);
+            }
+        });
+
         const openMobileMenu = () => {
             const liveBtn = document.querySelector('.mobile-menu-toggle');
             const liveNav = document.querySelector('.nav-menu');
